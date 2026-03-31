@@ -930,10 +930,10 @@
     "content": {
       "question": "Which function grows fastest asymptotically?",
       "options": [
-        "$n^2$ + 1000n",
-        "$n^3$/1000",
-        "$$2^n$$/1000000",
-        "n $1 + n^2$"
+        "$n^2 + 1000n$",
+        "$n^3/1000$",
+        "$2^n/1000000$",
+        "$n(1 + n^2)$"
       ],
       "correctIndex": 2
     },
@@ -5535,10 +5535,10 @@
     "content": {
       "question": "For recurrence $T(n) = 4T(n/2) + n^2$, which master method case applies?",
       "options": [
-        "Case 1: $T(n) = Θ(n^2)$",
-        "Case 2: $T(n) = Θ(n^2 \\$\\log n$)$",
-        "Case 3: $T(n) = Θ(n^2)$",
-        "Case 3: $T(n) = Θ(n^2 \\$\\log n$)$"
+        "Case 1: $T(n) = \\Theta(n^2)$",
+        "Case 2: $T(n) = \\Theta(n^2 \\log n)$",
+        "Case 3: $T(n) = \\Theta(n^2)$",
+        "Case 3: $T(n) = \\Theta(n^2 \\log n)$"
       ],
       "correctIndex": 1
     },
@@ -10385,10 +10385,10 @@
     "content": {
       "question": "What is the time complexity of the Euclidean algorithm for computing gcd(a,b)?",
       "options": [
-        "$O(min(a,b)$)",
-        "$O($\\sqrt{m}$in(a,b)$)",
-        "$O(log min(a,b)$)",
-        "$O($\\log(a+b)$$)"
+        "$O(\\min(a,b))$",
+        "$O(\\sqrt{\\min(a,b)})$",
+        "$O(\\log \\min(a,b))$",
+        "$O(\\log(a+b))$"
       ],
       "correctIndex": 2
     },
@@ -10478,9 +10478,9 @@
       "question": "What is the time complexity of k rounds of the Miller-Rabin primality test on an n-bit number?",
       "options": [
         "$O(k \\log n)$",
-        "$O(k lo$g^2$n)$",
-        "$O(k lo$g^3$n)$",
-        "$O($k^2$\\log n$)$"
+        "$O(k \\log^2 n)$",
+        "$O(k \\log^3 n)$",
+        "$O(k^2 \\log n)$"
       ],
       "correctIndex": 2
     },
