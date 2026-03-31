@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
+import type { Card, UserState } from '../types/card';
 
 interface CourseData {
   course: string;
@@ -17,6 +18,8 @@ interface Props {
   onSelectSubject: (subject: string | null) => void;
   onToggleBookmarked: () => void;
   onSearch: (query: string) => void;
+  allCards: Card[];
+  userState: UserState;
 }
 
 export function SideDrawer({
@@ -30,9 +33,22 @@ export function SideDrawer({
   onSelectSubject,
   onToggleBookmarked,
   onSearch,
+  allCards,
+  userState,
 }: Props) {
   const [expandedCourse, setExpandedCourse] = useState<string | null>(selectedCourse);
   const [query, setQuery] = useState('');
+
+  // Progress stats
+  const progress = useMemo(() => {
+    let filtered = allCards;
+    if (selectedCourse) filtered = filtered.filter(c => c.course === selectedCourse);
+    if (selectedSubject) filtered = filtered.filter(c => c.subject === selectedSubject);
+    const total = filtered.length;
+    const learned = filtered.filter(c => userState[c.id]?.learned).length;
+    const seen = filtered.filter(c => userState[c.id]?.lastSeen && !userState[c.id]?.learned).length;
+    return { total, learned, seen };
+  }, [allCards, userState, selectedCourse, selectedSubject]);
 
   const handleSearch = (value: string) => {
     setQuery(value);
@@ -204,6 +220,30 @@ export function SideDrawer({
                 </div>
               );
             })}
+          </div>
+
+          {/* Progress footer */}
+          <div className="px-4 py-3 border-t border-white/10">
+            <div className="flex items-center justify-between mb-1.5">
+              <span className="text-[10px] text-white/40">
+                {progress.learned} learned · {progress.seen} seen · {progress.total} total
+              </span>
+              <span className="text-[10px] text-white/40">
+                {progress.total > 0 ? Math.round(((progress.learned + progress.seen) / progress.total) * 100) : 0}%
+              </span>
+            </div>
+            <div className="w-full h-1.5 rounded-full bg-white/10 overflow-hidden">
+              <div className="h-full flex">
+                <div
+                  className="h-full bg-emerald-500 transition-all duration-500"
+                  style={{ width: progress.total > 0 ? `${(progress.learned / progress.total) * 100}%` : '0%' }}
+                />
+                <div
+                  className="h-full bg-violet-500/50 transition-all duration-500"
+                  style={{ width: progress.total > 0 ? `${(progress.seen / progress.total) * 100}%` : '0%' }}
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>

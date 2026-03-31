@@ -3,7 +3,6 @@ import { useLocalStorage } from './hooks/useLocalStorage';
 import { useFeed } from './hooks/useFeed';
 import { CardViewer } from './components/CardViewer';
 import { SideDrawer } from './components/SideDrawer';
-import { ProgressBar } from './components/ProgressBar';
 import { ThemeToggle } from './components/ThemeToggle';
 import type { Card, UserState } from './types/card';
 
@@ -136,6 +135,8 @@ export default function App() {
         onSelectSubject={setSelectedSubject}
         onToggleBookmarked={() => setShowBookmarked(prev => !prev)}
         onSearch={setSearchQuery}
+        allCards={allCards}
+        userState={userState}
       />
 
       <CardViewer
@@ -146,12 +147,6 @@ export default function App() {
         onLearn={handleLearn}
       />
 
-      <ProgressBar
-        cards={allCards}
-        userState={userState}
-        selectedCourse={selectedCourse}
-        selectedSubject={selectedSubject}
-      />
     </div>
   );
 }
