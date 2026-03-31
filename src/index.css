@@ -30,14 +30,12 @@ body {
 
 /* Snap scroll container */
 .snap-container {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
+  overflow: hidden;
   height: 100dvh;
+  touch-action: none;
 }
 
 .snap-card {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
   height: 100dvh;
 }
 

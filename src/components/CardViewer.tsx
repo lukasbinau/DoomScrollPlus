@@ -25,26 +25,90 @@ function renderCard(card: Card) {
 export function CardViewer({ cards, userState, onSeen, onBookmark, onLearn }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
   const currentIndexRef = useRef(0);
+  const touchStartY = useRef(0);
+  const isScrolling = useRef(false);
 
-  // Mark card as seen when it comes into view
-  const handleScroll = useCallback(() => {
+  // Programmatically scroll to a specific card index
+  const scrollToIndex = useCallback((index: number) => {
     const container = containerRef.current;
     if (!container) return;
-    const index = Math.round(container.scrollTop / container.clientHeight);
-    if (index !== currentIndexRef.current && cards[index]) {
-      currentIndexRef.current = index;
-      onSeen(cards[index].id);
+    const clamped = Math.max(0, Math.min(index, cards.length - 1));
+    container.scrollTo({ top: clamped * container.clientHeight, behavior: 'smooth' });
+    if (clamped !== currentIndexRef.current && cards[clamped]) {
+      currentIndexRef.current = clamped;
+      onSeen(cards[clamped].id);
     }
   }, [cards, onSeen]);
 
+  // Touch-based swipe: one swipe = one card
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
-    container.addEventListener('scroll', handleScroll, { passive: true });
+
+    const onTouchStart = (e: TouchEvent) => {
+      touchStartY.current = e.touches[0].clientY;
+      isScrolling.current = false;
+    };
+
+    const onTouchMove = (e: TouchEvent) => {
+      // Prevent native scroll so we control it
+      e.preventDefault();
+    };
+
+    const onTouchEnd = (e: TouchEvent) => {
+      if (isScrolling.current) return;
+      const deltaY = touchStartY.current - e.changedTouches[0].clientY;
+      const SWIPE_THRESHOLD = 50;
+
+      if (Math.abs(deltaY) > SWIPE_THRESHOLD) {
+        isScrolling.current = true;
+        if (deltaY > 0) {
+          scrollToIndex(currentIndexRef.current + 1); // swipe up → next
+        } else {
+          scrollToIndex(currentIndexRef.current - 1); // swipe down → prev
+        }
+      }
+    };
+
+    // Mouse wheel: one scroll = one card (for desktop)
+    const onWheel = (e: WheelEvent) => {
+      e.preventDefault();
+      if (isScrolling.current) return;
+      if (Math.abs(e.deltaY) > 30) {
+        isScrolling.current = true;
+        if (e.deltaY > 0) {
+          scrollToIndex(currentIndexRef.current + 1);
+        } else {
+          scrollToIndex(currentIndexRef.current - 1);
+        }
+        setTimeout(() => { isScrolling.current = false; }, 600);
+      }
+    };
+
+    container.addEventListener('touchstart', onTouchStart, { passive: true });
+    container.addEventListener('touchmove', onTouchMove, { passive: false });
+    container.addEventListener('touchend', onTouchEnd, { passive: true });
+    container.addEventListener('wheel', onWheel, { passive: false });
+
     // Mark first card as seen
     if (cards.length > 0) onSeen(cards[0].id);
-    return () => container.removeEventListener('scroll', handleScroll);
-  }, [cards, handleScroll, onSeen]);
+
+    return () => {
+      container.removeEventListener('touchstart', onTouchStart);
+      container.removeEventListener('touchmove', onTouchMove);
+      container.removeEventListener('touchend', onTouchEnd);
+      container.removeEventListener('wheel', onWheel);
+    };
+  }, [cards, onSeen, scrollToIndex]);
+
+  // Reset scroll lock after smooth scroll finishes
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+    const onScrollEnd = () => { isScrolling.current = false; };
+    container.addEventListener('scrollend', onScrollEnd);
+    return () => container.removeEventListener('scrollend', onScrollEnd);
+  }, []);
 
   if (cards.length === 0) {
     return (
