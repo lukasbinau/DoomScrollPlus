@@ -3,6 +3,7 @@ import { useLocalStorage } from './hooks/useLocalStorage';
 import { useFeed } from './hooks/useFeed';
 import { CardViewer } from './components/CardViewer';
 import { SideDrawer } from './components/SideDrawer';
+import { InstallPrompt } from './components/InstallPrompt';
 import type { Card, UserState } from './types/card';
 
 export default function App() {
@@ -140,6 +141,7 @@ export default function App() {
         onLearn={handleLearn}
       />
 
+      <InstallPrompt />
     </div>
   );
 }
