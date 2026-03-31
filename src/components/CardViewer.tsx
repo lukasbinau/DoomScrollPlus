@@ -57,21 +57,54 @@ export function CardViewer({ cards, userState, onSeen, onBookmark, onLearn }: Pr
   useEffect(() => {
     let startY = 0;
     let inScrollable = false;
+    let cardScrollEl: HTMLElement | null = null;
 
     const onTouchStart = (e: TouchEvent) => {
       startY = e.touches[0].clientY;
       const target = e.target as HTMLElement;
-      inScrollable = !!target.closest('.scrollable-touch');
+      const scrollable = target.closest('.scrollable-touch') as HTMLElement | null;
+
+      if (scrollable) {
+        const isCardBody = scrollable.classList.contains('card-body');
+        if (isCardBody) {
+          const hasOverflow = scrollable.scrollHeight > scrollable.clientHeight + 1;
+          inScrollable = hasOverflow;
+          cardScrollEl = hasOverflow ? scrollable : null;
+        } else {
+          // Inner scrollable (code block, diagram)
+          inScrollable = true;
+          cardScrollEl = null;
+        }
+      } else {
+        inScrollable = false;
+        cardScrollEl = null;
+      }
     };
 
     const onTouchMove = (e: TouchEvent) => {
-      // Allow native scroll inside scrollable child elements
       if (!inScrollable) e.preventDefault();
     };
 
     const onTouchEnd = (e: TouchEvent) => {
-      if (isAnimating.current || inScrollable) return;
+      if (isAnimating.current) return;
+
       const deltaY = startY - e.changedTouches[0].clientY;
+
+      if (cardScrollEl) {
+        // Card-body scroll: allow swipe at edges
+        const atTop = cardScrollEl.scrollTop <= 1;
+        const atBottom = cardScrollEl.scrollTop + cardScrollEl.clientHeight >= cardScrollEl.scrollHeight - 1;
+
+        if (Math.abs(deltaY) > 50) {
+          if ((deltaY > 0 && atBottom) || (deltaY < 0 && atTop)) {
+            goTo(deltaY > 0 ? currentIndex + 1 : currentIndex - 1);
+          }
+        }
+        return;
+      }
+
+      if (inScrollable) return;
+
       if (Math.abs(deltaY) > 50) {
         goTo(deltaY > 0 ? currentIndex + 1 : currentIndex - 1);
       }
@@ -133,7 +166,7 @@ export function CardViewer({ cards, userState, onSeen, onBookmark, onLearn }: Pr
             <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40 pointer-events-none" />
 
             {/* Card content */}
-            <div className="relative h-full">
+            <div className="card-body relative h-full overflow-y-auto scrollable-touch">
               {renderCard(card)}
             </div>
 

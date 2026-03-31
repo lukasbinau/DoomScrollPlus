@@ -11,7 +11,7 @@ export function BulletsCard({ card }: Props) {
   const allText = points.join(' ');
 
   return (
-    <div className="flex flex-col items-center justify-center h-full px-8">
+    <div className="flex flex-col items-center justify-center min-h-full px-8">
       <span className="inline-block px-3 py-1 mb-6 text-xs font-semibold tracking-wider uppercase rounded-full bg-white/10 text-white/70">
         {card.subject}
       </span>

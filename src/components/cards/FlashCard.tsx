@@ -11,7 +11,7 @@ export function FlashCard({ card }: Props) {
   const { question, answer } = card.content as FlashcardContent;
 
   return (
-    <div className="flex flex-col items-center justify-center h-full px-8">
+    <div className="flex flex-col items-center justify-center min-h-full px-8">
       <span className="inline-block px-3 py-1 mb-6 text-xs font-semibold tracking-wider uppercase rounded-full bg-amber-500/20 text-amber-400">
         Flashcard · {card.subject}
       </span>

@@ -51,6 +51,11 @@ body {
   height: 60dvh;
 }
 
+.brainrot .card-body > :first-child {
+  padding-top: 2.75rem;
+  padding-bottom: 5rem;
+}
+
 /* Scrollable child areas inside cards */
 .scrollable-touch {
   -webkit-overflow-scrolling: touch;
@@ -72,6 +77,7 @@ body {
 
 .snap-card {
   height: 100dvh;
+  overflow: hidden;
 }
 
 /* Flashcard flip */
