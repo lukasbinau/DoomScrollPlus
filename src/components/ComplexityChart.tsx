@@ -70,7 +70,7 @@ export function ComplexityChart({ text }: Props) {
     const points: string[] = [];
     for (let i = 1; i <= N; i++) {
       const x = pad.left + ((i - 1) / (N - 1)) * plotW;
-      const y = pad.top + plotH - Math.min(f.fn(i) / cappedMax, 1) * plotH;
+      const y = pad.top + plotH - (f.fn(i) / cappedMax) * plotH;
       points.push(`${x},${y}`);
     }
     return { key, points: points.join(' '), color: f.color, label: f.label };
@@ -87,15 +87,24 @@ export function ComplexityChart({ text }: Props) {
   return (
     <div className="mt-3 w-full max-w-[340px]">
       <svg viewBox={`0 0 ${W} ${totalH}`} className="w-full" style={{ height: 'auto' }}>
+        {/* Clip path to contain curves within the plot area */}
+        <defs>
+          <clipPath id={`chart-clip-${highlighted.join('-')}`}>
+            <rect x={pad.left} y={pad.top} width={plotW} height={plotH} />
+          </clipPath>
+        </defs>
+
         {/* Axes */}
         <line x1={pad.left} y1={pad.top + plotH} x2={W - pad.right} y2={pad.top + plotH} stroke="rgba(255,255,255,0.15)" strokeWidth={1} />
         <line x1={pad.left} y1={pad.top} x2={pad.left} y2={pad.top + plotH} stroke="rgba(255,255,255,0.15)" strokeWidth={1} />
         <text x={W / 2} y={H - 2} textAnchor="middle" fill="rgba(255,255,255,0.3)" fontSize={9}>n →</text>
 
-        {/* Curves */}
-        {curves.map(c => (
-          <polyline key={c.key} points={c.points} fill="none" stroke={c.color} strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" opacity={0.9} />
-        ))}
+        {/* Curves — clipped to plot area */}
+        <g clipPath={`url(#chart-clip-${highlighted.join('-')})`}>
+          {curves.map(c => (
+            <polyline key={c.key} points={c.points} fill="none" stroke={c.color} strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" opacity={0.9} />
+          ))}
+        </g>
 
         {/* Legend — 2-column grid below the chart */}
         {(() => {
