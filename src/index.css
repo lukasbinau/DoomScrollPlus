@@ -38,6 +38,7 @@ body {
 
 /* Snap scroll container */
 .snap-container {
+  position: relative;
   overflow: hidden;
   height: 100dvh;
 }
