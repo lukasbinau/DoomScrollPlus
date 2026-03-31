@@ -11202,5 +11202,1318 @@
     "course": "Algorithms and Data Structures",
     "source": "Introduction.to.Algorithms.4th.pdf (Ch.35)",
     "createdAt": "2026-03-31T17:44:58.133Z"
+  },
+  {
+    "id": "visual-search-trees-001",
+    "type": "diagram",
+    "course": "Algorithms and Data Structures",
+    "subject": "Search Trees",
+    "title": "Red-Black Tree Structure with Colors",
+    "content": {
+      "mermaid": "graph TD\n  A[13-BLACK] --> B[8-RED]\n  A --> C[17-BLACK]\n  B --> D[1-BLACK]\n  B --> E[11-BLACK]\n  C --> F[15-RED]\n  C --> G[25-RED]\n  G --> H[22-BLACK]\n  G --> I[27-BLACK]",
+      "caption": "Red-black tree maintaining balance through color properties. Red nodes cannot have red children, and all paths from root to leaves have equal black height."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:35:32.933Z"
+  },
+  {
+    "id": "visual-search-trees-002",
+    "type": "code",
+    "course": "Algorithms and Data Structures",
+    "subject": "Search Trees",
+    "title": "BST Insert Implementation",
+    "content": {
+      "code": "def insert(self, root, key):\n    if root is None:\n        return TreeNode(key)\n    \n    if key < root.val:\n        root.left = self.insert(root.left, key)\n    elif key > root.val:\n        root.right = self.insert(root.right, key)\n    \n    return root\n\nclass TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right",
+      "language": "python",
+      "explanation": "Recursive BST insertion that maintains the binary search property by comparing keys and inserting in the appropriate subtree."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:35:32.933Z"
+  },
+  {
+    "id": "visual-search-trees-003",
+    "type": "steps",
+    "course": "Algorithms and Data Structures",
+    "subject": "Search Trees",
+    "title": "Inserting into a BST Step by Step",
+    "content": {
+      "steps": [
+        {
+          "visual": "graph TD\n  A[8] --> B[3]\n  A --> C[10]\n  B --> D[1]\n  B --> E[6]",
+          "label": "Initial BST, inserting key 7"
+        },
+        {
+          "visual": "graph TD\n  A[8] --> B[3]\n  A --> C[10]\n  B --> D[1]\n  B --> E[6]\n  style A fill:#ffeb3b",
+          "label": "Start at root 8, compare 7 < 8, go left"
+        },
+        {
+          "visual": "graph TD\n  A[8] --> B[3]\n  A --> C[10]\n  B --> D[1]\n  B --> E[6]\n  style B fill:#ffeb3b",
+          "label": "At node 3, compare 7 > 3, go right"
+        },
+        {
+          "visual": "graph TD\n  A[8] --> B[3]\n  A --> C[10]\n  B --> D[1]\n  B --> E[6]\n  E --> F[7]\n  style F fill:#4caf50",
+          "label": "At node 6, compare 7 > 6, insert as right child"
+        }
+      ],
+      "summary": "BST insertion follows the search path, comparing keys at each node until finding an empty position where the new node maintains the BST property."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:35:32.933Z"
+  },
+  {
+    "id": "visual-search-trees-004",
+    "type": "diagram",
+    "course": "Algorithms and Data Structures",
+    "subject": "Search Trees",
+    "title": "AVL Tree Right Rotation",
+    "content": {
+      "mermaid": "graph TD\n  subgraph Before\n    A[Y] --> B[X]\n    A --> C[C]\n    B --> D[A]\n    B --> E[B]\n  end\n  subgraph After\n    F[X] --> G[A]\n    F --> H[Y]\n    H --> I[B]\n    H --> J[C]\n  end",
+      "caption": "Right rotation in AVL tree when left subtree becomes too heavy. Node X becomes new root, Y becomes right child of X."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:35:32.933Z"
+  },
+  {
+    "id": "visual-search-trees-005",
+    "type": "code",
+    "course": "Algorithms and Data Structures",
+    "subject": "Search Trees",
+    "title": "Inorder Tree Traversal",
+    "content": {
+      "code": "def inorder_traversal(root):\n    result = []\n    \n    def inorder(node):\n        if node:\n            inorder(node.left)    # Visit left subtree\n            result.append(node.val)  # Visit root\n            inorder(node.right)   # Visit right subtree\n    \n    inorder(root)\n    return result\n\n# For BST, inorder gives sorted sequence\n# Time: O(n), Space: O(h) where h is height",
+      "language": "python",
+      "explanation": "Inorder traversal visits nodes in left-root-right order. For BSTs, this produces values in sorted ascending order."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:35:32.933Z"
+  },
+  {
+    "id": "visual-search-trees-006",
+    "type": "steps",
+    "course": "Algorithms and Data Structures",
+    "subject": "Search Trees",
+    "title": "2-3 Tree Node Split Process",
+    "content": {
+      "steps": [
+        {
+          "visual": "graph TD\n  A[10-20-30] --> B[5]\n  A --> C[15]\n  A --> D[25]\n  A --> E[35]",
+          "label": "4-node created after insertion, needs splitting"
+        },
+        {
+          "visual": "graph TD\n  A[20] --> B[10]\n  A --> C[30]\n  B --> D[5]\n  B --> E[15]\n  C --> F[25]\n  C --> G[35]",
+          "label": "Split: middle key 20 becomes parent"
+        },
+        {
+          "visual": "graph TD\n  H[ROOT]\n  H --> A[20]\n  A --> B[10]\n  A --> C[30]\n  B --> D[5]\n  B --> E[15]\n  C --> F[25]\n  C --> G[35]",
+          "label": "Middle key propagates up to parent level"
+        }
+      ],
+      "summary": "2-3 tree splits 4-nodes by promoting the middle key upward, maintaining perfect balance and the 2-3 tree invariants."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:35:32.933Z"
+  },
+  {
+    "id": "visual-search-trees-007",
+    "type": "diagram",
+    "course": "Algorithms and Data Structures",
+    "subject": "Search Trees",
+    "title": "B-Tree Structure Example",
+    "content": {
+      "mermaid": "graph TD\n  A[10-20] --> B[5-7]\n  A --> C[13-17]\n  A --> D[25-30]\n  B --> E[1]\n  B --> F[6]\n  B --> G[8]\n  C --> H[11]\n  C --> I[15]\n  C --> J[18]\n  D --> K[22]\n  D --> L[27]\n  D --> M[35]",
+      "caption": "B-tree of order 3 with internal nodes containing 1-2 keys and 2-3 children. All leaves at same level, keys sorted within nodes."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:35:32.933Z"
+  },
+  {
+    "id": "visual-search-trees-008",
+    "type": "code",
+    "course": "Algorithms and Data Structures",
+    "subject": "Search Trees",
+    "title": "AVL Right Rotation Implementation",
+    "content": {
+      "code": "def right_rotate(y):\n    # y is the unbalanced node\n    x = y.left\n    T2 = x.right\n    \n    # Perform rotation\n    x.right = y\n    y.left = T2\n    \n    # Update heights\n    y.height = 1 + max(get_height(y.left), get_height(y.right))\n    x.height = 1 + max(get_height(x.left), get_height(x.right))\n    \n    # Return new root\n    return x",
+      "language": "python",
+      "explanation": "Right rotation for AVL tree rebalancing. Used when left subtree is heavier and causes imbalance. Updates heights after rotation."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:35:32.933Z"
+  },
+  {
+    "id": "visual-graphs-001",
+    "type": "diagram",
+    "course": "Algorithms and Data Structures",
+    "subject": "Graphs",
+    "title": "Directed vs Undirected Graphs Comparison",
+    "content": {
+      "mermaid": "graph TD\n  subgraph Directed\n    A[A] --> B[B]\n    B --> C[C]\n    C --> A\n  end\n  subgraph Undirected\n    D[A] --- E[B]\n    E --- F[C]\n    F --- D\n  end",
+      "caption": "Directed graphs have edges with direction (arrows) while undirected graphs have bidirectional edges. In directed graphs, edge $(u,v) \\neq (v,u)$"
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:36:01.708Z"
+  },
+  {
+    "id": "visual-graphs-002",
+    "type": "code",
+    "course": "Algorithms and Data Structures",
+    "subject": "Graphs",
+    "title": "BFS Algorithm Implementation",
+    "content": {
+      "code": "from collections import deque\n\ndef bfs(graph, start):\n    visited = set()\n    queue = deque([start])\n    result = []\n    \n    while queue:\n        node = queue.popleft()\n        if node not in visited:\n            visited.add(node)\n            result.append(node)\n            queue.extend(graph[node])\n    \n    return result",
+      "language": "python",
+      "explanation": "BFS uses a queue to explore nodes level by level. It visits all neighbors at current depth before moving to next depth level."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:36:01.708Z"
+  },
+  {
+    "id": "visual-graphs-003",
+    "type": "steps",
+    "course": "Algorithms and Data Structures",
+    "subject": "Graphs",
+    "title": "BFS Traversal with Queue States",
+    "content": {
+      "steps": [
+        {
+          "visual": "graph TD\n  A[A start] --> B[B]\n  A --> C[C]\n  B --> D[D]\n  C --> E[E]\n  style A fill:#f9f,stroke:#333,stroke-width:4px",
+          "label": "Start at A, queue: [A], visited: {}"
+        },
+        {
+          "visual": "graph TD\n  A[A visited] --> B[B]\n  A --> C[C]\n  B --> D[D]\n  C --> E[E]\n  style A fill:#9f9,stroke:#333,stroke-width:2px\n  style B fill:#f9f,stroke:#333,stroke-width:2px\n  style C fill:#f9f,stroke:#333,stroke-width:2px",
+          "label": "Visit A, add neighbors, queue: [B, C], visited: {A}"
+        },
+        {
+          "visual": "graph TD\n  A[A] --> B[B visited]\n  A --> C[C]\n  B --> D[D]\n  C --> E[E]\n  style A fill:#9f9,stroke:#333,stroke-width:2px\n  style B fill:#9f9,stroke:#333,stroke-width:2px\n  style C fill:#f9f,stroke:#333,stroke-width:2px\n  style D fill:#f9f,stroke:#333,stroke-width:2px",
+          "label": "Visit B, add D, queue: [C, D], visited: {A, B}"
+        },
+        {
+          "visual": "graph TD\n  A[A] --> B[B]\n  A --> C[C visited]\n  B --> D[D]\n  C --> E[E]\n  style A fill:#9f9,stroke:#333,stroke-width:2px\n  style B fill:#9f9,stroke:#333,stroke-width:2px\n  style C fill:#9f9,stroke:#333,stroke-width:2px\n  style D fill:#f9f,stroke:#333,stroke-width:2px\n  style E fill:#f9f,stroke:#333,stroke-width:2px",
+          "label": "Visit C, add E, queue: [D, E], visited: {A, B, C}"
+        }
+      ],
+      "summary": "BFS explores nodes level by level using a FIFO queue, ensuring shortest path discovery in unweighted graphs"
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:36:01.708Z"
+  },
+  {
+    "id": "visual-graphs-004",
+    "type": "diagram",
+    "course": "Algorithms and Data Structures",
+    "subject": "Graphs",
+    "title": "Adjacency Matrix vs List Representation",
+    "content": {
+      "mermaid": "graph LR\n  subgraph Matrix\n    M[0 1 0 1<br/>1 0 1 0<br/>0 1 0 1<br/>1 0 1 0]\n  end\n  subgraph List\n    L[0: 1,3<br/>1: 0,2<br/>2: 1,3<br/>3: 0,2]\n  end\n  subgraph Graph\n    A[0] --- B[1]\n    B --- C[2]\n    C --- D[3]\n    D --- A\n  end",
+      "caption": "Adjacency matrix uses $O(V^2)$ space but $O(1)$ edge lookup. Adjacency list uses $O(V+E)$ space with $O(degree)$ edge lookup"
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:36:01.708Z"
+  },
+  {
+    "id": "visual-graphs-005",
+    "type": "code",
+    "course": "Algorithms and Data Structures",
+    "subject": "Graphs",
+    "title": "DFS Algorithm with Recursion",
+    "content": {
+      "code": "def dfs(graph, node, visited=None):\n    if visited is None:\n        visited = set()\n    \n    visited.add(node)\n    result = [node]\n    \n    for neighbor in graph[node]:\n        if neighbor not in visited:\n            result.extend(dfs(graph, neighbor, visited))\n    \n    return result",
+      "language": "python",
+      "explanation": "DFS explores as far as possible along each branch before backtracking. Uses recursion or explicit stack for depth-first exploration."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:36:01.708Z"
+  },
+  {
+    "id": "visual-graphs-006",
+    "type": "steps",
+    "course": "Algorithms and Data Structures",
+    "subject": "Graphs",
+    "title": "DFS Traversal with Discovery Times",
+    "content": {
+      "steps": [
+        {
+          "visual": "graph TD\n  A[A d:1] --> B[B]\n  A --> C[C]\n  B --> D[D]\n  style A fill:#f9f,stroke:#333,stroke-width:4px",
+          "label": "Start DFS at A, discovery time = 1, stack: [A]"
+        },
+        {
+          "visual": "graph TD\n  A[A d:1] --> B[B d:2]\n  A --> C[C]\n  B --> D[D]\n  style A fill:#9f9,stroke:#333,stroke-width:2px\n  style B fill:#f9f,stroke:#333,stroke-width:4px",
+          "label": "Visit B from A, discovery time = 2, stack: [A, B]"
+        },
+        {
+          "visual": "graph TD\n  A[A d:1] --> B[B d:2]\n  A --> C[C]\n  B --> D[D d:3]\n  style A fill:#9f9,stroke:#333,stroke-width:2px\n  style B fill:#9f9,stroke:#333,stroke-width:2px\n  style D fill:#f9f,stroke:#333,stroke-width:4px",
+          "label": "Visit D from B, discovery time = 3, stack: [A, B, D]"
+        },
+        {
+          "visual": "graph TD\n  A[A d:1 f:6] --> B[B d:2 f:5]\n  A --> C[C d:4 f:7]\n  B --> D[D d:3 f:4]\n  style A fill:#bbf,stroke:#333,stroke-width:2px\n  style B fill:#bbf,stroke:#333,stroke-width:2px\n  style C fill:#bbf,stroke:#333,stroke-width:2px\n  style D fill:#bbf,stroke:#333,stroke-width:2px",
+          "label": "All nodes visited with discovery and finish times recorded"
+        }
+      ],
+      "summary": "DFS assigns discovery and finish times, useful for detecting cycles and topological ordering. Finish times decrease along back edges"
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:36:01.708Z"
+  },
+  {
+    "id": "visual-graphs-007",
+    "type": "code",
+    "course": "Algorithms and Data Structures",
+    "subject": "Graphs",
+    "title": "Topological Sort using DFS",
+    "content": {
+      "code": "def topological_sort(graph):\n    visited = set()\n    stack = []\n    \n    def dfs_util(node):\n        visited.add(node)\n        for neighbor in graph[node]:\n            if neighbor not in visited:\n                dfs_util(neighbor)\n        stack.append(node)\n    \n    for node in graph:\n        if node not in visited:\n            dfs_util(node)\n    \n    return stack[::-1]",
+      "language": "python",
+      "explanation": "Topological sort orders vertices in a DAG such that for every directed edge (u,v), u appears before v. Uses DFS and reverses finish order."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:36:01.708Z"
+  },
+  {
+    "id": "visual-graphs-008",
+    "type": "diagram",
+    "course": "Algorithms and Data Structures",
+    "subject": "Graphs",
+    "title": "Strongly Connected Components Visualization",
+    "content": {
+      "mermaid": "graph TD\n  subgraph SCC1\n    A[A] --> B[B]\n    B --> C[C]\n    C --> A\n  end\n  subgraph SCC2\n    D[D] --> E[E]\n    E --> D\n  end\n  subgraph SCC3\n    F[F]\n  end\n  C --> D\n  E --> F",
+      "caption": "A strongly connected component is a maximal set of vertices where every vertex is reachable from every other vertex in the component"
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:36:01.708Z"
+  },
+  {
+    "id": "visual-sorting-searching-001",
+    "type": "diagram",
+    "course": "Algorithms and Data Structures",
+    "subject": "Sorting & Searching",
+    "title": "Sorting Algorithm Time Complexity Comparison",
+    "content": {
+      "mermaid": "graph TD\n  A[Sorting Algorithms] --> B[O n²]\n  A --> C[O n log n]\n  A --> D[O n]\n  B --> E[Bubble Sort]\n  B --> F[Selection Sort]\n  B --> G[Insertion Sort]\n  C --> H[Merge Sort]\n  C --> I[Heap Sort]\n  C --> J[Quick Sort avg]\n  D --> K[Counting Sort]\n  D --> L[Radix Sort]",
+      "caption": "Time complexity hierarchy of common sorting algorithms. $O(n^2)$ algorithms are simple but inefficient, $O(n \\log n)$ are general-purpose optimal comparison sorts, and $O(n)$ are specialized non-comparison sorts."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:36:34.288Z"
+  },
+  {
+    "id": "visual-sorting-searching-002",
+    "type": "code",
+    "course": "Algorithms and Data Structures",
+    "subject": "Sorting & Searching",
+    "title": "Merge Sort Implementation",
+    "content": {
+      "code": "def merge_sort(arr):\n    if len(arr) <= 1:\n        return arr\n    \n    mid = len(arr) // 2\n    left = merge_sort(arr[:mid])\n    right = merge_sort(arr[mid:])\n    \n    return merge(left, right)\n\ndef merge(left, right):\n    result = []\n    i = j = 0\n    \n    while i < len(left) and j < len(right):\n        if left[i] <= right[j]:\n            result.append(left[i])\n            i += 1\n        else:\n            result.append(right[j])\n            j += 1\n    \n    result.extend(left[i:])\n    result.extend(right[j:])\n    return result",
+      "language": "python",
+      "explanation": "Divide-and-conquer sorting algorithm that recursively splits the array in half, sorts each half, then merges the sorted halves back together. Guaranteed O(n log n) time complexity."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:36:34.288Z"
+  },
+  {
+    "id": "visual-sorting-searching-003",
+    "type": "steps",
+    "course": "Algorithms and Data Structures",
+    "subject": "Sorting & Searching",
+    "title": "Merge Sort Tree Visualization",
+    "content": {
+      "steps": [
+        {
+          "visual": "graph TD\n  A[38 27 43 3 9 82 10] --> B[Split into halves]\n  A --> C[Left: 38 27 43 3]\n  A --> D[Right: 9 82 10]",
+          "label": "Initial split of array [38,27,43,3,9,82,10]"
+        },
+        {
+          "visual": "graph TD\n  A[38 27 43 3] --> B[38 27]\n  A --> C[43 3]\n  D[9 82 10] --> E[9 82]\n  D --> F[10]",
+          "label": "Continue splitting until single elements"
+        },
+        {
+          "visual": "graph TD\n  A[27 38] --> B[Merged]\n  C[3 43] --> B\n  D[9 82] --> E[Merged]\n  F[10] --> E",
+          "label": "Start merging sorted pairs"
+        },
+        {
+          "visual": "graph TD\n  A[3 27 38 43] --> B[Final merge]\n  C[9 10 82] --> B\n  B --> D[3 9 10 27 38 43 82]",
+          "label": "Final merge produces sorted array"
+        }
+      ],
+      "summary": "Merge sort divides the problem recursively, then conquers by merging sorted subsequences bottom-up."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:36:34.288Z"
+  },
+  {
+    "id": "visual-sorting-searching-004",
+    "type": "diagram",
+    "course": "Algorithms and Data Structures",
+    "subject": "Sorting & Searching",
+    "title": "Binary Search Tree Halving Process",
+    "content": {
+      "mermaid": "graph TD\n  A[Search space: 1-16] --> B[Check middle: 8]\n  B --> C[Target > 8]\n  C --> D[New space: 9-16]\n  D --> E[Check middle: 12]\n  E --> F[Target < 12]\n  F --> G[New space: 9-11]\n  G --> H[Found or not found]",
+      "caption": "Binary search repeatedly halves the search space by comparing with the middle element. Each comparison eliminates half the remaining possibilities, achieving $O(\\log n)$ time complexity."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:36:34.288Z"
+  },
+  {
+    "id": "visual-sorting-searching-005",
+    "type": "code",
+    "course": "Algorithms and Data Structures",
+    "subject": "Sorting & Searching",
+    "title": "QuickSort with Partition",
+    "content": {
+      "code": "def quicksort(arr, low=0, high=None):\n    if high is None:\n        high = len(arr) - 1\n    \n    if low < high:\n        pivot_idx = partition(arr, low, high)\n        quicksort(arr, low, pivot_idx - 1)\n        quicksort(arr, pivot_idx + 1, high)\n\ndef partition(arr, low, high):\n    pivot = arr[high]\n    i = low - 1\n    \n    for j in range(low, high):\n        if arr[j] <= pivot:\n            i += 1\n            arr[i], arr[j] = arr[j], arr[i]\n    \n    arr[i + 1], arr[high] = arr[high], arr[i + 1]\n    return i + 1",
+      "language": "python",
+      "explanation": "In-place sorting using divide-and-conquer. Partition rearranges elements around a pivot, then recursively sorts the two partitions. Average case O(n log n), worst case O(n²)."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:36:34.288Z"
+  },
+  {
+    "id": "visual-sorting-searching-006",
+    "type": "steps",
+    "course": "Algorithms and Data Structures",
+    "subject": "Sorting & Searching",
+    "title": "QuickSort Partitioning Process",
+    "content": {
+      "steps": [
+        {
+          "visual": "graph LR\n  A[3] --> B[6]\n  B --> C[8]\n  C --> D[10]\n  D --> E[2]\n  E --> F[5]\n  F --> G[Pivot: 5]",
+          "label": "Choose pivot element (last element: 5)"
+        },
+        {
+          "visual": "graph LR\n  A[3] --> B[6]\n  B --> C[8]\n  C --> D[10]\n  D --> E[2]\n  style A fill:#90EE90\n  style E fill:#90EE90",
+          "label": "Elements ≤ pivot (3,2) in green, others remain"
+        },
+        {
+          "visual": "graph LR\n  A[3] --> B[2]\n  B --> C[8]\n  C --> D[10]\n  D --> E[6]\n  E --> F[5]\n  style A fill:#90EE90\n  style B fill:#90EE90\n  style F fill:#FFD700",
+          "label": "Move smaller elements left, place pivot in correct position"
+        },
+        {
+          "visual": "graph LR\n  A[3 2] --> B[5]\n  B --> C[10 8 6]\n  style A fill:#90EE90\n  style B fill:#FFD700\n  style C fill:#FFB6C1",
+          "label": "Partition complete: left ≤ pivot ≤ right"
+        }
+      ],
+      "summary": "Partitioning rearranges elements so all smaller values are left of pivot, larger values are right. This creates the divide step for quicksort recursion."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:36:34.288Z"
+  },
+  {
+    "id": "visual-sorting-searching-007",
+    "type": "code",
+    "course": "Algorithms and Data Structures",
+    "subject": "Sorting & Searching",
+    "title": "Binary Search Implementation",
+    "content": {
+      "code": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    \n    while left <= right:\n        mid = (left + right) // 2\n        \n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    \n    return -1  # Not found",
+      "language": "python",
+      "explanation": "Efficient search algorithm for sorted arrays. Compares target with middle element and eliminates half the search space each iteration. Time complexity O(log n)."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:36:34.288Z"
+  },
+  {
+    "id": "visual-sorting-searching-008",
+    "type": "steps",
+    "course": "Algorithms and Data Structures",
+    "subject": "Sorting & Searching",
+    "title": "Insertion Sort Building Process",
+    "content": {
+      "steps": [
+        {
+          "visual": "graph LR\n  A[5] --> B[2]\n  B --> C[4]\n  C --> D[6]\n  D --> E[1]\n  E --> F[3]\n  style A fill:#90EE90",
+          "label": "Start with first element as sorted portion"
+        },
+        {
+          "visual": "graph LR\n  A[2] --> B[5]\n  B --> C[4]\n  C --> D[6]\n  D --> E[1]\n  E --> F[3]\n  style A fill:#90EE90\n  style B fill:#90EE90",
+          "label": "Insert 2 into correct position in sorted portion"
+        },
+        {
+          "visual": "graph LR\n  A[2] --> B[4]\n  B --> C[5]\n  C --> D[6]\n  C --> E[1]\n  E --> F[3]\n  style A fill:#90EE90\n  style B fill:#90EE90\n  style C fill:#90EE90",
+          "label": "Insert 4 between 2 and 5"
+        },
+        {
+          "visual": "graph LR\n  A[1] --> B[2]\n  B --> C[3]\n  C --> D[4]\n  D --> E[5]\n  E --> F[6]\n  style A fill:#90EE90\n  style B fill:#90EE90\n  style C fill:#90EE90\n  style D fill:#90EE90\n  style E fill:#90EE90\n  style F fill:#90EE90",
+          "label": "Continue until entire array is sorted"
+        }
+      ],
+      "summary": "Insertion sort builds the sorted array one element at a time by finding the correct position for each element in the already-sorted portion."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:36:34.288Z"
+  },
+  {
+    "id": "visual-shortest-paths-mst-001",
+    "type": "diagram",
+    "course": "Algorithms and Data Structures",
+    "subject": "Shortest Paths & MST",
+    "title": "Dijkstra's Algorithm on Weighted Graph",
+    "content": {
+      "mermaid": "graph TD\n  A[A:0] --> B[B:4]\n  A --> C[C:2]\n  B --> D[D:7]\n  C --> B\n  C --> D[D:5]\n  C --> E[E:6]\n  D --> E\n  B -.->|4| A\n  C -.->|2| A\n  D -.->|3| B\n  B -.->|1| C\n  D -.->|3| C\n  E -.->|4| C\n  E -.->|2| D",
+      "caption": "Weighted graph showing shortest distances from source A. Each node shows vertex and distance: $d[v]$. Dotted lines show edge weights."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:37:05.894Z"
+  },
+  {
+    "id": "visual-shortest-paths-mst-002",
+    "type": "code",
+    "course": "Algorithms and Data Structures",
+    "subject": "Shortest Paths & MST",
+    "title": "Dijkstra's Algorithm Implementation",
+    "content": {
+      "code": "import heapq\n\ndef dijkstra(graph, start):\n    distances = {node: float('inf') for node in graph}\n    distances[start] = 0\n    pq = [(0, start)]\n    \n    while pq:\n        current_dist, current = heapq.heappop(pq)\n        if current_dist > distances[current]:\n            continue\n            \n        for neighbor, weight in graph[current]:\n            distance = current_dist + weight\n            if distance < distances[neighbor]:\n                distances[neighbor] = distance\n                heapq.heappush(pq, (distance, neighbor))\n    \n    return distances",
+      "language": "python",
+      "explanation": "Dijkstra's algorithm using a min-heap priority queue. Finds shortest paths from a single source to all vertices in O((V+E)log V) time."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:37:05.894Z"
+  },
+  {
+    "id": "visual-shortest-paths-mst-003",
+    "type": "steps",
+    "course": "Algorithms and Data Structures",
+    "subject": "Shortest Paths & MST",
+    "title": "Dijkstra's Algorithm Step-by-Step Execution",
+    "content": {
+      "steps": [
+        {
+          "visual": "graph TD\n  A[A:0*] --> B[B:∞]\n  A --> C[C:∞]\n  B --> D[D:∞]\n  C --> D\n  style A fill:#ffcccc",
+          "label": "Initialize: Start at A with distance 0, all others infinity. A is current vertex."
+        },
+        {
+          "visual": "graph TD\n  A[A:0] --> B[B:4]\n  A --> C[C:2]\n  B --> D[D:∞]\n  C --> D\n  style C fill:#ffcccc",
+          "label": "Process A: Update neighbors B=4, C=2. Choose C (smallest unvisited distance)."
+        },
+        {
+          "visual": "graph TD\n  A[A:0] --> B[B:3]\n  A --> C[C:2]\n  B --> D[D:5]\n  C --> D\n  style B fill:#ffcccc",
+          "label": "Process C: Update B=3, D=5 via C. Choose B next (distance 3)."
+        },
+        {
+          "visual": "graph TD\n  A[A:0] --> B[B:3]\n  A --> C[C:2]\n  B --> D[D:5]\n  C --> D\n  style D fill:#ffcccc",
+          "label": "Process B: D remains 5 (no improvement). Choose D last, algorithm complete."
+        }
+      ],
+      "summary": "Dijkstra explores vertices in order of increasing distance, relaxing edges to find shortest paths."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:37:05.894Z"
+  },
+  {
+    "id": "visual-shortest-paths-mst-004",
+    "type": "diagram",
+    "course": "Algorithms and Data Structures",
+    "subject": "Shortest Paths & MST",
+    "title": "Kruskal's MST Construction Example",
+    "content": {
+      "mermaid": "graph TD\n  A[A] --- B[B]\n  A --- C[C]\n  B --- D[D]\n  C --- D\n  A -.->|1| B\n  A -.->|3| C\n  B -.->|2| D\n  C -.->|4| D",
+      "caption": "MST found by Kruskal's algorithm. Solid lines show selected edges in order: AB(1), BD(2), AC(3). Edge CD(4) rejected to avoid cycle."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:37:05.894Z"
+  },
+  {
+    "id": "visual-shortest-paths-mst-005",
+    "type": "code",
+    "course": "Algorithms and Data Structures",
+    "subject": "Shortest Paths & MST",
+    "title": "Kruskal's Algorithm with Union-Find",
+    "content": {
+      "code": "class UnionFind:\n    def __init__(self, n):\n        self.parent = list(range(n))\n        self.rank = [0] * n\n    \n    def find(self, x):\n        if self.parent[x] != x:\n            self.parent[x] = self.find(self.parent[x])\n        return self.parent[x]\n    \n    def union(self, x, y):\n        px, py = self.find(x), self.find(y)\n        if px == py: return False\n        if self.rank[px] < self.rank[py]: px, py = py, px\n        self.parent[py] = px\n        if self.rank[px] == self.rank[py]: self.rank[px] += 1\n        return True\n\ndef kruskal(edges, n):\n    edges.sort()\n    uf = UnionFind(n)\n    mst = []\n    for weight, u, v in edges:\n        if uf.union(u, v):\n            mst.append((weight, u, v))\n    return mst",
+      "language": "python",
+      "explanation": "Kruskal's algorithm sorts edges by weight and uses Union-Find to detect cycles. Runs in O(E log E) time."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:37:05.894Z"
+  },
+  {
+    "id": "visual-shortest-paths-mst-006",
+    "type": "diagram",
+    "course": "Algorithms and Data Structures",
+    "subject": "Shortest Paths & MST",
+    "title": "Bellman-Ford with Negative Edge Weights",
+    "content": {
+      "mermaid": "graph TD\n  A[A:0] --> B[B:1]\n  A --> C[C:4]\n  B --> C[C:2]\n  B --> D[D:-2]\n  D --> C[C:-1]\n  A -.->|1| B\n  A -.->|4| C\n  B -.->|1| C\n  B -.->|-3| D\n  D -.->|1| C",
+      "caption": "Bellman-Ford handles negative weights. Path A→B→D→C gives distance -1 to C, better than direct path A→C with distance 4."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:37:05.894Z"
+  },
+  {
+    "id": "visual-shortest-paths-mst-007",
+    "type": "code",
+    "course": "Algorithms and Data Structures",
+    "subject": "Shortest Paths & MST",
+    "title": "Bellman-Ford Relaxation Implementation",
+    "content": {
+      "code": "def bellman_ford(graph, start):\n    n = len(graph)\n    dist = [float('inf')] * n\n    dist[start] = 0\n    \n    # Relax edges V-1 times\n    for _ in range(n - 1):\n        for u in range(n):\n            for v, weight in graph[u]:\n                if dist[u] != float('inf') and dist[u] + weight < dist[v]:\n                    dist[v] = dist[u] + weight\n    \n    # Check for negative cycles\n    for u in range(n):\n        for v, weight in graph[u]:\n            if dist[u] != float('inf') and dist[u] + weight < dist[v]:\n                return None  # Negative cycle detected\n    \n    return dist",
+      "language": "python",
+      "explanation": "Bellman-Ford performs V-1 relaxation rounds, then checks for negative cycles. Works with negative edge weights in O(VE) time."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:37:05.894Z"
+  },
+  {
+    "id": "visual-shortest-paths-mst-008",
+    "type": "steps",
+    "course": "Algorithms and Data Structures",
+    "subject": "Shortest Paths & MST",
+    "title": "Prim's Algorithm Growing MST",
+    "content": {
+      "steps": [
+        {
+          "visual": "graph TD\n  A[A*] --- B[B]\n  A --- C[C]\n  B --- C\n  B --- D[D]\n  style A fill:#ccffcc",
+          "label": "Start with vertex A. MST contains only A. Consider all edges from A."
+        },
+        {
+          "visual": "graph TD\n  A[A] === B[B*]\n  A --- C[C]\n  B --- C\n  B --- D[D]\n  style A fill:#ccffcc\n  style B fill:#ccffcc",
+          "label": "Add minimum edge AB to MST. Now consider edges from A and B to outside vertices."
+        },
+        {
+          "visual": "graph TD\n  A[A] === B[B]\n  A === C[C*]\n  B --- C\n  B --- D[D]\n  style A fill:#ccffcc\n  style B fill:#ccffcc\n  style C fill:#ccffcc",
+          "label": "Add next minimum edge AC. MST now spans A, B, C. Consider edges to remaining vertices."
+        },
+        {
+          "visual": "graph TD\n  A[A] === B[B]\n  A === C[C]\n  B --- C\n  B === D[D*]\n  style A fill:#ccffcc\n  style B fill:#ccffcc\n  style C fill:#ccffcc\n  style D fill:#ccffcc",
+          "label": "Add edge BD to complete MST. All vertices connected with minimum total weight."
+        }
+      ],
+      "summary": "Prim's algorithm grows the MST by repeatedly adding the minimum weight edge connecting MST to a new vertex."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:37:05.894Z"
+  },
+  {
+    "id": "visual-algorithm-analysis-big-o--001",
+    "type": "diagram",
+    "course": "Algorithms and Data Structures",
+    "subject": "Algorithm Analysis (Big O)",
+    "title": "Recursion Tree Analysis T(n)=2T(n/2)+n",
+    "content": {
+      "mermaid": "graph TD\n  A[T-n] --> B[T-n/2]\n  A --> C[T-n/2]\n  B --> D[T-n/4]\n  B --> E[T-n/4]\n  C --> F[T-n/4]\n  C --> G[T-n/4]\n  D --> H[1]\n  E --> I[1]\n  F --> J[1]\n  G --> K[1]\n  A -.- L[cost: n]\n  B -.- M[cost: n/2]\n  C -.- N[cost: n/2]\n  D -.- O[cost: n/4]",
+      "caption": "Each level has total work $O(n)$, tree height is $\\log n$, so total complexity is $O(n \\log n)$"
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:37:35.805Z"
+  },
+  {
+    "id": "visual-algorithm-analysis-big-o--002",
+    "type": "diagram",
+    "course": "Algorithms and Data Structures",
+    "subject": "Algorithm Analysis (Big O)",
+    "title": "Master Method Decision Flowchart",
+    "content": {
+      "mermaid": "flowchart TD\n  A[T-n = aT-n/b + f-n] --> B{Compare f-n with n^log_b-a}\n  B -->|f-n = O-n^log_b-a-ε| C[Case 1: T-n = Θ-n^log_b-a]\n  B -->|f-n = Θ-n^log_b-a| D[Case 2: T-n = Θ-n^log_b-a log n]\n  B -->|f-n = Ω-n^log_b-a+ε| E{Regularity check}\n  E -->|af-n/b ≤ cf-n| F[Case 3: T-n = Θ-f-n]\n  E -->|No regularity| G[Master method does not apply]",
+      "caption": "Decision tree for applying the Master Method to solve recurrence relations"
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:37:35.805Z"
+  },
+  {
+    "id": "visual-algorithm-analysis-big-o--003",
+    "type": "diagram",
+    "course": "Algorithms and Data Structures",
+    "subject": "Algorithm Analysis (Big O)",
+    "title": "P vs NP Complexity Classes",
+    "content": {
+      "mermaid": "graph TD\n  A[P] --> B[NP]\n  B --> C[NP-Complete]\n  B --> D[NP-Hard]\n  C --> D\n  E[EXPTIME] --> B\n  F[Polynomial Time] --> A\n  G[Exponential Time] --> E\n  H[3-SAT] --> C\n  I[TSP] --> D\n  J[Sorting] --> A",
+      "caption": "Relationship between complexity classes. P ⊆ NP, but P = NP remains unknown"
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:37:35.805Z"
+  },
+  {
+    "id": "visual-algorithm-analysis-big-o--004",
+    "type": "diagram",
+    "course": "Algorithms and Data Structures",
+    "subject": "Algorithm Analysis (Big O)",
+    "title": "Dynamic Programming Subproblem DAG",
+    "content": {
+      "mermaid": "graph TD\n  A[Original Problem] --> B[Subproblem 1]\n  A --> C[Subproblem 2]\n  B --> D[Base Case 1]\n  B --> E[Base Case 2]\n  C --> E\n  C --> F[Base Case 3]\n  G[Overlapping] --> D\n  G --> E",
+      "caption": "DAG structure ensures no cycles, overlapping subproblems enable memoization for $O(V + E)$ complexity"
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:37:35.805Z"
+  },
+  {
+    "id": "visual-algorithm-analysis-big-o--005",
+    "type": "code",
+    "course": "Algorithms and Data Structures",
+    "subject": "Algorithm Analysis (Big O)",
+    "title": "Rod Cutting Dynamic Programming",
+    "content": {
+      "code": "def rod_cutting(prices, n):\n    dp = [0] * (n + 1)\n    \n    for i in range(1, n + 1):\n        max_val = 0\n        for j in range(i):\n            max_val = max(max_val, prices[j] + dp[i - j - 1])\n        dp[i] = max_val\n    \n    return dp[n]\n\n# Example usage\nprices = [1, 5, 8, 9, 10, 17, 17, 20]\nresult = rod_cutting(prices, 8)",
+      "language": "python",
+      "explanation": "Bottom-up DP solution for rod cutting. Time complexity O(n²), space O(n). Each dp[i] stores maximum revenue for rod length i."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:37:35.805Z"
+  },
+  {
+    "id": "visual-algorithm-analysis-big-o--006",
+    "type": "code",
+    "course": "Algorithms and Data Structures",
+    "subject": "Algorithm Analysis (Big O)",
+    "title": "Fibonacci with Memoization",
+    "content": {
+      "code": "def fibonacci_memo(n, memo={}):\n    if n in memo:\n        return memo[n]\n    \n    if n <= 1:\n        return n\n    \n    memo[n] = fibonacci_memo(n-1, memo) + fibonacci_memo(n-2, memo)\n    return memo[n]\n\n# Time: O(n), Space: O(n)\n# Without memo: O(2^n) exponential time\nresult = fibonacci_memo(50)",
+      "language": "python",
+      "explanation": "Memoization reduces fibonacci from O(2^n) to O(n) by storing computed results. Demonstrates power of avoiding redundant subproblem calculations."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:37:35.805Z"
+  },
+  {
+    "id": "visual-algorithm-analysis-big-o--007",
+    "type": "code",
+    "course": "Algorithms and Data Structures",
+    "subject": "Algorithm Analysis (Big O)",
+    "title": "Longest Common Subsequence Algorithm",
+    "content": {
+      "code": "def lcs(X, Y):\n    m, n = len(X), len(Y)\n    dp = [[0] * (n + 1) for _ in range(m + 1)]\n    \n    for i in range(1, m + 1):\n        for j in range(1, n + 1):\n            if X[i-1] == Y[j-1]:\n                dp[i][j] = dp[i-1][j-1] + 1\n            else:\n                dp[i][j] = max(dp[i-1][j], dp[i][j-1])\n    \n    return dp[m][n]",
+      "language": "python",
+      "explanation": "LCS using dynamic programming. Time complexity O(mn), space O(mn). Fills table bottom-up using optimal substructure property."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:37:35.805Z"
+  },
+  {
+    "id": "visual-algorithm-analysis-big-o--008",
+    "type": "steps",
+    "course": "Algorithms and Data Structures",
+    "subject": "Algorithm Analysis (Big O)",
+    "title": "Matrix Chain Parenthesization Steps",
+    "content": {
+      "steps": [
+        {
+          "visual": "graph LR\n  A[M1: 40x20] --> B[M2: 20x30]\n  B --> C[M3: 30x10]\n  C --> D[M4: 10x30]",
+          "label": "Initialize chain lengths and dimensions"
+        },
+        {
+          "visual": "graph TD\n  A[dp-1-1=0] --> B[dp-2-2=0]\n  B --> C[dp-3-3=0]\n  C --> D[dp-4-4=0]",
+          "label": "Fill diagonal with zeros - base cases"
+        },
+        {
+          "visual": "graph TD\n  A[dp-1-2] --> B[40x20x30 = 24000]\n  C[dp-2-3] --> D[20x30x10 = 6000]\n  E[dp-3-4] --> F[30x10x30 = 9000]",
+          "label": "Fill length 2 chains - adjacent matrices"
+        },
+        {
+          "visual": "graph TD\n  A[dp-1-3] --> B[min of splits]\n  B --> C[k=1: 30000]\n  B --> D[k=2: 18000]\n  E[Best: 18000]",
+          "label": "Fill longer chains using optimal splits"
+        }
+      ],
+      "summary": "Matrix chain multiplication uses O(n³) DP to find optimal parenthesization, minimizing scalar multiplications"
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:37:35.805Z"
+  },
+  {
+    "id": "visual-union-find-001",
+    "type": "diagram",
+    "course": "Algorithms and Data Structures",
+    "subject": "Union Find",
+    "title": "Union-Find Forest Before and After Union Operation",
+    "content": {
+      "mermaid": "graph TD\n  subgraph Before\n    A[3] --> B[1]\n    C[5] --> D[2]\n    E[7]\n  end\n  subgraph After\n    F[5] --> G[3]\n    G[3] --> H[1]\n    G[3] --> I[2]\n    J[7]\n  end",
+      "caption": "Union operation merges two trees by making the root of one point to the root of another. Time complexity is $O(\\log n)$ with proper weighting."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:38:02.428Z"
+  },
+  {
+    "id": "visual-union-find-002",
+    "type": "code",
+    "course": "Algorithms and Data Structures",
+    "subject": "Union Find",
+    "title": "Union-Find with Path Compression and Union by Rank",
+    "content": {
+      "code": "class UnionFind:\n    def __init__(self, n):\n        self.parent = list(range(n))\n        self.rank = [0] * n\n    \n    def find(self, x):\n        if self.parent[x] != x:\n            self.parent[x] = self.find(self.parent[x])  # path compression\n        return self.parent[x]\n    \n    def union(self, x, y):\n        px, py = self.find(x), self.find(y)\n        if px == py: return\n        if self.rank[px] < self.rank[py]: px, py = py, px\n        self.parent[py] = px\n        if self.rank[px] == self.rank[py]: self.rank[px] += 1",
+      "language": "python",
+      "explanation": "Complete union-find implementation with path compression in find() and union by rank. Achieves nearly constant amortized time complexity."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:38:02.428Z"
+  },
+  {
+    "id": "visual-union-find-003",
+    "type": "steps",
+    "course": "Algorithms and Data Structures",
+    "subject": "Union Find",
+    "title": "Path Compression Flattening a Tall Tree",
+    "content": {
+      "steps": [
+        {
+          "visual": "graph TD\n  A[0] --> B[1]\n  B[1] --> C[2]\n  C[2] --> D[3]\n  D[3] --> E[4]",
+          "label": "Initial tall tree - find(4) requires 4 hops"
+        },
+        {
+          "visual": "graph TD\n  A[0] --> B[1]\n  A[0] --> C[2]\n  A[0] --> D[3]\n  A[0] --> E[4]",
+          "label": "After find(4) with path compression - all nodes point to root"
+        },
+        {
+          "visual": "graph TD\n  A[0] --> B[1]\n  A[0] --> C[2]\n  A[0] --> D[3]\n  A[0] --> E[4]\n  A[0] --> F[5]",
+          "label": "Future operations are now O(1) - flat structure maintained"
+        }
+      ],
+      "summary": "Path compression flattens trees during find operations, making subsequent finds nearly constant time by connecting nodes directly to the root."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:38:02.428Z"
+  },
+  {
+    "id": "visual-union-find-004",
+    "type": "diagram",
+    "course": "Algorithms and Data Structures",
+    "subject": "Union Find",
+    "title": "Weighted Union vs Naive Union Comparison",
+    "content": {
+      "mermaid": "graph TD\n  subgraph Naive\n    A[1] --> B[2]\n    B[2] --> C[3]\n    C[3] --> D[4]\n  end\n  subgraph Weighted\n    E[3] --> F[1]\n    E[3] --> G[2]\n    E[3] --> H[4]\n  end",
+      "caption": "Weighted union keeps trees balanced by always attaching smaller tree to larger tree root. Height grows as $O(\\log n)$ vs $O(n)$ for naive union."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:38:02.428Z"
+  },
+  {
+    "id": "visual-union-find-005",
+    "type": "code",
+    "course": "Algorithms and Data Structures",
+    "subject": "Union Find",
+    "title": "Find with Path Compression Implementation",
+    "content": {
+      "code": "def find_with_compression(self, x):\n    # Store original path for compression\n    path = []\n    current = x\n    \n    # Find root and record path\n    while self.parent[current] != current:\n        path.append(current)\n        current = self.parent[current]\n    \n    # Compress path - point all nodes to root\n    for node in path:\n        self.parent[node] = current\n    \n    return current",
+      "language": "python",
+      "explanation": "Iterative path compression implementation that explicitly shows the two-pass process: first find the root, then update all nodes in the path to point directly to it."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:38:02.428Z"
+  },
+  {
+    "id": "visual-union-find-006",
+    "type": "steps",
+    "course": "Algorithms and Data Structures",
+    "subject": "Union Find",
+    "title": "Sequence of Union Operations Showing Tree Growth",
+    "content": {
+      "steps": [
+        {
+          "visual": "graph TD\n  A[0]\n  B[1]\n  C[2]\n  D[3]",
+          "label": "Initial state - each element is its own component"
+        },
+        {
+          "visual": "graph TD\n  A[0] --> B[1]\n  C[2]\n  D[3]",
+          "label": "union(0,1) - connect elements 0 and 1"
+        },
+        {
+          "visual": "graph TD\n  A[0] --> B[1]\n  C[2] --> D[3]",
+          "label": "union(2,3) - connect elements 2 and 3"
+        },
+        {
+          "visual": "graph TD\n  A[0] --> B[1]\n  A[0] --> C[2]\n  C[2] --> D[3]",
+          "label": "union(0,2) - merge the two trees into one component"
+        }
+      ],
+      "summary": "Union operations gradually merge disjoint sets by connecting tree roots. The final structure depends on the union strategy used (naive vs weighted)."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:38:02.428Z"
+  },
+  {
+    "id": "visual-union-find-007",
+    "type": "diagram",
+    "course": "Algorithms and Data Structures",
+    "subject": "Union Find",
+    "title": "Union-Find Forest Structure with Multiple Components",
+    "content": {
+      "mermaid": "graph TD\n  A[5] --> B[2]\n  A[5] --> C[6]\n  B[2] --> D[1]\n  E[9] --> F[4]\n  E[9] --> G[3]\n  H[7]\n  I[8]",
+      "caption": "Complete union-find forest showing multiple connected components. Each tree represents one equivalence class with root as the representative element."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:38:02.428Z"
+  },
+  {
+    "id": "visual-union-find-008",
+    "type": "code",
+    "course": "Algorithms and Data Structures",
+    "subject": "Union Find",
+    "title": "Union-Find Connected Components Counter",
+    "content": {
+      "code": "class ConnectedComponents:\n    def __init__(self, n):\n        self.parent = list(range(n))\n        self.size = [1] * n\n        self.components = n\n    \n    def find(self, x):\n        if self.parent[x] != x:\n            self.parent[x] = self.find(self.parent[x])\n        return self.parent[x]\n    \n    def union(self, x, y):\n        px, py = self.find(x), self.find(y)\n        if px != py:\n            if self.size[px] < self.size[py]: px, py = py, px\n            self.parent[py] = px\n            self.size[px] += self.size[py]\n            self.components -= 1",
+      "language": "python",
+      "explanation": "Extended union-find that tracks the number of connected components and component sizes. Useful for dynamic connectivity problems where you need to know component count."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:38:02.428Z"
+  },
+  {
+    "id": "visual-segment-trees-range-queries-001",
+    "type": "diagram",
+    "course": "Algorithms and Data Structures",
+    "subject": "Segment Trees & Range Queries",
+    "title": "Segment Tree Structure for Array [2,4,3,1,6,5]",
+    "content": {
+      "mermaid": "graph TD\n  A[20] --> B[9]\n  A --> C[11]\n  B --> D[6]\n  B --> E[3]\n  C --> F[7]\n  C --> G[5]\n  D --> H[2]\n  D --> I[4]\n  E --> J[3]\n  E --> K[1]\n  F --> L[6]\n  F --> M[5]",
+      "caption": "Complete segment tree storing range sums. Each internal node contains the sum of its children's ranges. Leaves represent individual array elements."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:38:47.211Z"
+  },
+  {
+    "id": "visual-segment-trees-range-queries-002",
+    "type": "code",
+    "course": "Algorithms and Data Structures",
+    "subject": "Segment Trees & Range Queries",
+    "title": "Segment Tree Build, Query and Update",
+    "content": {
+      "code": "class SegmentTree:\n    def __init__(self, arr):\n        self.n = len(arr)\n        self.tree = [0] * (4 * self.n)\n        self.build(arr, 0, 0, self.n - 1)\n    \n    def build(self, arr, node, start, end):\n        if start == end:\n            self.tree[node] = arr[start]\n        else:\n            mid = (start + end) // 2\n            self.build(arr, 2*node+1, start, mid)\n            self.build(arr, 2*node+2, mid+1, end)\n            self.tree[node] = self.tree[2*node+1] + self.tree[2*node+2]\n    \n    def query(self, node, start, end, l, r):\n        if r < start or end < l:\n            return 0\n        if l <= start and end <= r:\n            return self.tree[node]\n        mid = (start + end) // 2\n        return self.query(2*node+1, start, mid, l, r) + self.query(2*node+2, mid+1, end, l, r)\n    \n    def update(self, node, start, end, idx, val):\n        if start == end:\n            self.tree[node] = val\n        else:\n            mid = (start + end) // 2\n            if idx <= mid:\n                self.update(2*node+1, start, mid, idx, val)\n            else:\n                self.update(2*node+2, mid+1, end, idx, val)\n            self.tree[node] = self.tree[2*node+1] + self.tree[2*node+2]",
+      "language": "python",
+      "explanation": "Complete segment tree implementation with build ($O(n)$), query ($O(\\log n)$), and update ($O(\\log n)$) operations for range sum queries."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:38:47.211Z"
+  },
+  {
+    "id": "visual-segment-trees-range-queries-003",
+    "type": "steps",
+    "course": "Algorithms and Data Structures",
+    "subject": "Segment Trees & Range Queries",
+    "title": "Range Query [1,4] on Segment Tree",
+    "content": {
+      "steps": [
+        {
+          "visual": "graph TD\n  A[20-visited] --> B[9-visited]\n  A --> C[11]\n  B --> D[6]\n  B --> E[3]\n  C --> F[7]\n  C --> G[5]\n  D --> H[2]\n  D --> I[4]\n  E --> J[3]\n  E --> K[1]\n  F --> L[6]\n  F --> M[5]",
+          "label": "Start at root, query range [1,4] intersects with root range [0,5]"
+        },
+        {
+          "visual": "graph TD\n  A[20] --> B[9-visited]\n  A --> C[11-visited]\n  B --> D[6-complete]\n  B --> E[3]\n  C --> F[7]\n  C --> G[5]\n  D --> H[2]\n  D --> I[4]\n  E --> J[3]\n  E --> K[1]\n  F --> L[6]\n  F --> M[5]",
+          "label": "Left child [0,2] partially overlaps, right child [3,5] partially overlaps"
+        },
+        {
+          "visual": "graph TD\n  A[20] --> B[9]\n  A --> C[11]\n  B --> D[6-complete]\n  B --> E[3-visited]\n  C --> F[7-visited]\n  C --> G[5]\n  D --> H[2]\n  D --> I[4]\n  E --> J[3-complete]\n  E --> K[1]\n  F --> L[6-complete]\n  F --> M[5]",
+          "label": "Range [1,2] completely covered by node with value 6, check [3,3] and [4,4]"
+        },
+        {
+          "visual": "graph TD\n  A[20] --> B[9]\n  A --> C[11]\n  B --> D[6-result]\n  B --> E[3]\n  C --> F[7]\n  C --> G[5]\n  D --> H[2]\n  D --> I[4]\n  E --> J[3-result]\n  E --> K[1]\n  F --> L[6-result]\n  F --> M[5]",
+          "label": "Collect results: 6 + 3 + 6 = 15 for range [1,4]"
+        }
+      ],
+      "summary": "Query visits only $O(\\log n)$ nodes by utilizing complete coverage and pruning non-overlapping subtrees."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:38:47.211Z"
+  },
+  {
+    "id": "visual-segment-trees-range-queries-004",
+    "type": "diagram",
+    "course": "Algorithms and Data Structures",
+    "subject": "Segment Trees & Range Queries",
+    "title": "Lazy Propagation Tree Structure",
+    "content": {
+      "mermaid": "graph TD\n  A[sum:20,lazy:0] --> B[sum:9,lazy:2]\n  A --> C[sum:11,lazy:0]\n  B --> D[sum:6,lazy:0]\n  B --> E[sum:3,lazy:0]\n  C --> F[sum:7,lazy:5]\n  C --> G[sum:5,lazy:0]\n  D --> H[2]\n  D --> I[4]\n  E --> J[3]\n  E --> K[1]\n  F --> L[6]\n  F --> M[5]",
+      "caption": "Segment tree with lazy propagation flags. Lazy values represent pending updates that will be pushed down when needed, enabling $O(\\log n)$ range updates."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:38:47.211Z"
+  },
+  {
+    "id": "visual-segment-trees-range-queries-005",
+    "type": "code",
+    "course": "Algorithms and Data Structures",
+    "subject": "Segment Trees & Range Queries",
+    "title": "Fenwick Tree Implementation",
+    "content": {
+      "code": "class FenwickTree:\n    def __init__(self, n):\n        self.n = n\n        self.tree = [0] * (n + 1)\n    \n    def update(self, i, delta):\n        i += 1  # 1-indexed\n        while i <= self.n:\n            self.tree[i] += delta\n            i += i & (-i)  # Add LSB\n    \n    def prefix_sum(self, i):\n        i += 1  # 1-indexed\n        result = 0\n        while i > 0:\n            result += self.tree[i]\n            i -= i & (-i)  # Remove LSB\n        return result\n    \n    def range_sum(self, l, r):\n        return self.prefix_sum(r) - self.prefix_sum(l - 1)",
+      "language": "python",
+      "explanation": "Fenwick Tree (Binary Indexed Tree) for efficient prefix sum queries and point updates, both in $O(\\log n)$ time with better space efficiency than segment trees."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:38:47.211Z"
+  },
+  {
+    "id": "visual-segment-trees-range-queries-006",
+    "type": "steps",
+    "course": "Algorithms and Data Structures",
+    "subject": "Segment Trees & Range Queries",
+    "title": "Segment Tree Update Operation",
+    "content": {
+      "steps": [
+        {
+          "visual": "graph TD\n  A[20] --> B[9]\n  A --> C[11]\n  B --> D[6]\n  B --> E[3]\n  C --> F[7]\n  C --> G[5]\n  D --> H[2]\n  D --> I[4-old]",
+          "label": "Update index 1 from value 4 to value 7, start at root"
+        },
+        {
+          "visual": "graph TD\n  A[20] --> B[9-path]\n  A --> C[11]\n  B --> D[6-path]\n  B --> E[3]\n  C --> F[7]\n  C --> G[5]\n  D --> H[2]\n  D --> I[7-updated]",
+          "label": "Navigate down the path to leaf at index 1, update leaf value"
+        },
+        {
+          "visual": "graph TD\n  A[20] --> B[9]\n  A --> C[11]\n  B --> D[9-updated]\n  B --> E[3]\n  C --> F[7]\n  C --> G[5]\n  D --> H[2]\n  D --> I[7]",
+          "label": "Propagate up: update parent D to 2 + 7 = 9"
+        },
+        {
+          "visual": "graph TD\n  A[23-final] --> B[12-updated]\n  A --> C[11]\n  B --> D[9]\n  B --> E[3]\n  C --> F[7]\n  C --> G[5]\n  D --> H[2]\n  D --> I[7]",
+          "label": "Continue propagating: B becomes 9 + 3 = 12, root A becomes 12 + 11 = 23"
+        }
+      ],
+      "summary": "Update operation modifies one leaf and propagates changes up the tree path, maintaining correct range sums in $O(\\log n)$ time."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:38:47.211Z"
+  },
+  {
+    "id": "visual-segment-trees-range-queries-007",
+    "type": "diagram",
+    "course": "Algorithms and Data Structures",
+    "subject": "Segment Trees & Range Queries",
+    "title": "Fenwick Tree Index Structure",
+    "content": {
+      "mermaid": "graph TD\n  A[8:covers-1-8] --> B[4:covers-1-4]\n  A --> C[12:covers-9-12]\n  B --> D[2:covers-1-2]\n  B --> E[6:covers-5-6]\n  C --> F[10:covers-9-10]\n  C --> G[14:covers-13-14]\n  D --> H[1]\n  D --> I[3]\n  E --> J[5]\n  E --> K[7]\n  F --> L[9]\n  F --> M[11]\n  G --> N[13]\n  G --> O[15]",
+      "caption": "Fenwick Tree logical structure showing how each index covers a range based on its binary representation. Index $i$ is responsible for range starting at $i - (i \\& -i) + 1$."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:38:47.211Z"
+  },
+  {
+    "id": "visual-segment-trees-range-queries-008",
+    "type": "steps",
+    "course": "Algorithms and Data Structures",
+    "subject": "Segment Trees & Range Queries",
+    "title": "Range Minimum Query Processing",
+    "content": {
+      "steps": [
+        {
+          "visual": "graph TD\n  A[min:1] --> B[min:3]\n  A --> C[min:1]\n  B --> D[min:3]\n  B --> E[min:4]\n  C --> F[min:1]\n  C --> G[min:2]\n  D --> H[8]\n  D --> I[3]\n  E --> J[4]\n  E --> K[7]\n  F --> L[1]\n  F --> M[6]\n  G --> N[2]\n  G --> O[5]",
+          "label": "RMQ segment tree built with minimum values at each node"
+        },
+        {
+          "visual": "graph TD\n  A[min:1-start] --> B[min:3]\n  A --> C[min:1]\n  B --> D[min:3]\n  B --> E[min:4]\n  C --> F[min:1]\n  C --> G[min:2]\n  D --> H[8]\n  D --> I[3]\n  E --> J[4]\n  E --> K[7]\n  F --> L[1]\n  F --> M[6]\n  G --> N[2]\n  G --> O[5]",
+          "label": "Query range [2,5] for minimum value, start traversal from root"
+        },
+        {
+          "visual": "graph TD\n  A[min:1] --> B[min:3-visit]\n  A --> C[min:1-visit]\n  B --> D[min:3]\n  B --> E[min:4-partial]\n  C --> F[min:1-partial]\n  C --> G[min:2]\n  D --> H[8]\n  D --> I[3]\n  E --> J[4]\n  E --> K[7]\n  F --> L[1]\n  F --> M[6]\n  G --> N[2]\n  G --> O[5]",
+          "label": "Check both children, range [2,3] maps to right subtree of B, [4,5] maps to left subtree of C"
+        },
+        {
+          "visual": "graph TD\n  A[min:1] --> B[min:3]\n  A --> C[min:1]\n  B --> D[min:3]\n  B --> E[min:4-result]\n  C --> F[min:1-result]\n  C --> G[min:2]\n  D --> H[8]\n  D --> I[3]\n  E --> J[4]\n  E --> K[7]\n  F --> L[1]\n  F --> M[6]\n  G --> N[2]\n  G --> O[5]",
+          "label": "Collect minimum from relevant nodes: min(4,1) = 1 for range [2,5]"
+        }
+      ],
+      "summary": "Range Minimum Query follows same traversal pattern as sum queries but uses minimum operation instead of addition to combine results."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:38:47.211Z"
+  },
+  {
+    "id": "visual-stacks-queues-001",
+    "type": "diagram",
+    "course": "Algorithms and Data Structures",
+    "subject": "Stacks & Queues",
+    "title": "Stack LIFO Structure",
+    "content": {
+      "mermaid": "graph TD\n  A[Top: 30] --> B[20]\n  B --> C[10]\n  C --> D[Bottom: 5]\n  E[Push 40] -.-> A\n  A -.-> F[Pop returns 30]",
+      "caption": "Stack follows Last-In-First-Out principle. Elements are added and removed from the top only."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:39:10.568Z"
+  },
+  {
+    "id": "visual-stacks-queues-002",
+    "type": "diagram",
+    "course": "Algorithms and Data Structures",
+    "subject": "Stacks & Queues",
+    "title": "Queue FIFO Structure",
+    "content": {
+      "mermaid": "graph LR\n  A[Enqueue] --> B[10]\n  B --> C[20]\n  C --> D[30]\n  D --> E[Dequeue]\n  F[Front] -.-> B\n  G[Rear] -.-> D",
+      "caption": "Queue follows First-In-First-Out principle. Elements enter at rear and exit from front."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:39:10.568Z"
+  },
+  {
+    "id": "visual-stacks-queues-003",
+    "type": "diagram",
+    "course": "Algorithms and Data Structures",
+    "subject": "Stacks & Queues",
+    "title": "Doubly Linked List Node Structure",
+    "content": {
+      "mermaid": "graph LR\n  A[prev] --> B[data: 10]\n  B --> C[next]\n  D[prev] --> E[data: 20]\n  E --> F[next]\n  C --> E\n  D --> B\n  G[NULL] --> A\n  F --> H[NULL]",
+      "caption": "Each node contains data and pointers to both previous and next nodes, enabling bidirectional traversal."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:39:10.568Z"
+  },
+  {
+    "id": "visual-stacks-queues-004",
+    "type": "diagram",
+    "course": "Algorithms and Data Structures",
+    "subject": "Stacks & Queues",
+    "title": "Deque Double-Ended Queue",
+    "content": {
+      "mermaid": "graph LR\n  A[addFront] --> B[10]\n  B --> C[20]\n  C --> D[30]\n  D --> E[addRear]\n  F[removeFront] -.-> B\n  G[removeRear] -.-> D",
+      "caption": "Deque allows insertion and deletion at both ends, combining stack and queue operations."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:39:10.568Z"
+  },
+  {
+    "id": "visual-stacks-queues-005",
+    "type": "code",
+    "course": "Algorithms and Data Structures",
+    "subject": "Stacks & Queues",
+    "title": "Stack Implementation with Array",
+    "content": {
+      "code": "class Stack:\n    def __init__(self):\n        self.items = []\n    \n    def push(self, item):\n        self.items.append(item)\n    \n    def pop(self):\n        if not self.is_empty():\n            return self.items.pop()\n        return None\n    \n    def peek(self):\n        return self.items[-1] if self.items else None\n    \n    def is_empty(self):\n        return len(self.items) == 0",
+      "language": "python",
+      "explanation": "Array-based stack using list operations. Push adds to end, pop removes from end in O(1) time."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:39:10.568Z"
+  },
+  {
+    "id": "visual-stacks-queues-006",
+    "type": "code",
+    "course": "Algorithms and Data Structures",
+    "subject": "Stacks & Queues",
+    "title": "Circular Array Queue Implementation",
+    "content": {
+      "code": "class CircularQueue:\n    def __init__(self, size):\n        self.queue = [None] * size\n        self.front = self.rear = -1\n        self.size = size\n    \n    def enqueue(self, item):\n        if (self.rear + 1) % self.size == self.front:\n            return False  # Queue full\n        if self.front == -1:\n            self.front = 0\n        self.rear = (self.rear + 1) % self.size\n        self.queue[self.rear] = item\n        return True\n    \n    def dequeue(self):\n        if self.front == -1:\n            return None\n        item = self.queue[self.front]\n        if self.front == self.rear:\n            self.front = self.rear = -1\n        else:\n            self.front = (self.front + 1) % self.size\n        return item",
+      "language": "python",
+      "explanation": "Circular queue prevents array waste by wrapping indices around using modulo operation for efficient space usage."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:39:10.568Z"
+  },
+  {
+    "id": "visual-stacks-queues-007",
+    "type": "code",
+    "course": "Algorithms and Data Structures",
+    "subject": "Stacks & Queues",
+    "title": "Reverse Linked List Algorithm",
+    "content": {
+      "code": "class ListNode:\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n\ndef reverse_list(head):\n    prev = None\n    current = head\n    \n    while current:\n        next_temp = current.next\n        current.next = prev\n        prev = current\n        current = next_temp\n    \n    return prev",
+      "language": "python",
+      "explanation": "Iterative reversal using three pointers: prev, current, and next_temp to reverse links in O(n) time, O(1) space."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:39:10.568Z"
+  },
+  {
+    "id": "visual-stacks-queues-008",
+    "type": "steps",
+    "course": "Algorithms and Data Structures",
+    "subject": "Stacks & Queues",
+    "title": "Stack Postfix Expression Evaluation",
+    "content": {
+      "steps": [
+        {
+          "visual": "graph TD\n  A[Expression: 5 3 + 2 *]\n  B[Stack: empty]\n  C[Scan: 5]",
+          "label": "Start with empty stack, scan first operand 5"
+        },
+        {
+          "visual": "graph TD\n  A[Stack]\n  A --> B[5]\n  C[Stack]\n  C --> D[3]\n  D --> B",
+          "label": "Push operands 5 and 3 onto stack"
+        },
+        {
+          "visual": "graph TD\n  A[See +: Pop 3,5]\n  B[Calculate: 5+3=8]\n  C[Stack]\n  C --> D[8]",
+          "label": "Encounter +: pop two operands, compute sum, push result"
+        },
+        {
+          "visual": "graph TD\n  A[Stack]\n  A --> B[2]\n  B --> C[8]\n  D[See *: Pop 2,8]\n  E[Result: 8*2=16]",
+          "label": "Push 2, then multiply: pop 2 and 8, compute 8×2=16"
+        }
+      ],
+      "summary": "Postfix evaluation uses stack to store operands. When operator found, pop required operands, compute, and push result."
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:39:10.568Z"
+  },
+  {
+    "id": "visual-priority-queues-heaps-001",
+    "type": "diagram",
+    "course": "Algorithms and Data Structures",
+    "subject": "Priority Queues & Heaps",
+    "title": "Min-Heap Tree and Array Representation",
+    "content": {
+      "mermaid": "graph TD\n  A[1] --> B[3]\n  A --> C[2]\n  B --> D[7]\n  B --> E[8]\n  C --> F[4]\n  C --> G[5]\n  D --> H[10]\n  D --> I[16]\n  E --> J[14]",
+      "caption": "Min-heap as binary tree with corresponding array: [1, 3, 2, 7, 8, 4, 5, 10, 16, 14]. Parent at index $i$ has children at $2i+1$ and $2i+2$"
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:39:32.441Z"
+  },
+  {
+    "id": "visual-priority-queues-heaps-002",
+    "type": "diagram",
+    "course": "Algorithms and Data Structures",
+    "subject": "Priority Queues & Heaps",
+    "title": "Max-Heap Structure Example",
+    "content": {
+      "mermaid": "graph TD\n  A[50] --> B[30]\n  A --> C[40]\n  B --> D[10]\n  B --> E[25]\n  C --> F[35]\n  C --> G[20]\n  D --> H[5]",
+      "caption": "Max-heap where each parent node is greater than or equal to its children. Root contains maximum element (50)"
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:39:32.441Z"
+  },
+  {
+    "id": "visual-priority-queues-heaps-003",
+    "type": "diagram",
+    "course": "Algorithms and Data Structures",
+    "subject": "Priority Queues & Heaps",
+    "title": "Heap After Extract-Min Operation",
+    "content": {
+      "mermaid": "graph TD\n  A[2] --> B[3]\n  A --> C[4]\n  B --> D[7]\n  B --> E[8]\n  C --> F[10]",
+      "caption": "Result after extracting minimum (1) from previous heap. Last element moved to root, then bubbled down to restore heap property"
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:39:32.441Z"
+  },
+  {
+    "id": "visual-priority-queues-heaps-004",
+    "type": "diagram",
+    "course": "Algorithms and Data Structures",
+    "subject": "Priority Queues & Heaps",
+    "title": "Binomial Heap Structure",
+    "content": {
+      "mermaid": "graph TD\n  A[6] --> B[29]\n  A --> C[14]\n  A --> D[38]\n  C --> E[26]\n  F[12] --> G[25]\n  F --> H[16]\n  I[18]",
+      "caption": "Binomial heap consisting of binomial trees of different orders. Each tree satisfies heap property and has $2^k$ nodes"
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:39:32.441Z"
+  },
+  {
+    "id": "visual-priority-queues-heaps-005",
+    "type": "code",
+    "course": "Algorithms and Data Structures",
+    "subject": "Priority Queues & Heaps",
+    "title": "Heapify Implementation - Sift Down",
+    "content": {
+      "code": "def heapify(arr, n, i):\n    smallest = i\n    left = 2 * i + 1\n    right = 2 * i + 2\n    \n    if left < n and arr[left] < arr[smallest]:\n        smallest = left\n    \n    if right < n and arr[right] < arr[smallest]:\n        smallest = right\n    \n    if smallest != i:\n        arr[i], arr[smallest] = arr[smallest], arr[i]\n        heapify(arr, n, smallest)",
+      "language": "python",
+      "explanation": "Maintains min-heap property by comparing node with children and swapping with smallest child if necessary, then recursively heapifying affected subtree"
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:39:32.441Z"
+  },
+  {
+    "id": "visual-priority-queues-heaps-006",
+    "type": "code",
+    "course": "Algorithms and Data Structures",
+    "subject": "Priority Queues & Heaps",
+    "title": "Heap Insert with Sift-Up",
+    "content": {
+      "code": "def heap_insert(heap, key):\n    heap.append(key)\n    i = len(heap) - 1\n    \n    while i > 0:\n        parent = (i - 1) // 2\n        if heap[i] >= heap[parent]:\n            break\n        heap[i], heap[parent] = heap[parent], heap[i]\n        i = parent\n    \n    return heap",
+      "language": "python",
+      "explanation": "Adds new element at end of heap array, then bubbles it up by comparing with parent and swapping until heap property is restored"
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:39:32.441Z"
+  },
+  {
+    "id": "visual-priority-queues-heaps-007",
+    "type": "code",
+    "course": "Algorithms and Data Structures",
+    "subject": "Priority Queues & Heaps",
+    "title": "Build Heap from Unsorted Array",
+    "content": {
+      "code": "def build_min_heap(arr):\n    n = len(arr)\n    # Start from last non-leaf node\n    for i in range(n // 2 - 1, -1, -1):\n        heapify(arr, n, i)\n    return arr\n\ndef heapify(arr, n, i):\n    smallest = i\n    left, right = 2*i + 1, 2*i + 2\n    if left < n and arr[left] < arr[smallest]: smallest = left\n    if right < n and arr[right] < arr[smallest]: smallest = right\n    if smallest != i:\n        arr[i], arr[smallest] = arr[smallest], arr[i]\n        heapify(arr, n, smallest)",
+      "language": "python",
+      "explanation": "Builds min-heap from unsorted array in O(n) time by calling heapify on all non-leaf nodes from bottom-up"
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:39:32.441Z"
+  },
+  {
+    "id": "visual-priority-queues-heaps-008",
+    "type": "steps",
+    "course": "Algorithms and Data Structures",
+    "subject": "Priority Queues & Heaps",
+    "title": "Insert Element into Min-Heap Process",
+    "content": {
+      "steps": [
+        {
+          "visual": "graph TD\n  A[2] --> B[5]\n  A --> C[3]\n  B --> D[9]\n  B --> E[8]\n  C --> F[7]\n  C --> G[6]\n  D --> H[1]",
+          "label": "Insert 1 at end of heap array"
+        },
+        {
+          "visual": "graph TD\n  A[2] --> B[1]\n  A --> C[3]\n  B --> D[9]\n  B --> E[8]\n  C --> F[7]\n  C --> G[6]\n  D --> H[5]",
+          "label": "Compare with parent 9, swap since 1 < 9"
+        },
+        {
+          "visual": "graph TD\n  A[2] --> B[1]\n  A --> C[3]\n  B --> D[9]\n  B --> E[8]\n  C --> F[7]\n  C --> G[6]\n  D --> H[5]",
+          "label": "Compare with parent 5, swap since 1 < 5"
+        },
+        {
+          "visual": "graph TD\n  A[1] --> B[2]\n  A --> C[3]\n  B --> D[9]\n  B --> E[8]\n  C --> F[7]\n  C --> G[6]\n  D --> H[5]",
+          "label": "Compare with root 2, swap since 1 < 2. Heap property restored"
+        }
+      ],
+      "summary": "Insert operation adds element at end and bubbles up through parent comparisons until heap property is satisfied"
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:39:32.441Z"
+  },
+  {
+    "id": "visual-peak-finding-intro-001",
+    "type": "diagram",
+    "course": "Algorithms and Data Structures",
+    "subject": "Peak Finding & Intro",
+    "title": "1D Peak Finding Binary Search Decision Tree",
+    "content": {
+      "mermaid": "graph TD\n  A[Array 5,3,7,1,9,2] --> B{Compare mid with neighbors}\n  B -->|arr[2]=7 > arr[1]=3| C[Check right neighbor]\n  C -->|7 > 1| D[Peak found at index 2]\n  B -->|Not peak| E[Split array]\n  E --> F[Search left half]\n  E --> G[Search right half]",
+      "caption": "Binary search for 1D peak finding reduces search space by half at each step, achieving $O(\\log n)$ complexity"
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:39:50.606Z"
+  },
+  {
+    "id": "visual-peak-finding-intro-002",
+    "type": "diagram",
+    "course": "Algorithms and Data Structures",
+    "subject": "Peak Finding & Intro",
+    "title": "2D Peak Finding Divide-and-Conquer Strategy",
+    "content": {
+      "mermaid": "graph TD\n  A[2D Grid] --> B[Find middle column]\n  B --> C[Find max in middle column]\n  C --> D{Compare with left/right neighbors}\n  D -->|Peak found| E[Return position]\n  D -->|Left neighbor larger| F[Recurse on left half]\n  D -->|Right neighbor larger| G[Recurse on right half]\n  F --> H[Repeat process]\n  G --> I[Repeat process]",
+      "caption": "2D peak finding using divide-and-conquer reduces problem size from $n \\times m$ to $n \\times m/2$ at each step"
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:39:50.606Z"
+  },
+  {
+    "id": "visual-peak-finding-intro-003",
+    "type": "code",
+    "course": "Algorithms and Data Structures",
+    "subject": "Peak Finding & Intro",
+    "title": "1D Peak Finder Implementation",
+    "content": {
+      "code": "def find_1d_peak(arr):\n    left, right = 0, len(arr) - 1\n    \n    while left <= right:\n        mid = (left + right) // 2\n        \n        # Check if mid is a peak\n        left_ok = (mid == 0) or (arr[mid] >= arr[mid-1])\n        right_ok = (mid == len(arr)-1) or (arr[mid] >= arr[mid+1])\n        \n        if left_ok and right_ok:\n            return mid\n        elif not left_ok:\n            right = mid - 1\n        else:\n            left = mid + 1\n    \n    return -1",
+      "language": "python",
+      "explanation": "Binary search approach that compares each middle element with its neighbors, eliminating half the search space based on peak conditions"
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:39:50.606Z"
+  },
+  {
+    "id": "visual-peak-finding-intro-004",
+    "type": "steps",
+    "course": "Algorithms and Data Structures",
+    "subject": "Peak Finding & Intro",
+    "title": "1D Peak Finding Array Halving Process",
+    "content": {
+      "steps": [
+        {
+          "visual": "graph LR\n  A[1] --- B[3] --- C[7] --- D[2] --- E[9] --- F[4]\n  style C fill:#ff9999\n  G[mid=2, val=7]",
+          "label": "Start with array, check middle element 7 at index 2"
+        },
+        {
+          "visual": "graph LR\n  A[1] --- B[3] --- C[7] --- D[2] --- E[9] --- F[4]\n  style C fill:#99ff99\n  G[7 > 3 and 7 > 2: Peak found!]",
+          "label": "Compare 7 with neighbors: 7 > 3 and 7 > 2, so it's a peak"
+        },
+        {
+          "visual": "graph LR\n  A[1] --- B[5] --- C[3] --- D[8] --- E[2]\n  style D fill:#ff9999\n  G[Different array: mid=2, val=3]",
+          "label": "Alternative case: middle element 3 is not a peak"
+        },
+        {
+          "visual": "graph LR\n  D[8] --- E[2]\n  style D fill:#99ff99\n  G[Search right half, find peak 8]",
+          "label": "Since right neighbor 8 > 3, search right half and find peak"
+        }
+      ],
+      "summary": "Binary search eliminates half the array at each step, guaranteeing $O(\\log n)$ time complexity for 1D peak finding"
+    },
+    "source": "Generated visual card",
+    "createdAt": "2026-03-31T19:39:50.606Z"
   }
 ]

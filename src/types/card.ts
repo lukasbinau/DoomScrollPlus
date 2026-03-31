@@ -17,7 +17,26 @@ export interface QuizContent {
   correctIndex: number;
 }
 
-export type CardType = 'summary' | 'bullets' | 'flashcard' | 'quiz';
+export interface DiagramContent {
+  mermaid: string;
+  caption: string;
+}
+
+export interface CodeContent {
+  code: string;
+  language: string;
+  explanation: string;
+}
+
+export interface StepsContent {
+  steps: Array<{
+    visual: string;
+    label: string;
+  }>;
+  summary: string;
+}
+
+export type CardType = 'summary' | 'bullets' | 'flashcard' | 'quiz' | 'diagram' | 'code' | 'steps';
 
 export interface Card {
   id: string;
@@ -25,7 +44,7 @@ export interface Card {
   course: string;
   subject: string;
   title: string;
-  content: SummaryContent | BulletsContent | FlashcardContent | QuizContent;
+  content: SummaryContent | BulletsContent | FlashcardContent | QuizContent | DiagramContent | CodeContent | StepsContent;
   source: string;
   createdAt: string;
 }

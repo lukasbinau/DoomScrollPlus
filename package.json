@@ -11,12 +11,15 @@
   },
   "dependencies": {
     "katex": "^0.16.44",
+    "mermaid": "^11.13.0",
+    "prismjs": "^1.30.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@anthropic-ai/sdk": "^0.80.0",
     "@types/pdf-parse": "^1.1.5",
+    "@types/prismjs": "^1.26.6",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "@vitejs/plugin-react": "^4.3.0",

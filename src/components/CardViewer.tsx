@@ -4,6 +4,9 @@ import { SummaryCard } from './cards/SummaryCard';
 import { BulletsCard } from './cards/BulletsCard';
 import { FlashCard } from './cards/FlashCard';
 import { QuizCard } from './cards/QuizCard';
+import { DiagramCard } from './cards/DiagramCard';
+import { CodeCard } from './cards/CodeCard';
+import { StepsCard } from './cards/StepsCard';
 
 interface Props {
   cards: Card[];
@@ -19,6 +22,9 @@ function renderCard(card: Card) {
     case 'bullets': return <BulletsCard card={card} />;
     case 'flashcard': return <FlashCard card={card} />;
     case 'quiz': return <QuizCard card={card} />;
+    case 'diagram': return <DiagramCard card={card} />;
+    case 'code': return <CodeCard card={card} />;
+    case 'steps': return <StepsCard card={card} />;
   }
 }
 
