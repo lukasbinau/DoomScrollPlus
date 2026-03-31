@@ -1,0 +1,193 @@
+[
+  {
+    "id": "bio-001",
+    "type": "summary",
+    "subject": "Biology",
+    "title": "Mitochondria — The Powerhouse",
+    "content": {
+      "text": "Mitochondria generate most of the cell's ATP through oxidative phosphorylation. They have a double membrane — the inner membrane is highly folded into cristae, maximizing surface area for the electron transport chain. Fun fact: they have their own DNA, supporting the endosymbiotic theory."
+    },
+    "source": "Biology Textbook Ch.6",
+    "createdAt": "2026-03-15T10:00:00Z"
+  },
+  {
+    "id": "bio-002",
+    "type": "bullets",
+    "subject": "Biology",
+    "title": "Stages of Mitosis",
+    "content": {
+      "points": [
+        "Prophase: chromosomes condense, spindle fibers begin to form",
+        "Metaphase: chromosomes align at the cell's equator (metaphase plate)",
+        "Anaphase: sister chromatids separate and move to opposite poles",
+        "Telophase: nuclear envelopes reform, chromosomes decondense",
+        "Cytokinesis: cytoplasm divides to produce two daughter cells"
+      ]
+    },
+    "source": "Biology Textbook Ch.8",
+    "createdAt": "2026-03-15T10:05:00Z"
+  },
+  {
+    "id": "hist-001",
+    "type": "summary",
+    "subject": "History",
+    "title": "The Fall of the Berlin Wall",
+    "content": {
+      "text": "On November 9, 1989, the Berlin Wall fell after 28 years of dividing East and West Berlin. Growing pressure from peaceful protests and political reform in Eastern Europe led the East German government to open the border. It became the symbol of the end of the Cold War and led to German reunification in 1990."
+    },
+    "source": "Modern History Notes",
+    "createdAt": "2026-03-16T09:00:00Z"
+  },
+  {
+    "id": "math-001",
+    "type": "flashcard",
+    "subject": "Math",
+    "title": "Quadratic Formula",
+    "content": {
+      "question": "What is the quadratic formula used to solve ax² + bx + c = 0?",
+      "answer": "x = (-b ± √(b² - 4ac)) / 2a. The discriminant (b² - 4ac) determines the number of solutions: positive = 2 real, zero = 1 real, negative = 2 complex."
+    },
+    "source": "Algebra II Notes",
+    "createdAt": "2026-03-16T09:30:00Z"
+  },
+  {
+    "id": "cs-001",
+    "type": "quiz",
+    "subject": "Computer Science",
+    "title": "Big O Notation",
+    "content": {
+      "question": "What is the time complexity of binary search on a sorted array of n elements?",
+      "options": ["O(n)", "O(log n)", "O(n log n)", "O(1)"],
+      "correctIndex": 1
+    },
+    "source": "CS Algorithms Lecture 3",
+    "createdAt": "2026-03-17T14:00:00Z"
+  },
+  {
+    "id": "bio-003",
+    "type": "summary",
+    "subject": "Biology",
+    "title": "DNA Replication",
+    "content": {
+      "text": "DNA replication is semi-conservative — each new double helix contains one original and one new strand. Helicase unwinds the helix, primase adds RNA primers, and DNA polymerase III synthesizes the new strand in the 5'→3' direction. The leading strand is continuous; the lagging strand is built in Okazaki fragments."
+    },
+    "source": "Biology Textbook Ch.11",
+    "createdAt": "2026-03-17T15:00:00Z"
+  },
+  {
+    "id": "hist-002",
+    "type": "bullets",
+    "subject": "History",
+    "title": "Causes of World War I",
+    "content": {
+      "points": [
+        "Militarism: European nations built up massive armies and navies",
+        "Alliances: complex web of treaties meant one conflict could drag in many nations",
+        "Imperialism: competition for colonies created international tensions",
+        "Nationalism: ethnic pride fueled rivalries, especially in the Balkans",
+        "Assassination of Archduke Franz Ferdinand was the immediate trigger"
+      ]
+    },
+    "source": "Modern History Ch.3",
+    "createdAt": "2026-03-18T08:00:00Z"
+  },
+  {
+    "id": "math-002",
+    "type": "summary",
+    "subject": "Math",
+    "title": "Pythagorean Theorem",
+    "content": {
+      "text": "In any right triangle, the square of the hypotenuse equals the sum of the squares of the other two sides: a² + b² = c². This is one of the most fundamental relationships in geometry, used in distance calculations, trigonometry, and even 3D space."
+    },
+    "source": "Geometry Notes",
+    "createdAt": "2026-03-18T09:00:00Z"
+  },
+  {
+    "id": "cs-002",
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "HTTP Status Codes",
+    "content": {
+      "points": [
+        "200 OK — request succeeded",
+        "301 Moved Permanently — resource has a new URL",
+        "404 Not Found — server can't find the resource",
+        "500 Internal Server Error — server encountered an unexpected condition"
+      ]
+    },
+    "source": "Web Dev Lecture 5",
+    "createdAt": "2026-03-19T10:00:00Z"
+  },
+  {
+    "id": "bio-004",
+    "type": "quiz",
+    "subject": "Biology",
+    "title": "Cell Organelles",
+    "content": {
+      "question": "Which organelle is responsible for protein synthesis?",
+      "options": ["Golgi apparatus", "Ribosome", "Lysosome", "Smooth ER"],
+      "correctIndex": 1
+    },
+    "source": "Biology Textbook Ch.4",
+    "createdAt": "2026-03-19T11:00:00Z"
+  },
+  {
+    "id": "hist-003",
+    "type": "flashcard",
+    "subject": "History",
+    "title": "The Renaissance",
+    "content": {
+      "question": "When and where did the Renaissance begin, and what was its core idea?",
+      "answer": "The Renaissance began in 14th-century Italy (Florence). Its core idea was humanism — a renewed focus on human potential, classical learning, art, and science, marking the transition from the medieval to the modern world."
+    },
+    "source": "World History Ch.7",
+    "createdAt": "2026-03-20T08:00:00Z"
+  },
+  {
+    "id": "math-003",
+    "type": "quiz",
+    "subject": "Math",
+    "title": "Derivatives",
+    "content": {
+      "question": "What is the derivative of f(x) = x³ + 2x?",
+      "options": ["3x² + 2", "x² + 2", "3x³ + 2x", "3x + 2"],
+      "correctIndex": 0
+    },
+    "source": "Calculus Notes Ch.2",
+    "createdAt": "2026-03-20T10:00:00Z"
+  },
+  {
+    "id": "cs-003",
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "What is an API?",
+    "content": {
+      "text": "An API (Application Programming Interface) is a set of rules that lets different software applications communicate. Think of it as a waiter in a restaurant: you (the client) tell the waiter (API) what you want, and they bring it from the kitchen (server). REST APIs use HTTP methods like GET, POST, PUT, DELETE."
+    },
+    "source": "Web Dev Lecture 2",
+    "createdAt": "2026-03-21T09:00:00Z"
+  },
+  {
+    "id": "bio-005",
+    "type": "flashcard",
+    "subject": "Biology",
+    "title": "Photosynthesis Equation",
+    "content": {
+      "question": "What is the overall chemical equation for photosynthesis?",
+      "answer": "6CO₂ + 6H₂O + light energy → C₆H₁₂O₆ + 6O₂. Carbon dioxide and water are converted into glucose and oxygen using sunlight, primarily in the chloroplasts."
+    },
+    "source": "Biology Textbook Ch.7",
+    "createdAt": "2026-03-21T10:00:00Z"
+  },
+  {
+    "id": "hist-004",
+    "type": "summary",
+    "subject": "History",
+    "title": "The French Revolution",
+    "content": {
+      "text": "The French Revolution (1789–1799) overthrew the monarchy and established France as a republic. Triggered by economic crisis, social inequality, and Enlightenment ideas, key events included the storming of the Bastille, the Declaration of the Rights of Man, and the Reign of Terror. It fundamentally changed European political systems."
+    },
+    "source": "Modern History Ch.5",
+    "createdAt": "2026-03-22T08:00:00Z"
+  }
+]
