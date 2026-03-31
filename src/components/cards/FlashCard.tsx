@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import type { Card, FlashcardContent } from '../../types/card';
+import { MathText } from '../MathText';
 
 interface Props {
   card: Card;
@@ -26,7 +27,7 @@ export function FlashCard({ card }: Props) {
               Question
             </span>
             <p className="text-xl font-semibold leading-snug text-center text-white">
-              {question}
+              <MathText text={question} />
             </p>
             <span className="mt-6 text-xs text-white/30">Tap to reveal</span>
           </div>
@@ -37,7 +38,7 @@ export function FlashCard({ card }: Props) {
               Answer
             </span>
             <p className="text-lg leading-relaxed text-center text-white/90">
-              {answer}
+              <MathText text={answer} />
             </p>
             <span className="mt-6 text-xs text-white/30">Tap to flip back</span>
           </div>

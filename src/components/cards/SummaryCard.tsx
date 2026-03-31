@@ -1,4 +1,5 @@
 import type { Card, SummaryContent } from '../../types/card';
+import { MathText } from '../MathText';
 
 interface Props {
   card: Card;
@@ -13,10 +14,10 @@ export function SummaryCard({ card }: Props) {
         {card.subject}
       </span>
       <h2 className="mb-6 text-2xl font-bold leading-tight text-white">
-        {card.title}
+        <MathText text={card.title} />
       </h2>
       <p className="text-lg leading-relaxed text-white/80 max-w-[340px]">
-        {text}
+        <MathText text={text} />
       </p>
       <span className="mt-8 text-xs text-white/30">
         {card.source}

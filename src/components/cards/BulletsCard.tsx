@@ -1,4 +1,5 @@
 import type { Card, BulletsContent } from '../../types/card';
+import { MathText } from '../MathText';
 
 interface Props {
   card: Card;
@@ -13,7 +14,7 @@ export function BulletsCard({ card }: Props) {
         {card.subject}
       </span>
       <h2 className="mb-8 text-2xl font-bold leading-tight text-center text-white">
-        {card.title}
+        <MathText text={card.title} />
       </h2>
       <ul className="space-y-4 max-w-[340px] w-full">
         {points.map((point, i) => (
@@ -21,7 +22,7 @@ export function BulletsCard({ card }: Props) {
             <span className="flex-shrink-0 w-6 h-6 mt-0.5 rounded-full bg-violet-500/20 text-violet-400 flex items-center justify-center text-xs font-bold">
               {i + 1}
             </span>
-            <span className="text-base leading-relaxed text-white/80">{point}</span>
+            <MathText text={point} className="text-base leading-relaxed text-white/80" />
           </li>
         ))}
       </ul>

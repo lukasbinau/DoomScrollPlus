@@ -10,6 +10,7 @@
     "process": "tsx scripts/process-content.ts"
   },
   "dependencies": {
+    "katex": "^0.16.44",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },

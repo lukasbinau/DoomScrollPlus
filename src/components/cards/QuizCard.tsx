@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import type { Card, QuizContent } from '../../types/card';
+import { MathText } from '../MathText';
 
 interface Props {
   card: Card;
@@ -21,7 +22,7 @@ export function QuizCard({ card }: Props) {
       </span>
 
       <h2 className="mb-8 text-xl font-bold leading-snug text-center text-white max-w-[340px]">
-        {question}
+        <MathText text={question} />
       </h2>
 
       <div className="w-full max-w-[340px] space-y-3">
@@ -46,7 +47,7 @@ export function QuizCard({ card }: Props) {
               <span className="mr-3 font-semibold text-white/40">
                 {String.fromCharCode(65 + i)}
               </span>
-              {option}
+              <MathText text={option} />
             </button>
           );
         })}
