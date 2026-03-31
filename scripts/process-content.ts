@@ -30,10 +30,13 @@ async function extractText(filePath: string): Promise<string> {
   }
 
   if (ext === '.pdf') {
-    const pdfParse = (await import('pdf-parse')).default;
-    const buffer = fs.readFileSync(filePath);
-    const data = await pdfParse(buffer);
-    return data.text;
+    const { PDFParse } = await import('pdf-parse');
+    const buffer = new Uint8Array(fs.readFileSync(filePath));
+    const pdf = new PDFParse(buffer);
+    await pdf.load();
+    const result = await pdf.getText();
+    pdf.destroy();
+    return result.text;
   }
 
   if (ext === '.docx') {
@@ -100,7 +103,7 @@ ${text.slice(0, 12000)}
 Return ONLY the JSON array, no markdown fences, no explanation.`;
 
   const message = await client.messages.create({
-    model: 'claude-3-5-haiku-latest',
+    model: 'claude-sonnet-4-20250514',
     max_tokens: 4096,
     messages: [{ role: 'user', content: prompt }],
   });
@@ -192,22 +195,21 @@ async function main() {
       const cards = await generateCards(client, text, file);
       console.log(`  Generated ${cards.length} cards\n`);
       allNewCards.push(...cards);
+
+      // Write after each file so progress is saved even if a later file fails
+      const existingIds = new Set(existingCards.map((c) => (c as { id: string }).id));
+      const merged = [
+        ...existingCards,
+        ...allNewCards.filter(c => !existingIds.has((c as { id: string }).id)),
+      ];
+      fs.mkdirSync(path.dirname(OUTPUT_FILE), { recursive: true });
+      fs.writeFileSync(OUTPUT_FILE, JSON.stringify(merged, null, 2));
     } catch (err) {
       console.error(`  Error processing ${file}:`, err);
     }
   }
 
-  // Merge: keep existing, add new (avoid duplicate IDs)
-  const existingIds = new Set(existingCards.map((c) => (c as { id: string }).id));
-  const merged = [
-    ...existingCards,
-    ...allNewCards.filter(c => !existingIds.has((c as { id: string }).id)),
-  ];
-
-  fs.mkdirSync(path.dirname(OUTPUT_FILE), { recursive: true });
-  fs.writeFileSync(OUTPUT_FILE, JSON.stringify(merged, null, 2));
-
-  console.log(`Done! ${allNewCards.length} new cards added. Total: ${merged.length} cards.`);
+  console.log(`\nDone! ${allNewCards.length} new cards added. Total: ${existingCards.length + allNewCards.length} cards.`);
   console.log(`Output: ${OUTPUT_FILE}`);
 }
 

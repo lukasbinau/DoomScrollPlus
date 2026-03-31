@@ -57,7 +57,12 @@
     "title": "Big O Notation",
     "content": {
       "question": "What is the time complexity of binary search on a sorted array of n elements?",
-      "options": ["O(n)", "O(log n)", "O(n log n)", "O(1)"],
+      "options": [
+        "O(n)",
+        "O(log n)",
+        "O(n log n)",
+        "O(1)"
+      ],
       "correctIndex": 1
     },
     "source": "CS Algorithms Lecture 3",
@@ -125,7 +130,12 @@
     "title": "Cell Organelles",
     "content": {
       "question": "Which organelle is responsible for protein synthesis?",
-      "options": ["Golgi apparatus", "Ribosome", "Lysosome", "Smooth ER"],
+      "options": [
+        "Golgi apparatus",
+        "Ribosome",
+        "Lysosome",
+        "Smooth ER"
+      ],
       "correctIndex": 1
     },
     "source": "Biology Textbook Ch.4",
@@ -150,7 +160,12 @@
     "title": "Derivatives",
     "content": {
       "question": "What is the derivative of f(x) = x³ + 2x?",
-      "options": ["3x² + 2", "x² + 2", "3x³ + 2x", "3x + 2"],
+      "options": [
+        "3x² + 2",
+        "x² + 2",
+        "3x³ + 2x",
+        "3x + 2"
+      ],
       "correctIndex": 0
     },
     "source": "Calculus Notes Ch.2",
@@ -189,5 +204,4537 @@
     },
     "source": "Modern History Ch.5",
     "createdAt": "2026-03-22T08:00:00Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Machine Learning",
+    "title": "Data Matrix Structure",
+    "content": {
+      "text": "In machine learning, data is organized in an N × M matrix X where N represents the number of observations (data objects) and M represents the number of attributes (features). Each row contains one observation, and each column represents a different attribute or feature of the data."
+    },
+    "id": "02450_Book-001",
+    "source": "02450_Book.pdf",
+    "createdAt": "2026-03-31T16:28:05.607Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Machine Learning",
+    "title": "Key Data Components",
+    "content": {
+      "points": [
+        "X: Data matrix with N observations × M attributes",
+        "y: Output vector containing target values or class labels",
+        "attributeNames: Cell array storing names for each attribute",
+        "N: Total number of data objects in the dataset",
+        "M: Total number of attributes per observation"
+      ]
+    },
+    "id": "02450_Book-002",
+    "source": "02450_Book.pdf",
+    "createdAt": "2026-03-31T16:28:05.607Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Machine Learning",
+    "title": "Regression vs Classification",
+    "content": {
+      "text": "In regression tasks, the output variable y contains continuous values we want to predict. In classification tasks, y contains class indices (0, 1, ..., C-1) where C is the total number of classes, and we predict which category each observation belongs to."
+    },
+    "id": "02450_Book-003",
+    "source": "02450_Book.pdf",
+    "createdAt": "2026-03-31T16:28:05.607Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Machine Learning",
+    "title": "Machine Learning Task Types",
+    "content": {
+      "points": [
+        "Supervised learning: Uses labeled data to learn patterns",
+        "Unsupervised learning: Finds hidden patterns without labels",
+        "Reinforcement learning: Learns through trial and error with rewards",
+        "Each type requires different approaches and evaluation methods"
+      ]
+    },
+    "id": "02450_Book-004",
+    "source": "02450_Book.pdf",
+    "createdAt": "2026-03-31T16:28:05.607Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Machine Learning",
+    "title": "Cross-Validation Data Split",
+    "content": {
+      "text": "Machine learning uses cross-validation by splitting data into training and test sets. Variables are labeled with 'train' or 'test' suffixes to indicate which dataset they belong to, ensuring proper evaluation of model performance on unseen data."
+    },
+    "id": "02450_Book-005",
+    "source": "02450_Book.pdf",
+    "createdAt": "2026-03-31T16:28:05.607Z"
+  },
+  {
+    "type": "flashcard",
+    "subject": "Machine Learning",
+    "title": "Data Matrix Dimensions",
+    "content": {
+      "question": "In a machine learning data matrix X with dimensions N × M, what do N and M represent?",
+      "answer": "N represents the number of data objects (observations), and M represents the number of attributes (features) for each observation."
+    },
+    "id": "02450_Book-006",
+    "source": "02450_Book.pdf",
+    "createdAt": "2026-03-31T16:28:05.607Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Machine Learning",
+    "title": "Standard Data Format",
+    "content": {
+      "text": "Machine learning uses a standardized data format where observations are stored as row vectors in a matrix, with each column representing a different attribute. This consistent format allows algorithms to process data efficiently regardless of the specific domain or application."
+    },
+    "id": "02450_Book-007",
+    "source": "02450_Book.pdf",
+    "createdAt": "2026-03-31T16:28:05.607Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Machine Learning",
+    "title": "Feature Transformations",
+    "content": {
+      "points": [
+        "One-out-of-K coding: Converts categorical variables to binary vectors",
+        "Binarizing/thresholding: Converts continuous values to binary",
+        "Transformations prepare data for specific algorithms",
+        "Different algorithms may require different data formats"
+      ]
+    },
+    "id": "02450_Book-008",
+    "source": "02450_Book.pdf",
+    "createdAt": "2026-03-31T16:28:05.607Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Machine Learning",
+    "title": "Principal Component Analysis Purpose",
+    "content": {
+      "text": "Principal Component Analysis (PCA) is a dimensionality reduction technique that finds the most important directions of variation in high-dimensional data. It projects data onto lower-dimensional subspaces while preserving as much variance as possible."
+    },
+    "id": "02450_Book-009",
+    "source": "02450_Book.pdf",
+    "createdAt": "2026-03-31T16:28:05.607Z"
+  },
+  {
+    "type": "quiz",
+    "subject": "Machine Learning",
+    "title": "Classification Output Format",
+    "content": {
+      "question": "In a classification problem with 4 classes, what values would the output vector y contain?",
+      "options": [
+        "Values 1, 2, 3, 4",
+        "Values 0, 1, 2, 3",
+        "Values A, B, C, D",
+        "Continuous values 0.0 to 4.0"
+      ],
+      "correctIndex": 1
+    },
+    "id": "02450_Book-010",
+    "source": "02450_Book.pdf",
+    "createdAt": "2026-03-31T16:28:05.607Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Machine Learning",
+    "title": "Mathematical Notation Basics",
+    "content": {
+      "text": "Vectors are denoted by lowercase letters (x, y) while matrices use uppercase letters (A, B, X). The transpose operation is shown with superscript T. Individual elements are accessed using subscripts: xi for vector elements and Aij for matrix elements."
+    },
+    "id": "02450_Book-011",
+    "source": "02450_Book.pdf",
+    "createdAt": "2026-03-31T16:28:05.607Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Machine Learning",
+    "title": "Attribute Types",
+    "content": {
+      "points": [
+        "Numerical: Continuous values like height, weight, temperature",
+        "Categorical: Discrete categories like color, brand, type",
+        "Ordinal: Ordered categories like rating scales",
+        "Binary: Two-value attributes like yes/no, true/false"
+      ]
+    },
+    "id": "02450_Book-012",
+    "source": "02450_Book.pdf",
+    "createdAt": "2026-03-31T16:28:05.607Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Balanced Search Trees Overview",
+    "content": {
+      "text": "Balanced search trees guarantee logarithmic performance for all operations, unlike regular BSTs which can have poor worst-case performance. They slightly relax perfect balance requirements to maintain guaranteed ~lg N search time for N nodes, making them ideal for dynamic insertions while preserving efficiency."
+    },
+    "id": "Algs4edBalancedSearchTrees-001",
+    "source": "Algs4edBalancedSearchTrees.pdf",
+    "createdAt": "2026-03-31T16:28:25.165Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "2-3 Tree Node Types",
+    "content": {
+      "points": [
+        "2-nodes hold one key and two links (left for smaller keys, right for larger keys)",
+        "3-nodes hold two keys and three links (left, middle, and right subtrees)",
+        "All null links are the same distance from root (perfectly balanced)",
+        "Nodes can hold multiple keys unlike standard BST nodes"
+      ]
+    },
+    "id": "Algs4edBalancedSearchTrees-002",
+    "source": "Algs4edBalancedSearchTrees.pdf",
+    "createdAt": "2026-03-31T16:28:25.165Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "2-3 Tree Search Algorithm",
+    "content": {
+      "text": "Searching in a 2-3 tree works like BST search but compares against multiple keys per node. Compare the search key against all keys at current node - if found, it's a hit. Otherwise, follow the appropriate link based on which interval contains the search key until reaching a null link (miss) or finding the key."
+    },
+    "id": "Algs4edBalancedSearchTrees-003",
+    "source": "Algs4edBalancedSearchTrees.pdf",
+    "createdAt": "2026-03-31T16:28:25.165Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Insertion into 2-Nodes vs 3-Nodes",
+    "content": {
+      "points": [
+        "Inserting into 2-node: Simply replace with 3-node containing both keys",
+        "Inserting into 3-node: Create temporary 4-node then split it",
+        "4-node splits into two 2-nodes with middle key moving up to parent",
+        "Process maintains perfect balance throughout the tree"
+      ]
+    },
+    "id": "Algs4edBalancedSearchTrees-004",
+    "source": "Algs4edBalancedSearchTrees.pdf",
+    "createdAt": "2026-03-31T16:28:25.165Z"
+  },
+  {
+    "type": "flashcard",
+    "subject": "Computer Science",
+    "title": "Root Splitting",
+    "content": {
+      "question": "What happens when you need to split a 4-node at the root of a 2-3 tree?",
+      "answer": "The 4-node splits into three 2-nodes, with the middle key becoming the new root, increasing the tree height by 1. This is the only way 2-3 trees grow taller."
+    },
+    "id": "Algs4edBalancedSearchTrees-005",
+    "source": "Algs4edBalancedSearchTrees.pdf",
+    "createdAt": "2026-03-31T16:28:25.165Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Local Transformations Property",
+    "content": {
+      "text": "All 2-3 tree insertions involve purely local transformations - only the specific nodes and links being modified need to be examined. No other part of the tree is affected, and each transformation involves changing only a bounded constant number of links while preserving global order and balance properties."
+    },
+    "id": "Algs4edBalancedSearchTrees-006",
+    "source": "Algs4edBalancedSearchTrees.pdf",
+    "createdAt": "2026-03-31T16:28:25.165Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "2-3 Tree Growth Pattern",
+    "content": {
+      "points": [
+        "Unlike regular BSTs that grow down from top, 2-3 trees grow up from bottom",
+        "Height increases only when root splits (rare occurrence)",
+        "All paths from root to null links maintain same length",
+        "Growth is perfectly balanced - no path becomes longer than others"
+      ]
+    },
+    "id": "Algs4edBalancedSearchTrees-007",
+    "source": "Algs4edBalancedSearchTrees.pdf",
+    "createdAt": "2026-03-31T16:28:25.165Z"
+  },
+  {
+    "type": "quiz",
+    "subject": "Computer Science",
+    "title": "4-Node Splitting Quiz",
+    "content": {
+      "question": "When inserting into a 3-node whose parent is also a 3-node, what happens?",
+      "options": [
+        "Create 4-node and stop",
+        "Split immediately into 2-nodes",
+        "Create 4-node, split it, then create another 4-node in parent",
+        "Convert parent to 2-node first"
+      ],
+      "correctIndex": 2
+    },
+    "id": "Algs4edBalancedSearchTrees-008",
+    "source": "Algs4edBalancedSearchTrees.pdf",
+    "createdAt": "2026-03-31T16:28:25.165Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Perfect Balance Guarantee",
+    "content": {
+      "text": "2-3 trees maintain perfect balance by ensuring all null links are equidistant from the root. Every local transformation during insertion preserves this property - paths remain the same length except when the root splits, which increases all path lengths by exactly 1."
+    },
+    "id": "Algs4edBalancedSearchTrees-009",
+    "source": "Algs4edBalancedSearchTrees.pdf",
+    "createdAt": "2026-03-31T16:28:25.165Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Dynamic Connectivity Problem",
+    "content": {
+      "text": "The dynamic connectivity problem involves determining whether two objects are connected through a series of relationships. Given pairs of objects that are connected, we need to efficiently answer whether any two objects belong to the same connected component without storing all possible connection paths."
+    },
+    "id": "Algs4edUnionFind-001",
+    "source": "Algs4edUnionFind.pdf",
+    "createdAt": "2026-03-31T16:28:42.298Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Union-Find Applications",
+    "content": {
+      "points": [
+        "Networks: Determining if computers can communicate through existing connections",
+        "Variable-name equivalence: Checking if two variable names refer to the same object in programming",
+        "Mathematical sets: Testing if two integers belong to the same set",
+        "Social networks: Finding if people are connected through friendships"
+      ]
+    },
+    "id": "Algs4edUnionFind-002",
+    "source": "Algs4edUnionFind.pdf",
+    "createdAt": "2026-03-31T16:28:42.298Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Equivalence Relations",
+    "content": {
+      "text": "The 'is connected to' relationship is an equivalence relation with three key properties: reflexive (p connects to p), symmetric (if p connects to q, then q connects to p), and transitive (if p connects to q and q connects to r, then p connects to r). This partitions objects into equivalence classes called connected components."
+    },
+    "id": "Algs4edUnionFind-003",
+    "source": "Algs4edUnionFind.pdf",
+    "createdAt": "2026-03-31T16:28:42.298Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Union-Find API Operations",
+    "content": {
+      "points": [
+        "union(p, q): Add connection between sites p and q",
+        "find(p): Get component identifier for site p",
+        "connected(p, q): Check if p and q are in same component",
+        "count(): Return total number of components"
+      ]
+    },
+    "id": "Algs4edUnionFind-004",
+    "source": "Algs4edUnionFind.pdf",
+    "createdAt": "2026-03-31T16:28:42.298Z"
+  },
+  {
+    "type": "flashcard",
+    "subject": "Computer Science",
+    "title": "Connected Components",
+    "content": {
+      "question": "What happens to the number of components when union() merges two different components?",
+      "answer": "The number of components decreases by 1, since two separate components become one."
+    },
+    "id": "Algs4edUnionFind-005",
+    "source": "Algs4edUnionFind.pdf",
+    "createdAt": "2026-03-31T16:28:42.298Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Union-Find Data Structure",
+    "content": {
+      "text": "Union-Find uses a site-indexed array id[] where each position represents a site (0 to N-1) and stores component information. Initially, each site is its own component with id[i] = i, and we use one site's name as the identifier for each component."
+    },
+    "id": "Algs4edUnionFind-006",
+    "source": "Algs4edUnionFind.pdf",
+    "createdAt": "2026-03-31T16:28:42.298Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Algorithm Development Themes",
+    "content": {
+      "points": [
+        "Good algorithms can make impossible problems solvable",
+        "Efficient algorithms can be as simple to code as inefficient ones",
+        "Understanding performance characteristics is intellectually rewarding",
+        "Scientific method helps choose between different solutions",
+        "Iterative refinement leads to increasingly efficient algorithms"
+      ]
+    },
+    "id": "Algs4edUnionFind-007",
+    "source": "Algs4edUnionFind.pdf",
+    "createdAt": "2026-03-31T16:28:42.298Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Union-Find Cost Model",
+    "content": {
+      "text": "To analyze Union-Find algorithms, we count array accesses (reads and writes) as our primary performance metric. This provides a useful way to compare different implementations since running time is typically within a constant factor of array access count."
+    },
+    "id": "Algs4edUnionFind-008",
+    "source": "Algs4edUnionFind.pdf",
+    "createdAt": "2026-03-31T16:28:42.298Z"
+  },
+  {
+    "type": "quiz",
+    "subject": "Computer Science",
+    "title": "Equivalence Relation Quiz",
+    "content": {
+      "question": "Which property ensures that if A connects to B and B connects to C, then A connects to C?",
+      "options": [
+        "Reflexive",
+        "Symmetric",
+        "Transitive",
+        "Distributive"
+      ],
+      "correctIndex": 2
+    },
+    "id": "Algs4edUnionFind-009",
+    "source": "Algs4edUnionFind.pdf",
+    "createdAt": "2026-03-31T16:28:42.298Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Problem Filtering Goal",
+    "content": {
+      "text": "The Union-Find algorithm filters out redundant connections by only outputting pairs p-q when they're not already connected through existing relationships. If previous pairs already imply that p and q are connected, the new pair is ignored."
+    },
+    "id": "Algs4edUnionFind-010",
+    "source": "Algs4edUnionFind.pdf",
+    "createdAt": "2026-03-31T16:28:42.298Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Big O Notation Basics",
+    "content": {
+      "text": "Big O notation describes how an algorithm's running time grows as input size increases. It focuses on the dominant term and ignores constants - for example, 3n² + 100n becomes O(n²) because n² grows fastest for large inputs."
+    },
+    "id": "analysis-weekplan (1)-001",
+    "source": "analysis-weekplan (1).pdf",
+    "createdAt": "2026-03-31T16:29:06.168Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Asymptotic Notation Types",
+    "content": {
+      "points": [
+        "O-notation: Upper bound - algorithm runs no slower than this",
+        "Ω-notation: Lower bound - algorithm runs no faster than this",
+        "Θ-notation: Tight bound - algorithm runs exactly at this rate",
+        "All three describe algorithm efficiency for large input sizes"
+      ]
+    },
+    "id": "analysis-weekplan (1)-002",
+    "source": "analysis-weekplan (1).pdf",
+    "createdAt": "2026-03-31T16:29:06.168Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Common Growth Rates",
+    "content": {
+      "text": "Algorithm growth rates from fastest to slowest: constant O(1), logarithmic O(log n), linear O(n), linearithmic O(n log n), quadratic O(n²), cubic O(n³), exponential O(2ⁿ). Each step represents a significant performance difference."
+    },
+    "id": "analysis-weekplan (1)-003",
+    "source": "analysis-weekplan (1).pdf",
+    "createdAt": "2026-03-31T16:29:06.168Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Loop Analysis Tips",
+    "content": {
+      "points": [
+        "Single loop 1 to n: O(n) time",
+        "Nested loops both 1 to n: O(n²) time",
+        "Loop that doubles counter (i = 2*i): O(log n) time",
+        "Combine multiplicatively for nested structures"
+      ]
+    },
+    "id": "analysis-weekplan (1)-004",
+    "source": "analysis-weekplan (1).pdf",
+    "createdAt": "2026-03-31T16:29:06.168Z"
+  },
+  {
+    "type": "flashcard",
+    "subject": "Computer Science",
+    "title": "Doubling Input Size",
+    "content": {
+      "question": "If an algorithm runs in O(n³) time, how much slower is it when input size doubles?",
+      "answer": "8 times slower. When n becomes 2n, the time becomes (2n)³ = 8n³, which is 8 times the original n³."
+    },
+    "id": "analysis-weekplan (1)-005",
+    "source": "analysis-weekplan (1).pdf",
+    "createdAt": "2026-03-31T16:29:06.168Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Merge Sort Variants",
+    "content": {
+      "text": "Standard merge sort splits arrays into 2 parts, but you can generalize to k-way splits. 3-merge sort splits into 3 parts, and all variants maintain O(n log n) time complexity because the tree depth changes but total work per level stays linear."
+    },
+    "id": "analysis-weekplan (1)-006",
+    "source": "analysis-weekplan (1).pdf",
+    "createdAt": "2026-03-31T16:29:06.168Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Maximum Subarray Problem",
+    "content": {
+      "points": [
+        "Find contiguous subarray with largest sum in an array",
+        "Brute force: O(n³) - check all possible subarrays",
+        "Improved: O(n²) using prefix sums for fast range queries",
+        "Optimal: O(n) using dynamic programming (Kadane's algorithm)",
+        "Divide & conquer: O(n log n) splitting problem in half"
+      ]
+    },
+    "id": "analysis-weekplan (1)-007",
+    "source": "analysis-weekplan (1).pdf",
+    "createdAt": "2026-03-31T16:29:06.168Z"
+  },
+  {
+    "type": "quiz",
+    "subject": "Computer Science",
+    "title": "Growth Rate Comparison",
+    "content": {
+      "question": "Which function grows fastest asymptotically?",
+      "options": [
+        "n log n",
+        "n²",
+        "√n",
+        "2ⁿ"
+      ],
+      "correctIndex": 3
+    },
+    "id": "analysis-weekplan (1)-008",
+    "source": "analysis-weekplan (1).pdf",
+    "createdAt": "2026-03-31T16:29:06.168Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Factorial Growth Analysis",
+    "content": {
+      "text": "The logarithm of n factorial, log(n!), equals Θ(n log n). This is because n! ≈ (n/e)ⁿ√(2πn) by Stirling's approximation, so log(n!) grows at the same rate as n log n asymptotically."
+    },
+    "id": "analysis-weekplan (1)-009",
+    "source": "analysis-weekplan (1).pdf",
+    "createdAt": "2026-03-31T16:29:06.168Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Asymptotic Analysis Rules",
+    "content": {
+      "points": [
+        "Drop constants: 5n² becomes O(n²)",
+        "Keep highest degree term: n³ + n² becomes O(n³)",
+        "Logarithm bases don't matter: log₂ n = O(log n)",
+        "max(f(n), g(n)) = Θ(f(n) + g(n)) for non-negative functions"
+      ]
+    },
+    "id": "analysis-weekplan (1)-010",
+    "source": "analysis-weekplan (1).pdf",
+    "createdAt": "2026-03-31T16:29:06.168Z"
+  },
+  {
+    "type": "flashcard",
+    "subject": "Computer Science",
+    "title": "Theta vs Big O",
+    "content": {
+      "question": "What's the difference between Θ(n²) and O(n²)?",
+      "answer": "Θ(n²) means exactly quadratic growth (tight bound), while O(n²) means at most quadratic growth (upper bound). An O(n) algorithm is also O(n²), but not Θ(n²)."
+    },
+    "id": "analysis-weekplan (1)-011",
+    "source": "analysis-weekplan (1).pdf",
+    "createdAt": "2026-03-31T16:29:06.168Z"
+  },
+  {
+    "type": "quiz",
+    "subject": "Computer Science",
+    "title": "Exponential Growth",
+    "content": {
+      "question": "Is 2^(n+1) = O(2^n)?",
+      "options": [
+        "Yes, because 2^(n+1) = 2·2^n which is O(2^n)",
+        "No, because the exponent is larger",
+        "Only for small values of n",
+        "Depends on the base of the logarithm"
+      ],
+      "correctIndex": 0
+    },
+    "id": "analysis-weekplan (1)-012",
+    "source": "analysis-weekplan (1).pdf",
+    "createdAt": "2026-03-31T16:29:06.168Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Asymptotic Notation Basics",
+    "content": {
+      "text": "Asymptotic notation describes how algorithms perform as input size grows. Big O (O) gives upper bounds, Theta (Θ) gives tight bounds, and Omega (Ω) gives lower bounds. This helps compare algorithm efficiency without getting lost in implementation details."
+    },
+    "id": "analysis-weekplan (2)-001",
+    "source": "analysis-weekplan (2).pdf",
+    "createdAt": "2026-03-31T16:29:26.721Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Big O Notation Rules",
+    "content": {
+      "points": [
+        "Drop constants: 5n² becomes O(n²)",
+        "Keep highest degree term: n² + n becomes O(n²)",
+        "Logarithm bases don't matter: log₂n = O(log n)",
+        "Exponentials grow faster than polynomials: 2ⁿ > n³"
+      ]
+    },
+    "id": "analysis-weekplan (2)-002",
+    "source": "analysis-weekplan (2).pdf",
+    "createdAt": "2026-03-31T16:29:26.721Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Loop Analysis Strategy",
+    "content": {
+      "text": "To analyze loop running time, count how many times each operation executes. For nested loops, multiply the iterations. If a loop variable doubles each time (i = 2·i), it runs O(log n) times since you can only double log n times before exceeding n."
+    },
+    "id": "analysis-weekplan (2)-003",
+    "source": "analysis-weekplan (2).pdf",
+    "createdAt": "2026-03-31T16:29:26.721Z"
+  },
+  {
+    "type": "flashcard",
+    "subject": "Computer Science",
+    "title": "Doubling Hypothesis",
+    "content": {
+      "question": "If an algorithm runs in 7n³ time, how much slower is it when input size doubles?",
+      "answer": "8 times slower. When n becomes 2n, the time becomes 7(2n)³ = 7·8n³ = 8 times the original time."
+    },
+    "id": "analysis-weekplan (2)-004",
+    "source": "analysis-weekplan (2).pdf",
+    "createdAt": "2026-03-31T16:29:26.721Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Common Growth Rates",
+    "content": {
+      "points": [
+        "O(1) - Constant time, best case",
+        "O(log n) - Logarithmic, very efficient",
+        "O(n) - Linear time, scales directly",
+        "O(n log n) - Efficient sorting algorithms",
+        "O(n²) - Quadratic, nested loops"
+      ]
+    },
+    "id": "analysis-weekplan (2)-005",
+    "source": "analysis-weekplan (2).pdf",
+    "createdAt": "2026-03-31T16:29:26.721Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Merge Sort Variants",
+    "content": {
+      "text": "Standard merge sort splits arrays in half (2-way), but you can generalize to k-way splits. 3-merge sort splits into 3 parts, still achieving O(n log n) time. The key insight is that merging k sorted arrays still takes linear time."
+    },
+    "id": "analysis-weekplan (2)-006",
+    "source": "analysis-weekplan (2).pdf",
+    "createdAt": "2026-03-31T16:29:26.721Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Maximal Subarray Problem",
+    "content": {
+      "points": [
+        "Find contiguous subarray with largest sum",
+        "Brute force: O(n³) checking all subarrays",
+        "Improved: O(n²) with precomputed sums",
+        "Divide & conquer: O(n log n) solution",
+        "Optimal: O(n) linear time algorithm exists"
+      ]
+    },
+    "id": "analysis-weekplan (2)-007",
+    "source": "analysis-weekplan (2).pdf",
+    "createdAt": "2026-03-31T16:29:26.721Z"
+  },
+  {
+    "type": "quiz",
+    "subject": "Computer Science",
+    "title": "Asymptotic Comparison",
+    "content": {
+      "question": "Which function grows fastest asymptotically?",
+      "options": [
+        "n log n",
+        "n²",
+        "√n",
+        "2ⁿ"
+      ],
+      "correctIndex": 3
+    },
+    "id": "analysis-weekplan (2)-008",
+    "source": "analysis-weekplan (2).pdf",
+    "createdAt": "2026-03-31T16:29:26.721Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Why Asymptotic Analysis Matters",
+    "content": {
+      "text": "Asymptotic analysis helps predict how algorithms scale with large inputs. A O(n²) algorithm might work fine for 100 elements but become unusable for 10,000. Understanding growth rates helps choose the right algorithm for your problem size."
+    },
+    "id": "analysis-weekplan (2)-009",
+    "source": "analysis-weekplan (2).pdf",
+    "createdAt": "2026-03-31T16:29:26.721Z"
+  },
+  {
+    "type": "flashcard",
+    "subject": "Computer Science",
+    "title": "Theta Notation",
+    "content": {
+      "question": "What does Θ(n²) mean?",
+      "answer": "The function grows exactly like n² - it's both O(n²) and Ω(n²). It gives a tight bound on the growth rate."
+    },
+    "id": "analysis-weekplan (2)-010",
+    "source": "analysis-weekplan (2).pdf",
+    "createdAt": "2026-03-31T16:29:26.721Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Loop Time Complexity Examples",
+    "content": {
+      "points": [
+        "i doubles each iteration: O(log n) total iterations",
+        "Nested loop with outer O(n), inner O(log n): O(n log n)",
+        "Three nested linear loops: O(n³)",
+        "Loop that multiplies by 5: still O(log n)"
+      ]
+    },
+    "id": "analysis-weekplan (2)-011",
+    "source": "analysis-weekplan (2).pdf",
+    "createdAt": "2026-03-31T16:29:26.721Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Big O Notation Basics",
+    "content": {
+      "text": "Big O notation describes how an algorithm's running time grows as input size increases. It focuses on the dominant term and ignores constants - so 3n² + 100n becomes O(n²). This helps us compare algorithm efficiency and predict performance on large inputs."
+    },
+    "id": "analysis-weekplan-001",
+    "source": "analysis-weekplan.pdf",
+    "createdAt": "2026-03-31T16:29:49.243Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Asymptotic Notation Types",
+    "content": {
+      "points": [
+        "O-notation: Upper bound - algorithm runs no worse than this",
+        "Ω-notation: Lower bound - algorithm takes at least this much time",
+        "Θ-notation: Tight bound - algorithm's exact growth rate",
+        "Used to classify algorithms by their worst-case, best-case, or average performance"
+      ]
+    },
+    "id": "analysis-weekplan-002",
+    "source": "analysis-weekplan.pdf",
+    "createdAt": "2026-03-31T16:29:49.243Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Common Growth Rates",
+    "content": {
+      "text": "Algorithm complexities from fastest to slowest: O(1) constant, O(log n) logarithmic, O(n) linear, O(n log n) linearithmic, O(n²) quadratic, O(n³) cubic, O(2ⁿ) exponential. Each step up means dramatically slower performance on large inputs."
+    },
+    "id": "analysis-weekplan-003",
+    "source": "analysis-weekplan.pdf",
+    "createdAt": "2026-03-31T16:29:49.243Z"
+  },
+  {
+    "type": "flashcard",
+    "subject": "Computer Science",
+    "title": "Loop Analysis",
+    "content": {
+      "question": "What's the time complexity of a loop that starts at i=1 and doubles i each iteration until i>n?",
+      "answer": "O(log n) - the loop runs log₂(n) times since we're doubling i each time until it exceeds n."
+    },
+    "id": "analysis-weekplan-004",
+    "source": "analysis-weekplan.pdf",
+    "createdAt": "2026-03-31T16:29:49.243Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Merge Sort Variants",
+    "content": {
+      "points": [
+        "Standard merge sort splits array into 2 parts recursively",
+        "3-merge sort splits into 3 parts instead of 2",
+        "Both have O(n log n) time complexity",
+        "k-merge sort can split into k parts but doesn't improve asymptotic complexity",
+        "Linear time merging is possible for any number of sorted arrays"
+      ]
+    },
+    "id": "analysis-weekplan-005",
+    "source": "analysis-weekplan.pdf",
+    "createdAt": "2026-03-31T16:29:49.243Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Doubling Hypothesis",
+    "content": {
+      "text": "The doubling hypothesis helps estimate algorithm complexity by observing how runtime changes when input size doubles. For O(n²) algorithms, doubling input makes it 4x slower. For O(n³), it's 8x slower. This empirical approach helps identify the growth rate of unknown algorithms."
+    },
+    "id": "analysis-weekplan-006",
+    "source": "analysis-weekplan.pdf",
+    "createdAt": "2026-03-31T16:29:49.243Z"
+  },
+  {
+    "type": "quiz",
+    "subject": "Computer Science",
+    "title": "Complexity Comparison",
+    "content": {
+      "question": "Which function grows fastest asymptotically?",
+      "options": [
+        "n² + 1000n",
+        "n³/1000",
+        "2ⁿ/1000000",
+        "n log n + n²"
+      ],
+      "correctIndex": 2
+    },
+    "id": "analysis-weekplan-007",
+    "source": "analysis-weekplan.pdf",
+    "createdAt": "2026-03-31T16:29:49.243Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Maximum Subarray Problem",
+    "content": {
+      "points": [
+        "Find contiguous subarray with largest sum in an array of positive and negative integers",
+        "Brute force approach: O(n³) by checking all possible subarrays",
+        "Improved approach: O(n²) using prefix sums for constant-time subarray sum calculation",
+        "Divide and conquer: O(n log n) by splitting array and considering cross-boundary subarrays",
+        "Optimal solution: O(n) using dynamic programming (Kadane's algorithm)"
+      ]
+    },
+    "id": "analysis-weekplan-008",
+    "source": "analysis-weekplan.pdf",
+    "createdAt": "2026-03-31T16:29:49.243Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Asymptotic Properties",
+    "content": {
+      "text": "Key asymptotic properties include: max(f(n), g(n)) = Θ(f(n) + g(n)), meaning the maximum of two functions grows at the same rate as their sum. Also, log(n!) = Θ(n log n), which is useful for analyzing algorithms involving permutations or factorials."
+    },
+    "id": "analysis-weekplan-009",
+    "source": "analysis-weekplan.pdf",
+    "createdAt": "2026-03-31T16:29:49.243Z"
+  },
+  {
+    "type": "flashcard",
+    "subject": "Computer Science",
+    "title": "Theta Notation",
+    "content": {
+      "question": "What does Θ(n²) mean for an algorithm?",
+      "answer": "The algorithm's running time grows exactly quadratically with input size - it's both O(n²) and Ω(n²), meaning n² is both an upper and lower bound."
+    },
+    "id": "analysis-weekplan-010",
+    "source": "analysis-weekplan.pdf",
+    "createdAt": "2026-03-31T16:29:49.243Z"
+  },
+  {
+    "type": "quiz",
+    "subject": "Computer Science",
+    "title": "Loop Complexity Quiz",
+    "content": {
+      "question": "What's the complexity of nested loops where outer runs n times and inner doubles from 1 to n?",
+      "options": [
+        "O(n)",
+        "O(n log n)",
+        "O(n²)",
+        "O(log n)"
+      ],
+      "correctIndex": 1
+    },
+    "id": "analysis-weekplan-011",
+    "source": "analysis-weekplan.pdf",
+    "createdAt": "2026-03-31T16:29:49.243Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Analyzing Nested Loops",
+    "content": {
+      "text": "When analyzing nested loops, multiply their complexities. An outer loop running n times with an inner loop that doubles each iteration (log n times) gives O(n log n). Always identify the pattern of each loop level and combine appropriately."
+    },
+    "id": "analysis-weekplan-012",
+    "source": "analysis-weekplan.pdf",
+    "createdAt": "2026-03-31T16:29:49.243Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "What are Directed Graphs?",
+    "content": {
+      "text": "Directed graphs (digraphs) are mathematical structures with vertices connected by edges that have direction. Unlike undirected graphs, you can only travel along edges in one specific direction, making them perfect for modeling relationships like dependencies, hierarchies, or flows."
+    },
+    "id": "directedgraphs-weekplan-001",
+    "source": "directedgraphs-weekplan.pdf",
+    "createdAt": "2026-03-31T16:30:06.568Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Graph Representation Methods",
+    "content": {
+      "points": [
+        "Adjacency lists: Each vertex stores a list of its neighbors",
+        "Adjacency matrices: 2D array where entry (i,j) = 1 if edge exists from i to j",
+        "Adjacency lists are space-efficient for sparse graphs",
+        "Adjacency matrices allow O(1) edge lookup but use O(V²) space"
+      ]
+    },
+    "id": "directedgraphs-weekplan-002",
+    "source": "directedgraphs-weekplan.pdf",
+    "createdAt": "2026-03-31T16:30:06.568Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "DAGs Explained",
+    "content": {
+      "text": "A Directed Acyclic Graph (DAG) is a directed graph with no cycles - you can't start from a vertex and follow edges to return to the same vertex. DAGs are crucial for representing dependencies, scheduling problems, and data flow where circular dependencies would cause issues."
+    },
+    "id": "directedgraphs-weekplan-003",
+    "source": "directedgraphs-weekplan.pdf",
+    "createdAt": "2026-03-31T16:30:06.568Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Topological Sorting",
+    "content": {
+      "points": [
+        "Linear ordering of vertices where each directed edge goes from earlier to later vertex",
+        "Only possible in DAGs (graphs with no cycles)",
+        "Used for scheduling tasks with dependencies",
+        "Can be computed using DFS or by repeatedly removing vertices with in-degree 0",
+        "Multiple valid topological orderings can exist for the same DAG"
+      ]
+    },
+    "id": "directedgraphs-weekplan-004",
+    "source": "directedgraphs-weekplan.pdf",
+    "createdAt": "2026-03-31T16:30:06.568Z"
+  },
+  {
+    "type": "flashcard",
+    "subject": "Computer Science",
+    "title": "Strongly Connected Components",
+    "content": {
+      "question": "What is a strongly connected component in a directed graph?",
+      "answer": "A maximal set of vertices where every vertex is reachable from every other vertex in the set via directed paths."
+    },
+    "id": "directedgraphs-weekplan-005",
+    "source": "directedgraphs-weekplan.pdf",
+    "createdAt": "2026-03-31T16:30:06.568Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Graph Traversal Algorithms",
+    "content": {
+      "text": "DFS (Depth-First Search) explores as far as possible along each branch before backtracking, while BFS (Breadth-First Search) explores all neighbors at the current depth before moving deeper. Both are fundamental for graph analysis and have O(V+E) time complexity."
+    },
+    "id": "directedgraphs-weekplan-006",
+    "source": "directedgraphs-weekplan.pdf",
+    "createdAt": "2026-03-31T16:30:06.568Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Real-World Graph Applications",
+    "content": {
+      "points": [
+        "Course prerequisites can be modeled as DAGs for scheduling",
+        "Snakes and ladders game states form a graph for shortest path problems",
+        "Social networks use graphs to represent relationships",
+        "Dependency resolution in software uses topological sorting"
+      ]
+    },
+    "id": "directedgraphs-weekplan-007",
+    "source": "directedgraphs-weekplan.pdf",
+    "createdAt": "2026-03-31T16:30:06.568Z"
+  },
+  {
+    "type": "quiz",
+    "subject": "Computer Science",
+    "title": "DAG Properties Quiz",
+    "content": {
+      "question": "How many strongly connected components does a DAG have?",
+      "options": [
+        "Always 1",
+        "Always equal to number of vertices",
+        "Always equal to number of edges",
+        "Depends on the specific graph structure"
+      ],
+      "correctIndex": 1
+    },
+    "id": "directedgraphs-weekplan-008",
+    "source": "directedgraphs-weekplan.pdf",
+    "createdAt": "2026-03-31T16:30:06.568Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Hamiltonian Paths in DAGs",
+    "content": {
+      "text": "A Hamiltonian path visits every vertex exactly once. In DAGs, finding Hamiltonian paths is easier than in general graphs because the acyclic property eliminates many complications, though it's still a challenging computational problem."
+    },
+    "id": "directedgraphs-weekplan-009",
+    "source": "directedgraphs-weekplan.pdf",
+    "createdAt": "2026-03-31T16:30:06.568Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Graph Problem Solving Strategy",
+    "content": {
+      "points": [
+        "Model the problem as vertices and edges",
+        "Determine if the graph is directed or undirected",
+        "Check for cycles to identify if it's a DAG",
+        "Choose appropriate algorithms (BFS for shortest paths, DFS for connectivity)",
+        "Consider using topological sorting for dependency problems"
+      ]
+    },
+    "id": "directedgraphs-weekplan-010",
+    "source": "directedgraphs-weekplan.pdf",
+    "createdAt": "2026-03-31T16:30:06.568Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "What Are Directed Graphs?",
+    "content": {
+      "text": "A directed graph is a set of vertices connected by directed edges, where each edge has a specific direction from one vertex to another. Think of it like a road network where vertices are intersections and edges are one-way roads - you can only travel in the direction the arrow points."
+    },
+    "id": "directedgraphs4x1-001",
+    "source": "directedgraphs4x1.pdf",
+    "createdAt": "2026-03-31T16:30:27.268Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Real-World Applications of Directed Graphs",
+    "content": {
+      "points": [
+        "Web crawling: vertices are webpages, edges are hyperlinks between pages",
+        "Garbage collection: vertices are objects, edges are pointers/references to find reachable objects",
+        "Task scheduling: vertices are jobs, edges show dependency relationships",
+        "Automata: vertices are states, edges represent state transitions for pattern matching"
+      ]
+    },
+    "id": "directedgraphs4x1-002",
+    "source": "directedgraphs4x1.pdf",
+    "createdAt": "2026-03-31T16:30:27.268Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Degree Properties in Directed Graphs",
+    "content": {
+      "text": "In directed graphs, each vertex has an in-degree (number of incoming edges) and out-degree (number of outgoing edges). A key property is that the sum of all in-degrees equals the sum of all out-degrees, which equals the total number of edges, since every edge has exactly one start and one end vertex."
+    },
+    "id": "directedgraphs4x1-003",
+    "source": "directedgraphs4x1.pdf",
+    "createdAt": "2026-03-31T16:30:27.268Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Adjacency Matrix Representation",
+    "content": {
+      "points": [
+        "Uses a 2D n×n array where A[i,j] = 1 if vertex i points to vertex j",
+        "Space complexity: O(n²) - can be wasteful for sparse graphs",
+        "POINTSTO operations run in O(1) time - very fast lookups",
+        "NEIGHBORS operations take O(n) time - must scan entire row",
+        "Best for dense graphs where fast edge lookups are critical"
+      ]
+    },
+    "id": "directedgraphs4x1-004",
+    "source": "directedgraphs4x1.pdf",
+    "createdAt": "2026-03-31T16:30:27.268Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Adjacency List Representation",
+    "content": {
+      "points": [
+        "Each vertex maintains a linked list of vertices it points to",
+        "Space complexity: O(n + m) - much more efficient for sparse graphs",
+        "All operations (POINTSTO, NEIGHBORS, INSERT) take O(degree) time",
+        "Generally preferred representation for most graph algorithms",
+        "Space usage scales with actual number of edges, not theoretical maximum"
+      ]
+    },
+    "id": "directedgraphs4x1-005",
+    "source": "directedgraphs4x1.pdf",
+    "createdAt": "2026-03-31T16:30:27.268Z"
+  },
+  {
+    "type": "flashcard",
+    "subject": "Computer Science",
+    "title": "Graph Search Algorithms",
+    "content": {
+      "question": "What are the two main search algorithms for directed graphs and what's their time complexity?",
+      "answer": "Depth-First Search (DFS) and Breadth-First Search (BFS). Both run in O(n + m) time, where n is vertices and m is edges."
+    },
+    "id": "directedgraphs4x1-006",
+    "source": "directedgraphs4x1.pdf",
+    "createdAt": "2026-03-31T16:30:27.268Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Topological Sorting Explained",
+    "content": {
+      "text": "Topological sorting arranges vertices in a linear order so that all directed edges point from left to right. It's only possible in directed acyclic graphs (DAGs). The algorithm repeatedly finds vertices with in-degree 0, outputs them, removes them from the graph, and repeats until done."
+    },
+    "id": "directedgraphs4x1-007",
+    "source": "directedgraphs4x1.pdf",
+    "createdAt": "2026-03-31T16:30:27.268Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Efficient Topological Sorting Algorithm",
+    "content": {
+      "points": [
+        "Maintain an in-degree count for each vertex and a list of zero in-degree vertices",
+        "Repeatedly remove a vertex with in-degree 0 and add it to the sorted order",
+        "When removing a vertex, decrease in-degree of all its neighbors",
+        "If any neighbor reaches in-degree 0, add it to the zero-degree list",
+        "Total time complexity: O(n + m) with proper implementation"
+      ]
+    },
+    "id": "directedgraphs4x1-008",
+    "source": "directedgraphs4x1.pdf",
+    "createdAt": "2026-03-31T16:30:27.268Z"
+  },
+  {
+    "type": "quiz",
+    "subject": "Computer Science",
+    "title": "DAG and Topological Sorting Relationship",
+    "content": {
+      "question": "What is the relationship between directed acyclic graphs (DAGs) and topological sorting?",
+      "options": [
+        "Only some DAGs can be topologically sorted",
+        "DAGs cannot be topologically sorted",
+        "A graph is a DAG if and only if it has a topological sorting",
+        "Topological sorting creates cycles in graphs"
+      ],
+      "correctIndex": 2
+    },
+    "id": "directedgraphs4x1-009",
+    "source": "directedgraphs4x1.pdf",
+    "createdAt": "2026-03-31T16:30:27.268Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Strongly Connected Components",
+    "content": {
+      "text": "Two vertices are strongly connected if there's a path from each to the other. A strongly connected component is a maximal set of vertices where every pair is strongly connected. These components can be computed in O(n + m) time using advanced algorithms."
+    },
+    "id": "directedgraphs4x1-010",
+    "source": "directedgraphs4x1.pdf",
+    "createdAt": "2026-03-31T16:30:27.268Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Implicit Graphs in Practice",
+    "content": {
+      "text": "Implicit graphs represent massive graphs without storing all vertices and edges explicitly. Instead, they use a start vertex and an algorithm to generate neighbors on demand. This is essential for applications like game AI and puzzle solving, where the full graph would be too large to store in memory."
+    },
+    "id": "directedgraphs4x1-011",
+    "source": "directedgraphs4x1.pdf",
+    "createdAt": "2026-03-31T16:30:27.268Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "What is a Peak in an Array?",
+    "content": {
+      "text": "A peak in an array is an element that is greater than or equal to its neighbors. For example, in array [2, 1, 3, 7, 3], the element 7 is a peak because it's ≥ both 3 (left neighbor) and 3 (right neighbor). Every array is guaranteed to have at least one peak."
+    },
+    "id": "introduction-weekplan (1)-001",
+    "source": "introduction-weekplan (1).pdf",
+    "createdAt": "2026-03-31T16:30:49.569Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Peak Finding Algorithm Types",
+    "content": {
+      "points": [
+        "Linear algorithms: Check every element sequentially, taking O(n) time",
+        "Recursive algorithm: Uses divide-and-conquer approach, taking O(log n) time",
+        "2D peak finding: Can be solved in O(n²), O(n log n), or even O(n) time depending on approach",
+        "Recursive approach is more efficient for large arrays"
+      ]
+    },
+    "id": "introduction-weekplan (1)-002",
+    "source": "introduction-weekplan (1).pdf",
+    "createdAt": "2026-03-31T16:30:49.569Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Valley Problem Definition",
+    "content": {
+      "text": "A valley problem is the opposite of peak finding - you're looking for an element that is smaller than or equal to its neighbors. This creates an analogous algorithmic challenge where similar divide-and-conquer techniques can be applied to find valleys efficiently."
+    },
+    "id": "introduction-weekplan (1)-003",
+    "source": "introduction-weekplan (1).pdf",
+    "createdAt": "2026-03-31T16:30:49.569Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Algorithm Complexity Measures",
+    "content": {
+      "points": [
+        "Time complexity: How long the algorithm takes to run",
+        "Space complexity: How much memory the algorithm uses",
+        "Network complexity: Amount of data transmitted in distributed systems",
+        "Energy complexity: Power consumption of the algorithm",
+        "Communication complexity: Number of messages exchanged between processes"
+      ]
+    },
+    "id": "introduction-weekplan (1)-004",
+    "source": "introduction-weekplan (1).pdf",
+    "createdAt": "2026-03-31T16:30:49.569Z"
+  },
+  {
+    "type": "flashcard",
+    "subject": "Computer Science",
+    "title": "Peak Properties",
+    "content": {
+      "question": "What is the maximum number of peaks possible in an array of length n?",
+      "answer": "The maximum number of peaks is n. This occurs when the array alternates between high and low values, like [1, 2, 1, 2, 1], where every high value is a peak."
+    },
+    "id": "introduction-weekplan (1)-005",
+    "source": "introduction-weekplan (1).pdf",
+    "createdAt": "2026-03-31T16:30:49.569Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "ARRAYFUN Algorithm Purpose",
+    "content": {
+      "text": "The ARRAYFUN algorithm checks if there exist two elements in an array that sum to zero (i.e., one is the negative of the other). It uses nested loops to compare every possible pair of elements, making it an O(n²) brute force solution."
+    },
+    "id": "introduction-weekplan (1)-006",
+    "source": "introduction-weekplan (1).pdf",
+    "createdAt": "2026-03-31T16:30:49.569Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "2D Peak Finding Challenge",
+    "content": {
+      "points": [
+        "A 2D peak must be ≥ all four neighbors (North, East, South, West)",
+        "Simple O(n²) approach: check every element in the matrix",
+        "O(n log n) solution: find max in center column, then recurse on promising half",
+        "O(n) solution exists using quadrant division technique"
+      ]
+    },
+    "id": "introduction-weekplan (1)-007",
+    "source": "introduction-weekplan (1).pdf",
+    "createdAt": "2026-03-31T16:30:49.569Z"
+  },
+  {
+    "type": "quiz",
+    "subject": "Computer Science",
+    "title": "Peak Algorithm Complexity",
+    "content": {
+      "question": "What is the time complexity of the recursive peak-finding algorithm?",
+      "options": [
+        "O(n)",
+        "O(log n)",
+        "O(n log n)",
+        "O(n²)"
+      ],
+      "correctIndex": 1
+    },
+    "id": "introduction-weekplan (1)-008",
+    "source": "introduction-weekplan (1).pdf",
+    "createdAt": "2026-03-31T16:30:49.569Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Optimal vs Approximate Solutions",
+    "content": {
+      "text": "Some problems require optimal solutions (like financial transactions or safety-critical systems), while others can use approximate solutions (like image compression or recommendation systems). The choice depends on whether small errors are acceptable or catastrophic."
+    },
+    "id": "introduction-weekplan (1)-009",
+    "source": "introduction-weekplan (1).pdf",
+    "createdAt": "2026-03-31T16:30:49.569Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Peak Finding Implementation Tips",
+    "content": {
+      "points": [
+        "Always check array bounds to avoid out-of-bounds errors",
+        "Linear algorithms can start from either end of the array",
+        "Recursive algorithm needs careful base case handling",
+        "Test with edge cases like single elements and identical elements"
+      ]
+    },
+    "id": "introduction-weekplan (1)-010",
+    "source": "introduction-weekplan (1).pdf",
+    "createdAt": "2026-03-31T16:30:49.569Z"
+  },
+  {
+    "type": "flashcard",
+    "subject": "Computer Science",
+    "title": "Modified Peak Definition",
+    "content": {
+      "question": "If peaks must be strictly larger than neighbors (not equal), how does this affect the recursive algorithm?",
+      "answer": "The algorithm still works and finds peaks in O(log n) time, but now some arrays might have no peaks at all (like arrays with all identical elements)."
+    },
+    "id": "introduction-weekplan (1)-011",
+    "source": "introduction-weekplan (1).pdf",
+    "createdAt": "2026-03-31T16:30:49.569Z"
+  },
+  {
+    "type": "quiz",
+    "subject": "Computer Science",
+    "title": "Array Analysis",
+    "content": {
+      "question": "In the array [2, 1, 3, 7, 3, 11, 1, 5, 7, 10], which elements are peaks?",
+      "options": [
+        "2, 7, 11, 10",
+        "7, 11, 10",
+        "2, 3, 7, 11, 5, 10",
+        "1, 3, 11, 1, 7"
+      ],
+      "correctIndex": 0
+    },
+    "id": "introduction-weekplan (1)-012",
+    "source": "introduction-weekplan (1).pdf",
+    "createdAt": "2026-03-31T16:30:49.569Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Peak Finding Problem",
+    "content": {
+      "text": "In array peak finding, a peak is an element that is greater than or equal to its neighbors. For example, in array A[i], element A[i] is a peak if A[i] ≥ A[i-1] and A[i] ≥ A[i+1]. Every array of length n ≥ 1 is guaranteed to have at least one peak, making this a fundamental algorithmic problem."
+    },
+    "id": "introduction-weekplan-001",
+    "source": "introduction-weekplan.pdf",
+    "createdAt": "2026-03-31T16:31:10.512Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Peak Finding Algorithms",
+    "content": {
+      "points": [
+        "Linear time algorithms scan through the array sequentially to find peaks",
+        "Recursive divide-and-conquer algorithm can find peaks in O(log n) time",
+        "The recursive approach checks the middle element and recurses on the side with a larger neighbor",
+        "All peak finding algorithms are guaranteed to find at least one peak in any non-empty array"
+      ]
+    },
+    "id": "introduction-weekplan-002",
+    "source": "introduction-weekplan.pdf",
+    "createdAt": "2026-03-31T16:31:10.512Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Valley Problem Definition",
+    "content": {
+      "text": "The valley problem is analogous to peak finding but searches for local minima instead. A valley at position i means A[i] ≤ A[i-1] and A[i] ≤ A[i+1], where the element is smaller than or equal to its neighbors. Similar algorithmic approaches can be adapted to solve the valley finding problem."
+    },
+    "id": "introduction-weekplan-003",
+    "source": "introduction-weekplan.pdf",
+    "createdAt": "2026-03-31T16:31:10.512Z"
+  },
+  {
+    "type": "flashcard",
+    "subject": "Computer Science",
+    "title": "Peak Properties",
+    "content": {
+      "question": "What is the maximum number of peaks possible in an array of length n?",
+      "answer": "The maximum number of peaks is n. This occurs when the array alternates between high and low values, making every element a peak (e.g., [5,1,5,1,5])."
+    },
+    "id": "introduction-weekplan-004",
+    "source": "introduction-weekplan.pdf",
+    "createdAt": "2026-03-31T16:31:10.512Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Algorithm Complexity Measures",
+    "content": {
+      "points": [
+        "Time complexity: how execution time grows with input size",
+        "Space complexity: how memory usage scales with input size",
+        "Communication complexity: amount of data exchanged between processes",
+        "Energy complexity: power consumption required for computation",
+        "Parallelization complexity: how well algorithm scales across multiple processors"
+      ]
+    },
+    "id": "introduction-weekplan-005",
+    "source": "introduction-weekplan.pdf",
+    "createdAt": "2026-03-31T16:31:10.512Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "2D Peak Finding",
+    "content": {
+      "text": "In a 2D matrix, a peak M[i,j] must be greater than or equal to all four neighbors (North, East, South, West). A simple O(n²) algorithm checks every element, while more sophisticated divide-and-conquer approaches can achieve O(n log n) or even O(n) time complexity using clever recursive strategies."
+    },
+    "id": "introduction-weekplan-006",
+    "source": "introduction-weekplan.pdf",
+    "createdAt": "2026-03-31T16:31:10.512Z"
+  },
+  {
+    "type": "quiz",
+    "subject": "Computer Science",
+    "title": "Array Function Analysis",
+    "content": {
+      "question": "What does the ARRAYFUN algorithm compute when it checks if A[i] + A[j] = 0 for all pairs?",
+      "options": [
+        "Whether the array is sorted",
+        "Whether any two elements sum to zero",
+        "The maximum sum of two elements",
+        "Whether all elements are positive"
+      ],
+      "correctIndex": 1
+    },
+    "id": "introduction-weekplan-007",
+    "source": "introduction-weekplan.pdf",
+    "createdAt": "2026-03-31T16:31:10.512Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Recursive Algorithm Invariants",
+    "content": {
+      "text": "To prove the recursive peak finding algorithm always works, we use mathematical induction with an invariant. The invariant states that in each recursive call, the subarray being examined is guaranteed to contain at least one peak, ensuring the algorithm will eventually find one."
+    },
+    "id": "introduction-weekplan-008",
+    "source": "introduction-weekplan.pdf",
+    "createdAt": "2026-03-31T16:31:10.512Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Real-World Algorithm Applications",
+    "content": {
+      "points": [
+        "Optimal solutions required: flight scheduling, medical dosage calculations, financial trading systems",
+        "Approximate solutions acceptable: image compression, weather prediction, recommendation systems",
+        "Peak finding applications: signal processing, image analysis, finding local maxima in data",
+        "Algorithm choice depends on accuracy requirements vs. computational constraints"
+      ]
+    },
+    "id": "introduction-weekplan-009",
+    "source": "introduction-weekplan.pdf",
+    "createdAt": "2026-03-31T16:31:10.512Z"
+  },
+  {
+    "type": "flashcard",
+    "subject": "Computer Science",
+    "title": "Modified Peak Definition",
+    "content": {
+      "question": "If we change peak definition to 'strictly larger than neighbors', what happens to the recursive O(log n) algorithm?",
+      "answer": "The algorithm can still work in O(log n) time, but arrays might not always have peaks under the strict definition (e.g., [1,1,1] has no strictly larger peaks)."
+    },
+    "id": "introduction-weekplan-010",
+    "source": "introduction-weekplan.pdf",
+    "createdAt": "2026-03-31T16:31:10.512Z"
+  },
+  {
+    "type": "summary",
+    "subject": "General Studies",
+    "title": "Empty Content Challenge",
+    "content": {
+      "text": "When study material appears empty or incomplete, it's important to identify what information is missing and seek alternative sources. This situation often occurs with corrupted files, incomplete downloads, or formatting issues that prevent content from displaying properly."
+    },
+    "id": "IntroProgStackandQueues-001",
+    "source": "IntroProgStackandQueues.pdf",
+    "createdAt": "2026-03-31T16:31:17.181Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Study Skills",
+    "title": "Dealing with Missing Materials",
+    "content": {
+      "points": [
+        "Check if the original source file is corrupted or incomplete",
+        "Verify your internet connection and try reloading the content",
+        "Contact instructors or peers for alternative versions of the material",
+        "Use backup study resources like textbooks or online databases"
+      ]
+    },
+    "id": "IntroProgStackandQueues-002",
+    "source": "IntroProgStackandQueues.pdf",
+    "createdAt": "2026-03-31T16:31:17.181Z"
+  },
+  {
+    "type": "flashcard",
+    "subject": "Study Skills",
+    "title": "Problem Solving",
+    "content": {
+      "question": "What should you do first when encountering empty or missing study materials?",
+      "answer": "Check if the source file is corrupted, verify your connection, and try reloading the content before seeking alternative sources."
+    },
+    "id": "IntroProgStackandQueues-003",
+    "source": "IntroProgStackandQueues.pdf",
+    "createdAt": "2026-03-31T16:31:17.181Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Stack Basics",
+    "content": {
+      "text": "A stack is a Last-In-First-Out (LIFO) data structure where elements are added and removed from the same end called the top. The two main operations are PUSH (add element) and POP (remove top element). Think of it like a stack of plates - you can only add or remove from the top."
+    },
+    "id": "introtodatastructures-weekplan (1)-001",
+    "source": "introtodatastructures-weekplan (1).pdf",
+    "createdAt": "2026-03-31T16:31:38.702Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Queue Fundamentals",
+    "content": {
+      "text": "A queue is a First-In-First-Out (FIFO) data structure where elements are added at one end (rear) and removed from the other end (front). The main operations are ENQUEUE (add element) and DEQUEUE (remove element). It works like a line at a store - first person in line is first to be served."
+    },
+    "id": "introtodatastructures-weekplan (1)-002",
+    "source": "introtodatastructures-weekplan (1).pdf",
+    "createdAt": "2026-03-31T16:31:38.702Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Linked List Operations",
+    "content": {
+      "points": [
+        "Each node contains data and a reference to the next node",
+        "To delete a node: set previous node's next pointer to skip the target node",
+        "To insert a node: create new node and update pointer references",
+        "Traversal requires following next pointers from head to null",
+        "No random access - must traverse sequentially to reach elements"
+      ]
+    },
+    "id": "introtodatastructures-weekplan (1)-003",
+    "source": "introtodatastructures-weekplan (1).pdf",
+    "createdAt": "2026-03-31T16:31:38.702Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Doubly Linked Lists",
+    "content": {
+      "text": "Doubly linked lists extend regular linked lists by adding a 'prev' reference to each node, pointing to the previous element. This allows bidirectional traversal and enables constant-time deletion of any node without needing to traverse from the head to find the previous node."
+    },
+    "id": "introtodatastructures-weekplan (1)-004",
+    "source": "introtodatastructures-weekplan (1).pdf",
+    "createdAt": "2026-03-31T16:31:38.702Z"
+  },
+  {
+    "type": "flashcard",
+    "subject": "Computer Science",
+    "title": "Stack vs Queue",
+    "content": {
+      "question": "What is the key difference between how stacks and queues handle elements?",
+      "answer": "Stacks use LIFO (Last-In-First-Out) - the most recently added element is removed first. Queues use FIFO (First-In-First-Out) - the oldest element is removed first."
+    },
+    "id": "introtodatastructures-weekplan (1)-005",
+    "source": "introtodatastructures-weekplan (1).pdf",
+    "createdAt": "2026-03-31T16:31:38.702Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Dynamic Array Benefits",
+    "content": {
+      "points": [
+        "Automatically resizes when capacity is exceeded",
+        "Provides O(1) amortized time for insertions",
+        "Uses linear space relative to current number of elements",
+        "Can implement stacks efficiently with push/pop operations",
+        "Avoids fixed-size limitations of static arrays"
+      ]
+    },
+    "id": "introtodatastructures-weekplan (1)-006",
+    "source": "introtodatastructures-weekplan (1).pdf",
+    "createdAt": "2026-03-31T16:31:38.702Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Linked List Insertion",
+    "content": {
+      "text": "To insert a new node after an existing node x: first set the new node's next pointer to x.next, then update x.next to point to the new node. The order matters - if you update x.next first, you lose the reference to the rest of the list."
+    },
+    "id": "introtodatastructures-weekplan (1)-007",
+    "source": "introtodatastructures-weekplan (1).pdf",
+    "createdAt": "2026-03-31T16:31:38.702Z"
+  },
+  {
+    "type": "quiz",
+    "subject": "Computer Science",
+    "title": "Stack Operations Quiz",
+    "content": {
+      "question": "After performing PUSH(5), PUSH(3), POP, PUSH(7) on an empty stack, what element is at the top?",
+      "options": [
+        "5",
+        "3",
+        "7",
+        "Empty"
+      ],
+      "correctIndex": 2
+    },
+    "id": "introtodatastructures-weekplan (1)-008",
+    "source": "introtodatastructures-weekplan (1).pdf",
+    "createdAt": "2026-03-31T16:31:38.702Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Binary Search in Linked Lists",
+    "content": {
+      "text": "Binary search doesn't work efficiently on linked lists because they lack random access to elements. You can't jump to the middle element in O(1) time like with arrays - you must traverse sequentially, making binary search's time advantage disappear."
+    },
+    "id": "introtodatastructures-weekplan (1)-009",
+    "source": "introtodatastructures-weekplan (1).pdf",
+    "createdAt": "2026-03-31T16:31:38.702Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Two Stacks in One Array",
+    "content": {
+      "points": [
+        "Place first stack at the beginning of array (grows rightward)",
+        "Place second stack at the end of array (grows leftward)",
+        "Overflow occurs only when stacks meet in the middle",
+        "Both PUSH and POP operations remain O(1) time",
+        "Maximizes space utilization compared to splitting array in half"
+      ]
+    },
+    "id": "introtodatastructures-weekplan (1)-010",
+    "source": "introtodatastructures-weekplan (1).pdf",
+    "createdAt": "2026-03-31T16:31:38.702Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Queue with Two Stacks",
+    "content": {
+      "text": "You can implement a queue using two stacks by designating one for input and one for output. ENQUEUE always pushes to the input stack. DEQUEUE pops from output stack, but if output is empty, transfer all elements from input to output first."
+    },
+    "id": "introtodatastructures-weekplan (1)-011",
+    "source": "introtodatastructures-weekplan (1).pdf",
+    "createdAt": "2026-03-31T16:31:38.702Z"
+  },
+  {
+    "type": "flashcard",
+    "subject": "Computer Science",
+    "title": "List Reversal Algorithm",
+    "content": {
+      "question": "How can you reverse a linked list in O(n) time with O(1) extra space?",
+      "answer": "Use three pointers: previous, current, and next. Traverse the list, reversing each node's next pointer to point to the previous node, while carefully updating the three pointers to avoid losing references."
+    },
+    "id": "introtodatastructures-weekplan (1)-012",
+    "source": "introtodatastructures-weekplan (1).pdf",
+    "createdAt": "2026-03-31T16:31:38.702Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Stack Basics",
+    "content": {
+      "text": "A stack is a Last-In-First-Out (LIFO) data structure where elements are added and removed from the same end called the top. The two main operations are PUSH (add element to top) and POP (remove element from top). Think of it like a stack of plates - you can only add or remove from the top."
+    },
+    "id": "introtodatastructures-weekplan-001",
+    "source": "introtodatastructures-weekplan.pdf",
+    "createdAt": "2026-03-31T16:31:56.946Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Queue Basics",
+    "content": {
+      "text": "A queue is a First-In-First-Out (FIFO) data structure where elements are added at one end (rear) and removed from the other end (front). The main operations are ENQUEUE (add to rear) and DEQUEUE (remove from front). It works like a line at a store - first person in line is first to be served."
+    },
+    "id": "introtodatastructures-weekplan-002",
+    "source": "introtodatastructures-weekplan.pdf",
+    "createdAt": "2026-03-31T16:31:56.946Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Linked List Operations",
+    "content": {
+      "points": [
+        "x.next = x.next.next removes the element after x from the list",
+        "To insert element t after x: set t.next = x.next, then x.next = t",
+        "Order matters - swapping insertion statements can break the list structure",
+        "Linked lists allow dynamic memory allocation without fixed size limits"
+      ]
+    },
+    "id": "introtodatastructures-weekplan-003",
+    "source": "introtodatastructures-weekplan.pdf",
+    "createdAt": "2026-03-31T16:31:56.946Z"
+  },
+  {
+    "type": "flashcard",
+    "subject": "Computer Science",
+    "title": "Algorithm FOO Purpose",
+    "content": {
+      "question": "What does the algorithm FOO(head) compute when given a linked list?",
+      "answer": "FOO computes the length (number of elements) in the linked list by traversing from head to null and counting each node."
+    },
+    "id": "introtodatastructures-weekplan-004",
+    "source": "introtodatastructures-weekplan.pdf",
+    "createdAt": "2026-03-31T16:31:56.946Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Stack vs Queue Implementation",
+    "content": {
+      "points": [
+        "Stacks can be implemented with arrays or linked lists using PUSH/POP operations",
+        "Queues can be implemented with arrays or linked lists using ENQUEUE/DEQUEUE operations",
+        "Two stacks can share a single array by growing from opposite ends",
+        "A queue can be implemented using two stacks with careful operation management"
+      ]
+    },
+    "id": "introtodatastructures-weekplan-005",
+    "source": "introtodatastructures-weekplan.pdf",
+    "createdAt": "2026-03-31T16:31:56.946Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Dynamic Arrays",
+    "content": {
+      "text": "Dynamic arrays automatically resize when they run out of space, allowing unlimited growth without declaring a fixed size. When implementing stacks with dynamic arrays, both PUSH and POP operations can achieve O(1) amortized time complexity while maintaining linear space usage relative to current elements."
+    },
+    "id": "introtodatastructures-weekplan-006",
+    "source": "introtodatastructures-weekplan.pdf",
+    "createdAt": "2026-03-31T16:31:56.946Z"
+  },
+  {
+    "type": "quiz",
+    "subject": "Computer Science",
+    "title": "Stack Operations Quiz",
+    "content": {
+      "question": "What sequence results from: PUSH(4), PUSH(1), PUSH(3), POP, PUSH(8), POP on an empty stack?",
+      "options": [
+        "Stack contains: 4, 1",
+        "Stack contains: 4, 1, 8",
+        "Stack contains: 4, 3, 8",
+        "Stack contains: 4, 1, 3"
+      ],
+      "correctIndex": 0
+    },
+    "id": "introtodatastructures-weekplan-007",
+    "source": "introtodatastructures-weekplan.pdf",
+    "createdAt": "2026-03-31T16:31:56.946Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Sorted Linked Lists",
+    "content": {
+      "text": "To insert into a sorted linked list, traverse from the head until you find the correct position, then insert the new element while maintaining sorted order. Binary search won't work efficiently on linked lists because you can't jump to the middle element - you must traverse sequentially."
+    },
+    "id": "introtodatastructures-weekplan-008",
+    "source": "introtodatastructures-weekplan.pdf",
+    "createdAt": "2026-03-31T16:31:56.946Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "List Reversal Algorithm",
+    "content": {
+      "points": [
+        "Reverse a linked list in Θ(n) time using constant extra space",
+        "Use three pointers: previous, current, and next",
+        "Traverse the list once, reversing the next pointers as you go",
+        "The original head becomes the new tail, original tail becomes new head"
+      ]
+    },
+    "id": "introtodatastructures-weekplan-009",
+    "source": "introtodatastructures-weekplan.pdf",
+    "createdAt": "2026-03-31T16:31:56.946Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Algorithm BAR Function",
+    "content": {
+      "text": "Algorithm BAR(x, s) is a recursive function that computes the sum of all values in a linked list starting from node x, adding them to the accumulator s. It uses tail recursion to traverse the list and accumulate the sum of all node keys."
+    },
+    "id": "introtodatastructures-weekplan-010",
+    "source": "introtodatastructures-weekplan.pdf",
+    "createdAt": "2026-03-31T16:31:56.946Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "What Are Graphs?",
+    "content": {
+      "text": "Graphs are data structures consisting of vertices (nodes) connected by edges. They're used to model relationships between objects, like social networks, road maps, or computer networks. Graphs can be represented using adjacency lists or adjacency matrices."
+    },
+    "id": "introtographs-weekplan-001",
+    "source": "introtographs-weekplan.pdf",
+    "createdAt": "2026-03-31T16:32:16.039Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Graph Representation Methods",
+    "content": {
+      "points": [
+        "Adjacency List: Each vertex stores a list of its neighbors",
+        "Adjacency Matrix: 2D array where entry (i,j) is 1 if edge exists between vertices i and j",
+        "Adjacency lists are space-efficient for sparse graphs",
+        "Adjacency matrices allow O(1) edge lookup time",
+        "Choice depends on graph density and operations needed"
+      ]
+    },
+    "id": "introtographs-weekplan-002",
+    "source": "introtographs-weekplan.pdf",
+    "createdAt": "2026-03-31T16:32:16.039Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Depth-First Search (DFS)",
+    "content": {
+      "text": "DFS explores a graph by going as deep as possible along each branch before backtracking. It uses recursion or an explicit stack to keep track of vertices. DFS produces a tree structure and assigns discovery/finish times to each vertex."
+    },
+    "id": "introtographs-weekplan-003",
+    "source": "introtographs-weekplan.pdf",
+    "createdAt": "2026-03-31T16:32:16.039Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Breadth-First Search (BFS)",
+    "content": {
+      "text": "BFS explores a graph level by level, visiting all neighbors of a vertex before moving to the next level. It uses a queue data structure and finds shortest paths in unweighted graphs. BFS calculates the minimum distance from the starting vertex to all other vertices."
+    },
+    "id": "introtographs-weekplan-004",
+    "source": "introtographs-weekplan.pdf",
+    "createdAt": "2026-03-31T16:32:16.039Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Connected Components",
+    "content": {
+      "points": [
+        "A connected component is a maximal set of vertices where every pair is connected by a path",
+        "In undirected graphs, you can find components using DFS or BFS",
+        "Each vertex belongs to exactly one connected component",
+        "A graph with one component is called connected",
+        "Disconnected graphs have multiple components"
+      ]
+    },
+    "id": "introtographs-weekplan-005",
+    "source": "introtographs-weekplan.pdf",
+    "createdAt": "2026-03-31T16:32:16.039Z"
+  },
+  {
+    "type": "flashcard",
+    "subject": "Computer Science",
+    "title": "Bipartite Graphs",
+    "content": {
+      "question": "What is a bipartite graph?",
+      "answer": "A graph whose vertices can be divided into two disjoint sets such that no two vertices within the same set are adjacent. All edges connect vertices from different sets."
+    },
+    "id": "introtographs-weekplan-006",
+    "source": "introtographs-weekplan.pdf",
+    "createdAt": "2026-03-31T16:32:16.039Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Cycle Detection",
+    "content": {
+      "text": "A cycle in a graph is a path that starts and ends at the same vertex. You can detect cycles using DFS by checking if you encounter a vertex that's already been visited in the current path. This is fundamental for determining if a graph is acyclic."
+    },
+    "id": "introtographs-weekplan-007",
+    "source": "introtographs-weekplan.pdf",
+    "createdAt": "2026-03-31T16:32:16.039Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Grid Graphs",
+    "content": {
+      "points": [
+        "Vertices arranged in rows and columns like a grid",
+        "Only horizontally and vertically adjacent vertices can be connected",
+        "A k×k grid graph has k² vertices",
+        "Commonly used to model mazes and 2D spatial problems",
+        "Edges connect only neighboring cells in 4 directions"
+      ]
+    },
+    "id": "introtographs-weekplan-008",
+    "source": "introtographs-weekplan.pdf",
+    "createdAt": "2026-03-31T16:32:16.039Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Euler Tours and Paths",
+    "content": {
+      "text": "An Euler tour visits every edge exactly once and returns to the starting vertex. An Euler path visits every edge exactly once but doesn't need to return to start. A graph has an Euler tour if and only if all vertices have even degree."
+    },
+    "id": "introtographs-weekplan-009",
+    "source": "introtographs-weekplan.pdf",
+    "createdAt": "2026-03-31T16:32:16.039Z"
+  },
+  {
+    "type": "quiz",
+    "subject": "Computer Science",
+    "title": "Graph Algorithm Complexity",
+    "content": {
+      "question": "What is the time complexity of BFS and DFS on a graph with V vertices and E edges?",
+      "options": [
+        "O(V)",
+        "O(E)",
+        "O(V + E)",
+        "O(V × E)"
+      ],
+      "correctIndex": 2
+    },
+    "id": "introtographs-weekplan-010",
+    "source": "introtographs-weekplan.pdf",
+    "createdAt": "2026-03-31T16:32:16.039Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Tree Diameter",
+    "content": {
+      "text": "The diameter of a tree is the longest shortest path between any two vertices in the tree. Since trees have no cycles, there's exactly one path between any two vertices. Computing diameter helps understand the tree's \"width\" or maximum distance."
+    },
+    "id": "introtographs-weekplan-011",
+    "source": "introtographs-weekplan.pdf",
+    "createdAt": "2026-03-31T16:32:16.039Z"
+  },
+  {
+    "type": "flashcard",
+    "subject": "Computer Science",
+    "title": "DFS without Recursion",
+    "content": {
+      "question": "How can you implement DFS without using recursion?",
+      "answer": "Use an explicit stack data structure. Push the starting vertex onto the stack, then repeatedly pop a vertex, mark it as visited, and push all its unvisited neighbors onto the stack."
+    },
+    "id": "introtographs-weekplan-012",
+    "source": "introtographs-weekplan.pdf",
+    "createdAt": "2026-03-31T16:32:16.039Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "What Are Graphs?",
+    "content": {
+      "text": "An undirected graph is a set of vertices (nodes) connected by edges. Graphs model countless real-world problems like computer networks, transportation systems, social media connections, and molecular structures. They're fundamental data structures with hundreds of well-known algorithms."
+    },
+    "id": "introtographs4x1-001",
+    "source": "introtographs4x1.pdf",
+    "createdAt": "2026-03-31T16:32:33.567Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Graph Terminology Basics",
+    "content": {
+      "points": [
+        "V = set of vertices, E = set of edges, where each edge connects two vertices",
+        "Path: sequence of vertices connected by edges",
+        "Cycle: path that starts and ends at the same vertex",
+        "Degree of vertex v: number of neighbors or edges connected to v",
+        "Two vertices are connected if there's a path between them"
+      ]
+    },
+    "id": "introtographs4x1-002",
+    "source": "introtographs4x1.pdf",
+    "createdAt": "2026-03-31T16:32:33.567Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "The Handshaking Lemma",
+    "content": {
+      "text": "In any undirected graph, the sum of all vertex degrees equals twice the number of edges (∑ deg(v) = 2m). This works because each edge contributes 1 to the degree of both vertices it connects, so every edge is counted exactly twice in the total."
+    },
+    "id": "introtographs4x1-003",
+    "source": "introtographs4x1.pdf",
+    "createdAt": "2026-03-31T16:32:33.567Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Real-World Graph Applications",
+    "content": {
+      "points": [
+        "Internet: computers as vertices, cables as edges",
+        "Transportation: intersections/airports as vertices, roads/flights as edges",
+        "Social networks: people as vertices, friendships as edges",
+        "Biology: proteins as vertices, interactions as edges",
+        "Financial: stocks as vertices, transactions as edges"
+      ]
+    },
+    "id": "introtographs4x1-004",
+    "source": "introtographs4x1.pdf",
+    "createdAt": "2026-03-31T16:32:33.567Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Common Graph Problems",
+    "content": {
+      "points": [
+        "Path finding: Is there a path between two vertices?",
+        "Shortest path: What's the minimum distance between vertices?",
+        "Cycle detection: Does the graph contain any cycles?",
+        "Connectivity: Are all vertices reachable from each other?",
+        "Hamilton cycle: Is there a cycle visiting each vertex exactly once?"
+      ]
+    },
+    "id": "introtographs4x1-005",
+    "source": "introtographs4x1.pdf",
+    "createdAt": "2026-03-31T16:32:33.567Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Graph Representation Methods",
+    "content": {
+      "text": "Graphs need efficient data structures supporting key operations: checking if vertices are adjacent, finding all neighbors of a vertex, and inserting new edges. The choice of representation affects the time and space complexity of these operations."
+    },
+    "id": "introtographs4x1-006",
+    "source": "introtographs4x1.pdf",
+    "createdAt": "2026-03-31T16:32:33.567Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Adjacency Matrix Representation",
+    "content": {
+      "points": [
+        "2D array A where A[i,j] = 1 if vertices i and j are connected",
+        "Space complexity: O(n²) where n is number of vertices",
+        "ADJACENT and INSERT operations: O(1) time",
+        "NEIGHBORS operation: O(n) time",
+        "Good for dense graphs with many edges"
+      ]
+    },
+    "id": "introtographs4x1-007",
+    "source": "introtographs4x1.pdf",
+    "createdAt": "2026-03-31T16:32:33.567Z"
+  },
+  {
+    "type": "flashcard",
+    "subject": "Computer Science",
+    "title": "Graph Components",
+    "content": {
+      "question": "In graph notation G = (V, E), what do V and E represent?",
+      "answer": "V is the set of vertices (nodes) and E is the set of edges (connections between vertices)"
+    },
+    "id": "introtographs4x1-008",
+    "source": "introtographs4x1.pdf",
+    "createdAt": "2026-03-31T16:32:33.567Z"
+  },
+  {
+    "type": "quiz",
+    "subject": "Computer Science",
+    "title": "Degree Calculation",
+    "content": {
+      "question": "If a graph has 5 vertices and the sum of all degrees is 12, how many edges does it have?",
+      "options": [
+        "5 edges",
+        "6 edges",
+        "10 edges",
+        "12 edges"
+      ],
+      "correctIndex": 1
+    },
+    "id": "introtographs4x1-009",
+    "source": "introtographs4x1.pdf",
+    "createdAt": "2026-03-31T16:32:33.567Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Graph Search Algorithms",
+    "content": {
+      "text": "Depth-First Search (DFS) and Breadth-First Search (BFS) are fundamental algorithms for exploring graphs. DFS goes as deep as possible before backtracking, while BFS explores all neighbors at the current level before moving deeper. Both are essential for solving connectivity and pathfinding problems."
+    },
+    "id": "introtographs4x1-010",
+    "source": "introtographs4x1.pdf",
+    "createdAt": "2026-03-31T16:32:33.567Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "What is a Minimum Spanning Tree?",
+    "content": {
+      "text": "A Minimum Spanning Tree (MST) is a subset of edges in a weighted graph that connects all vertices with the minimum total weight possible, without forming any cycles. It's like finding the cheapest way to connect all points in a network while ensuring everything stays connected."
+    },
+    "id": "minimumspanningtrees-weekplan-001",
+    "source": "minimumspanningtrees-weekplan.pdf",
+    "createdAt": "2026-03-31T16:32:54.196Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Kruskal's Algorithm Steps",
+    "content": {
+      "points": [
+        "Sort all edges by weight from lightest to heaviest",
+        "Start with an empty set of edges",
+        "For each edge, add it to the MST if it doesn't create a cycle",
+        "Stop when you have n-1 edges (where n is the number of vertices)",
+        "Use a union-find data structure to efficiently detect cycles"
+      ]
+    },
+    "id": "minimumspanningtrees-weekplan-002",
+    "source": "minimumspanningtrees-weekplan.pdf",
+    "createdAt": "2026-03-31T16:32:54.196Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Prim's Algorithm Steps",
+    "content": {
+      "points": [
+        "Start from any vertex and add it to the MST",
+        "Use a priority queue to track edges from MST vertices to non-MST vertices",
+        "Always pick the lightest edge that connects an MST vertex to a non-MST vertex",
+        "Add the new vertex and edge to the MST",
+        "Repeat until all vertices are included"
+      ]
+    },
+    "id": "minimumspanningtrees-weekplan-003",
+    "source": "minimumspanningtrees-weekplan.pdf",
+    "createdAt": "2026-03-31T16:32:54.196Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "MST Key Properties",
+    "content": {
+      "text": "The lightest edge in any graph is always part of some MST, but the heaviest edge may or may not be included. If all edge weights are distinct, there's exactly one unique MST. Scaling all weights by the same positive factor doesn't change which edges form the MST."
+    },
+    "id": "minimumspanningtrees-weekplan-004",
+    "source": "minimumspanningtrees-weekplan.pdf",
+    "createdAt": "2026-03-31T16:32:54.196Z"
+  },
+  {
+    "type": "flashcard",
+    "subject": "Computer Science",
+    "title": "Reverse Deletion Algorithm",
+    "content": {
+      "question": "How does the reverse deletion algorithm work to find an MST?",
+      "answer": "Start with all edges, then examine edges from heaviest to lightest. Remove an edge only if its removal doesn't disconnect the graph. The remaining edges form an MST."
+    },
+    "id": "minimumspanningtrees-weekplan-005",
+    "source": "minimumspanningtrees-weekplan.pdf",
+    "createdAt": "2026-03-31T16:32:54.196Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Cut and Cycle Properties",
+    "content": {
+      "text": "The cut property states that the lightest edge crossing any cut must be in some MST. The cycle property states that the heaviest edge in any cycle cannot be in an MST. These properties work even when edge weights aren't distinct, and they justify why Prim's and Kruskal's algorithms are correct."
+    },
+    "id": "minimumspanningtrees-weekplan-006",
+    "source": "minimumspanningtrees-weekplan.pdf",
+    "createdAt": "2026-03-31T16:32:54.196Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "MST Algorithm Comparison",
+    "content": {
+      "points": [
+        "Kruskal's: Sort edges globally, use union-find, good for sparse graphs",
+        "Prim's: Grow tree locally, use priority queue, good for dense graphs",
+        "Both have O(E log E) time complexity for most implementations",
+        "Reverse deletion: Start with all edges, remove heaviest that don't disconnect",
+        "All three algorithms produce correct MSTs"
+      ]
+    },
+    "id": "minimumspanningtrees-weekplan-007",
+    "source": "minimumspanningtrees-weekplan.pdf",
+    "createdAt": "2026-03-31T16:32:54.196Z"
+  },
+  {
+    "type": "quiz",
+    "subject": "Computer Science",
+    "title": "MST Applications",
+    "content": {
+      "question": "Which real-world problem is best solved using a Minimum Spanning Tree?",
+      "options": [
+        "Finding shortest path between two cities",
+        "Connecting buildings with minimum cable cost",
+        "Sorting a list of numbers",
+        "Finding the maximum flow in a network"
+      ],
+      "correctIndex": 1
+    },
+    "id": "minimumspanningtrees-weekplan-008",
+    "source": "minimumspanningtrees-weekplan.pdf",
+    "createdAt": "2026-03-31T16:32:54.196Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Maximum Spanning Tree",
+    "content": {
+      "text": "To find a Maximum Spanning Tree (tree with maximum total weight), you can transform the problem by negating all edge weights, finding the MST of the transformed graph, then converting back. Alternatively, modify existing MST algorithms to pick heaviest edges instead of lightest ones."
+    },
+    "id": "minimumspanningtrees-weekplan-009",
+    "source": "minimumspanningtrees-weekplan.pdf",
+    "createdAt": "2026-03-31T16:32:54.196Z"
+  },
+  {
+    "type": "flashcard",
+    "subject": "Computer Science",
+    "title": "MST with Small Weights",
+    "content": {
+      "question": "How can you efficiently compute an MST when all edge weights are small integers like {1, 2, ..., 10}?",
+      "answer": "Use counting sort or bucket sort to sort edges in O(m) time instead of O(m log m), making the overall algorithm faster since sorting is often the bottleneck."
+    },
+    "id": "minimumspanningtrees-weekplan-010",
+    "source": "minimumspanningtrees-weekplan.pdf",
+    "createdAt": "2026-03-31T16:32:54.196Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "MST Uniqueness",
+    "content": {
+      "text": "When all edge weights in a graph are distinct, there is exactly one unique MST. However, when weights can be equal, multiple MSTs may exist. Kruskal's algorithm can return different valid MSTs depending on how ties are broken when sorting edges with equal weights."
+    },
+    "id": "minimumspanningtrees-weekplan-011",
+    "source": "minimumspanningtrees-weekplan.pdf",
+    "createdAt": "2026-03-31T16:32:54.196Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "What is a Minimum Spanning Tree?",
+    "content": {
+      "text": "A Minimum Spanning Tree (MST) is a subgraph that connects all vertices in a weighted graph with the minimum total edge weight possible. It must be connected (all vertices reachable) and acyclic (no cycles), using exactly n-1 edges for n vertices."
+    },
+    "id": "minimumspanningtrees4x1-001",
+    "source": "minimumspanningtrees4x1.pdf",
+    "createdAt": "2026-03-31T16:33:12.811Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Key MST Definitions",
+    "content": {
+      "points": [
+        "Weighted graph: Each edge has a numerical weight w(e)",
+        "Spanning tree: Connected and acyclic subgraph covering all vertices",
+        "MST: Spanning tree with minimum total weight",
+        "Uses exactly n-1 edges for n vertices"
+      ]
+    },
+    "id": "minimumspanningtrees4x1-002",
+    "source": "minimumspanningtrees4x1.pdf",
+    "createdAt": "2026-03-31T16:33:12.811Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "MST Applications",
+    "content": {
+      "text": "Minimum spanning trees have wide applications in network design (computer networks, roads, electrical circuits), approximation algorithms for problems like traveling salesperson, and fields like meteorology, biomedical analysis, and image processing."
+    },
+    "id": "minimumspanningtrees4x1-003",
+    "source": "minimumspanningtrees4x1.pdf",
+    "createdAt": "2026-03-31T16:33:12.811Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Cut Property",
+    "content": {
+      "points": [
+        "A cut partitions vertices into two non-empty sets",
+        "Cut edges cross between the two sets",
+        "The lightest cut edge is always in the MST",
+        "This property helps prove correctness of MST algorithms"
+      ]
+    },
+    "id": "minimumspanningtrees4x1-004",
+    "source": "minimumspanningtrees4x1.pdf",
+    "createdAt": "2026-03-31T16:33:12.811Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Cycle Property",
+    "content": {
+      "text": "For any cycle in a graph, the heaviest edge in that cycle cannot be part of the minimum spanning tree. This is because we could replace it with a lighter edge to get a spanning tree with smaller total weight."
+    },
+    "id": "minimumspanningtrees4x1-005",
+    "source": "minimumspanningtrees4x1.pdf",
+    "createdAt": "2026-03-31T16:33:12.811Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Prim's Algorithm Steps",
+    "content": {
+      "points": [
+        "Start from any vertex s",
+        "Grow tree T by adding lightest edge with one endpoint in T",
+        "Use priority queue to efficiently find lightest cut edge",
+        "Stop when T has n-1 edges",
+        "Time complexity: O(m log n) with binary heap"
+      ]
+    },
+    "id": "minimumspanningtrees4x1-006",
+    "source": "minimumspanningtrees4x1.pdf",
+    "createdAt": "2026-03-31T16:33:12.811Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "How Prim's Algorithm Works",
+    "content": {
+      "text": "Prim's algorithm grows the MST one vertex at a time, always adding the lightest edge that connects a vertex in the current tree to a vertex outside it. It uses the cut property to ensure the result is optimal."
+    },
+    "id": "minimumspanningtrees4x1-007",
+    "source": "minimumspanningtrees4x1.pdf",
+    "createdAt": "2026-03-31T16:33:12.811Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Kruskal's Algorithm Steps",
+    "content": {
+      "points": [
+        "Sort all edges by weight from lightest to heaviest",
+        "Consider edges in sorted order",
+        "Add edge to tree if it doesn't create a cycle",
+        "Use dynamic connectivity to check for cycles",
+        "Time complexity: O(m log n)"
+      ]
+    },
+    "id": "minimumspanningtrees4x1-008",
+    "source": "minimumspanningtrees4x1.pdf",
+    "createdAt": "2026-03-31T16:33:12.811Z"
+  },
+  {
+    "type": "flashcard",
+    "subject": "Computer Science",
+    "title": "MST Properties",
+    "content": {
+      "question": "What are the two key properties used to prove MST algorithm correctness?",
+      "answer": "Cut Property (lightest cut edge is in MST) and Cycle Property (heaviest cycle edge is not in MST)"
+    },
+    "id": "minimumspanningtrees4x1-009",
+    "source": "minimumspanningtrees4x1.pdf",
+    "createdAt": "2026-03-31T16:33:12.811Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Prim's vs Kruskal's",
+    "content": {
+      "text": "Prim's algorithm grows the tree vertex by vertex from a starting point, while Kruskal's considers edges globally by weight. Both are greedy algorithms with O(m log n) time complexity, but use different approaches to build the MST."
+    },
+    "id": "minimumspanningtrees4x1-010",
+    "source": "minimumspanningtrees4x1.pdf",
+    "createdAt": "2026-03-31T16:33:12.811Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Priority Queue Options for Prim's",
+    "content": {
+      "points": [
+        "Array: O(n²) total time, simple implementation",
+        "Binary heap: O(m log n) total time, good general choice",
+        "Fibonacci heap: O(m + n log n) total time, best theoretical",
+        "Choice depends on graph density and implementation complexity"
+      ]
+    },
+    "id": "minimumspanningtrees4x1-011",
+    "source": "minimumspanningtrees4x1.pdf",
+    "createdAt": "2026-03-31T16:33:12.811Z"
+  },
+  {
+    "type": "quiz",
+    "subject": "Computer Science",
+    "title": "MST Algorithm Quiz",
+    "content": {
+      "question": "Which algorithm considers edges in order from lightest to heaviest?",
+      "options": [
+        "Prim's Algorithm",
+        "Kruskal's Algorithm",
+        "Dijkstra's Algorithm",
+        "Breadth-First Search"
+      ],
+      "correctIndex": 1
+    },
+    "id": "minimumspanningtrees4x1-012",
+    "source": "minimumspanningtrees4x1.pdf",
+    "createdAt": "2026-03-31T16:33:12.811Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Range Queries Explained",
+    "content": {
+      "text": "Range queries calculate values from subarrays of an array, like finding the sum, minimum, or maximum in a specific range. While a simple loop approach works in O(n) time per query, specialized data structures can answer these queries much more efficiently in O(1) or O(log n) time."
+    },
+    "id": "partialsums-001",
+    "source": "partialsums.pdf",
+    "createdAt": "2026-03-31T16:33:32.738Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Common Range Query Types",
+    "content": {
+      "points": [
+        "sumq(a, b): calculate sum of values in range [a, b]",
+        "minq(a, b): find minimum value in range [a, b]",
+        "maxq(a, b): find maximum value in range [a, b]",
+        "Each query operates on a subarray between two indices"
+      ]
+    },
+    "id": "partialsums-002",
+    "source": "partialsums.pdf",
+    "createdAt": "2026-03-31T16:33:32.738Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Prefix Sum Arrays",
+    "content": {
+      "text": "A prefix sum array stores cumulative sums where each position k contains sum(0, k) from the original array. Once built in O(n) time, any range sum can be calculated in O(1) time using the formula: sum(a, b) = sum(0, b) - sum(0, a-1)."
+    },
+    "id": "partialsums-003",
+    "source": "partialsums.pdf",
+    "createdAt": "2026-03-31T16:33:32.738Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Fenwick Tree Features",
+    "content": {
+      "points": [
+        "Also called Binary Indexed Tree (BIT)",
+        "Supports range sum queries in O(log n) time",
+        "Allows array updates in O(log n) time",
+        "Uses bit operations like k&-k for efficient implementation",
+        "Dynamic alternative to static prefix sum arrays"
+      ]
+    },
+    "id": "partialsums-004",
+    "source": "partialsums.pdf",
+    "createdAt": "2026-03-31T16:33:32.738Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Segment Tree Advantages",
+    "content": {
+      "text": "Segment trees are binary trees that support both range queries and updates in O(log n) time. Unlike Fenwick trees which only handle sum queries, segment trees can process minimum, maximum, and other types of range queries, making them more versatile but requiring more memory."
+    },
+    "id": "partialsums-005",
+    "source": "partialsums.pdf",
+    "createdAt": "2026-03-31T16:33:32.738Z"
+  },
+  {
+    "type": "flashcard",
+    "subject": "Computer Science",
+    "title": "Time Complexity",
+    "content": {
+      "question": "What is the time complexity of answering a range sum query using a prefix sum array?",
+      "answer": "O(1) - constant time, because it only requires two array lookups and one subtraction operation."
+    },
+    "id": "partialsums-006",
+    "source": "partialsums.pdf",
+    "createdAt": "2026-03-31T16:33:32.738Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Minimum Query Processing",
+    "content": {
+      "points": [
+        "Requires O(n log n) preprocessing time",
+        "Precalculates values for ranges with power-of-two lengths",
+        "Answers queries in O(1) time after preprocessing",
+        "Uses sparse table method with overlapping ranges",
+        "More complex than sum queries but still efficient"
+      ]
+    },
+    "id": "partialsums-007",
+    "source": "partialsums.pdf",
+    "createdAt": "2026-03-31T16:33:32.738Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Static vs Dynamic Queries",
+    "content": {
+      "text": "Static range queries work on arrays that never change, allowing simple preprocessing with prefix sums. Dynamic queries need to handle array updates between queries, requiring more sophisticated data structures like Fenwick trees or segment trees that maintain efficiency during modifications."
+    },
+    "id": "partialsums-008",
+    "source": "partialsums.pdf",
+    "createdAt": "2026-03-31T16:33:32.738Z"
+  },
+  {
+    "type": "quiz",
+    "subject": "Computer Science",
+    "title": "Data Structure Selection",
+    "content": {
+      "question": "Which data structure is best for handling both range sum queries and frequent array updates?",
+      "options": [
+        "Static prefix sum array",
+        "Fenwick tree (Binary Indexed Tree)",
+        "Simple loop-based approach",
+        "Two-dimensional array"
+      ],
+      "correctIndex": 1
+    },
+    "id": "partialsums-009",
+    "source": "partialsums.pdf",
+    "createdAt": "2026-03-31T16:33:32.738Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Segment Tree Structure",
+    "content": {
+      "points": [
+        "Binary tree with array elements at bottom level",
+        "Internal nodes store information for range queries",
+        "Each range can be divided into O(log n) tree nodes",
+        "Updates require modifying O(log n) nodes along a path",
+        "Stored as array with 2n elements for n-sized input"
+      ]
+    },
+    "id": "partialsums-010",
+    "source": "partialsums.pdf",
+    "createdAt": "2026-03-31T16:33:32.738Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "What is a Priority Queue?",
+    "content": {
+      "text": "A priority queue is a data structure where elements are served based on their priority rather than insertion order. The highest priority element is always removed first, making it perfect for task scheduling and resource allocation problems."
+    },
+    "id": "priorityqueues-weekplan-001",
+    "source": "priorityqueues-weekplan.pdf",
+    "createdAt": "2026-03-31T16:33:52.977Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Heap Properties",
+    "content": {
+      "points": [
+        "A heap is a complete binary tree where parent nodes have higher (max-heap) or lower (min-heap) values than their children",
+        "Can be efficiently represented as an array where element at index i has children at 2i and 2i+1",
+        "Maintains the heap property: every parent satisfies the ordering constraint with its children",
+        "Height is O(log n) which enables efficient operations"
+      ]
+    },
+    "id": "priorityqueues-weekplan-002",
+    "source": "priorityqueues-weekplan.pdf",
+    "createdAt": "2026-03-31T16:33:52.977Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Heap vs Sorted Array",
+    "content": {
+      "text": "While a sorted array satisfies heap property (each parent is larger than children), it's not the optimal heap representation. Heaps prioritize fast insertion and extraction over complete ordering, making them better for priority queue operations."
+    },
+    "id": "priorityqueues-weekplan-003",
+    "source": "priorityqueues-weekplan.pdf",
+    "createdAt": "2026-03-31T16:33:52.977Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Standard Heap Operations",
+    "content": {
+      "points": [
+        "INSERT: Add new element while maintaining heap property in O(log n) time",
+        "EXTRACTMAX: Remove and return largest element in O(log n) time",
+        "INCREASEKEY: Increase an element's priority and restore heap property in O(log n) time",
+        "All operations preserve the fundamental heap structure"
+      ]
+    },
+    "id": "priorityqueues-weekplan-004",
+    "source": "priorityqueues-weekplan.pdf",
+    "createdAt": "2026-03-31T16:33:52.977Z"
+  },
+  {
+    "type": "flashcard",
+    "subject": "Computer Science",
+    "title": "Minimum Element Location",
+    "content": {
+      "question": "Where can the minimum element be found in a max-heap?",
+      "answer": "The minimum element in a max-heap can only be found in the leaf nodes (bottom level), since all internal nodes must be larger than their children."
+    },
+    "id": "priorityqueues-weekplan-005",
+    "source": "priorityqueues-weekplan.pdf",
+    "createdAt": "2026-03-31T16:33:52.977Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Complete Binary Tree Properties",
+    "content": {
+      "text": "A complete binary tree of height h has exactly 2^(h+1) - 1 nodes. This can be calculated as 1 + 2 + 4 + ... + 2^h, which forms a geometric series that sums to this formula."
+    },
+    "id": "priorityqueues-weekplan-006",
+    "source": "priorityqueues-weekplan.pdf",
+    "createdAt": "2026-03-31T16:33:52.977Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Extended Priority Queue Operations",
+    "content": {
+      "points": [
+        "REMOVELARGEST(m): Remove m largest elements in O(m log n) time",
+        "DELETE(x): Remove specific element x in O(log n) time",
+        "FUSION(x,y): Combine two elements into one with sum of their keys in O(log n) time",
+        "THRESHOLD(k): Return all elements with key ≥ k in O(m) time where m is result size"
+      ]
+    },
+    "id": "priorityqueues-weekplan-007",
+    "source": "priorityqueues-weekplan.pdf",
+    "createdAt": "2026-03-31T16:33:52.977Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Satellite Data in Heaps",
+    "content": {
+      "text": "Heaps can store additional information (satellite data) like age, weight, or other attributes alongside the key. This extra data can be accessed in O(1) time using the element's index without affecting standard heap operation performance."
+    },
+    "id": "priorityqueues-weekplan-008",
+    "source": "priorityqueues-weekplan.pdf",
+    "createdAt": "2026-03-31T16:33:52.977Z"
+  },
+  {
+    "type": "quiz",
+    "subject": "Computer Science",
+    "title": "Heap Array Representation",
+    "content": {
+      "question": "In a heap represented as an array starting at index 1, where are the children of element at index i located?",
+      "options": [
+        "At indices i+1 and i+2",
+        "At indices 2i and 2i+1",
+        "At indices i/2 and i/2+1",
+        "At indices i-1 and i+1"
+      ],
+      "correctIndex": 1
+    },
+    "id": "priorityqueues-weekplan-009",
+    "source": "priorityqueues-weekplan.pdf",
+    "createdAt": "2026-03-31T16:33:52.977Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Merging Sorted Arrays",
+    "content": {
+      "text": "You can merge k sorted arrays containing n total elements into a single sorted array in O(n log k) time using a min-heap. Keep the smallest element from each array in the heap and repeatedly extract the minimum."
+    },
+    "id": "priorityqueues-weekplan-010",
+    "source": "priorityqueues-weekplan.pdf",
+    "createdAt": "2026-03-31T16:33:52.977Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Task Delegation Problem",
+    "content": {
+      "points": [
+        "Use a max-heap to always access the most difficult available task",
+        "NEWTASK(i,d): Insert task with id i and difficulty d into heap",
+        "REQUESTTASK(): Extract and return the task id with highest difficulty",
+        "Perfect real-world example of priority queue application"
+      ]
+    },
+    "id": "priorityqueues-weekplan-011",
+    "source": "priorityqueues-weekplan.pdf",
+    "createdAt": "2026-03-31T16:33:52.977Z"
+  },
+  {
+    "type": "flashcard",
+    "subject": "Computer Science",
+    "title": "Heap Time Complexity",
+    "content": {
+      "question": "What is the time complexity of INSERT, EXTRACTMAX, and INCREASEKEY operations in a heap?",
+      "answer": "All three operations run in O(log n) time, where n is the number of elements in the heap, because they may need to traverse the height of the tree."
+    },
+    "id": "priorityqueues-weekplan-012",
+    "source": "priorityqueues-weekplan.pdf",
+    "createdAt": "2026-03-31T16:33:52.977Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Priority Queue Basics",
+    "content": {
+      "text": "A priority queue is a data structure that maintains a dynamic set where each element has a key and supports operations like MAX() to find the largest element, EXTRACTMAX() to remove it, INSERT() to add new elements, and INCREASEKEY() to update values. It's like a regular queue, but elements are served based on priority rather than arrival order."
+    },
+    "id": "priorityqueues4x1-001",
+    "source": "priorityqueues4x1.pdf",
+    "createdAt": "2026-03-31T16:34:12.975Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Priority Queue Operations",
+    "content": {
+      "points": [
+        "MAX(): return element with largest key",
+        "EXTRACTMAX(): return and remove element with largest key",
+        "INCREASEKEY(x, k): set x.key = k (assumes k ≥ x.key)",
+        "INSERT(x): add element x to the set S"
+      ]
+    },
+    "id": "priorityqueues4x1-002",
+    "source": "priorityqueues4x1.pdf",
+    "createdAt": "2026-03-31T16:34:12.975Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Priority Queue Applications",
+    "content": {
+      "points": [
+        "Scheduling tasks by priority",
+        "Dijkstra's algorithm for shortest paths",
+        "Prim's algorithm for minimum spanning trees",
+        "Huffman's algorithm for compression",
+        "Any scenario where you need the 'most important' item quickly"
+      ]
+    },
+    "id": "priorityqueues4x1-003",
+    "source": "priorityqueues4x1.pdf",
+    "createdAt": "2026-03-31T16:34:12.975Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Heap Definition",
+    "content": {
+      "text": "A heap is an almost complete binary tree that satisfies heap-order property: for any node, all keys in its left and right subtrees are less than or equal to the node's key. This structure allows efficient priority queue operations while maintaining a compact tree shape."
+    },
+    "id": "priorityqueues4x1-004",
+    "source": "priorityqueues4x1.pdf",
+    "createdAt": "2026-03-31T16:34:12.975Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Heap Array Representation",
+    "content": {
+      "points": [
+        "Store heap nodes in array H[1..n] in level order",
+        "PARENT(x): return x/2",
+        "LEFT(x): return 2x",
+        "RIGHT(x): return 2x + 1",
+        "All operations run in O(1) time with O(n) space"
+      ]
+    },
+    "id": "priorityqueues4x1-005",
+    "source": "priorityqueues4x1.pdf",
+    "createdAt": "2026-03-31T16:34:12.975Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Bubble Up and Down",
+    "content": {
+      "text": "BUBBLEUP fixes heap violations by swapping a node with its parent when the node's key is too large, continuing until heap order is restored. BUBBLEDOWN does the opposite, swapping with the larger child when a node's key is too small. Both operations take O(log n) time."
+    },
+    "id": "priorityqueues4x1-006",
+    "source": "priorityqueues4x1.pdf",
+    "createdAt": "2026-03-31T16:34:12.975Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Heap Priority Queue Performance",
+    "content": {
+      "points": [
+        "MAX(): O(1) - just return H[1]",
+        "EXTRACTMAX(): O(log n) - replace root with last element, then bubble down",
+        "INSERT(): O(log n) - add at end, then bubble up",
+        "INCREASEKEY(): O(log n) - update value, then bubble up"
+      ]
+    },
+    "id": "priorityqueues4x1-007",
+    "source": "priorityqueues4x1.pdf",
+    "createdAt": "2026-03-31T16:34:12.975Z"
+  },
+  {
+    "type": "flashcard",
+    "subject": "Computer Science",
+    "title": "Complete vs Almost Complete Trees",
+    "content": {
+      "question": "What's the difference between a complete binary tree and an almost complete binary tree?",
+      "answer": "A complete binary tree has all levels completely filled. An almost complete binary tree is a complete tree with 0 or more rightmost leaves deleted from the last level."
+    },
+    "id": "priorityqueues4x1-008",
+    "source": "priorityqueues4x1.pdf",
+    "createdAt": "2026-03-31T16:34:12.975Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Building a Heap Efficiently",
+    "content": {
+      "text": "You can build a heap from an unsorted array in O(n) time using bottom-up construction: apply BUBBLEDOWN to all nodes in decreasing level order. This is faster than the O(n log n) top-down approach that uses BUBBLEUP on each node."
+    },
+    "id": "priorityqueues4x1-009",
+    "source": "priorityqueues4x1.pdf",
+    "createdAt": "2026-03-31T16:34:12.975Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Heapsort Algorithm",
+    "content": {
+      "points": [
+        "Build a heap from the input array in O(n) time",
+        "Perform n EXTRACTMAX operations in O(n log n) time",
+        "Place extracted elements at the end of array",
+        "Results in O(n log n) total time with O(1) extra space",
+        "It's an in-place sorting algorithm"
+      ]
+    },
+    "id": "priorityqueues4x1-010",
+    "source": "priorityqueues4x1.pdf",
+    "createdAt": "2026-03-31T16:34:12.975Z"
+  },
+  {
+    "type": "quiz",
+    "subject": "Computer Science",
+    "title": "Data Structure Comparison",
+    "content": {
+      "question": "Which data structure gives the best overall performance for priority queue operations?",
+      "options": [
+        "Linked list - O(n) max, O(1) insert",
+        "Sorted linked list - O(1) max, O(n) insert",
+        "Heap - O(1) max, O(log n) insert",
+        "Array - O(n) max, O(1) insert"
+      ],
+      "correctIndex": 2
+    },
+    "id": "priorityqueues4x1-011",
+    "source": "priorityqueues4x1.pdf",
+    "createdAt": "2026-03-31T16:34:12.975Z"
+  },
+  {
+    "type": "flashcard",
+    "subject": "Computer Science",
+    "title": "Heap Height Property",
+    "content": {
+      "question": "What is the height of an almost complete binary tree with n nodes?",
+      "answer": "Θ(log n) - this logarithmic height is what makes heap operations efficient."
+    },
+    "id": "priorityqueues4x1-012",
+    "source": "priorityqueues4x1.pdf",
+    "createdAt": "2026-03-31T16:34:12.975Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Insertion Sort Basics",
+    "content": {
+      "text": "Insertion sort builds a sorted array one element at a time by taking each unsorted element and inserting it into its correct position among the already sorted elements. It works similarly to how you might sort playing cards in your hand, moving each card to its proper place."
+    },
+    "id": "searchingandsorting-weekplan-001",
+    "source": "searchingandsorting-weekplan.pdf",
+    "createdAt": "2026-03-31T16:34:31.365Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Merge Sort Overview",
+    "content": {
+      "text": "Merge sort uses a divide-and-conquer approach by recursively splitting an array into smaller subarrays until each contains only one element, then merging them back together in sorted order. This algorithm guarantees O(n log n) time complexity regardless of input data."
+    },
+    "id": "searchingandsorting-weekplan-002",
+    "source": "searchingandsorting-weekplan.pdf",
+    "createdAt": "2026-03-31T16:34:31.365Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Sorting Algorithm Comparison",
+    "content": {
+      "points": [
+        "Insertion sort: O(n²) time, good for small arrays",
+        "Merge sort: O(n log n) time, stable and predictable",
+        "Quick sort: O(n log n) average, O(n²) worst case",
+        "Binary search can optimize insertion step in insertion sort"
+      ]
+    },
+    "id": "searchingandsorting-weekplan-003",
+    "source": "searchingandsorting-weekplan.pdf",
+    "createdAt": "2026-03-31T16:34:31.365Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Duplicate Detection Problem",
+    "content": {
+      "text": "Finding duplicates in an array can be solved in O(n²) time by comparing every pair of elements, or optimized to O(n log n) by first sorting the array and then checking adjacent elements. The sorting approach is more efficient for larger datasets."
+    },
+    "id": "searchingandsorting-weekplan-004",
+    "source": "searchingandsorting-weekplan.pdf",
+    "createdAt": "2026-03-31T16:34:31.365Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "2Sum and 3Sum Problems",
+    "content": {
+      "points": [
+        "2Sum: Find two numbers that add to zero",
+        "Brute force 2Sum: O(n²) by checking all pairs",
+        "Optimized 2Sum: O(n log n) using sorting and binary search",
+        "3Sum extends the concept to three numbers summing to zero"
+      ]
+    },
+    "id": "searchingandsorting-weekplan-005",
+    "source": "searchingandsorting-weekplan.pdf",
+    "createdAt": "2026-03-31T16:34:31.365Z"
+  },
+  {
+    "type": "flashcard",
+    "subject": "Computer Science",
+    "title": "Binary Search Optimization",
+    "content": {
+      "question": "Can binary search improve insertion sort's performance, and how?",
+      "answer": "Binary search can speed up finding the insertion position from O(n) to O(log n), but the shifting of elements still takes O(n) time, so overall complexity remains O(n²)."
+    },
+    "id": "searchingandsorting-weekplan-006",
+    "source": "searchingandsorting-weekplan.pdf",
+    "createdAt": "2026-03-31T16:34:31.365Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Selection and Rank Problems",
+    "content": {
+      "text": "The rank k problem asks for the kth smallest element in an array. While sorting first gives O(n log n) solution, clever partitioning techniques can solve it in O(n) average time using methods similar to quicksort's partition step."
+    },
+    "id": "searchingandsorting-weekplan-007",
+    "source": "searchingandsorting-weekplan.pdf",
+    "createdAt": "2026-03-31T16:34:31.365Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Partition and QuickSort",
+    "content": {
+      "points": [
+        "Partition separates array into elements ≤ pivot and > pivot",
+        "QuickSort uses recursive partitioning around pivot elements",
+        "Median makes a good pivot for balanced partitions",
+        "Partition step runs in O(n) linear time"
+      ]
+    },
+    "id": "searchingandsorting-weekplan-008",
+    "source": "searchingandsorting-weekplan.pdf",
+    "createdAt": "2026-03-31T16:34:31.365Z"
+  },
+  {
+    "type": "quiz",
+    "subject": "Computer Science",
+    "title": "Time Complexity Quiz",
+    "content": {
+      "question": "What is the time complexity of the optimized 3Sum algorithm?",
+      "options": [
+        "O(n³)",
+        "O(n² log n)",
+        "O(n²)",
+        "O(n log n)"
+      ],
+      "correctIndex": 2
+    },
+    "id": "searchingandsorting-weekplan-009",
+    "source": "searchingandsorting-weekplan.pdf",
+    "createdAt": "2026-03-31T16:34:31.365Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Greedy Stone Collection",
+    "content": {
+      "text": "To maximize the number of stones Josefine can carry within weight limit W, use a greedy approach: sort stones by weight and keep adding the lightest stones until adding another would exceed the weight capacity."
+    },
+    "id": "searchingandsorting-weekplan-010",
+    "source": "searchingandsorting-weekplan.pdf",
+    "createdAt": "2026-03-31T16:34:31.365Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Algorithm Design Strategies",
+    "content": {
+      "points": [
+        "Divide and conquer: Split problem into smaller subproblems",
+        "Greedy: Make locally optimal choices at each step",
+        "Binary search: Reduce search space by half each iteration",
+        "Sorting as preprocessing: Often enables faster subsequent operations"
+      ]
+    },
+    "id": "searchingandsorting-weekplan-011",
+    "source": "searchingandsorting-weekplan.pdf",
+    "createdAt": "2026-03-31T16:34:31.365Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "What is a Binary Search Tree?",
+    "content": {
+      "text": "A binary search tree (BST) is a tree data structure where each node has at most two children, and for every node, all values in the left subtree are smaller than the node's value, while all values in the right subtree are larger. This ordering property makes searching, insertion, and deletion operations efficient."
+    },
+    "id": "searchtrees-weekplan-001",
+    "source": "searchtrees-weekplan.pdf",
+    "createdAt": "2026-03-31T16:34:50.416Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "BST Key Properties",
+    "content": {
+      "points": [
+        "Left subtree contains only values smaller than the current node",
+        "Right subtree contains only values larger than the current node",
+        "Both left and right subtrees are also binary search trees",
+        "The smallest element is always the leftmost node",
+        "The largest element is always the rightmost node"
+      ]
+    },
+    "id": "searchtrees-weekplan-002",
+    "source": "searchtrees-weekplan.pdf",
+    "createdAt": "2026-03-31T16:34:50.416Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Tree Traversal Methods",
+    "content": {
+      "text": "There are three main ways to traverse a binary tree: preorder (visit root, then left, then right), inorder (visit left, then root, then right), and postorder (visit left, then right, then root). In a BST, inorder traversal visits nodes in sorted order from smallest to largest."
+    },
+    "id": "searchtrees-weekplan-003",
+    "source": "searchtrees-weekplan.pdf",
+    "createdAt": "2026-03-31T16:34:50.416Z"
+  },
+  {
+    "type": "flashcard",
+    "subject": "Computer Science",
+    "title": "BST Min/Max Location",
+    "content": {
+      "question": "Where are the smallest and largest elements located in a binary search tree?",
+      "answer": "The smallest element is at the leftmost node (keep going left until you can't), and the largest element is at the rightmost node (keep going right until you can't)."
+    },
+    "id": "searchtrees-weekplan-004",
+    "source": "searchtrees-weekplan.pdf",
+    "createdAt": "2026-03-31T16:34:50.416Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "What is a 2-3 Tree?",
+    "content": {
+      "text": "A 2-3 tree is a balanced search tree where each internal node has either 2 or 3 children, and all leaves are at the same level. Each node can store 1 or 2 keys, maintaining sorted order. This structure guarantees O(log n) height, making all operations efficient."
+    },
+    "id": "searchtrees-weekplan-005",
+    "source": "searchtrees-weekplan.pdf",
+    "createdAt": "2026-03-31T16:34:50.416Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "2-3 Tree Properties",
+    "content": {
+      "points": [
+        "All leaves are at the same level (perfectly balanced)",
+        "Internal nodes have 2 or 3 children",
+        "Nodes contain 1 or 2 keys in sorted order",
+        "Height is always O(log n)",
+        "Automatically stays balanced during insertions and deletions"
+      ]
+    },
+    "id": "searchtrees-weekplan-006",
+    "source": "searchtrees-weekplan.pdf",
+    "createdAt": "2026-03-31T16:34:50.416Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "BST vs Heap Properties",
+    "content": {
+      "text": "Binary search trees maintain left < root < right ordering for efficient searching, while heaps maintain parent ≥ children (max-heap) or parent ≤ children (min-heap) for efficient priority operations. BSTs optimize for search/sort operations, while heaps optimize for finding min/max elements."
+    },
+    "id": "searchtrees-weekplan-007",
+    "source": "searchtrees-weekplan.pdf",
+    "createdAt": "2026-03-31T16:34:50.416Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Common Tree Query Operations",
+    "content": {
+      "points": [
+        "PREDECESSOR(k): Find largest element ≤ k",
+        "RANGEREPORT(k1,k2): Return all elements in range [k1,k2]",
+        "RANGECOUNT(k1,k2): Count elements in range [k1,k2]",
+        "All can be implemented in O(log n) time on balanced trees"
+      ]
+    },
+    "id": "searchtrees-weekplan-008",
+    "source": "searchtrees-weekplan.pdf",
+    "createdAt": "2026-03-31T16:34:50.416Z"
+  },
+  {
+    "type": "quiz",
+    "subject": "Computer Science",
+    "title": "BST Traversal Quiz",
+    "content": {
+      "question": "Which traversal method visits nodes in sorted order in a binary search tree?",
+      "options": [
+        "Preorder traversal",
+        "Inorder traversal",
+        "Postorder traversal",
+        "Level-order traversal"
+      ],
+      "correctIndex": 1
+    },
+    "id": "searchtrees-weekplan-009",
+    "source": "searchtrees-weekplan.pdf",
+    "createdAt": "2026-03-31T16:34:50.416Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Balanced vs Unbalanced Trees",
+    "content": {
+      "text": "The height of a binary search tree affects performance - balanced trees have O(log n) height giving efficient operations, while unbalanced trees can degrade to O(n) height in worst case. Balanced trees like 2-3 trees automatically maintain optimal height through self-balancing operations."
+    },
+    "id": "searchtrees-weekplan-010",
+    "source": "searchtrees-weekplan.pdf",
+    "createdAt": "2026-03-31T16:34:50.416Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Tree Height Analysis",
+    "content": {
+      "points": [
+        "Minimum height for n nodes: ⌊log₂ n⌋",
+        "Maximum height for n nodes: n-1 (degenerate case)",
+        "2-3 trees guarantee height is Θ(log n)",
+        "Height directly impacts operation time complexity",
+        "Balanced trees maintain optimal performance"
+      ]
+    },
+    "id": "searchtrees-weekplan-011",
+    "source": "searchtrees-weekplan.pdf",
+    "createdAt": "2026-03-31T16:34:50.416Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Dynamic Ordered Sets",
+    "content": {
+      "text": "Dynamic ordered sets maintain a collection of elements with unique keys, supporting three core operations: SEARCH(k) to find an element, INSERT(x) to add a new element, and DELETE(x) to remove an element. The key challenge is efficiently supporting these operations while keeping elements ordered by their keys."
+    },
+    "id": "searchtrees4x1-001",
+    "source": "searchtrees4x1.pdf",
+    "createdAt": "2026-03-31T16:35:09.462Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Binary Search Tree Properties",
+    "content": {
+      "points": [
+        "Each node has at most two children (left and right)",
+        "Maintains symmetric order: left subtree ≤ node.key ≤ right subtree",
+        "Inorder traversal visits nodes in sorted key order",
+        "Operations take O(h) time where h is tree height",
+        "Height can be Ω(n) worst-case, Θ(log n) on average"
+      ]
+    },
+    "id": "searchtrees4x1-002",
+    "source": "searchtrees4x1.pdf",
+    "createdAt": "2026-03-31T16:35:09.462Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "BST Search Operation",
+    "content": {
+      "text": "To search for a key k in a binary search tree, start at the root and compare k with the current node's key. If equal, return the element. If k is smaller, go left; if larger, go right. If you reach a null pointer, the key doesn't exist."
+    },
+    "id": "searchtrees4x1-003",
+    "source": "searchtrees4x1.pdf",
+    "createdAt": "2026-03-31T16:35:09.462Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "BST Deletion Cases",
+    "content": {
+      "points": [
+        "0 children: Simply remove the node",
+        "1 child: Replace node with its single child",
+        "2 children: Find successor (smallest key in right subtree), replace node's key with successor's key, then delete successor",
+        "All cases run in O(h) time"
+      ]
+    },
+    "id": "searchtrees4x1-004",
+    "source": "searchtrees4x1.pdf",
+    "createdAt": "2026-03-31T16:35:09.462Z"
+  },
+  {
+    "type": "flashcard",
+    "subject": "Computer Science",
+    "title": "Tree Traversal Order",
+    "content": {
+      "question": "What order does inorder traversal visit nodes in a binary search tree?",
+      "answer": "Sorted order by key values (ascending)"
+    },
+    "id": "searchtrees4x1-005",
+    "source": "searchtrees4x1.pdf",
+    "createdAt": "2026-03-31T16:35:09.462Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "2-3 Trees Balance",
+    "content": {
+      "text": "2-3 trees maintain perfect balance by ensuring every path from root to leaf has the same length. Each internal node has either 2 children with 1 key, or 3 children with 2 keys. This guarantees O(log n) height and operations."
+    },
+    "id": "searchtrees4x1-006",
+    "source": "searchtrees4x1.pdf",
+    "createdAt": "2026-03-31T16:35:09.462Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Data Structure Comparison",
+    "content": {
+      "points": [
+        "Linked list: O(n) search, O(1) insert/delete",
+        "Sorted array: O(log n) search, O(n) insert/delete",
+        "Binary search tree: O(h) for all operations",
+        "2-3 tree: O(log n) for all operations",
+        "Space complexity is O(n) for all structures"
+      ]
+    },
+    "id": "searchtrees4x1-007",
+    "source": "searchtrees4x1.pdf",
+    "createdAt": "2026-03-31T16:35:09.462Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "2-3 Tree Insert Strategy",
+    "content": {
+      "text": "To insert into a 2-3 tree, first search to find the insertion point at a leaf. Add the new key, and if the node becomes too large (more than 2 keys), move the middle key up to the parent and split the node. Repeat this process up the tree if necessary."
+    },
+    "id": "searchtrees4x1-008",
+    "source": "searchtrees4x1.pdf",
+    "createdAt": "2026-03-31T16:35:09.462Z"
+  },
+  {
+    "type": "quiz",
+    "subject": "Computer Science",
+    "title": "BST Symmetric Order",
+    "content": {
+      "question": "In a binary search tree with symmetric order, where are keys greater than the current node located?",
+      "options": [
+        "Left subtree",
+        "Right subtree",
+        "Parent node",
+        "Both subtrees"
+      ],
+      "correctIndex": 1
+    },
+    "id": "searchtrees4x1-009",
+    "source": "searchtrees4x1.pdf",
+    "createdAt": "2026-03-31T16:35:09.462Z"
+  },
+  {
+    "type": "flashcard",
+    "subject": "Computer Science",
+    "title": "Tree Height Impact",
+    "content": {
+      "question": "What is the worst-case time complexity for BST operations when the tree is completely unbalanced?",
+      "answer": "O(n) because the height h can be equal to n in a linear chain"
+    },
+    "id": "searchtrees4x1-010",
+    "source": "searchtrees4x1.pdf",
+    "createdAt": "2026-03-31T16:35:09.462Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Balanced vs Unbalanced Trees",
+    "content": {
+      "text": "While basic binary search trees can degrade to O(n) height in worst case, balanced search trees like 2-3 trees maintain O(log n) height through structural constraints. This guarantees efficient O(log n) operations regardless of insertion order."
+    },
+    "id": "searchtrees4x1-011",
+    "source": "searchtrees4x1.pdf",
+    "createdAt": "2026-03-31T16:35:09.462Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Range Minimum Queries Overview",
+    "content": {
+      "text": "Range Minimum Queries (RMQ) are a fundamental problem in computer science where we need to efficiently find the minimum element in any given range of an array. This problem appears frequently in competitive programming and real-world applications, requiring specialized data structures like segment trees to achieve optimal performance."
+    },
+    "id": "segmenttrees-weekplan-001",
+    "source": "segmenttrees-weekplan.pdf",
+    "createdAt": "2026-03-31T16:35:28.657Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Segment Trees Basics",
+    "content": {
+      "points": [
+        "A segment tree is a binary tree data structure used for storing intervals or segments",
+        "Each leaf represents a single array element, while internal nodes represent merged information from their children",
+        "Common operations include range queries (sum, min, max) and point updates",
+        "Time complexity is O(log n) for both queries and updates",
+        "Space complexity is O(n) with the tree stored in an array format"
+      ]
+    },
+    "id": "segmenttrees-weekplan-002",
+    "source": "segmenttrees-weekplan.pdf",
+    "createdAt": "2026-03-31T16:35:28.657Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Segment Tree Operations",
+    "content": {
+      "text": "Segment trees support two main operations: ADD(index, value) which updates a single element, and range queries that retrieve aggregated information over a range. The tree structure allows these operations to run in O(log n) time by only visiting nodes along the path from root to leaf, making it much faster than naive O(n) approaches."
+    },
+    "id": "segmenttrees-weekplan-003",
+    "source": "segmenttrees-weekplan.pdf",
+    "createdAt": "2026-03-31T16:35:28.657Z"
+  },
+  {
+    "type": "flashcard",
+    "subject": "Computer Science",
+    "title": "Segment Tree Time Complexity",
+    "content": {
+      "question": "What is the time complexity for both query and update operations in a segment tree?",
+      "answer": "O(log n) - because we only need to traverse from root to leaf, visiting at most log n nodes in the tree structure."
+    },
+    "id": "segmenttrees-weekplan-004",
+    "source": "segmenttrees-weekplan.pdf",
+    "createdAt": "2026-03-31T16:35:28.657Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Range Sum Queries",
+    "content": {
+      "points": [
+        "Range sum queries find the total sum of elements in a given range [i, j]",
+        "Can be solved using segment trees, prefix sums, or Fenwick trees",
+        "Segment trees allow both range queries and point updates in O(log n) time",
+        "Prefix sums provide O(1) queries but O(n) updates",
+        "Useful for problems involving cumulative data analysis"
+      ]
+    },
+    "id": "segmenttrees-weekplan-005",
+    "source": "segmenttrees-weekplan.pdf",
+    "createdAt": "2026-03-31T16:35:28.657Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Range Updates Problem",
+    "content": {
+      "text": "The range update problem involves efficiently adding a value to all elements in a range [i, j] and looking up individual elements. This requires techniques like lazy propagation in segment trees or difference arrays to avoid the naive O(n) cost of updating each element individually, achieving O(log n) performance instead."
+    },
+    "id": "segmenttrees-weekplan-006",
+    "source": "segmenttrees-weekplan.pdf",
+    "createdAt": "2026-03-31T16:35:28.657Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Real-World Applications",
+    "content": {
+      "points": [
+        "Database indexing for range queries on large datasets",
+        "Geographic information systems for spatial range searches",
+        "Financial systems for calculating portfolio values over time periods",
+        "Game development for collision detection and spatial partitioning",
+        "Image processing for region-based operations and filters"
+      ]
+    },
+    "id": "segmenttrees-weekplan-007",
+    "source": "segmenttrees-weekplan.pdf",
+    "createdAt": "2026-03-31T16:35:28.657Z"
+  },
+  {
+    "type": "quiz",
+    "subject": "Computer Science",
+    "title": "Segment Tree Structure",
+    "content": {
+      "question": "In a segment tree stored as an array, where are the leaf nodes typically located?",
+      "options": [
+        "At the beginning of the array",
+        "Scattered throughout the array",
+        "In the second half of the array",
+        "Only at odd indices"
+      ],
+      "correctIndex": 2
+    },
+    "id": "segmenttrees-weekplan-008",
+    "source": "segmenttrees-weekplan.pdf",
+    "createdAt": "2026-03-31T16:35:28.657Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Dynamic Array Preprocessing",
+    "content": {
+      "text": "Preprocessing arrays for range queries involves building auxiliary data structures that enable fast query responses. The choice between segment trees, sparse tables, or other structures depends on whether the array is static or dynamic, and whether updates are needed alongside queries."
+    },
+    "id": "segmenttrees-weekplan-009",
+    "source": "segmenttrees-weekplan.pdf",
+    "createdAt": "2026-03-31T16:35:28.657Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Common Range Query Types",
+    "content": {
+      "points": [
+        "Range Minimum Query (RMQ): find the smallest element in a range",
+        "Range Maximum Query: find the largest element in a range",
+        "Range Sum Query: calculate the total sum of elements in a range",
+        "Range GCD Query: find the greatest common divisor of elements in a range",
+        "Range XOR Query: compute the XOR of all elements in a range"
+      ]
+    },
+    "id": "segmenttrees-weekplan-010",
+    "source": "segmenttrees-weekplan.pdf",
+    "createdAt": "2026-03-31T16:35:28.657Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Range Minimum Query Problem",
+    "content": {
+      "text": "Range Minimum Query (RMQ) is a problem where you preprocess an array to efficiently answer queries about the minimum element in any given range. Given an array A[1...n], RMQ(i,j) returns the minimum element in the subarray from index i to j."
+    },
+    "id": "segmenttrees1x1-001",
+    "source": "segmenttrees1x1.pdf",
+    "createdAt": "2026-03-31T16:35:50.243Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Static RMQ Solutions",
+    "content": {
+      "points": [
+        "Solution 1: Store array, scan for each query - O(n) space, O(n) time",
+        "Solution 2: Precompute all answers in matrix - O(n²) space, O(1) time",
+        "Trade-off between preprocessing time/space and query speed",
+        "Matrix solution stores answer for every possible (i,j) pair"
+      ]
+    },
+    "id": "segmenttrees1x1-002",
+    "source": "segmenttrees1x1.pdf",
+    "createdAt": "2026-03-31T16:35:50.243Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Dynamic Range Minimum Queries",
+    "content": {
+      "text": "Dynamic RMQ extends the basic problem by allowing updates to array elements. It supports both RMQ(i,j) queries and Add(i,k) operations that modify A[i] = A[i] + k, where k can be negative."
+    },
+    "id": "segmenttrees1x1-003",
+    "source": "segmenttrees1x1.pdf",
+    "createdAt": "2026-03-31T16:35:50.243Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Dynamic RMQ Trade-offs",
+    "content": {
+      "points": [
+        "Array solution: O(n) space, O(n) query, O(1) update",
+        "Matrix solution: O(n²) space, O(1) query, O(n²) update",
+        "Updates in matrix approach require recalculating many entries",
+        "Need better data structure for balanced performance"
+      ]
+    },
+    "id": "segmenttrees1x1-004",
+    "source": "segmenttrees1x1.pdf",
+    "createdAt": "2026-03-31T16:35:50.243Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Segment Trees for RMQ",
+    "content": {
+      "text": "Segment trees provide an optimal solution for dynamic RMQ by organizing data in a binary tree structure. Each node stores the minimum value of its range, allowing both queries and updates to be performed in O(log n) time with O(n) space."
+    },
+    "id": "segmenttrees1x1-005",
+    "source": "segmenttrees1x1.pdf",
+    "createdAt": "2026-03-31T16:35:50.243Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Segment Tree Performance",
+    "content": {
+      "points": [
+        "Space complexity: O(n) - linear in array size",
+        "Query time: O(log n) - traverse tree height",
+        "Update time: O(log n) - modify path from leaf to root",
+        "Balanced solution for dynamic range queries"
+      ]
+    },
+    "id": "segmenttrees1x1-006",
+    "source": "segmenttrees1x1.pdf",
+    "createdAt": "2026-03-31T16:35:50.243Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Segment Tree Query Algorithm",
+    "content": {
+      "text": "To query RMQ(i,j) in a segment tree, start with pointers at positions i and j. Move inward while taking minimum values from nodes that represent complete ranges within the query interval, then move both pointers up to their parents until they meet."
+    },
+    "id": "segmenttrees1x1-007",
+    "source": "segmenttrees1x1.pdf",
+    "createdAt": "2026-03-31T16:35:50.243Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Segment Tree Updates",
+    "content": {
+      "text": "When updating an element in a segment tree, you modify the leaf node and then propagate the change upward to the root. Each ancestor node may need to recalculate its minimum value based on its children, requiring O(log n) operations."
+    },
+    "id": "segmenttrees1x1-008",
+    "source": "segmenttrees1x1.pdf",
+    "createdAt": "2026-03-31T16:35:50.243Z"
+  },
+  {
+    "type": "flashcard",
+    "subject": "Computer Science",
+    "title": "RMQ Definition",
+    "content": {
+      "question": "What does RMQ(i,j) return?",
+      "answer": "The minimum element in the array range from index i to index j"
+    },
+    "id": "segmenttrees1x1-009",
+    "source": "segmenttrees1x1.pdf",
+    "createdAt": "2026-03-31T16:35:50.243Z"
+  },
+  {
+    "type": "quiz",
+    "subject": "Computer Science",
+    "title": "Segment Tree Complexity",
+    "content": {
+      "question": "What is the time complexity for both queries and updates in a segment tree?",
+      "options": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n²)"
+      ],
+      "correctIndex": 1
+    },
+    "id": "segmenttrees1x1-010",
+    "source": "segmenttrees1x1.pdf",
+    "createdAt": "2026-03-31T16:35:50.243Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Query Algorithm Steps",
+    "content": {
+      "points": [
+        "Initialize s = infinity, set pointers a = i and b = j",
+        "While a is not right of b, check if nodes are complete ranges",
+        "If a is right child, take minimum and move a right",
+        "If b is left child, take minimum and move b left",
+        "Move both pointers to parent nodes and repeat"
+      ]
+    },
+    "id": "segmenttrees1x1-011",
+    "source": "segmenttrees1x1.pdf",
+    "createdAt": "2026-03-31T16:35:50.243Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Range Minimum Query Problem",
+    "content": {
+      "text": "Range Minimum Query (RMQ) is a data structure problem where you preprocess an array A[1...n] to efficiently answer queries RMQ(i,j) that return the minimum element in the subarray A[i...j]. The goal is to balance preprocessing time, space usage, and query time complexity."
+    },
+    "id": "segmenttrees4x1-001",
+    "source": "segmenttrees4x1.pdf",
+    "createdAt": "2026-03-31T16:36:11.068Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Static RMQ Solutions",
+    "content": {
+      "points": [
+        "Solution 1: Store original array - O(n) space, O(n) query time",
+        "Solution 2: Precompute all queries in matrix - O(n²) space, O(1) query time",
+        "Trade-off between space and query time complexity",
+        "Static solutions don't support array updates after preprocessing"
+      ]
+    },
+    "id": "segmenttrees4x1-002",
+    "source": "segmenttrees4x1.pdf",
+    "createdAt": "2026-03-31T16:36:11.068Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Dynamic Range Minimum Queries",
+    "content": {
+      "text": "Dynamic RMQ extends the basic problem by supporting updates to the array. It must handle both RMQ(i,j) queries to find minimum values and Add(i,k) operations to modify array elements by adding k to position i (k can be negative)."
+    },
+    "id": "segmenttrees4x1-003",
+    "source": "segmenttrees4x1.pdf",
+    "createdAt": "2026-03-31T16:36:11.068Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Dynamic RMQ Trade-offs",
+    "content": {
+      "points": [
+        "Array solution: O(n) space, O(n) query, O(1) update time",
+        "Matrix solution: O(n²) space, O(1) query, O(n²) update time",
+        "Updates in matrix approach require recalculating many entries",
+        "Need better data structure for balanced performance"
+      ]
+    },
+    "id": "segmenttrees4x1-004",
+    "source": "segmenttrees4x1.pdf",
+    "createdAt": "2026-03-31T16:36:11.068Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Segment Trees for RMQ",
+    "content": {
+      "text": "Segment trees provide an optimal solution for dynamic RMQ problems. They use O(n) space and support both queries and updates in O(log n) time by organizing data in a binary tree structure where each node stores the minimum of its subtree."
+    },
+    "id": "segmenttrees4x1-005",
+    "source": "segmenttrees4x1.pdf",
+    "createdAt": "2026-03-31T16:36:11.068Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Segment Tree Properties",
+    "content": {
+      "points": [
+        "Space complexity: O(n) - much better than O(n²) matrix",
+        "Query time: O(log n) - logarithmic traversal of tree height",
+        "Update time: O(log n) - propagate changes up the tree path",
+        "Each internal node stores minimum of its children's ranges"
+      ]
+    },
+    "id": "segmenttrees4x1-006",
+    "source": "segmenttrees4x1.pdf",
+    "createdAt": "2026-03-31T16:36:11.068Z"
+  },
+  {
+    "type": "flashcard",
+    "subject": "Computer Science",
+    "title": "Segment Tree Complexity",
+    "content": {
+      "question": "What are the time and space complexities for segment trees in dynamic RMQ?",
+      "answer": "Space: O(n), Query time: O(log n), Update time: O(log n). This provides a good balance between all operations compared to naive approaches."
+    },
+    "id": "segmenttrees4x1-007",
+    "source": "segmenttrees4x1.pdf",
+    "createdAt": "2026-03-31T16:36:11.068Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Segment Tree Query Algorithm",
+    "content": {
+      "text": "To query RMQ(i,j) in a segment tree, start with pointers at positions i and j. Move inward by taking minimum values from right children of left pointer and left children of right pointer, then move both pointers up to their parents until they meet."
+    },
+    "id": "segmenttrees4x1-008",
+    "source": "segmenttrees4x1.pdf",
+    "createdAt": "2026-03-31T16:36:11.068Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Segment Tree Update Process",
+    "content": {
+      "points": [
+        "Add(i,k) operation modifies array element at position i",
+        "Update leaf node in segment tree with new value",
+        "Propagate changes upward through all ancestor nodes",
+        "Each ancestor recalculates its minimum from children"
+      ]
+    },
+    "id": "segmenttrees4x1-009",
+    "source": "segmenttrees4x1.pdf",
+    "createdAt": "2026-03-31T16:36:11.068Z"
+  },
+  {
+    "type": "quiz",
+    "subject": "Computer Science",
+    "title": "RMQ Solution Comparison",
+    "content": {
+      "question": "Which approach gives the best overall performance for dynamic RMQ with frequent queries and updates?",
+      "options": [
+        "Store array only",
+        "Precomputed matrix",
+        "Segment tree",
+        "Linear scan each time"
+      ],
+      "correctIndex": 2
+    },
+    "id": "segmenttrees4x1-010",
+    "source": "segmenttrees4x1.pdf",
+    "createdAt": "2026-03-31T16:36:11.068Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "What Are Shortest Path Algorithms?",
+    "content": {
+      "text": "Shortest path algorithms find the path between two nodes in a graph with the minimum total weight. These algorithms are fundamental in computer science and have applications in routing, navigation, network optimization, and many other domains where finding optimal paths is crucial."
+    },
+    "id": "shortestpaths-weekplan-001",
+    "source": "shortestpaths-weekplan.pdf",
+    "createdAt": "2026-03-31T16:36:32.599Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Dijkstra's Algorithm Properties",
+    "content": {
+      "points": [
+        "Works only with non-negative edge weights",
+        "Finds shortest paths from a single source to all other nodes",
+        "Uses a greedy approach with a priority queue",
+        "Time complexity is O((V + E) log V) with binary heap",
+        "Fails with negative edges because it assumes found distances are final"
+      ]
+    },
+    "id": "shortestpaths-weekplan-002",
+    "source": "shortestpaths-weekplan.pdf",
+    "createdAt": "2026-03-31T16:36:32.599Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Shortest Path Trees",
+    "content": {
+      "text": "A shortest path tree rooted at node s contains the shortest paths from s to all reachable nodes in the graph. It's a subgraph that forms a tree structure where each node's parent represents the next step on the optimal path back to the source."
+    },
+    "id": "shortestpaths-weekplan-003",
+    "source": "shortestpaths-weekplan.pdf",
+    "createdAt": "2026-03-31T16:36:32.599Z"
+  },
+  {
+    "type": "flashcard",
+    "subject": "Computer Science",
+    "title": "Negative Edges Impact",
+    "content": {
+      "question": "What happens when you run Dijkstra's algorithm on a graph with negative edge weights?",
+      "answer": "Dijkstra's algorithm produces incorrect results because it assumes that once a node is processed, its shortest distance is final. Negative edges can create shorter paths that are discovered later."
+    },
+    "id": "shortestpaths-weekplan-004",
+    "source": "shortestpaths-weekplan.pdf",
+    "createdAt": "2026-03-31T16:36:32.599Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "DAG Longest Path Algorithm",
+    "content": {
+      "points": [
+        "Topologically sort the vertices of the DAG",
+        "Initialize distances: source = 0, all others = negative infinity",
+        "Process vertices in topological order",
+        "For each vertex, update distances to its neighbors",
+        "Works because DAGs have no cycles to create contradictions"
+      ]
+    },
+    "id": "shortestpaths-weekplan-005",
+    "source": "shortestpaths-weekplan.pdf",
+    "createdAt": "2026-03-31T16:36:32.599Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Cable Routing Optimization",
+    "content": {
+      "text": "To maximize signal quality in cable networks, we need shortest path algorithms since signal degrades proportionally to cable length. When boxes add extra cost (like 5 meters of cable), we modify edge weights to include this penalty before running the shortest path algorithm."
+    },
+    "id": "shortestpaths-weekplan-006",
+    "source": "shortestpaths-weekplan.pdf",
+    "createdAt": "2026-03-31T16:36:32.599Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Minimum Spanning Trees for Cost",
+    "content": {
+      "text": "When AlgoNet wants to minimize cable maintenance costs while connecting all houses, this becomes a Minimum Spanning Tree problem. We need to find the subset of edges that connects all nodes with minimum total weight, not shortest paths."
+    },
+    "id": "shortestpaths-weekplan-007",
+    "source": "shortestpaths-weekplan.pdf",
+    "createdAt": "2026-03-31T16:36:32.599Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Probability Path Problems",
+    "content": {
+      "points": [
+        "Convert probabilities to logarithms to use addition instead of multiplication",
+        "Use negative log values so maximum probability becomes minimum weight",
+        "Apply shortest path algorithms on the transformed graph",
+        "Convert final result back using exponential function",
+        "Independent probabilities multiply along paths"
+      ]
+    },
+    "id": "shortestpaths-weekplan-008",
+    "source": "shortestpaths-weekplan.pdf",
+    "createdAt": "2026-03-31T16:36:32.599Z"
+  },
+  {
+    "type": "quiz",
+    "subject": "Computer Science",
+    "title": "Edge Weight Effects",
+    "content": {
+      "question": "What happens to a shortest path tree T when you add the same constant c to all edge weights in the graph?",
+      "options": [
+        "T is always still optimal",
+        "T is never optimal anymore",
+        "T may or may not remain optimal",
+        "T becomes a maximum spanning tree"
+      ],
+      "correctIndex": 2
+    },
+    "id": "shortestpaths-weekplan-009",
+    "source": "shortestpaths-weekplan.pdf",
+    "createdAt": "2026-03-31T16:36:32.599Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Loopy Trees Structure",
+    "content": {
+      "text": "A loopy tree is created by taking a binary tree and adding edges from every leaf back to the root. This creates a special graph structure that's mostly tree-like but has some cycles, which can potentially allow for more efficient shortest path algorithms than general graphs."
+    },
+    "id": "shortestpaths-weekplan-010",
+    "source": "shortestpaths-weekplan.pdf",
+    "createdAt": "2026-03-31T16:36:32.599Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Shortest Path Verification",
+    "content": {
+      "points": [
+        "Check if tree T is rooted at source s",
+        "Verify all edges in T have correct shortest distances",
+        "For each node, confirm no other path is shorter",
+        "Use relaxation: if dist[u] + weight(u,v) < dist[v], then T is not optimal",
+        "All tree edges must satisfy the shortest path property"
+      ]
+    },
+    "id": "shortestpaths-weekplan-011",
+    "source": "shortestpaths-weekplan.pdf",
+    "createdAt": "2026-03-31T16:36:32.599Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Shortest Paths Problem",
+    "content": {
+      "text": "The shortest paths problem asks us to find the shortest path from a source vertex s to all other vertices in a directed, weighted graph. The solution is typically represented as a shortest path tree rooted at s, which efficiently captures all shortest paths from the source."
+    },
+    "id": "shortestpaths4x1-001",
+    "source": "shortestpaths4x1.pdf",
+    "createdAt": "2026-03-31T16:36:52.619Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Shortest Path Applications",
+    "content": {
+      "points": [
+        "Routing in computer networks and GPS navigation",
+        "Scheduling tasks with dependencies",
+        "Pipelining in computer architectures",
+        "Resource allocation and optimization problems"
+      ]
+    },
+    "id": "shortestpaths4x1-002",
+    "source": "shortestpaths4x1.pdf",
+    "createdAt": "2026-03-31T16:36:52.619Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Subpath Property",
+    "content": {
+      "text": "A key property of shortest paths is that any subpath of a shortest path is also a shortest path. This means if we have the shortest path from s to t, then every portion of that path between any two vertices on it is also shortest between those vertices."
+    },
+    "id": "shortestpaths4x1-003",
+    "source": "shortestpaths4x1.pdf",
+    "createdAt": "2026-03-31T16:36:52.619Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Dijkstra's Algorithm Steps",
+    "content": {
+      "points": [
+        "Initialize source distance to 0, all others to infinity",
+        "Maintain a priority queue of unvisited vertices",
+        "Extract vertex with minimum distance estimate",
+        "Relax all outgoing edges by updating distance estimates",
+        "Repeat until all vertices are processed"
+      ]
+    },
+    "id": "shortestpaths4x1-004",
+    "source": "shortestpaths4x1.pdf",
+    "createdAt": "2026-03-31T16:36:52.619Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Edge Relaxation",
+    "content": {
+      "text": "Edge relaxation is the core operation in shortest path algorithms. For edge (u,v), if the path through u gives a shorter distance to v than currently known, we update v's distance to u.distance + weight(u,v). This process gradually improves distance estimates."
+    },
+    "id": "shortestpaths4x1-005",
+    "source": "shortestpaths4x1.pdf",
+    "createdAt": "2026-03-31T16:36:52.619Z"
+  },
+  {
+    "type": "flashcard",
+    "subject": "Computer Science",
+    "title": "Dijkstra Complexity",
+    "content": {
+      "question": "What is the time complexity of Dijkstra's algorithm using a binary heap?",
+      "answer": "O(m log n) where m is the number of edges and n is the number of vertices, due to n extract-min operations and up to m decrease-key operations, each taking O(log n) time."
+    },
+    "id": "shortestpaths4x1-006",
+    "source": "shortestpaths4x1.pdf",
+    "createdAt": "2026-03-31T16:36:52.619Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Priority Queue Operations in Dijkstra",
+    "content": {
+      "points": [
+        "n INSERT operations to add all vertices initially",
+        "n EXTRACT-MIN operations to process each vertex",
+        "Up to m DECREASE-KEY operations when relaxing edges",
+        "Total complexity depends on the priority queue implementation chosen"
+      ]
+    },
+    "id": "shortestpaths4x1-007",
+    "source": "shortestpaths4x1.pdf",
+    "createdAt": "2026-03-31T16:36:52.619Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "DAG Shortest Paths",
+    "content": {
+      "text": "Finding shortest paths in Directed Acyclic Graphs (DAGs) is computationally easier than general graphs. We can process vertices in topological order and relax edges, achieving O(m + n) time complexity. This approach even works with negative edge weights."
+    },
+    "id": "shortestpaths4x1-008",
+    "source": "shortestpaths4x1.pdf",
+    "createdAt": "2026-03-31T16:36:52.619Z"
+  },
+  {
+    "type": "quiz",
+    "subject": "Computer Science",
+    "title": "Algorithm Requirements",
+    "content": {
+      "question": "What is a key requirement for Dijkstra's algorithm to work correctly?",
+      "options": [
+        "The graph must be acyclic",
+        "All edge weights must be non-negative",
+        "The graph must be undirected",
+        "There must be exactly n-1 edges"
+      ],
+      "correctIndex": 1
+    },
+    "id": "shortestpaths4x1-009",
+    "source": "shortestpaths4x1.pdf",
+    "createdAt": "2026-03-31T16:36:52.619Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Priority Queue Comparison",
+    "content": {
+      "points": [
+        "Array implementation: O(n²) total time, simple but slow",
+        "Binary heap: O(m log n) total time, good general choice",
+        "Fibonacci heap: O(m + n log n) total time, optimal but complex",
+        "Choice depends on graph density and implementation complexity"
+      ]
+    },
+    "id": "shortestpaths4x1-010",
+    "source": "shortestpaths4x1.pdf",
+    "createdAt": "2026-03-31T16:36:52.619Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Greedy Nature of Dijkstra",
+    "content": {
+      "text": "Dijkstra's algorithm is a greedy algorithm that always selects the closest unvisited vertex next. This greedy choice is optimal because once we select a vertex, we know its shortest path distance is final - no future relaxations can improve it."
+    },
+    "id": "shortestpaths4x1-011",
+    "source": "shortestpaths4x1.pdf",
+    "createdAt": "2026-03-31T16:36:52.619Z"
+  },
+  {
+    "type": "quiz",
+    "subject": "Computer Science",
+    "title": "DAG Algorithm Advantage",
+    "content": {
+      "question": "What is the main advantage of the DAG shortest path algorithm over Dijkstra's?",
+      "options": [
+        "It works with negative weights",
+        "It has O(m + n) time complexity",
+        "It doesn't need a priority queue",
+        "All of the above"
+      ],
+      "correctIndex": 3
+    },
+    "id": "shortestpaths4x1-012",
+    "source": "shortestpaths4x1.pdf",
+    "createdAt": "2026-03-31T16:36:52.619Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Course Overview: Algorithms & Data Structures",
+    "content": {
+      "text": "02105 Algorithms and Data Structures 1 is a computer science course that uses the CLRS textbook 'Introduction to Algorithms' 4th edition. The course covers fundamental algorithms and data structures concepts through a structured weekly format combining lectures, exercise classes, and hands-on programming work."
+    },
+    "id": "survivalguide-001",
+    "source": "survivalguide.pdf",
+    "createdAt": "2026-03-31T16:37:04.593Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Weekly Course Structure",
+    "content": {
+      "points": [
+        "8:00-10:00 Exercise class with TAs on previous lecture material",
+        "10:00-10:45 Walkthrough of selected exercises from the class",
+        "10:50-12:00 Lecture on new material",
+        "Week 0 is the first exercise class with no corresponding lecture"
+      ]
+    },
+    "id": "survivalguide-002",
+    "source": "survivalguide.pdf",
+    "createdAt": "2026-03-31T16:37:04.593Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Exercise Preparation Strategy",
+    "content": {
+      "text": "Before each exercise class, you should familiarize yourself with all exercises and work on at least half of them beforehand. Don't expect to solve all exercises during class time - focus on your weak points and work in your preferred order to maximize learning."
+    },
+    "id": "survivalguide-003",
+    "source": "survivalguide.pdf",
+    "createdAt": "2026-03-31T16:37:04.593Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Exercise Difficulty Codes",
+    "content": {
+      "points": [
+        "[w] Warmup exercises - should be easy if you understand the material",
+        "[*] Difficult exercises requiring clever insights",
+        "[**] Very difficult exercises needing creative problem-solving",
+        "[†] Programming implementation exercises"
+      ]
+    },
+    "id": "survivalguide-004",
+    "source": "survivalguide.pdf",
+    "createdAt": "2026-03-31T16:37:04.593Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Programming Languages",
+    "content": {
+      "text": "You can use any standard imperative programming language like Python, Java, C, or C++ for implementation exercises. Python is the default programming language for the course, making it a good choice if you're unsure which language to use."
+    },
+    "id": "survivalguide-005",
+    "source": "survivalguide.pdf",
+    "createdAt": "2026-03-31T16:37:04.593Z"
+  },
+  {
+    "type": "flashcard",
+    "subject": "Computer Science",
+    "title": "Course Textbook",
+    "content": {
+      "question": "What is the main textbook used in 02105 Algorithms and Data Structures 1?",
+      "answer": "'Introduction to Algorithms' 4th edition by Cormen, Leiserson, Rivest, and Stein (CLRS)"
+    },
+    "id": "survivalguide-006",
+    "source": "survivalguide.pdf",
+    "createdAt": "2026-03-31T16:37:04.593Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Hand-in Exercises",
+    "content": {
+      "text": "The course offers several voluntary hand-in exercises throughout the semester. These are non-mandatory but provide additional practice and learning opportunities. Details about these exercises can be found on the course homepage."
+    },
+    "id": "survivalguide-007",
+    "source": "survivalguide.pdf",
+    "createdAt": "2026-03-31T16:37:04.593Z"
+  },
+  {
+    "type": "quiz",
+    "subject": "Computer Science",
+    "title": "Exercise Class Timing",
+    "content": {
+      "question": "What happens during the 10:00-10:45 time slot in the weekly schedule?",
+      "options": [
+        "New lecture material is presented",
+        "Students work on exercises independently",
+        "Walkthrough of selected exercises from the exercise class",
+        "Programming assignments are due"
+      ],
+      "correctIndex": 2
+    },
+    "id": "survivalguide-008",
+    "source": "survivalguide.pdf",
+    "createdAt": "2026-03-31T16:37:04.593Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "What is Union Find?",
+    "content": {
+      "text": "Union Find is a data structure that efficiently tracks connected components in a dynamic graph. It supports two main operations: UNION (connect two elements) and FIND (check if two elements are connected). This makes it perfect for problems like network connectivity and dynamic graph analysis."
+    },
+    "id": "unionfind-weekplan-001",
+    "source": "unionfind-weekplan.pdf",
+    "createdAt": "2026-03-31T16:37:26.519Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Union Find Variants",
+    "content": {
+      "points": [
+        "Quick Find: Fast lookups O(1) but slow unions O(n)",
+        "Quick Union: Uses tree structure, but can create tall trees",
+        "Weighted Quick Union: Keeps trees balanced by merging smaller into larger",
+        "Path Compression: Flattens trees during FIND to speed up future operations"
+      ]
+    },
+    "id": "unionfind-weekplan-002",
+    "source": "unionfind-weekplan.pdf",
+    "createdAt": "2026-03-31T16:37:26.519Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Quick Find Algorithm",
+    "content": {
+      "text": "Quick Find uses an array where each element stores its component ID. FIND operations are O(1) since you just check the array. However, UNION operations are O(n) because you must update all elements in one component to match the other component's ID."
+    },
+    "id": "unionfind-weekplan-003",
+    "source": "unionfind-weekplan.pdf",
+    "createdAt": "2026-03-31T16:37:26.519Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Quick Union Trees",
+    "content": {
+      "text": "Quick Union represents each component as a tree where each node points to its parent. FIND follows parent pointers to the root, while UNION connects one tree's root to another's. Without optimizations, trees can become very tall, making operations slow."
+    },
+    "id": "unionfind-weekplan-004",
+    "source": "unionfind-weekplan.pdf",
+    "createdAt": "2026-03-31T16:37:26.519Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Weighted Quick Union Benefits",
+    "content": {
+      "points": [
+        "Always attaches smaller tree to root of larger tree",
+        "Keeps tree height logarithmic in the number of nodes",
+        "Prevents worst-case linear chains from forming",
+        "Significantly improves performance over basic quick union"
+      ]
+    },
+    "id": "unionfind-weekplan-005",
+    "source": "unionfind-weekplan.pdf",
+    "createdAt": "2026-03-31T16:37:26.519Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Path Compression Magic",
+    "content": {
+      "text": "Path compression flattens trees by making every node on the path point directly to the root during FIND operations. This optimization makes subsequent FIND operations much faster and keeps the tree structure nearly flat over time."
+    },
+    "id": "unionfind-weekplan-006",
+    "source": "unionfind-weekplan.pdf",
+    "createdAt": "2026-03-31T16:37:26.519Z"
+  },
+  {
+    "type": "flashcard",
+    "subject": "Computer Science",
+    "title": "Quick Find vs Quick Union",
+    "content": {
+      "question": "What is the key difference between Quick Find and Quick Union data structures?",
+      "answer": "Quick Find uses an array where FIND is O(1) but UNION is O(n). Quick Union uses trees where FIND can be slow but UNION is faster by just linking tree roots."
+    },
+    "id": "unionfind-weekplan-007",
+    "source": "unionfind-weekplan.pdf",
+    "createdAt": "2026-03-31T16:37:26.519Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Real-World Applications",
+    "content": {
+      "points": [
+        "Computer network connectivity monitoring",
+        "Percolation problems (like zombie invasion paths)",
+        "Dynamic graph component tracking",
+        "Kruskal's minimum spanning tree algorithm",
+        "Social network friend group analysis"
+      ]
+    },
+    "id": "unionfind-weekplan-008",
+    "source": "unionfind-weekplan.pdf",
+    "createdAt": "2026-03-31T16:37:26.519Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Linked List Implementation",
+    "content": {
+      "text": "Union Find can be implemented using linked lists where each set is a list with the first element as representative. Each node has a pointer to the representative for O(1) FIND operations. UNION requires merging lists, which can be optimized by always merging the smaller list into the larger one."
+    },
+    "id": "unionfind-weekplan-009",
+    "source": "unionfind-weekplan.pdf",
+    "createdAt": "2026-03-31T16:37:26.519Z"
+  },
+  {
+    "type": "quiz",
+    "subject": "Computer Science",
+    "title": "Union Find Complexity",
+    "content": {
+      "question": "What is the time complexity of FIND in Quick Find?",
+      "options": [
+        "O(n)",
+        "O(log n)",
+        "O(1)",
+        "O(n log n)"
+      ],
+      "correctIndex": 2
+    },
+    "id": "unionfind-weekplan-010",
+    "source": "unionfind-weekplan.pdf",
+    "createdAt": "2026-03-31T16:37:26.519Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Dynamic Connectivity Problem",
+    "content": {
+      "text": "The dynamic connectivity problem asks: given a set of elements that start disconnected, support adding connections and querying if two elements are connected. Union Find solves this efficiently, much better than repeatedly running graph search algorithms."
+    },
+    "id": "unionfind-weekplan-011",
+    "source": "unionfind-weekplan.pdf",
+    "createdAt": "2026-03-31T16:37:26.519Z"
+  },
+  {
+    "type": "quiz",
+    "subject": "Computer Science",
+    "title": "Optimization Strategy",
+    "content": {
+      "question": "In weighted quick union, when merging two trees of equal size, which tree becomes the subtree?",
+      "options": [
+        "The first tree specified",
+        "The second tree specified",
+        "Either one (implementation dependent)",
+        "They cannot be merged"
+      ],
+      "correctIndex": 2
+    },
+    "id": "unionfind-weekplan-012",
+    "source": "unionfind-weekplan.pdf",
+    "createdAt": "2026-03-31T16:37:26.519Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Union Find Data Structure",
+    "content": {
+      "text": "Union Find is a data structure that maintains dynamic families of disjoint sets. It supports three key operations: INIT(n) creates n individual sets, UNION(i,j) merges the sets containing elements i and j, and FIND(i) returns a representative for the set containing element i. This structure is essential for solving dynamic connectivity problems efficiently."
+    },
+    "id": "unionfind4x1-001",
+    "source": "unionfind4x1.pdf",
+    "createdAt": "2026-03-31T16:37:49.632Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Union Find Applications",
+    "content": {
+      "points": [
+        "Dynamic connectivity - checking if nodes are connected in a graph",
+        "Minimum spanning tree algorithms like Kruskal's",
+        "Unification processes in logic programming and compilers",
+        "Finding nearest common ancestors in tree structures",
+        "Games like Hex and Go for territory detection"
+      ]
+    },
+    "id": "unionfind4x1-002",
+    "source": "unionfind4x1.pdf",
+    "createdAt": "2026-03-31T16:37:49.632Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Quick Find Implementation",
+    "content": {
+      "text": "Quick Find uses an array where each element stores its set's representative directly. FIND operations are O(1) since you just return the array value, but UNION operations are expensive O(n) because you must update the representative for all elements in one of the merging sets. This makes it inefficient for union-heavy workloads."
+    },
+    "id": "unionfind4x1-003",
+    "source": "unionfind4x1.pdf",
+    "createdAt": "2026-03-31T16:37:49.632Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Quick Union Trees",
+    "content": {
+      "text": "Quick Union represents each set as a rooted tree, where each element points to its parent and the root points to itself. FIND follows parent pointers to reach the root, while UNION makes one tree's root point to another's root. The main drawback is that trees can become very deep (up to n-1), making operations slow in the worst case."
+    },
+    "id": "unionfind4x1-004",
+    "source": "unionfind4x1.pdf",
+    "createdAt": "2026-03-31T16:37:49.632Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Weighted Quick Union Benefits",
+    "content": {
+      "points": [
+        "Always makes the smaller tree's root point to the larger tree's root",
+        "Maintains an additional size array to track subtree sizes",
+        "Guarantees maximum tree depth of log₂ n for any node",
+        "Improves worst-case performance from O(n) to O(log n)",
+        "Balances trees automatically during union operations"
+      ]
+    },
+    "id": "unionfind4x1-005",
+    "source": "unionfind4x1.pdf",
+    "createdAt": "2026-03-31T16:37:49.632Z"
+  },
+  {
+    "type": "flashcard",
+    "subject": "Computer Science",
+    "title": "Tree Depth Limit",
+    "content": {
+      "question": "What is the maximum depth of any node in Weighted Quick Union with n elements?",
+      "answer": "log₂ n. This is because each time a node's depth increases, its tree must merge with a larger tree, at least doubling the total size. Since we can only double log₂ n times before reaching n elements, the depth is bounded by log₂ n."
+    },
+    "id": "unionfind4x1-006",
+    "source": "unionfind4x1.pdf",
+    "createdAt": "2026-03-31T16:37:49.632Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Path Compression Optimization",
+    "content": {
+      "text": "Path Compression flattens trees during FIND operations by making all nodes on the path point directly to the root. While a single FIND doesn't become faster, subsequent operations on those nodes are much quicker. This technique works with both Quick Union and Weighted Quick Union implementations."
+    },
+    "id": "unionfind4x1-007",
+    "source": "unionfind4x1.pdf",
+    "createdAt": "2026-03-31T16:37:49.632Z"
+  },
+  {
+    "type": "bullets",
+    "subject": "Computer Science",
+    "title": "Union Find Time Complexities",
+    "content": {
+      "points": [
+        "Quick Find: O(1) FIND, O(n) UNION - fast lookups, slow merging",
+        "Quick Union: O(depth) for both - can be O(n) in worst case",
+        "Weighted Quick Union: O(log n) for both - balanced trees guarantee",
+        "With Path Compression: O(α(m,n)) amortized - nearly constant time"
+      ]
+    },
+    "id": "unionfind4x1-008",
+    "source": "unionfind4x1.pdf",
+    "createdAt": "2026-03-31T16:37:49.632Z"
+  },
+  {
+    "type": "quiz",
+    "subject": "Computer Science",
+    "title": "Implementation Comparison",
+    "content": {
+      "question": "Which Union Find implementation has O(1) FIND time but O(n) UNION time?",
+      "options": [
+        "Quick Union",
+        "Quick Find",
+        "Weighted Quick Union",
+        "Path Compression"
+      ],
+      "correctIndex": 1
+    },
+    "id": "unionfind4x1-009",
+    "source": "unionfind4x1.pdf",
+    "createdAt": "2026-03-31T16:37:49.632Z"
+  },
+  {
+    "type": "summary",
+    "subject": "Computer Science",
+    "title": "Dynamic Connectivity Problem",
+    "content": {
+      "text": "Dynamic Connectivity maintains a graph where you can add edges and query if two vertices are connected. Using Union Find, INIT creates isolated vertices, INSERT(u,v) performs UNION(u,v), and CONNECTED(u,v) checks if FIND(u) equals FIND(v). This gives O(log n) time per operation with Weighted Quick Union."
+    },
+    "id": "unionfind4x1-010",
+    "source": "unionfind4x1.pdf",
+    "createdAt": "2026-03-31T16:37:49.632Z"
+  },
+  {
+    "type": "flashcard",
+    "subject": "Computer Science",
+    "title": "Inverse Ackermann Function",
+    "content": {
+      "question": "What is α(m,n) in the context of Union Find with Path Compression?",
+      "answer": "α(m,n) is the inverse of the Ackermann function, which appears in the time complexity O(n + m α(m,n)) for m operations on n elements. For any practical input size, α(m,n) ≤ 5, making it effectively constant time."
+    },
+    "id": "unionfind4x1-011",
+    "source": "unionfind4x1.pdf",
+    "createdAt": "2026-03-31T16:37:49.632Z"
   }
 ]
