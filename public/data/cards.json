@@ -47,8 +47,8 @@
     "subject": "Math",
     "title": "Quadratic Formula",
     "content": {
-      "question": "What is the quadratic formula used to solve ax² + bx + c = 0?",
-      "answer": "x = (-b ± √(b² - 4ac)) / 2a. The discriminant (b² - 4ac) determines the number of solutions: positive = 2 real, zero = 1 real, negative = 2 complex."
+      "question": "What is the quadratic formula used to solve $ax^2 + bx + c = 0$?",
+      "answer": "x = (-b ± $\\sqrt{b^2 - 4ac}$) / 2a. The discriminant ($b^2 - 4ac$) determines the number of solutions: positive = 2 real, zero = 1 real, negative = 2 complex."
     },
     "source": "Algebra II Notes",
     "createdAt": "2026-03-16T09:30:00Z",
@@ -62,10 +62,10 @@
     "content": {
       "question": "What is the time complexity of binary search on a sorted array of n elements?",
       "options": [
-        "O(n)",
-        "O(log n)",
-        "O(n log n)",
-        "O(1)"
+        "$O(n)$",
+        "$O(\\log n)$",
+        "$O(n \\log n)$",
+        "$O(1)$"
       ],
       "correctIndex": 1
     },
@@ -109,7 +109,7 @@
     "subject": "Math",
     "title": "Pythagorean Theorem",
     "content": {
-      "text": "In any right triangle, the square of the hypotenuse equals the sum of the squares of the other two sides: a² + b² = c². This is one of the most fundamental relationships in geometry, used in distance calculations, trigonometry, and even 3D space."
+      "text": "In any right triangle, the square of the hypotenuse equals the sum of the squares of the other two sides: $a^2 + b^2 = c^2$. This is one of the most fundamental relationships in geometry, used in distance calculations, trigonometry, and even 3D space."
     },
     "source": "Geometry Notes",
     "createdAt": "2026-03-18T09:00:00Z",
@@ -170,11 +170,11 @@
     "subject": "Math",
     "title": "Derivatives",
     "content": {
-      "question": "What is the derivative of f(x) = x³ + 2x?",
+      "question": "What is the derivative of f(x) = $x^3 + 2x$?",
       "options": [
-        "3x² + 2",
-        "x² + 2",
-        "3x³ + 2x",
+        "$3x^2 + 2$",
+        "$x^2 + 2$",
+        "$3x^3 + 2x$",
         "3x + 2"
       ],
       "correctIndex": 0
@@ -500,7 +500,7 @@
     "subject": "Algorithm Analysis (Big O)",
     "title": "Big O Notation Basics",
     "content": {
-      "text": "Big O notation describes how an algorithm's running time grows as input size increases. It focuses on the dominant term and ignores constants - for example, 3n² + 100n becomes O(n²) because n² grows fastest for large inputs."
+      "text": "Big O notation describes how an algorithm's running time grows as input size increases. It focuses on the dominant term and ignores constants - for example, $3n^2 + 100n$ becomes $O(n^2)$ because $n^2$ grows fastest for large inputs."
     },
     "id": "analysis-weekplan (1)-001",
     "source": "analysis-weekplan (1).pdf",
@@ -529,7 +529,7 @@
     "subject": "Algorithm Analysis (Big O)",
     "title": "Common Growth Rates",
     "content": {
-      "text": "Algorithm growth rates from fastest to slowest: constant O(1), logarithmic O(log n), linear O(n), linearithmic O(n log n), quadratic O(n²), cubic O(n³), exponential O(2ⁿ). Each step represents a significant performance difference."
+      "text": "Algorithm growth rates from fastest to slowest: constant $O(1)$, logarithmic $O(\\log n)$, linear $O(n)$, linearithmic $O(n \\log n)$, quadratic $O(n^2)$, cubic $O(n^3)$, exponential $O(2^n)$. Each step represents a significant performance difference."
     },
     "id": "analysis-weekplan (1)-003",
     "source": "analysis-weekplan (1).pdf",
@@ -542,9 +542,9 @@
     "title": "Loop Analysis Tips",
     "content": {
       "points": [
-        "Single loop 1 to n: O(n) time",
-        "Nested loops both 1 to n: O(n²) time",
-        "Loop that doubles counter (i = 2*i): O(log n) time",
+        "Single loop 1 to n: $O(n)$ time",
+        "Nested loops both 1 to n: $O(n^2)$ time",
+        "Loop that doubles counter (i = 2*i): $O(\\log n)$ time",
         "Combine multiplicatively for nested structures"
       ]
     },
@@ -558,8 +558,8 @@
     "subject": "Algorithm Analysis (Big O)",
     "title": "Doubling Input Size",
     "content": {
-      "question": "If an algorithm runs in O(n³) time, how much slower is it when input size doubles?",
-      "answer": "8 times slower. When n becomes 2n, the time becomes (2n)³ = 8n³, which is 8 times the original n³."
+      "question": "If an algorithm runs in $O(n^3)$ time, how much slower is it when input size doubles?",
+      "answer": "8 times slower. When n becomes 2n, the time becomes $(2n)^3 = 8n^3$, which is 8 times the original $n^3$."
     },
     "id": "analysis-weekplan (1)-005",
     "source": "analysis-weekplan (1).pdf",
@@ -571,7 +571,7 @@
     "subject": "Algorithm Analysis (Big O)",
     "title": "Merge Sort Variants",
     "content": {
-      "text": "Standard merge sort splits arrays into 2 parts, but you can generalize to k-way splits. 3-merge sort splits into 3 parts, and all variants maintain O(n log n) time complexity because the tree depth changes but total work per level stays linear."
+      "text": "Standard merge sort splits arrays into 2 parts, but you can generalize to k-way splits. 3-merge sort splits into 3 parts, and all variants maintain $O(n \\log n)$ time complexity because the tree depth changes but total work per level stays linear."
     },
     "id": "analysis-weekplan (1)-006",
     "source": "analysis-weekplan (1).pdf",
@@ -585,10 +585,10 @@
     "content": {
       "points": [
         "Find contiguous subarray with largest sum in an array",
-        "Brute force: O(n³) - check all possible subarrays",
-        "Improved: O(n²) using prefix sums for fast range queries",
-        "Optimal: O(n) using dynamic programming (Kadane's algorithm)",
-        "Divide & conquer: O(n log n) splitting problem in half"
+        "Brute force: $O(n^3)$ - check all possible subarrays",
+        "Improved: $O(n^2)$ using prefix sums for fast range queries",
+        "Optimal: $O(n)$ using dynamic programming (Kadane's algorithm)",
+        "Divide & conquer: $O(n \\log n)$ splitting problem in half"
       ]
     },
     "id": "analysis-weekplan (1)-007",
@@ -603,10 +603,10 @@
     "content": {
       "question": "Which function grows fastest asymptotically?",
       "options": [
-        "n log n",
-        "n²",
-        "√n",
-        "2ⁿ"
+        "$n \\log n$",
+        "$n^2$",
+        "$\\sqrt{n}$",
+        "$2^n$"
       ],
       "correctIndex": 3
     },
@@ -620,7 +620,7 @@
     "subject": "Algorithm Analysis (Big O)",
     "title": "Factorial Growth Analysis",
     "content": {
-      "text": "The logarithm of n factorial, log(n!), equals Θ(n log n). This is because n! ≈ (n/e)ⁿ√(2πn) by Stirling's approximation, so log(n!) grows at the same rate as n log n asymptotically."
+      "text": "The logarithm of n factorial, $\\log(n!)$, equals $\\Theta(n \\log n)$. This is because n! ≈ $(n/e)^n\\sqrt{2\\pi n}$ by Stirling's approximation, so $\\log(n!)$ grows at the same rate as $n \\log n$ asymptotically."
     },
     "id": "analysis-weekplan (1)-009",
     "source": "analysis-weekplan (1).pdf",
@@ -633,9 +633,9 @@
     "title": "Asymptotic Analysis Rules",
     "content": {
       "points": [
-        "Drop constants: 5n² becomes O(n²)",
-        "Keep highest degree term: n³ + n² becomes O(n³)",
-        "Logarithm bases don't matter: log₂ n = O(log n)",
+        "Drop constants: $5n^2$ becomes $O(n^2)$",
+        "Keep highest degree term: $n^3 + n^2$ becomes $O(n^3)$",
+        "Logarithm bases don't matter: $\\log_2 n = O(\\log n)$",
         "max(f(n), g(n)) = Θ(f(n) + g(n)) for non-negative functions"
       ]
     },
@@ -649,8 +649,8 @@
     "subject": "Algorithm Analysis (Big O)",
     "title": "Theta vs Big O",
     "content": {
-      "question": "What's the difference between Θ(n²) and O(n²)?",
-      "answer": "Θ(n²) means exactly quadratic growth (tight bound), while O(n²) means at most quadratic growth (upper bound). An O(n) algorithm is also O(n²), but not Θ(n²)."
+      "question": "What's the difference between $\\Theta(n^2)$ and $O(n^2)$?",
+      "answer": "$\\Theta(n^2)$ means exactly quadratic growth (tight bound), while $O(n^2)$ means at most quadratic growth (upper bound). An $O(n)$ algorithm is also $O(n^2)$, but not $\\Theta(n^2)$."
     },
     "id": "analysis-weekplan (1)-011",
     "source": "analysis-weekplan (1).pdf",
@@ -662,9 +662,9 @@
     "subject": "Algorithm Analysis (Big O)",
     "title": "Exponential Growth",
     "content": {
-      "question": "Is 2^(n+1) = O(2^n)?",
+      "question": "Is $2^{n+1} = O(2^n)$?",
       "options": [
-        "Yes, because 2^(n+1) = 2·2^n which is O(2^n)",
+        "Yes, because $2^{n+1} = 2 \\cdot 2^n$ which is $O(2^n)$",
         "No, because the exponent is larger",
         "Only for small values of n",
         "Depends on the base of the logarithm"
@@ -681,7 +681,7 @@
     "subject": "Algorithm Analysis (Big O)",
     "title": "Asymptotic Notation Basics",
     "content": {
-      "text": "Asymptotic notation describes how algorithms perform as input size grows. Big O (O) gives upper bounds, Theta (Θ) gives tight bounds, and Omega (Ω) gives lower bounds. This helps compare algorithm efficiency without getting lost in implementation details."
+      "text": "Asymptotic notation describes how algorithms perform as input size grows. Big O (O) gives upper bounds, $\\Theta$ (Θ) gives tight bounds, and $\\Omega$ (Ω) gives lower bounds. This helps compare algorithm efficiency without getting lost in implementation details."
     },
     "id": "analysis-weekplan (2)-001",
     "source": "analysis-weekplan (2).pdf",
@@ -694,10 +694,10 @@
     "title": "Big O Notation Rules",
     "content": {
       "points": [
-        "Drop constants: 5n² becomes O(n²)",
-        "Keep highest degree term: n² + n becomes O(n²)",
-        "Logarithm bases don't matter: log₂n = O(log n)",
-        "Exponentials grow faster than polynomials: 2ⁿ > n³"
+        "Drop constants: $5n^2$ becomes $O(n^2)$",
+        "Keep highest degree term: $n^2 + n$ becomes $O(n^2)$",
+        "Logarithm bases don't matter: $\\log_2 n = O(\\log n)$",
+        "Exponentials grow faster than polynomials: $2^n > n^3$"
       ]
     },
     "id": "analysis-weekplan (2)-002",
@@ -710,7 +710,7 @@
     "subject": "Algorithm Analysis (Big O)",
     "title": "Loop Analysis Strategy",
     "content": {
-      "text": "To analyze loop running time, count how many times each operation executes. For nested loops, multiply the iterations. If a loop variable doubles each time (i = 2·i), it runs O(log n) times since you can only double log n times before exceeding n."
+      "text": "To analyze loop running time, count how many times each operation executes. For nested loops, multiply the iterations. If a loop variable doubles each time (i = 2·i), it runs $O(\\log n)$ times since you can only double $\\log n$ times before exceeding n."
     },
     "id": "analysis-weekplan (2)-003",
     "source": "analysis-weekplan (2).pdf",
@@ -722,8 +722,8 @@
     "subject": "Algorithm Analysis (Big O)",
     "title": "Doubling Hypothesis",
     "content": {
-      "question": "If an algorithm runs in 7n³ time, how much slower is it when input size doubles?",
-      "answer": "8 times slower. When n becomes 2n, the time becomes 7(2n)³ = 7·8n³ = 8 times the original time."
+      "question": "If an algorithm runs in $7n^3$ time, how much slower is it when input size doubles?",
+      "answer": "8 times slower. When n becomes 2n, the time becomes $7(2n)^3 = 7 \\cdot 8n^3 = 8$ times the original time."
     },
     "id": "analysis-weekplan (2)-004",
     "source": "analysis-weekplan (2).pdf",
@@ -736,11 +736,11 @@
     "title": "Common Growth Rates",
     "content": {
       "points": [
-        "O(1) - Constant time, best case",
-        "O(log n) - Logarithmic, very efficient",
-        "O(n) - Linear time, scales directly",
-        "O(n log n) - Efficient sorting algorithms",
-        "O(n²) - Quadratic, nested loops"
+        "$O(1)$ - Constant time, best case",
+        "$O(\\log n)$ - Logarithmic, very efficient",
+        "$O(n)$ - Linear time, scales directly",
+        "$O(n \\log n)$ - Efficient sorting algorithms",
+        "$O(n^2)$ - Quadratic, nested loops"
       ]
     },
     "id": "analysis-weekplan (2)-005",
@@ -753,7 +753,7 @@
     "subject": "Algorithm Analysis (Big O)",
     "title": "Merge Sort Variants",
     "content": {
-      "text": "Standard merge sort splits arrays in half (2-way), but you can generalize to k-way splits. 3-merge sort splits into 3 parts, still achieving O(n log n) time. The key insight is that merging k sorted arrays still takes linear time."
+      "text": "Standard merge sort splits arrays in half (2-way), but you can generalize to k-way splits. 3-merge sort splits into 3 parts, still achieving $O(n \\log n)$ time. The key insight is that merging k sorted arrays still takes linear time."
     },
     "id": "analysis-weekplan (2)-006",
     "source": "analysis-weekplan (2).pdf",
@@ -767,10 +767,10 @@
     "content": {
       "points": [
         "Find contiguous subarray with largest sum",
-        "Brute force: O(n³) checking all subarrays",
-        "Improved: O(n²) with precomputed sums",
-        "Divide & conquer: O(n log n) solution",
-        "Optimal: O(n) linear time algorithm exists"
+        "Brute force: $O(n^3)$ checking all subarrays",
+        "Improved: $O(n^2)$ with precomputed sums",
+        "Divide & conquer: $O(n \\log n)$ solution",
+        "Optimal: $O(n)$ linear time algorithm exists"
       ]
     },
     "id": "analysis-weekplan (2)-007",
@@ -785,10 +785,10 @@
     "content": {
       "question": "Which function grows fastest asymptotically?",
       "options": [
-        "n log n",
-        "n²",
-        "√n",
-        "2ⁿ"
+        "$n \\log n$",
+        "$n^2$",
+        "$\\sqrt{n}$",
+        "$2^n$"
       ],
       "correctIndex": 3
     },
@@ -802,7 +802,7 @@
     "subject": "Algorithm Analysis (Big O)",
     "title": "Why Asymptotic Analysis Matters",
     "content": {
-      "text": "Asymptotic analysis helps predict how algorithms scale with large inputs. A O(n²) algorithm might work fine for 100 elements but become unusable for 10,000. Understanding growth rates helps choose the right algorithm for your problem size."
+      "text": "Asymptotic analysis helps predict how algorithms scale with large inputs. A $O(n^2)$ algorithm might work fine for 100 elements but become unusable for 10,000. Understanding growth rates helps choose the right algorithm for your problem size."
     },
     "id": "analysis-weekplan (2)-009",
     "source": "analysis-weekplan (2).pdf",
@@ -814,8 +814,8 @@
     "subject": "Algorithm Analysis (Big O)",
     "title": "Theta Notation",
     "content": {
-      "question": "What does Θ(n²) mean?",
-      "answer": "The function grows exactly like n² - it's both O(n²) and Ω(n²). It gives a tight bound on the growth rate."
+      "question": "What does $\\Theta(n^2)$ mean?",
+      "answer": "The function grows exactly like $n^2$ - it's both $O(n^2)$ and $\\Omega(n^2)$. It gives a tight bound on the growth rate."
     },
     "id": "analysis-weekplan (2)-010",
     "source": "analysis-weekplan (2).pdf",
@@ -828,10 +828,10 @@
     "title": "Loop Time Complexity Examples",
     "content": {
       "points": [
-        "i doubles each iteration: O(log n) total iterations",
-        "Nested loop with outer O(n), inner O(log n): O(n log n)",
-        "Three nested linear loops: O(n³)",
-        "Loop that multiplies by 5: still O(log n)"
+        "i doubles each iteration: $O(\\log n)$ total iterations",
+        "Nested loop with outer $O(n)$, inner $O(\\log n)$: $O(n \\log n)$",
+        "Three nested linear loops: $O(n^3)$",
+        "Loop that multiplies by 5: still $O(\\log n)$"
       ]
     },
     "id": "analysis-weekplan (2)-011",
@@ -844,7 +844,7 @@
     "subject": "Algorithm Analysis (Big O)",
     "title": "Big O Notation Basics",
     "content": {
-      "text": "Big O notation describes how an algorithm's running time grows as input size increases. It focuses on the dominant term and ignores constants - so 3n² + 100n becomes O(n²). This helps us compare algorithm efficiency and predict performance on large inputs."
+      "text": "Big O notation describes how an algorithm's running time grows as input size increases. It focuses on the dominant term and ignores constants - so $3n^2 + 100n$ becomes $O(n^2)$. This helps us compare algorithm efficiency and predict performance on large inputs."
     },
     "id": "analysis-weekplan-001",
     "source": "analysis-weekplan.pdf",
@@ -873,7 +873,7 @@
     "subject": "Algorithm Analysis (Big O)",
     "title": "Common Growth Rates",
     "content": {
-      "text": "Algorithm complexities from fastest to slowest: O(1) constant, O(log n) logarithmic, O(n) linear, O(n log n) linearithmic, O(n²) quadratic, O(n³) cubic, O(2ⁿ) exponential. Each step up means dramatically slower performance on large inputs."
+      "text": "Algorithm complexities from fastest to slowest: $O(1)$ constant, $O(\\log n)$ logarithmic, $O(n)$ linear, $O(n \\log n)$ linearithmic, $O(n^2)$ quadratic, $O(n^3)$ cubic, $O(2^n)$ exponential. Each step up means dramatically slower performance on large inputs."
     },
     "id": "analysis-weekplan-003",
     "source": "analysis-weekplan.pdf",
@@ -886,7 +886,7 @@
     "title": "Loop Analysis",
     "content": {
       "question": "What's the time complexity of a loop that starts at i=1 and doubles i each iteration until i>n?",
-      "answer": "O(log n) - the loop runs log₂(n) times since we're doubling i each time until it exceeds n."
+      "answer": "$O(\\log n)$ - the loop runs $\\log_2 n$ times since we're doubling i each time until it exceeds n."
     },
     "id": "analysis-weekplan-004",
     "source": "analysis-weekplan.pdf",
@@ -901,7 +901,7 @@
       "points": [
         "Standard merge sort splits array into 2 parts recursively",
         "3-merge sort splits into 3 parts instead of 2",
-        "Both have O(n log n) time complexity",
+        "Both have $O(n \\log n)$ time complexity",
         "k-merge sort can split into k parts but doesn't improve asymptotic complexity",
         "Linear time merging is possible for any number of sorted arrays"
       ]
@@ -916,7 +916,7 @@
     "subject": "Algorithm Analysis (Big O)",
     "title": "Doubling Hypothesis",
     "content": {
-      "text": "The doubling hypothesis helps estimate algorithm complexity by observing how runtime changes when input size doubles. For O(n²) algorithms, doubling input makes it 4x slower. For O(n³), it's 8x slower. This empirical approach helps identify the growth rate of unknown algorithms."
+      "text": "The doubling hypothesis helps estimate algorithm complexity by observing how runtime changes when input size doubles. For $O(n^2)$ algorithms, doubling input makes it 4x slower. For $O(n^3)$, it's 8x slower. This empirical approach helps identify the growth rate of unknown algorithms."
     },
     "id": "analysis-weekplan-006",
     "source": "analysis-weekplan.pdf",
@@ -930,10 +930,10 @@
     "content": {
       "question": "Which function grows fastest asymptotically?",
       "options": [
-        "n² + 1000n",
-        "n³/1000",
-        "2ⁿ/1000000",
-        "n log n + n²"
+        "$n^2$ + 1000n",
+        "$n^3$/1000",
+        "$$2^n$$/1000000",
+        "n $1 + n^2$"
       ],
       "correctIndex": 2
     },
@@ -949,10 +949,10 @@
     "content": {
       "points": [
         "Find contiguous subarray with largest sum in an array of positive and negative integers",
-        "Brute force approach: O(n³) by checking all possible subarrays",
-        "Improved approach: O(n²) using prefix sums for constant-time subarray sum calculation",
-        "Divide and conquer: O(n log n) by splitting array and considering cross-boundary subarrays",
-        "Optimal solution: O(n) using dynamic programming (Kadane's algorithm)"
+        "Brute force approach: $O(n^3)$ by checking all possible subarrays",
+        "Improved approach: $O(n^2)$ using prefix sums for constant-time subarray sum calculation",
+        "Divide and conquer: $O(n \\log n)$ by splitting array and considering cross-boundary subarrays",
+        "Optimal solution: $O(n)$ using dynamic programming (Kadane's algorithm)"
       ]
     },
     "id": "analysis-weekplan-008",
@@ -965,7 +965,7 @@
     "subject": "Algorithm Analysis (Big O)",
     "title": "Asymptotic Properties",
     "content": {
-      "text": "Key asymptotic properties include: max(f(n), g(n)) = Θ(f(n) + g(n)), meaning the maximum of two functions grows at the same rate as their sum. Also, log(n!) = Θ(n log n), which is useful for analyzing algorithms involving permutations or factorials."
+      "text": "Key asymptotic properties include: max(f(n), g(n)) = Θ(f(n) + g(n)), meaning the maximum of two functions grows at the same rate as their sum. Also, $\\log(n!)$ = Θ(n $\\log n$), which is useful for analyzing algorithms involving permutations or factorials."
     },
     "id": "analysis-weekplan-009",
     "source": "analysis-weekplan.pdf",
@@ -977,8 +977,8 @@
     "subject": "Algorithm Analysis (Big O)",
     "title": "Theta Notation",
     "content": {
-      "question": "What does Θ(n²) mean for an algorithm?",
-      "answer": "The algorithm's running time grows exactly quadratically with input size - it's both O(n²) and Ω(n²), meaning n² is both an upper and lower bound."
+      "question": "What does $\\Theta(n^2) mean for an algorithm?",
+      "answer": "The algorithm's running time grows exactly quadratically with input size - it's both $O(n^2)$ and $\\Omega(n^2), meaning $n^2$ is both an upper and lower bound."
     },
     "id": "analysis-weekplan-010",
     "source": "analysis-weekplan.pdf",
@@ -992,10 +992,10 @@
     "content": {
       "question": "What's the complexity of nested loops where outer runs n times and inner doubles from 1 to n?",
       "options": [
-        "O(n)",
-        "O(n log n)",
-        "O(n²)",
-        "O(log n)"
+        "$O(n)$",
+        "$O(n \\log n)$",
+        "$O(n^2)$",
+        "$O(\\log n)$"
       ],
       "correctIndex": 1
     },
@@ -1009,7 +1009,7 @@
     "subject": "Algorithm Analysis (Big O)",
     "title": "Analyzing Nested Loops",
     "content": {
-      "text": "When analyzing nested loops, multiply their complexities. An outer loop running n times with an inner loop that doubles each iteration (log n times) gives O(n log n). Always identify the pattern of each loop level and combine appropriately."
+      "text": "When analyzing nested loops, multiply their complexities. An outer loop running n times with an inner loop that doubles each iteration ($\\log n$ times) gives $O(n \\log n)$. Always identify the pattern of each loop level and combine appropriately."
     },
     "id": "analysis-weekplan-012",
     "source": "analysis-weekplan.pdf",
@@ -1037,7 +1037,7 @@
         "Adjacency lists: Each vertex stores a list of its neighbors",
         "Adjacency matrices: 2D array where entry (i,j) = 1 if edge exists from i to j",
         "Adjacency lists are space-efficient for sparse graphs",
-        "Adjacency matrices allow O(1) edge lookup but use O(V²) space"
+        "Adjacency matrices allow $O(1)$ edge lookup but use $O($V^2$)$ space"
       ]
     },
     "id": "directedgraphs-weekplan-002",
@@ -1093,7 +1093,7 @@
     "subject": "Graphs",
     "title": "Graph Traversal Algorithms",
     "content": {
-      "text": "DFS (Depth-First Search) explores as far as possible along each branch before backtracking, while BFS (Breadth-First Search) explores all neighbors at the current depth before moving deeper. Both are fundamental for graph analysis and have O(V+E) time complexity."
+      "text": "DFS (Depth-First Search) explores as far as possible along each branch before backtracking, while BFS (Breadth-First Search) explores all neighbors at the current depth before moving deeper. Both are fundamental for graph analysis and have $O(V+E)$ time complexity."
     },
     "id": "directedgraphs-weekplan-006",
     "source": "directedgraphs-weekplan.pdf",
@@ -1214,9 +1214,9 @@
     "content": {
       "points": [
         "Uses a 2D n×n array where A[i,j] = 1 if vertex i points to vertex j",
-        "Space complexity: O(n²) - can be wasteful for sparse graphs",
-        "POINTSTO operations run in O(1) time - very fast lookups",
-        "NEIGHBORS operations take O(n) time - must scan entire row",
+        "Space complexity: $O(n^2)$ - can be wasteful for sparse graphs",
+        "POINTSTO operations run in $O(1)$ time - very fast lookups",
+        "NEIGHBORS operations take $O(n)$ time - must scan entire row",
         "Best for dense graphs where fast edge lookups are critical"
       ]
     },
@@ -1232,8 +1232,8 @@
     "content": {
       "points": [
         "Each vertex maintains a linked list of vertices it points to",
-        "Space complexity: O(n + m) - much more efficient for sparse graphs",
-        "All operations (POINTSTO, NEIGHBORS, INSERT) take O(degree) time",
+        "Space complexity: $O(n + m)$ - much more efficient for sparse graphs",
+        "All operations (POINTSTO, NEIGHBORS, INSERT) take $O(degree)$ time",
         "Generally preferred representation for most graph algorithms",
         "Space usage scales with actual number of edges, not theoretical maximum"
       ]
@@ -1249,7 +1249,7 @@
     "title": "Graph Search Algorithms",
     "content": {
       "question": "What are the two main search algorithms for directed graphs and what's their time complexity?",
-      "answer": "Depth-First Search (DFS) and Breadth-First Search (BFS). Both run in O(n + m) time, where n is vertices and m is edges."
+      "answer": "Depth-First Search (DFS) and Breadth-First Search (BFS). Both run in $O(n + m)$ time, where n is vertices and m is edges."
     },
     "id": "directedgraphs4x1-006",
     "source": "directedgraphs4x1.pdf",
@@ -1278,7 +1278,7 @@
         "Repeatedly remove a vertex with in-degree 0 and add it to the sorted order",
         "When removing a vertex, decrease in-degree of all its neighbors",
         "If any neighbor reaches in-degree 0, add it to the zero-degree list",
-        "Total time complexity: O(n + m) with proper implementation"
+        "Total time complexity: $O(n + m)$ with proper implementation"
       ]
     },
     "id": "directedgraphs4x1-008",
@@ -1310,7 +1310,7 @@
     "subject": "Graphs",
     "title": "Strongly Connected Components",
     "content": {
-      "text": "Two vertices are strongly connected if there's a path from each to the other. A strongly connected component is a maximal set of vertices where every pair is strongly connected. These components can be computed in O(n + m) time using advanced algorithms."
+      "text": "Two vertices are strongly connected if there's a path from each to the other. A strongly connected component is a maximal set of vertices where every pair is strongly connected. These components can be computed in $O(n + m)$ time using advanced algorithms."
     },
     "id": "directedgraphs4x1-010",
     "source": "directedgraphs4x1.pdf",
@@ -1347,9 +1347,9 @@
     "title": "Peak Finding Algorithm Types",
     "content": {
       "points": [
-        "Linear algorithms: Check every element sequentially, taking O(n) time",
-        "Recursive algorithm: Uses divide-and-conquer approach, taking O(log n) time",
-        "2D peak finding: Can be solved in O(n²), O(n log n), or even O(n) time depending on approach",
+        "Linear algorithms: Check every element sequentially, taking $O(n)$ time",
+        "Recursive algorithm: Uses divide-and-conquer approach, taking $O(\\log n)$ time",
+        "2D peak finding: Can be solved in $O(n^2)$, $O(n \\log n)$, or even $O(n)$ time depending on approach",
         "Recursive approach is more efficient for large arrays"
       ]
     },
@@ -1406,7 +1406,7 @@
     "subject": "Peak Finding & Intro",
     "title": "ARRAYFUN Algorithm Purpose",
     "content": {
-      "text": "The ARRAYFUN algorithm checks if there exist two elements in an array that sum to zero (i.e., one is the negative of the other). It uses nested loops to compare every possible pair of elements, making it an O(n²) brute force solution."
+      "text": "The ARRAYFUN algorithm checks if there exist two elements in an array that sum to zero (i.e., one is the negative of the other). It uses nested loops to compare every possible pair of elements, making it an $O(n^2)$ brute force solution."
     },
     "id": "introduction-weekplan (1)-006",
     "source": "introduction-weekplan (1).pdf",
@@ -1420,9 +1420,9 @@
     "content": {
       "points": [
         "A 2D peak must be ≥ all four neighbors (North, East, South, West)",
-        "Simple O(n²) approach: check every element in the matrix",
-        "O(n log n) solution: find max in center column, then recurse on promising half",
-        "O(n) solution exists using quadrant division technique"
+        "Simple $O(n^2)$ approach: check every element in the matrix",
+        "$O(n \\log n)$ solution: find max in center column, then recurse on promising half",
+        "$O(n)$ solution exists using quadrant division technique"
       ]
     },
     "id": "introduction-weekplan (1)-007",
@@ -1437,10 +1437,10 @@
     "content": {
       "question": "What is the time complexity of the recursive peak-finding algorithm?",
       "options": [
-        "O(n)",
-        "O(log n)",
-        "O(n log n)",
-        "O(n²)"
+        "$O(n)$",
+        "$O(\\log n)$",
+        "$O(n \\log n)$",
+        "$O(n^2)$"
       ],
       "correctIndex": 1
     },
@@ -1484,7 +1484,7 @@
     "title": "Modified Peak Definition",
     "content": {
       "question": "If peaks must be strictly larger than neighbors (not equal), how does this affect the recursive algorithm?",
-      "answer": "The algorithm still works and finds peaks in O(log n) time, but now some arrays might have no peaks at all (like arrays with all identical elements)."
+      "answer": "The algorithm still works and finds peaks in $O(\\log n)$ time, but now some arrays might have no peaks at all (like arrays with all identical elements)."
     },
     "id": "introduction-weekplan (1)-011",
     "source": "introduction-weekplan (1).pdf",
@@ -1529,7 +1529,7 @@
     "content": {
       "points": [
         "Linear time algorithms scan through the array sequentially to find peaks",
-        "Recursive divide-and-conquer algorithm can find peaks in O(log n) time",
+        "Recursive divide-and-conquer algorithm can find peaks in $O(\\log n)$ time",
         "The recursive approach checks the middle element and recurses on the side with a larger neighbor",
         "All peak finding algorithms are guaranteed to find at least one peak in any non-empty array"
       ]
@@ -1587,7 +1587,7 @@
     "subject": "Peak Finding & Intro",
     "title": "2D Peak Finding",
     "content": {
-      "text": "In a 2D matrix, a peak M[i,j] must be greater than or equal to all four neighbors (North, East, South, West). A simple O(n²) algorithm checks every element, while more sophisticated divide-and-conquer approaches can achieve O(n log n) or even O(n) time complexity using clever recursive strategies."
+      "text": "In a 2D matrix, a peak M[i,j] must be greater than or equal to all four neighbors (North, East, South, West). A simple $O(n^2)$ algorithm checks every element, while more sophisticated divide-and-conquer approaches can achieve $O(n \\log n)$ or even $O(n)$ time complexity using clever recursive strategies."
     },
     "id": "introduction-weekplan-006",
     "source": "introduction-weekplan.pdf",
@@ -1647,8 +1647,8 @@
     "subject": "Peak Finding & Intro",
     "title": "Modified Peak Definition",
     "content": {
-      "question": "If we change peak definition to 'strictly larger than neighbors', what happens to the recursive O(log n) algorithm?",
-      "answer": "The algorithm can still work in O(log n) time, but arrays might not always have peaks under the strict definition (e.g., [1,1,1] has no strictly larger peaks)."
+      "question": "If we change peak definition to 'strictly larger than neighbors', what happens to the recursive $O(\\log n)$ algorithm?",
+      "answer": "The algorithm can still work in $O(\\log n)$ time, but arrays might not always have peaks under the strict definition (e.g., [1,1,1] has no strictly larger peaks)."
     },
     "id": "introduction-weekplan-010",
     "source": "introduction-weekplan.pdf",
@@ -1771,7 +1771,7 @@
     "content": {
       "points": [
         "Automatically resizes when capacity is exceeded",
-        "Provides O(1) amortized time for insertions",
+        "Provides $O(1)$ amortized time for insertions",
         "Uses linear space relative to current number of elements",
         "Can implement stacks efficiently with push/pop operations",
         "Avoids fixed-size limitations of static arrays"
@@ -1818,7 +1818,7 @@
     "subject": "Stacks & Queues",
     "title": "Binary Search in Linked Lists",
     "content": {
-      "text": "Binary search doesn't work efficiently on linked lists because they lack random access to elements. You can't jump to the middle element in O(1) time like with arrays - you must traverse sequentially, making binary search's time advantage disappear."
+      "text": "Binary search doesn't work efficiently on linked lists because they lack random access to elements. You can't jump to the middle element in $O(1)$ time like with arrays - you must traverse sequentially, making binary search's time advantage disappear."
     },
     "id": "introtodatastructures-weekplan (1)-009",
     "source": "introtodatastructures-weekplan (1).pdf",
@@ -1834,7 +1834,7 @@
         "Place first stack at the beginning of array (grows rightward)",
         "Place second stack at the end of array (grows leftward)",
         "Overflow occurs only when stacks meet in the middle",
-        "Both PUSH and POP operations remain O(1) time",
+        "Both PUSH and POP operations remain $O(1)$ time",
         "Maximizes space utilization compared to splitting array in half"
       ]
     },
@@ -1860,7 +1860,7 @@
     "subject": "Stacks & Queues",
     "title": "List Reversal Algorithm",
     "content": {
-      "question": "How can you reverse a linked list in O(n) time with O(1) extra space?",
+      "question": "How can you reverse a linked list in $O(n)$ time with $O(1)$ extra space?",
       "answer": "Use three pointers: previous, current, and next. Traverse the list, reversing each node's next pointer to point to the previous node, while carefully updating the three pointers to avoid losing references."
     },
     "id": "introtodatastructures-weekplan (1)-012",
@@ -1944,7 +1944,7 @@
     "subject": "Stacks & Queues",
     "title": "Dynamic Arrays",
     "content": {
-      "text": "Dynamic arrays automatically resize when they run out of space, allowing unlimited growth without declaring a fixed size. When implementing stacks with dynamic arrays, both PUSH and POP operations can achieve O(1) amortized time complexity while maintaining linear space usage relative to current elements."
+      "text": "Dynamic arrays automatically resize when they run out of space, allowing unlimited growth without declaring a fixed size. When implementing stacks with dynamic arrays, both PUSH and POP operations can achieve $O(1)$ amortized time complexity while maintaining linear space usage relative to current elements."
     },
     "id": "introtodatastructures-weekplan-006",
     "source": "introtodatastructures-weekplan.pdf",
@@ -2032,7 +2032,7 @@
         "Adjacency List: Each vertex stores a list of its neighbors",
         "Adjacency Matrix: 2D array where entry (i,j) is 1 if edge exists between vertices i and j",
         "Adjacency lists are space-efficient for sparse graphs",
-        "Adjacency matrices allow O(1) edge lookup time",
+        "Adjacency matrices allow $O(1)$ edge lookup time",
         "Choice depends on graph density and operations needed"
       ]
     },
@@ -2116,7 +2116,7 @@
       "points": [
         "Vertices arranged in rows and columns like a grid",
         "Only horizontally and vertically adjacent vertices can be connected",
-        "A k×k grid graph has k² vertices",
+        "A k×k grid graph has $k^2$ vertices",
         "Commonly used to model mazes and 2D spatial problems",
         "Edges connect only neighboring cells in 4 directions"
       ]
@@ -2145,10 +2145,10 @@
     "content": {
       "question": "What is the time complexity of BFS and DFS on a graph with V vertices and E edges?",
       "options": [
-        "O(V)",
-        "O(E)",
-        "O(V + E)",
-        "O(V × E)"
+        "$O(V)$",
+        "$O(E)$",
+        "$O(V + E)$",
+        "$O(V × E)$"
       ],
       "correctIndex": 2
     },
@@ -2279,9 +2279,9 @@
     "content": {
       "points": [
         "2D array A where A[i,j] = 1 if vertices i and j are connected",
-        "Space complexity: O(n²) where n is number of vertices",
-        "ADJACENT and INSERT operations: O(1) time",
-        "NEIGHBORS operation: O(n) time",
+        "Space complexity: $O(n^2)$ where n is number of vertices",
+        "ADJACENT and INSERT operations: $O(1)$ time",
+        "NEIGHBORS operation: $O(n)$ time",
         "Good for dense graphs with many edges"
       ]
     },
@@ -2427,7 +2427,7 @@
       "points": [
         "Kruskal's: Sort edges globally, use union-find, good for sparse graphs",
         "Prim's: Grow tree locally, use priority queue, good for dense graphs",
-        "Both have O(E log E) time complexity for most implementations",
+        "Both have $O(E log E)$ time complexity for most implementations",
         "Reverse deletion: Start with all edges, remove heaviest that don't disconnect",
         "All three algorithms produce correct MSTs"
       ]
@@ -2474,7 +2474,7 @@
     "title": "MST with Small Weights",
     "content": {
       "question": "How can you efficiently compute an MST when all edge weights are small integers like {1, 2, ..., 10}?",
-      "answer": "Use counting sort or bucket sort to sort edges in O(m) time instead of O(m log m), making the overall algorithm faster since sorting is often the bottleneck."
+      "answer": "Use counting sort or bucket sort to sort edges in $O(m)$ time instead of $O(m log m)$, making the overall algorithm faster since sorting is often the bottleneck."
     },
     "id": "minimumspanningtrees-weekplan-010",
     "source": "minimumspanningtrees-weekplan.pdf",
@@ -2573,7 +2573,7 @@
         "Grow tree T by adding lightest edge with one endpoint in T",
         "Use priority queue to efficiently find lightest cut edge",
         "Stop when T has n-1 edges",
-        "Time complexity: O(m log n) with binary heap"
+        "Time complexity: $O(m \\log n)$ with binary heap"
       ]
     },
     "id": "minimumspanningtrees4x1-006",
@@ -2603,7 +2603,7 @@
         "Consider edges in sorted order",
         "Add edge to tree if it doesn't create a cycle",
         "Use dynamic connectivity to check for cycles",
-        "Time complexity: O(m log n)"
+        "Time complexity: $O(m \\log n)$"
       ]
     },
     "id": "minimumspanningtrees4x1-008",
@@ -2629,7 +2629,7 @@
     "subject": "Shortest Paths & MST",
     "title": "Prim's vs Kruskal's",
     "content": {
-      "text": "Prim's algorithm grows the tree vertex by vertex from a starting point, while Kruskal's considers edges globally by weight. Both are greedy algorithms with O(m log n) time complexity, but use different approaches to build the MST."
+      "text": "Prim's algorithm grows the tree vertex by vertex from a starting point, while Kruskal's considers edges globally by weight. Both are greedy algorithms with $O(m \\log n)$ time complexity, but use different approaches to build the MST."
     },
     "id": "minimumspanningtrees4x1-010",
     "source": "minimumspanningtrees4x1.pdf",
@@ -2642,9 +2642,9 @@
     "title": "Priority Queue Options for Prim's",
     "content": {
       "points": [
-        "Array: O(n²) total time, simple implementation",
-        "Binary heap: O(m log n) total time, good general choice",
-        "Fibonacci heap: O(m + n log n) total time, best theoretical",
+        "Array: $O(n^2)$ total time, simple implementation",
+        "Binary heap: $O(m \\log n)$ total time, good general choice",
+        "Fibonacci heap: $O(m + n \\log n)$ total time, best theoretical",
         "Choice depends on graph density and implementation complexity"
       ]
     },
@@ -2677,7 +2677,7 @@
     "subject": "Segment Trees & Range Queries",
     "title": "Range Queries Explained",
     "content": {
-      "text": "Range queries calculate values from subarrays of an array, like finding the sum, minimum, or maximum in a specific range. While a simple loop approach works in O(n) time per query, specialized data structures can answer these queries much more efficiently in O(1) or O(log n) time."
+      "text": "Range queries calculate values from subarrays of an array, like finding the sum, minimum, or maximum in a specific range. While a simple loop approach works in $O(n)$ time per query, specialized data structures can answer these queries much more efficiently in $O(1)$ or $O(\\log n)$ time."
     },
     "id": "partialsums-001",
     "source": "partialsums.pdf",
@@ -2706,7 +2706,7 @@
     "subject": "Segment Trees & Range Queries",
     "title": "Prefix Sum Arrays",
     "content": {
-      "text": "A prefix sum array stores cumulative sums where each position k contains sum(0, k) from the original array. Once built in O(n) time, any range sum can be calculated in O(1) time using the formula: sum(a, b) = sum(0, b) - sum(0, a-1)."
+      "text": "A prefix sum array stores cumulative sums where each position k contains sum(0, k) from the original array. Once built in $O(n)$ time, any range sum can be calculated in $O(1)$ time using the formula: sum(a, b) = sum(0, b) - sum(0, a-1)."
     },
     "id": "partialsums-003",
     "source": "partialsums.pdf",
@@ -2720,8 +2720,8 @@
     "content": {
       "points": [
         "Also called Binary Indexed Tree (BIT)",
-        "Supports range sum queries in O(log n) time",
-        "Allows array updates in O(log n) time",
+        "Supports range sum queries in $O(\\log n)$ time",
+        "Allows array updates in $O(\\log n)$ time",
         "Uses bit operations like k&-k for efficient implementation",
         "Dynamic alternative to static prefix sum arrays"
       ]
@@ -2736,7 +2736,7 @@
     "subject": "Segment Trees & Range Queries",
     "title": "Segment Tree Advantages",
     "content": {
-      "text": "Segment trees are binary trees that support both range queries and updates in O(log n) time. Unlike Fenwick trees which only handle sum queries, segment trees can process minimum, maximum, and other types of range queries, making them more versatile but requiring more memory."
+      "text": "Segment trees are binary trees that support both range queries and updates in $O(\\log n)$ time. Unlike Fenwick trees which only handle sum queries, segment trees can process minimum, maximum, and other types of range queries, making them more versatile but requiring more memory."
     },
     "id": "partialsums-005",
     "source": "partialsums.pdf",
@@ -2749,7 +2749,7 @@
     "title": "Time Complexity",
     "content": {
       "question": "What is the time complexity of answering a range sum query using a prefix sum array?",
-      "answer": "O(1) - constant time, because it only requires two array lookups and one subtraction operation."
+      "answer": "$O(1)$ - constant time, because it only requires two array lookups and one subtraction operation."
     },
     "id": "partialsums-006",
     "source": "partialsums.pdf",
@@ -2762,9 +2762,9 @@
     "title": "Minimum Query Processing",
     "content": {
       "points": [
-        "Requires O(n log n) preprocessing time",
+        "Requires $O(n \\log n)$ preprocessing time",
         "Precalculates values for ranges with power-of-two lengths",
-        "Answers queries in O(1) time after preprocessing",
+        "Answers queries in $O(1)$ time after preprocessing",
         "Uses sparse table method with overlapping ranges",
         "More complex than sum queries but still efficient"
       ]
@@ -2813,8 +2813,8 @@
       "points": [
         "Binary tree with array elements at bottom level",
         "Internal nodes store information for range queries",
-        "Each range can be divided into O(log n) tree nodes",
-        "Updates require modifying O(log n) nodes along a path",
+        "Each range can be divided into $O(\\log n)$ tree nodes",
+        "Updates require modifying $O(\\log n)$ nodes along a path",
         "Stored as array with 2n elements for n-sized input"
       ]
     },
@@ -2844,7 +2844,7 @@
         "A heap is a complete binary tree where parent nodes have higher (max-heap) or lower (min-heap) values than their children",
         "Can be efficiently represented as an array where element at index i has children at 2i and 2i+1",
         "Maintains the heap property: every parent satisfies the ordering constraint with its children",
-        "Height is O(log n) which enables efficient operations"
+        "Height is $O(\\log n)$ which enables efficient operations"
       ]
     },
     "id": "priorityqueues-weekplan-002",
@@ -2870,9 +2870,9 @@
     "title": "Standard Heap Operations",
     "content": {
       "points": [
-        "INSERT: Add new element while maintaining heap property in O(log n) time",
-        "EXTRACTMAX: Remove and return largest element in O(log n) time",
-        "INCREASEKEY: Increase an element's priority and restore heap property in O(log n) time",
+        "INSERT: Add new element while maintaining heap property in $O(\\log n)$ time",
+        "EXTRACTMAX: Remove and return largest element in $O(\\log n)$ time",
+        "INCREASEKEY: Increase an element's priority and restore heap property in $O(\\log n)$ time",
         "All operations preserve the fundamental heap structure"
       ]
     },
@@ -2899,7 +2899,7 @@
     "subject": "Priority Queues & Heaps",
     "title": "Complete Binary Tree Properties",
     "content": {
-      "text": "A complete binary tree of height h has exactly 2^(h+1) - 1 nodes. This can be calculated as 1 + 2 + 4 + ... + 2^h, which forms a geometric series that sums to this formula."
+      "text": "A complete binary tree of height h has exactly $2^{(h+1)}$ - 1 nodes. This can be calculated as 1 + 2 + 4 + ... + 2^h, which forms a geometric series that sums to this formula."
     },
     "id": "priorityqueues-weekplan-006",
     "source": "priorityqueues-weekplan.pdf",
@@ -2912,10 +2912,10 @@
     "title": "Extended Priority Queue Operations",
     "content": {
       "points": [
-        "REMOVELARGEST(m): Remove m largest elements in O(m log n) time",
-        "DELETE(x): Remove specific element x in O(log n) time",
-        "FUSION(x,y): Combine two elements into one with sum of their keys in O(log n) time",
-        "THRESHOLD(k): Return all elements with key ≥ k in O(m) time where m is result size"
+        "REMOVELARGEST(m): Remove m largest elements in $O(m \\log n)$ time",
+        "DELETE(x): Remove specific element x in $O(\\log n)$ time",
+        "FUSION(x,y): Combine two elements into one with sum of their keys in $O(\\log n)$ time",
+        "THRESHOLD(k): Return all elements with key ≥ k in $O(m)$ time where m is result size"
       ]
     },
     "id": "priorityqueues-weekplan-007",
@@ -2928,7 +2928,7 @@
     "subject": "Priority Queues & Heaps",
     "title": "Satellite Data in Heaps",
     "content": {
-      "text": "Heaps can store additional information (satellite data) like age, weight, or other attributes alongside the key. This extra data can be accessed in O(1) time using the element's index without affecting standard heap operation performance."
+      "text": "Heaps can store additional information (satellite data) like age, weight, or other attributes alongside the key. This extra data can be accessed in $O(1)$ time using the element's index without affecting standard heap operation performance."
     },
     "id": "priorityqueues-weekplan-008",
     "source": "priorityqueues-weekplan.pdf",
@@ -2959,7 +2959,7 @@
     "subject": "Priority Queues & Heaps",
     "title": "Merging Sorted Arrays",
     "content": {
-      "text": "You can merge k sorted arrays containing n total elements into a single sorted array in O(n log k) time using a min-heap. Keep the smallest element from each array in the heap and repeatedly extract the minimum."
+      "text": "You can merge k sorted arrays containing n total elements into a single sorted array in $O(n log k)$ time using a min-heap. Keep the smallest element from each array in the heap and repeatedly extract the minimum."
     },
     "id": "priorityqueues-weekplan-010",
     "source": "priorityqueues-weekplan.pdf",
@@ -2989,7 +2989,7 @@
     "title": "Heap Time Complexity",
     "content": {
       "question": "What is the time complexity of INSERT, EXTRACTMAX, and INCREASEKEY operations in a heap?",
-      "answer": "All three operations run in O(log n) time, where n is the number of elements in the heap, because they may need to traverse the height of the tree."
+      "answer": "All three operations run in $O(\\log n)$ time, where n is the number of elements in the heap, because they may need to traverse the height of the tree."
     },
     "id": "priorityqueues-weekplan-012",
     "source": "priorityqueues-weekplan.pdf",
@@ -3065,7 +3065,7 @@
         "PARENT(x): return x/2",
         "LEFT(x): return 2x",
         "RIGHT(x): return 2x + 1",
-        "All operations run in O(1) time with O(n) space"
+        "All operations run in $O(1)$ time with $O(n)$ space"
       ]
     },
     "id": "priorityqueues4x1-005",
@@ -3078,7 +3078,7 @@
     "subject": "Priority Queues & Heaps",
     "title": "Bubble Up and Down",
     "content": {
-      "text": "BUBBLEUP fixes heap violations by swapping a node with its parent when the node's key is too large, continuing until heap order is restored. BUBBLEDOWN does the opposite, swapping with the larger child when a node's key is too small. Both operations take O(log n) time."
+      "text": "BUBBLEUP fixes heap violations by swapping a node with its parent when the node's key is too large, continuing until heap order is restored. BUBBLEDOWN does the opposite, swapping with the larger child when a node's key is too small. Both operations take $O(\\log n)$ time."
     },
     "id": "priorityqueues4x1-006",
     "source": "priorityqueues4x1.pdf",
@@ -3091,10 +3091,10 @@
     "title": "Heap Priority Queue Performance",
     "content": {
       "points": [
-        "MAX(): O(1) - just return H[1]",
-        "EXTRACTMAX(): O(log n) - replace root with last element, then bubble down",
-        "INSERT(): O(log n) - add at end, then bubble up",
-        "INCREASEKEY(): O(log n) - update value, then bubble up"
+        "MAX(): $O(1)$ - just return H[1]",
+        "EXTRACTMAX(): $O(\\log n)$ - replace root with last element, then bubble down",
+        "INSERT(): $O(\\log n)$ - add at end, then bubble up",
+        "INCREASEKEY(): $O(\\log n)$ - update value, then bubble up"
       ]
     },
     "id": "priorityqueues4x1-007",
@@ -3120,7 +3120,7 @@
     "subject": "Priority Queues & Heaps",
     "title": "Building a Heap Efficiently",
     "content": {
-      "text": "You can build a heap from an unsorted array in O(n) time using bottom-up construction: apply BUBBLEDOWN to all nodes in decreasing level order. This is faster than the O(n log n) top-down approach that uses BUBBLEUP on each node."
+      "text": "You can build a heap from an unsorted array in $O(n)$ time using bottom-up construction: apply BUBBLEDOWN to all nodes in decreasing level order. This is faster than the $O(n \\log n)$ top-down approach that uses BUBBLEUP on each node."
     },
     "id": "priorityqueues4x1-009",
     "source": "priorityqueues4x1.pdf",
@@ -3133,10 +3133,10 @@
     "title": "Heapsort Algorithm",
     "content": {
       "points": [
-        "Build a heap from the input array in O(n) time",
-        "Perform n EXTRACTMAX operations in O(n log n) time",
+        "Build a heap from the input array in $O(n)$ time",
+        "Perform n EXTRACTMAX operations in $O(n \\log n)$ time",
         "Place extracted elements at the end of array",
-        "Results in O(n log n) total time with O(1) extra space",
+        "Results in $O(n \\log n)$ total time with $O(1)$ extra space",
         "It's an in-place sorting algorithm"
       ]
     },
@@ -3152,10 +3152,10 @@
     "content": {
       "question": "Which data structure gives the best overall performance for priority queue operations?",
       "options": [
-        "Linked list - O(n) max, O(1) insert",
-        "Sorted linked list - O(1) max, O(n) insert",
-        "Heap - O(1) max, O(log n) insert",
-        "Array - O(n) max, O(1) insert"
+        "Linked list - $O(n)$ max, $O(1)$ insert",
+        "Sorted linked list - $O(1)$ max, $O(n)$ insert",
+        "Heap - $O(1)$ max, $O(\\log n)$ insert",
+        "Array - $O(n)$ max, $O(1)$ insert"
       ],
       "correctIndex": 2
     },
@@ -3170,7 +3170,7 @@
     "title": "Heap Height Property",
     "content": {
       "question": "What is the height of an almost complete binary tree with n nodes?",
-      "answer": "Θ(log n) - this logarithmic height is what makes heap operations efficient."
+      "answer": "$\\Theta($\\log n$)$ - this logarithmic height is what makes heap operations efficient."
     },
     "id": "priorityqueues4x1-012",
     "source": "priorityqueues4x1.pdf",
@@ -3194,7 +3194,7 @@
     "subject": "Sorting & Searching",
     "title": "Merge Sort Overview",
     "content": {
-      "text": "Merge sort uses a divide-and-conquer approach by recursively splitting an array into smaller subarrays until each contains only one element, then merging them back together in sorted order. This algorithm guarantees O(n log n) time complexity regardless of input data."
+      "text": "Merge sort uses a divide-and-conquer approach by recursively splitting an array into smaller subarrays until each contains only one element, then merging them back together in sorted order. This algorithm guarantees $O(n \\log n)$ time complexity regardless of input data."
     },
     "id": "searchingandsorting-weekplan-002",
     "source": "searchingandsorting-weekplan.pdf",
@@ -3207,9 +3207,9 @@
     "title": "Sorting Algorithm Comparison",
     "content": {
       "points": [
-        "Insertion sort: O(n²) time, good for small arrays",
-        "Merge sort: O(n log n) time, stable and predictable",
-        "Quick sort: O(n log n) average, O(n²) worst case",
+        "Insertion sort: $O(n^2)$ time, good for small arrays",
+        "Merge sort: $O(n \\log n)$ time, stable and predictable",
+        "Quick sort: $O(n \\log n)$ average, $O(n^2)$ worst case",
         "Binary search can optimize insertion step in insertion sort"
       ]
     },
@@ -3223,7 +3223,7 @@
     "subject": "Sorting & Searching",
     "title": "Duplicate Detection Problem",
     "content": {
-      "text": "Finding duplicates in an array can be solved in O(n²) time by comparing every pair of elements, or optimized to O(n log n) by first sorting the array and then checking adjacent elements. The sorting approach is more efficient for larger datasets."
+      "text": "Finding duplicates in an array can be solved in $O(n^2)$ time by comparing every pair of elements, or optimized to $O(n \\log n)$ by first sorting the array and then checking adjacent elements. The sorting approach is more efficient for larger datasets."
     },
     "id": "searchingandsorting-weekplan-004",
     "source": "searchingandsorting-weekplan.pdf",
@@ -3237,8 +3237,8 @@
     "content": {
       "points": [
         "2Sum: Find two numbers that add to zero",
-        "Brute force 2Sum: O(n²) by checking all pairs",
-        "Optimized 2Sum: O(n log n) using sorting and binary search",
+        "Brute force 2Sum: $O(n^2)$ by checking all pairs",
+        "Optimized 2Sum: $O(n \\log n)$ using sorting and binary search",
         "3Sum extends the concept to three numbers summing to zero"
       ]
     },
@@ -3253,7 +3253,7 @@
     "title": "Binary Search Optimization",
     "content": {
       "question": "Can binary search improve insertion sort's performance, and how?",
-      "answer": "Binary search can speed up finding the insertion position from O(n) to O(log n), but the shifting of elements still takes O(n) time, so overall complexity remains O(n²)."
+      "answer": "Binary search can speed up finding the insertion position from $O(n)$ to $O(\\log n)$, but the shifting of elements still takes $O(n)$ time, so overall complexity remains $O(n^2)$."
     },
     "id": "searchingandsorting-weekplan-006",
     "source": "searchingandsorting-weekplan.pdf",
@@ -3265,7 +3265,7 @@
     "subject": "Sorting & Searching",
     "title": "Selection and Rank Problems",
     "content": {
-      "text": "The rank k problem asks for the kth smallest element in an array. While sorting first gives O(n log n) solution, clever partitioning techniques can solve it in O(n) average time using methods similar to quicksort's partition step."
+      "text": "The rank k problem asks for the kth smallest element in an array. While sorting first gives $O(n \\log n)$ solution, clever partitioning techniques can solve it in $O(n)$ average time using methods similar to quicksort's partition step."
     },
     "id": "searchingandsorting-weekplan-007",
     "source": "searchingandsorting-weekplan.pdf",
@@ -3281,7 +3281,7 @@
         "Partition separates array into elements ≤ pivot and > pivot",
         "QuickSort uses recursive partitioning around pivot elements",
         "Median makes a good pivot for balanced partitions",
-        "Partition step runs in O(n) linear time"
+        "Partition step runs in $O(n)$ linear time"
       ]
     },
     "id": "searchingandsorting-weekplan-008",
@@ -3296,10 +3296,10 @@
     "content": {
       "question": "What is the time complexity of the optimized 3Sum algorithm?",
       "options": [
-        "O(n³)",
-        "O(n² log n)",
-        "O(n²)",
-        "O(n log n)"
+        "$O(n^3)$",
+        "$O(n^2 \\log n)$",
+        "$O(n^2)$",
+        "$O(n \\log n)$"
       ],
       "correctIndex": 2
     },
@@ -3397,7 +3397,7 @@
     "subject": "Search Trees",
     "title": "What is a 2-3 Tree?",
     "content": {
-      "text": "A 2-3 tree is a balanced search tree where each internal node has either 2 or 3 children, and all leaves are at the same level. Each node can store 1 or 2 keys, maintaining sorted order. This structure guarantees O(log n) height, making all operations efficient."
+      "text": "A 2-3 tree is a balanced search tree where each internal node has either 2 or 3 children, and all leaves are at the same level. Each node can store 1 or 2 keys, maintaining sorted order. This structure guarantees $O(\\log n)$ height, making all operations efficient."
     },
     "id": "searchtrees-weekplan-005",
     "source": "searchtrees-weekplan.pdf",
@@ -3413,7 +3413,7 @@
         "All leaves are at the same level (perfectly balanced)",
         "Internal nodes have 2 or 3 children",
         "Nodes contain 1 or 2 keys in sorted order",
-        "Height is always O(log n)",
+        "Height is always $O(\\log n)$",
         "Automatically stays balanced during insertions and deletions"
       ]
     },
@@ -3443,7 +3443,7 @@
         "PREDECESSOR(k): Find largest element ≤ k",
         "RANGEREPORT(k1,k2): Return all elements in range [k1,k2]",
         "RANGECOUNT(k1,k2): Count elements in range [k1,k2]",
-        "All can be implemented in O(log n) time on balanced trees"
+        "All can be implemented in $O(\\log n)$ time on balanced trees"
       ]
     },
     "id": "searchtrees-weekplan-008",
@@ -3475,7 +3475,7 @@
     "subject": "Search Trees",
     "title": "Balanced vs Unbalanced Trees",
     "content": {
-      "text": "The height of a binary search tree affects performance - balanced trees have O(log n) height giving efficient operations, while unbalanced trees can degrade to O(n) height in worst case. Balanced trees like 2-3 trees automatically maintain optimal height through self-balancing operations."
+      "text": "The height of a binary search tree affects performance - balanced trees have $O(\\log n)$ height giving efficient operations, while unbalanced trees can degrade to $O(n)$ height in worst case. Balanced trees like 2-3 trees automatically maintain optimal height through self-balancing operations."
     },
     "id": "searchtrees-weekplan-010",
     "source": "searchtrees-weekplan.pdf",
@@ -3488,9 +3488,9 @@
     "title": "Tree Height Analysis",
     "content": {
       "points": [
-        "Minimum height for n nodes: ⌊log₂ n⌋",
+        "Minimum height for n nodes: ⌊$\\log_2 n$⌋",
         "Maximum height for n nodes: n-1 (degenerate case)",
-        "2-3 trees guarantee height is Θ(log n)",
+        "2-3 trees guarantee height is $\\Theta($\\log n$)$",
         "Height directly impacts operation time complexity",
         "Balanced trees maintain optimal performance"
       ]
@@ -3521,8 +3521,8 @@
         "Each node has at most two children (left and right)",
         "Maintains symmetric order: left subtree ≤ node.key ≤ right subtree",
         "Inorder traversal visits nodes in sorted key order",
-        "Operations take O(h) time where h is tree height",
-        "Height can be Ω(n) worst-case, Θ(log n) on average"
+        "Operations take $O(h)$ time where h is tree height",
+        "Height can be Ω(n) worst-case, $\\Theta($\\log n$)$ on average"
       ]
     },
     "id": "searchtrees4x1-002",
@@ -3551,7 +3551,7 @@
         "0 children: Simply remove the node",
         "1 child: Replace node with its single child",
         "2 children: Find successor (smallest key in right subtree), replace node's key with successor's key, then delete successor",
-        "All cases run in O(h) time"
+        "All cases run in $O(h)$ time"
       ]
     },
     "id": "searchtrees4x1-004",
@@ -3577,7 +3577,7 @@
     "subject": "Search Trees",
     "title": "2-3 Trees Balance",
     "content": {
-      "text": "2-3 trees maintain perfect balance by ensuring every path from root to leaf has the same length. Each internal node has either 2 children with 1 key, or 3 children with 2 keys. This guarantees O(log n) height and operations."
+      "text": "2-3 trees maintain perfect balance by ensuring every path from root to leaf has the same length. Each internal node has either 2 children with 1 key, or 3 children with 2 keys. This guarantees $O(\\log n)$ height and operations."
     },
     "id": "searchtrees4x1-006",
     "source": "searchtrees4x1.pdf",
@@ -3590,11 +3590,11 @@
     "title": "Data Structure Comparison",
     "content": {
       "points": [
-        "Linked list: O(n) search, O(1) insert/delete",
-        "Sorted array: O(log n) search, O(n) insert/delete",
-        "Binary search tree: O(h) for all operations",
-        "2-3 tree: O(log n) for all operations",
-        "Space complexity is O(n) for all structures"
+        "Linked list: $O(n)$ search, $O(1)$ insert/delete",
+        "Sorted array: $O(\\log n)$ search, $O(n)$ insert/delete",
+        "Binary search tree: $O(h)$ for all operations",
+        "2-3 tree: $O(\\log n)$ for all operations",
+        "Space complexity is $O(n)$ for all structures"
       ]
     },
     "id": "searchtrees4x1-007",
@@ -3639,7 +3639,7 @@
     "title": "Tree Height Impact",
     "content": {
       "question": "What is the worst-case time complexity for BST operations when the tree is completely unbalanced?",
-      "answer": "O(n) because the height h can be equal to n in a linear chain"
+      "answer": "$O(n)$ because the height h can be equal to n in a linear chain"
     },
     "id": "searchtrees4x1-010",
     "source": "searchtrees4x1.pdf",
@@ -3651,7 +3651,7 @@
     "subject": "Search Trees",
     "title": "Balanced vs Unbalanced Trees",
     "content": {
-      "text": "While basic binary search trees can degrade to O(n) height in worst case, balanced search trees like 2-3 trees maintain O(log n) height through structural constraints. This guarantees efficient O(log n) operations regardless of insertion order."
+      "text": "While basic binary search trees can degrade to $O(n)$ height in worst case, balanced search trees like 2-3 trees maintain $O(\\log n)$ height through structural constraints. This guarantees efficient $O(\\log n)$ operations regardless of insertion order."
     },
     "id": "searchtrees4x1-011",
     "source": "searchtrees4x1.pdf",
@@ -3679,8 +3679,8 @@
         "A segment tree is a binary tree data structure used for storing intervals or segments",
         "Each leaf represents a single array element, while internal nodes represent merged information from their children",
         "Common operations include range queries (sum, min, max) and point updates",
-        "Time complexity is O(log n) for both queries and updates",
-        "Space complexity is O(n) with the tree stored in an array format"
+        "Time complexity is $O(\\log n)$ for both queries and updates",
+        "Space complexity is $O(n)$ with the tree stored in an array format"
       ]
     },
     "id": "segmenttrees-weekplan-002",
@@ -3693,7 +3693,7 @@
     "subject": "Segment Trees & Range Queries",
     "title": "Segment Tree Operations",
     "content": {
-      "text": "Segment trees support two main operations: ADD(index, value) which updates a single element, and range queries that retrieve aggregated information over a range. The tree structure allows these operations to run in O(log n) time by only visiting nodes along the path from root to leaf, making it much faster than naive O(n) approaches."
+      "text": "Segment trees support two main operations: ADD(index, value) which updates a single element, and range queries that retrieve aggregated information over a range. The tree structure allows these operations to run in $O(\\log n)$ time by only visiting nodes along the path from root to leaf, making it much faster than naive $O(n)$ approaches."
     },
     "id": "segmenttrees-weekplan-003",
     "source": "segmenttrees-weekplan.pdf",
@@ -3706,7 +3706,7 @@
     "title": "Segment Tree Time Complexity",
     "content": {
       "question": "What is the time complexity for both query and update operations in a segment tree?",
-      "answer": "O(log n) - because we only need to traverse from root to leaf, visiting at most log n nodes in the tree structure."
+      "answer": "$O(\\log n)$ - because we only need to traverse from root to leaf, visiting at most $\\log n$ nodes in the tree structure."
     },
     "id": "segmenttrees-weekplan-004",
     "source": "segmenttrees-weekplan.pdf",
@@ -3721,8 +3721,8 @@
       "points": [
         "Range sum queries find the total sum of elements in a given range [i, j]",
         "Can be solved using segment trees, prefix sums, or Fenwick trees",
-        "Segment trees allow both range queries and point updates in O(log n) time",
-        "Prefix sums provide O(1) queries but O(n) updates",
+        "Segment trees allow both range queries and point updates in $O(\\log n)$ time",
+        "Prefix sums provide $O(1)$ queries but $O(n)$ updates",
         "Useful for problems involving cumulative data analysis"
       ]
     },
@@ -3736,7 +3736,7 @@
     "subject": "Segment Trees & Range Queries",
     "title": "Range Updates Problem",
     "content": {
-      "text": "The range update problem involves efficiently adding a value to all elements in a range [i, j] and looking up individual elements. This requires techniques like lazy propagation in segment trees or difference arrays to avoid the naive O(n) cost of updating each element individually, achieving O(log n) performance instead."
+      "text": "The range update problem involves efficiently adding a value to all elements in a range [i, j] and looking up individual elements. This requires techniques like lazy propagation in segment trees or difference arrays to avoid the naive $O(n)$ cost of updating each element individually, achieving $O(\\log n)$ performance instead."
     },
     "id": "segmenttrees-weekplan-006",
     "source": "segmenttrees-weekplan.pdf",
@@ -3828,8 +3828,8 @@
     "title": "Static RMQ Solutions",
     "content": {
       "points": [
-        "Solution 1: Store array, scan for each query - O(n) space, O(n) time",
-        "Solution 2: Precompute all answers in matrix - O(n²) space, O(1) time",
+        "Solution 1: Store array, scan for each query - $O(n)$ space, $O(n)$ time",
+        "Solution 2: Precompute all answers in matrix - $O(n^2)$ space, $O(1)$ time",
         "Trade-off between preprocessing time/space and query speed",
         "Matrix solution stores answer for every possible (i,j) pair"
       ]
@@ -3857,8 +3857,8 @@
     "title": "Dynamic RMQ Trade-offs",
     "content": {
       "points": [
-        "Array solution: O(n) space, O(n) query, O(1) update",
-        "Matrix solution: O(n²) space, O(1) query, O(n²) update",
+        "Array solution: $O(n)$ space, $O(n)$ query, $O(1)$ update",
+        "Matrix solution: $O(n^2)$ space, $O(1)$ query, $O(n^2)$ update",
         "Updates in matrix approach require recalculating many entries",
         "Need better data structure for balanced performance"
       ]
@@ -3873,7 +3873,7 @@
     "subject": "Segment Trees & Range Queries",
     "title": "Segment Trees for RMQ",
     "content": {
-      "text": "Segment trees provide an optimal solution for dynamic RMQ by organizing data in a binary tree structure. Each node stores the minimum value of its range, allowing both queries and updates to be performed in O(log n) time with O(n) space."
+      "text": "Segment trees provide an optimal solution for dynamic RMQ by organizing data in a binary tree structure. Each node stores the minimum value of its range, allowing both queries and updates to be performed in $O(\\log n)$ time with $O(n)$ space."
     },
     "id": "segmenttrees1x1-005",
     "source": "segmenttrees1x1.pdf",
@@ -3886,9 +3886,9 @@
     "title": "Segment Tree Performance",
     "content": {
       "points": [
-        "Space complexity: O(n) - linear in array size",
-        "Query time: O(log n) - traverse tree height",
-        "Update time: O(log n) - modify path from leaf to root",
+        "Space complexity: $O(n)$ - linear in array size",
+        "Query time: $O(\\log n)$ - traverse tree height",
+        "Update time: $O(\\log n)$ - modify path from leaf to root",
         "Balanced solution for dynamic range queries"
       ]
     },
@@ -3914,7 +3914,7 @@
     "subject": "Segment Trees & Range Queries",
     "title": "Segment Tree Updates",
     "content": {
-      "text": "When updating an element in a segment tree, you modify the leaf node and then propagate the change upward to the root. Each ancestor node may need to recalculate its minimum value based on its children, requiring O(log n) operations."
+      "text": "When updating an element in a segment tree, you modify the leaf node and then propagate the change upward to the root. Each ancestor node may need to recalculate its minimum value based on its children, requiring $O(\\log n)$ operations."
     },
     "id": "segmenttrees1x1-008",
     "source": "segmenttrees1x1.pdf",
@@ -3941,10 +3941,10 @@
     "content": {
       "question": "What is the time complexity for both queries and updates in a segment tree?",
       "options": [
-        "O(1)",
-        "O(log n)",
-        "O(n)",
-        "O(n²)"
+        "$O(1)$",
+        "$O(\\log n)$",
+        "$O(n)$",
+        "$O(n^2)$"
       ],
       "correctIndex": 1
     },
@@ -3989,8 +3989,8 @@
     "title": "Static RMQ Solutions",
     "content": {
       "points": [
-        "Solution 1: Store original array - O(n) space, O(n) query time",
-        "Solution 2: Precompute all queries in matrix - O(n²) space, O(1) query time",
+        "Solution 1: Store original array - $O(n)$ space, $O(n)$ query time",
+        "Solution 2: Precompute all queries in matrix - $O(n^2)$ space, $O(1)$ query time",
         "Trade-off between space and query time complexity",
         "Static solutions don't support array updates after preprocessing"
       ]
@@ -4018,8 +4018,8 @@
     "title": "Dynamic RMQ Trade-offs",
     "content": {
       "points": [
-        "Array solution: O(n) space, O(n) query, O(1) update time",
-        "Matrix solution: O(n²) space, O(1) query, O(n²) update time",
+        "Array solution: $O(n)$ space, $O(n)$ query, $O(1)$ update time",
+        "Matrix solution: $O(n^2)$ space, $O(1)$ query, $O(n^2)$ update time",
         "Updates in matrix approach require recalculating many entries",
         "Need better data structure for balanced performance"
       ]
@@ -4034,7 +4034,7 @@
     "subject": "Segment Trees & Range Queries",
     "title": "Segment Trees for RMQ",
     "content": {
-      "text": "Segment trees provide an optimal solution for dynamic RMQ problems. They use O(n) space and support both queries and updates in O(log n) time by organizing data in a binary tree structure where each node stores the minimum of its subtree."
+      "text": "Segment trees provide an optimal solution for dynamic RMQ problems. They use $O(n)$ space and support both queries and updates in $O(\\log n)$ time by organizing data in a binary tree structure where each node stores the minimum of its subtree."
     },
     "id": "segmenttrees4x1-005",
     "source": "segmenttrees4x1.pdf",
@@ -4047,9 +4047,9 @@
     "title": "Segment Tree Properties",
     "content": {
       "points": [
-        "Space complexity: O(n) - much better than O(n²) matrix",
-        "Query time: O(log n) - logarithmic traversal of tree height",
-        "Update time: O(log n) - propagate changes up the tree path",
+        "Space complexity: $O(n)$ - much better than $O(n^2)$ matrix",
+        "Query time: $O(\\log n)$ - logarithmic traversal of tree height",
+        "Update time: $O(\\log n)$ - propagate changes up the tree path",
         "Each internal node stores minimum of its children's ranges"
       ]
     },
@@ -4064,7 +4064,7 @@
     "title": "Segment Tree Complexity",
     "content": {
       "question": "What are the time and space complexities for segment trees in dynamic RMQ?",
-      "answer": "Space: O(n), Query time: O(log n), Update time: O(log n). This provides a good balance between all operations compared to naive approaches."
+      "answer": "Space: $O(n)$, Query time: $O(\\log n)$, Update time: $O(\\log n)$. This provides a good balance between all operations compared to naive approaches."
     },
     "id": "segmenttrees4x1-007",
     "source": "segmenttrees4x1.pdf",
@@ -4140,7 +4140,7 @@
         "Works only with non-negative edge weights",
         "Finds shortest paths from a single source to all other nodes",
         "Uses a greedy approach with a priority queue",
-        "Time complexity is O((V + E) log V) with binary heap",
+        "Time complexity is $O((V + E) \\log V)$ with binary heap",
         "Fails with negative edges because it assumes found distances are final"
       ]
     },
@@ -4360,7 +4360,7 @@
     "title": "Dijkstra Complexity",
     "content": {
       "question": "What is the time complexity of Dijkstra's algorithm using a binary heap?",
-      "answer": "O(m log n) where m is the number of edges and n is the number of vertices, due to n extract-min operations and up to m decrease-key operations, each taking O(log n) time."
+      "answer": "$O(m \\log n)$ where m is the number of edges and n is the number of vertices, due to n extract-min operations and up to m decrease-key operations, each taking $O(\\log n)$ time."
     },
     "id": "shortestpaths4x1-006",
     "source": "shortestpaths4x1.pdf",
@@ -4389,7 +4389,7 @@
     "subject": "Shortest Paths & MST",
     "title": "DAG Shortest Paths",
     "content": {
-      "text": "Finding shortest paths in Directed Acyclic Graphs (DAGs) is computationally easier than general graphs. We can process vertices in topological order and relax edges, achieving O(m + n) time complexity. This approach even works with negative edge weights."
+      "text": "Finding shortest paths in Directed Acyclic Graphs (DAGs) is computationally easier than general graphs. We can process vertices in topological order and relax edges, achieving $O(m + n)$ time complexity. This approach even works with negative edge weights."
     },
     "id": "shortestpaths4x1-008",
     "source": "shortestpaths4x1.pdf",
@@ -4421,9 +4421,9 @@
     "title": "Priority Queue Comparison",
     "content": {
       "points": [
-        "Array implementation: O(n²) total time, simple but slow",
-        "Binary heap: O(m log n) total time, good general choice",
-        "Fibonacci heap: O(m + n log n) total time, optimal but complex",
+        "Array implementation: $O(n^2)$ total time, simple but slow",
+        "Binary heap: $O(m \\log n)$ total time, good general choice",
+        "Fibonacci heap: $O(m + n \\log n)$ total time, optimal but complex",
         "Choice depends on graph density and implementation complexity"
       ]
     },
@@ -4452,7 +4452,7 @@
       "question": "What is the main advantage of the DAG shortest path algorithm over Dijkstra's?",
       "options": [
         "It works with negative weights",
-        "It has O(m + n) time complexity",
+        "It has $O(m + n)$ time complexity",
         "It doesn't need a priority queue",
         "All of the above"
       ],
@@ -4595,7 +4595,7 @@
     "title": "Union Find Variants",
     "content": {
       "points": [
-        "Quick Find: Fast lookups O(1) but slow unions O(n)",
+        "Quick Find: Fast lookups $O(1)$ but slow unions $O(n)$",
         "Quick Union: Uses tree structure, but can create tall trees",
         "Weighted Quick Union: Keeps trees balanced by merging smaller into larger",
         "Path Compression: Flattens trees during FIND to speed up future operations"
@@ -4611,7 +4611,7 @@
     "subject": "Union Find",
     "title": "Quick Find Algorithm",
     "content": {
-      "text": "Quick Find uses an array where each element stores its component ID. FIND operations are O(1) since you just check the array. However, UNION operations are O(n) because you must update all elements in one component to match the other component's ID."
+      "text": "Quick Find uses an array where each element stores its component ID. FIND operations are $O(1)$ since you just check the array. However, UNION operations are $O(n)$ because you must update all elements in one component to match the other component's ID."
     },
     "id": "unionfind-weekplan-003",
     "source": "unionfind-weekplan.pdf",
@@ -4665,7 +4665,7 @@
     "title": "Quick Find vs Quick Union",
     "content": {
       "question": "What is the key difference between Quick Find and Quick Union data structures?",
-      "answer": "Quick Find uses an array where FIND is O(1) but UNION is O(n). Quick Union uses trees where FIND can be slow but UNION is faster by just linking tree roots."
+      "answer": "Quick Find uses an array where FIND is $O(1)$ but UNION is $O(n)$. Quick Union uses trees where FIND can be slow but UNION is faster by just linking tree roots."
     },
     "id": "unionfind-weekplan-007",
     "source": "unionfind-weekplan.pdf",
@@ -4695,7 +4695,7 @@
     "subject": "Union Find",
     "title": "Linked List Implementation",
     "content": {
-      "text": "Union Find can be implemented using linked lists where each set is a list with the first element as representative. Each node has a pointer to the representative for O(1) FIND operations. UNION requires merging lists, which can be optimized by always merging the smaller list into the larger one."
+      "text": "Union Find can be implemented using linked lists where each set is a list with the first element as representative. Each node has a pointer to the representative for $O(1)$ FIND operations. UNION requires merging lists, which can be optimized by always merging the smaller list into the larger one."
     },
     "id": "unionfind-weekplan-009",
     "source": "unionfind-weekplan.pdf",
@@ -4709,10 +4709,10 @@
     "content": {
       "question": "What is the time complexity of FIND in Quick Find?",
       "options": [
-        "O(n)",
-        "O(log n)",
-        "O(1)",
-        "O(n log n)"
+        "$O(n)$",
+        "$O(\\log n)$",
+        "$O(1)$",
+        "$O(n \\log n)$"
       ],
       "correctIndex": 2
     },
@@ -4787,7 +4787,7 @@
     "subject": "Union Find",
     "title": "Quick Find Implementation",
     "content": {
-      "text": "Quick Find uses an array where each element stores its set's representative directly. FIND operations are O(1) since you just return the array value, but UNION operations are expensive O(n) because you must update the representative for all elements in one of the merging sets. This makes it inefficient for union-heavy workloads."
+      "text": "Quick Find uses an array where each element stores its set's representative directly. FIND operations are $O(1)$ since you just return the array value, but UNION operations are expensive $O(n)$ because you must update the representative for all elements in one of the merging sets. This makes it inefficient for union-heavy workloads."
     },
     "id": "unionfind4x1-003",
     "source": "unionfind4x1.pdf",
@@ -4814,8 +4814,8 @@
       "points": [
         "Always makes the smaller tree's root point to the larger tree's root",
         "Maintains an additional size array to track subtree sizes",
-        "Guarantees maximum tree depth of log₂ n for any node",
-        "Improves worst-case performance from O(n) to O(log n)",
+        "Guarantees maximum tree depth of $\\log n$ for any node",
+        "Improves worst-case performance from $O(n)$ to $O(\\log n)$",
         "Balances trees automatically during union operations"
       ]
     },
@@ -4830,7 +4830,7 @@
     "title": "Tree Depth Limit",
     "content": {
       "question": "What is the maximum depth of any node in Weighted Quick Union with n elements?",
-      "answer": "log₂ n. This is because each time a node's depth increases, its tree must merge with a larger tree, at least doubling the total size. Since we can only double log₂ n times before reaching n elements, the depth is bounded by log₂ n."
+      "answer": "$\\log n$. This is because each time a node's depth increases, its tree must merge with a larger tree, at least doubling the total size. Since we can only double $\\log n$ times before reaching n elements, the depth is bounded by $\\log n$."
     },
     "id": "unionfind4x1-006",
     "source": "unionfind4x1.pdf",
@@ -4855,10 +4855,10 @@
     "title": "Union Find Time Complexities",
     "content": {
       "points": [
-        "Quick Find: O(1) FIND, O(n) UNION - fast lookups, slow merging",
-        "Quick Union: O(depth) for both - can be O(n) in worst case",
-        "Weighted Quick Union: O(log n) for both - balanced trees guarantee",
-        "With Path Compression: O(α(m,n)) amortized - nearly constant time"
+        "Quick Find: $O(1)$ FIND, $O(n)$ UNION - fast lookups, slow merging",
+        "Quick Union: $O(depth)$ for both - can be $O(n)$ in worst case",
+        "Weighted Quick Union: $O(\\log n)$ for both - balanced trees guarantee",
+        "With Path Compression: $O(α(m,n))$ amortized - nearly constant time"
       ]
     },
     "id": "unionfind4x1-008",
@@ -4871,7 +4871,7 @@
     "subject": "Union Find",
     "title": "Implementation Comparison",
     "content": {
-      "question": "Which Union Find implementation has O(1) FIND time but O(n) UNION time?",
+      "question": "Which Union Find implementation has $O(1)$ FIND time but $O(n)$ UNION time?",
       "options": [
         "Quick Union",
         "Quick Find",
@@ -4890,7 +4890,7 @@
     "subject": "Union Find",
     "title": "Dynamic Connectivity Problem",
     "content": {
-      "text": "Dynamic Connectivity maintains a graph where you can add edges and query if two vertices are connected. Using Union Find, INIT creates isolated vertices, INSERT(u,v) performs UNION(u,v), and CONNECTED(u,v) checks if FIND(u) equals FIND(v). This gives O(log n) time per operation with Weighted Quick Union."
+      "text": "Dynamic Connectivity maintains a graph where you can add edges and query if two vertices are connected. Using Union Find, INIT creates isolated vertices, INSERT(u,v) performs UNION(u,v), and CONNECTED(u,v) checks if FIND(u) equals FIND(v). This gives $O(\\log n)$ time per operation with Weighted Quick Union."
     },
     "id": "unionfind4x1-010",
     "source": "unionfind4x1.pdf",
@@ -4903,7 +4903,7 @@
     "title": "Inverse Ackermann Function",
     "content": {
       "question": "What is α(m,n) in the context of Union Find with Path Compression?",
-      "answer": "α(m,n) is the inverse of the Ackermann function, which appears in the time complexity O(n + m α(m,n)) for m operations on n elements. For any practical input size, α(m,n) ≤ 5, making it effectively constant time."
+      "answer": "α(m,n) is the inverse of the Ackermann function, which appears in the time complexity $O(n + m α(m,n))$ for m operations on n elements. For any practical input size, α(m,n) ≤ 5, making it effectively constant time."
     },
     "id": "unionfind4x1-011",
     "source": "unionfind4x1.pdf",
@@ -5090,7 +5090,7 @@
     "subject": "Sorting & Searching",
     "title": "Insertion Sort Basics",
     "content": {
-      "text": "Insertion sort builds the final sorted array one item at a time by taking elements from the unsorted portion and inserting them into their correct position in the sorted portion. It works similarly to how you might sort playing cards in your hands. The algorithm is efficient for small datasets and has a best-case time complexity of O(n) when the array is already sorted."
+      "text": "Insertion sort builds the final sorted array one item at a time by taking elements from the unsorted portion and inserting them into their correct position in the sorted portion. It works similarly to how you might sort playing cards in your hands. The algorithm is efficient for small datasets and has a best-case time complexity of $O(n)$ when the array is already sorted."
     },
     "id": "clrs-ch02-001",
     "course": "Algorithms and Data Structures",
@@ -5103,8 +5103,8 @@
     "title": "Insertion Sort Properties",
     "content": {
       "points": [
-        "Time complexity: O(n²) worst case, O(n) best case",
-        "Space complexity: O(1) - sorts in place",
+        "Time complexity: $O(n^2)$ worst case, $O(n)$ best case",
+        "Space complexity: $O(1)$ - sorts in place",
         "Stable algorithm - maintains relative order of equal elements",
         "Adaptive - performs better on partially sorted arrays",
         "Online - can sort elements as they arrive"
@@ -5135,10 +5135,10 @@
     "content": {
       "question": "What is the worst-case time complexity of insertion sort?",
       "options": [
-        "O(n)",
-        "O(n log n)",
-        "O(n²)",
-        "O(2ⁿ)"
+        "$O(n)$",
+        "$O(n \\log n)$",
+        "$O(n^2)$",
+        "$O(2^n)$"
       ],
       "correctIndex": 2
     },
@@ -5152,7 +5152,7 @@
     "subject": "Sorting & Searching",
     "title": "Big-O Notation Explained",
     "content": {
-      "text": "Big-O notation describes the upper bound of an algorithm's growth rate, focusing on the worst-case scenario as input size approaches infinity. It ignores constant factors and lower-order terms, providing a simplified way to compare algorithm efficiency. For example, O(n²) means the algorithm's runtime grows quadratically with input size."
+      "text": "Big-O notation describes the upper bound of an algorithm's growth rate, focusing on the worst-case scenario as input size approaches infinity. It ignores constant factors and lower-order terms, providing a simplified way to compare algorithm efficiency. For example, $O(n^2)$ means the algorithm's runtime grows quadratically with input size."
     },
     "id": "clrs-ch02-005",
     "course": "Algorithms and Data Structures",
@@ -5165,11 +5165,11 @@
     "title": "Common Time Complexities",
     "content": {
       "points": [
-        "O(1) - Constant time, independent of input size",
-        "O(log n) - Logarithmic, like binary search",
-        "O(n) - Linear, must examine each element once",
-        "O(n log n) - Linearithmic, efficient sorting algorithms",
-        "O(n²) - Quadratic, nested loops over input"
+        "$O(1)$ - Constant time, independent of input size",
+        "$O(\\log n)$ - Logarithmic, like binary search",
+        "$O(n)$ - Linear, must examine each element once",
+        "$O(n \\log n)$ - Linearithmic, efficient sorting algorithms",
+        "$O(n^2)$ - Quadratic, nested loops over input"
       ]
     },
     "id": "clrs-ch02-006",
@@ -5227,10 +5227,10 @@
     "title": "Merge Sort Characteristics",
     "content": {
       "points": [
-        "Always runs in O(n log n) time regardless of input",
+        "Always runs in $O(n \\log n)$ time regardless of input",
         "Uses divide and conquer paradigm",
         "Stable sorting algorithm",
-        "Requires O(n) extra space for merging",
+        "Requires $O(n)$ extra space for merging",
         "Predictable performance makes it suitable for real-time systems"
       ]
     },
@@ -5259,10 +5259,10 @@
     "content": {
       "question": "What is the space complexity of insertion sort?",
       "options": [
-        "O(n)",
-        "O(log n)",
-        "O(1)",
-        "O(n²)"
+        "$O(n)$",
+        "$O(\\log n)$",
+        "$O(1)$",
+        "$O(n^2)$"
       ],
       "correctIndex": 2
     },
@@ -5276,7 +5276,7 @@
     "subject": "Algorithm Analysis (Big O)",
     "title": "Big O Notation Basics",
     "content": {
-      "text": "Big O notation describes the upper bound of an algorithm's running time as input size grows. It focuses on the worst-case scenario and ignores constants and lower-order terms. For example, O(n²) means the algorithm's time grows at most quadratically with input size."
+      "text": "Big O notation describes the upper bound of an algorithm's running time as input size grows. It focuses on the worst-case scenario and ignores constants and lower-order terms. For example, $O(n^2)$ means the algorithm's time grows at most quadratically with input size."
     },
     "id": "clrs-ch03-001",
     "course": "Algorithms and Data Structures",
@@ -5288,7 +5288,7 @@
     "subject": "Algorithm Analysis (Big O)",
     "title": "Omega Notation Explained",
     "content": {
-      "text": "Omega (Ω) notation provides a lower bound on an algorithm's running time. It describes the best-case scenario - the minimum time an algorithm will take. While Big O gives us the ceiling, Omega gives us the floor of performance."
+      "text": "Omega (Ω) notation provides a lower bound on an algorithm's running time. It describes the best-case scenario - the minimum time an algorithm will take. While Big O gives us the ceiling, $\\Omega$ gives us the floor of performance."
     },
     "id": "clrs-ch03-002",
     "course": "Algorithms and Data Structures",
@@ -5300,7 +5300,7 @@
     "subject": "Algorithm Analysis (Big O)",
     "title": "Theta Notation Overview",
     "content": {
-      "text": "Theta (Θ) notation represents tight bounds on running time - both upper and lower bounds simultaneously. When an algorithm is Θ(n), it means the running time grows exactly proportionally to n, not faster or slower."
+      "text": "Theta (Θ) notation represents tight bounds on running time - both upper and lower bounds simultaneously. When an algorithm is $\\Theta(n)$, it means the running time grows exactly proportionally to n, not faster or slower."
     },
     "id": "clrs-ch03-003",
     "course": "Algorithms and Data Structures",
@@ -5312,7 +5312,7 @@
     "subject": "Algorithm Analysis (Big O)",
     "title": "Asymptotic Growth Comparison",
     "content": {
-      "text": "Asymptotic analysis compares how algorithms scale as input size approaches infinity. Constants become irrelevant - an O(n) algorithm will always outperform O(n²) for sufficiently large inputs, regardless of constant factors."
+      "text": "Asymptotic analysis compares how algorithms scale as input size approaches infinity. Constants become irrelevant - an $O(n)$ algorithm will always outperform $O(n^2)$ for sufficiently large inputs, regardless of constant factors."
     },
     "id": "clrs-ch03-004",
     "course": "Algorithms and Data Structures",
@@ -5324,7 +5324,7 @@
     "subject": "Algorithm Analysis (Big O)",
     "title": "Why Constants Don't Matter",
     "content": {
-      "text": "In asymptotic notation, we ignore constant factors because they become insignificant for large inputs. An algorithm taking 1000n steps is still O(n), and will eventually outperform one taking n² steps as n grows large enough."
+      "text": "In asymptotic notation, we ignore constant factors because they become insignificant for large inputs. An algorithm taking 1000n steps is still $O(n)$, and will eventually outperform one taking $n^2$ steps as n grows large enough."
     },
     "id": "clrs-ch03-005",
     "course": "Algorithms and Data Structures",
@@ -5337,11 +5337,11 @@
     "title": "Common Time Complexities",
     "content": {
       "points": [
-        "O(1): Constant time - accessing array element",
-        "O(log n): Logarithmic - binary search",
-        "O(n): Linear - scanning through array",
-        "O(n log n): Linearithmic - efficient sorting algorithms",
-        "O(n²): Quadratic - nested loops over input"
+        "$O(1)$: Constant time - accessing array element",
+        "$O(\\log n)$: Logarithmic - binary search",
+        "$O(n)$: Linear - scanning through array",
+        "$O(n \\log n)$: Linearithmic - efficient sorting algorithms",
+        "$O(n^2)$: Quadratic - nested loops over input"
       ]
     },
     "id": "clrs-ch03-006",
@@ -5356,7 +5356,7 @@
     "content": {
       "points": [
         "Drop all constant factors (5n becomes n)",
-        "Keep only the highest-order term (n² + n becomes n²)",
+        "Keep only the highest-order term ($n^2$ + n becomes $n^2$)",
         "Use the worst-case scenario for Big O",
         "Focus on behavior as n approaches infinity"
       ]
@@ -5372,7 +5372,7 @@
     "title": "Formal Definition Components",
     "content": {
       "points": [
-        "f(n) = O(g(n)) means f grows no faster than g",
+        "f(n) = $O(g(n)$) means f grows no faster than g",
         "There exist constants c > 0 and n₀ such that f(n) ≤ c·g(n)",
         "The inequality holds for all n ≥ n₀",
         "Constants c and n₀ can be chosen to make the definition work"
@@ -5389,8 +5389,8 @@
     "title": "Growth Rate Hierarchy",
     "content": {
       "points": [
-        "O(1) < O(log n) < O(n) < O(n log n)",
-        "O(n log n) < O(n²) < O(n³) < O(2ⁿ)",
+        "$O(1)$ < $O(\\log n)$ < $O(n)$ < $O(n \\log n)$",
+        "$O(n \\log n)$ < $O(n^2)$ < $O(n^3)$ < $O(2^n)$",
         "Polynomial time is generally considered efficient",
         "Exponential time becomes impractical for large inputs"
       ]
@@ -5405,7 +5405,7 @@
     "subject": "Algorithm Analysis (Big O)",
     "title": "Big O Definition",
     "content": {
-      "question": "What does f(n) = O(g(n)) formally mean?",
+      "question": "What does f(n) = $O(g(n)$) formally mean?",
       "answer": "There exist positive constants c and n₀ such that f(n) ≤ c·g(n) for all n ≥ n₀. This means f(n) grows no faster than g(n) asymptotically."
     },
     "id": "clrs-ch03-010",
@@ -5418,8 +5418,8 @@
     "subject": "Algorithm Analysis (Big O)",
     "title": "Theta vs Big O",
     "content": {
-      "question": "What's the difference between Θ(n) and O(n)?",
-      "answer": "Θ(n) means the function grows exactly proportionally to n (tight bound), while O(n) means it grows at most proportionally to n (upper bound only)."
+      "question": "What's the difference between Θ(n) and $O(n)$?",
+      "answer": "Θ(n) means the function grows exactly proportionally to n (tight bound), while $O(n)$ means it grows at most proportionally to n (upper bound only)."
     },
     "id": "clrs-ch03-011",
     "course": "Algorithms and Data Structures",
@@ -5433,10 +5433,10 @@
     "content": {
       "question": "Which time complexity is most efficient for large inputs?",
       "options": [
-        "O(n²)",
-        "O(n log n)",
-        "O(2ⁿ)",
-        "O(n³)"
+        "$O(n^2)$",
+        "$O(n \\log n)$",
+        "$O(2^n)$",
+        "$O(n^3)$"
       ],
       "correctIndex": 1
     },
@@ -5479,7 +5479,7 @@
     "subject": "Algorithm Analysis (Big O)",
     "title": "Standard Matrix Multiplication",
     "content": {
-      "text": "Standard matrix multiplication of two n×n matrices requires three nested loops, resulting in Θ(n³) time complexity. Each element in the result matrix is computed as a dot product of a row and column. This cubic complexity becomes expensive for large matrices."
+      "text": "Standard matrix multiplication of two n×n matrices requires three nested loops, resulting in $\\Theta(n^3)$ time complexity. Each element in the result matrix is computed as a dot product of a row and column. This cubic complexity becomes expensive for large matrices."
     },
     "id": "clrs-ch04-003",
     "course": "Algorithms and Data Structures",
@@ -5492,7 +5492,7 @@
     "title": "Strassen's Algorithm Complexity",
     "content": {
       "question": "What is the time complexity of Strassen's matrix multiplication algorithm?",
-      "answer": "O(n^log₂7) ≈ O(n^2.807), which is better than the standard O(n³) algorithm. Strassen achieves this by using 7 recursive multiplications instead of 8."
+      "answer": "$O(n^log₂7)$ ≈ $O(n^2.807)$, which is better than the standard $O(n^3)$ algorithm. Strassen achieves this by using 7 recursive multiplications instead of 8."
     },
     "id": "clrs-ch04-004",
     "course": "Algorithms and Data Structures",
@@ -5533,12 +5533,12 @@
     "subject": "Algorithm Analysis (Big O)",
     "title": "Master Method Application",
     "content": {
-      "question": "For recurrence T(n) = 4T(n/2) + n², which master method case applies?",
+      "question": "For recurrence $T(n) = 4T(n/2) + n^2$, which master method case applies?",
       "options": [
-        "Case 1: T(n) = Θ(n²)",
-        "Case 2: T(n) = Θ(n² log n)",
-        "Case 3: T(n) = Θ(n²)",
-        "Case 3: T(n) = Θ(n² log n)"
+        "Case 1: $T(n) = Θ(n^2)$",
+        "Case 2: $T(n) = Θ(n^2 \\$\\log n$)$",
+        "Case 3: $T(n) = Θ(n^2)$",
+        "Case 3: $T(n) = Θ(n^2 \\$\\log n$)$"
       ],
       "correctIndex": 1
     },
@@ -5554,7 +5554,7 @@
     "content": {
       "points": [
         "Case 1: f(n) grows slower than n^(log_b a), solution is Θ(n^(log_b a))",
-        "Case 2: f(n) grows at same rate as n^(log_b a), solution is Θ(n^(log_b a) log n)",
+        "Case 2: f(n) grows at same rate as n^(log_b a), solution is Θ(n^(log_b a) $\\log n$)",
         "Case 3: f(n) grows faster than n^(log_b a), solution is Θ(f(n))",
         "Regularity condition must hold for Case 3 to apply"
       ]
@@ -5570,7 +5570,7 @@
     "title": "Master Method Format",
     "content": {
       "question": "What is the standard form of recurrence that the master method solves?",
-      "answer": "T(n) = aT(n/b) + f(n), where a ≥ 1 and b > 1 are constants, and f(n) is asymptotically positive."
+      "answer": "$T(n) = aT(n/b) + f(n)$, where a ≥ 1 and b > 1 are constants, and f(n) is asymptotically positive."
     },
     "id": "clrs-ch04-009",
     "course": "Algorithms and Data Structures",
@@ -5594,7 +5594,7 @@
     "subject": "Algorithm Analysis (Big O)",
     "title": "Recurrence Solution Methods",
     "content": {
-      "question": "Which method is most systematic for solving recurrences of the form T(n) = aT(n/b) + f(n)?",
+      "question": "Which method is most systematic for solving recurrences of the form $T(n) = aT(n/b) + f(n)?$",
       "options": [
         "Substitution method",
         "Recursion tree method",
@@ -5614,7 +5614,7 @@
     "title": "Divide-and-Conquer Recurrence",
     "content": {
       "question": "Why do divide-and-conquer algorithms often have logarithmic depth?",
-      "answer": "Because they repeatedly divide the problem size by a constant factor (usually 2), creating log n levels of recursion before reaching the base case."
+      "answer": "Because they repeatedly divide the problem size by a constant factor (usually 2), creating $\\log n$ levels of recursion before reaching the base case."
     },
     "id": "clrs-ch04-012",
     "course": "Algorithms and Data Structures",
@@ -5788,7 +5788,7 @@
         "E[XY] = E[X]E[Y] for independent X,Y",
         "E[X + Y] = E[X] + E[Y] always",
         "E[cX] = cE[X] for constant c",
-        "Var[X] = E[X²] - (E[X])²"
+        "Var[X] = E[$X^2$] - (E[X])²"
       ],
       "correctIndex": 1
     },
@@ -5814,7 +5814,7 @@
     "subject": "Priority Queues & Heaps",
     "title": "Heapsort Algorithm Overview",
     "content": {
-      "text": "Heapsort first builds a max-heap from the input array, then repeatedly extracts the maximum element and places it at the end. This creates a sorted array in O(n log n) time with O(1) space complexity. It's an in-place, comparison-based sorting algorithm."
+      "text": "Heapsort first builds a max-heap from the input array, then repeatedly extracts the maximum element and places it at the end. This creates a sorted array in $O(n \\log n)$ time with $O(1)$ space complexity. It's an in-place, comparison-based sorting algorithm."
     },
     "id": "clrs-ch06-002",
     "course": "Algorithms and Data Structures",
@@ -5826,7 +5826,7 @@
     "subject": "Priority Queues & Heaps",
     "title": "Priority Queue Data Structure",
     "content": {
-      "text": "A priority queue is an abstract data type where elements have priorities and are served in priority order. Heaps provide an efficient implementation with O(log n) insertion and deletion. Maximum priority elements are accessed first in O(1) time."
+      "text": "A priority queue is an abstract data type where elements have priorities and are served in priority order. Heaps provide an efficient implementation with $O(\\log n)$ insertion and deletion. Maximum priority elements are accessed first in $O(1)$ time."
     },
     "id": "clrs-ch06-003",
     "course": "Algorithms and Data Structures",
@@ -5838,7 +5838,7 @@
     "subject": "Priority Queues & Heaps",
     "title": "Building Heap from Array",
     "content": {
-      "text": "Building a heap from an unsorted array can be done in O(n) time using bottom-up approach. Start from the last non-leaf node and apply heapify downward to each node. This is more efficient than inserting elements one by one."
+      "text": "Building a heap from an unsorted array can be done in $O(n)$ time using bottom-up approach. Start from the last non-leaf node and apply heapify downward to each node. This is more efficient than inserting elements one by one."
     },
     "id": "clrs-ch06-004",
     "course": "Algorithms and Data Structures",
@@ -5850,7 +5850,7 @@
     "subject": "Priority Queues & Heaps",
     "title": "Max-Heapify Operation Explained",
     "content": {
-      "text": "Max-heapify maintains the heap property by comparing a node with its children and swapping if necessary. It then recursively applies to the affected subtree. The operation runs in O(log n) time and is fundamental to heap operations."
+      "text": "Max-heapify maintains the heap property by comparing a node with its children and swapping if necessary. It then recursively applies to the affected subtree. The operation runs in $O(\\log n)$ time and is fundamental to heap operations."
     },
     "id": "clrs-ch06-005",
     "course": "Algorithms and Data Structures",
@@ -5866,7 +5866,7 @@
         "Complete binary tree structure with all levels filled except possibly the last",
         "Max-heap property: parent ≥ children for all nodes",
         "Array representation: parent at i, children at 2i and 2i+1",
-        "Height is O(log n) for n elements"
+        "Height is $O(\\log n)$ for n elements"
       ]
     },
     "id": "clrs-ch06-006",
@@ -5880,10 +5880,10 @@
     "title": "Heapsort Time Complexity",
     "content": {
       "points": [
-        "Building initial heap takes O(n) time",
-        "Each of n-1 extract-max operations takes O(log n)",
-        "Overall time complexity is O(n log n)",
-        "Space complexity is O(1) - sorts in place"
+        "Building initial heap takes $O(n)$ time",
+        "Each of n-1 extract-max operations takes $O(\\log n)$",
+        "Overall time complexity is $O(n \\log n)$",
+        "Space complexity is $O(1)$ - sorts in place"
       ]
     },
     "id": "clrs-ch06-007",
@@ -5897,10 +5897,10 @@
     "title": "Priority Queue Operations",
     "content": {
       "points": [
-        "Insert: Add element and bubble up - O(log n)",
-        "Extract-max: Remove root and heapify down - O(log n)",
-        "Peek/Maximum: Return root element - O(1)",
-        "Increase-key: Update priority and restore heap - O(log n)"
+        "Insert: Add element and bubble up - $O(\\log n)$",
+        "Extract-max: Remove root and heapify down - $O(\\log n)$",
+        "Peek/Maximum: Return root element - $O(1)$",
+        "Increase-key: Update priority and restore heap - $O(\\log n)$"
       ]
     },
     "id": "clrs-ch06-008",
@@ -5958,10 +5958,10 @@
     "content": {
       "question": "What is the worst-case time complexity of heapsort?",
       "options": [
-        "O(n)",
-        "O(n log n)",
-        "O(n²)",
-        "O(log n)"
+        "$O(n)$",
+        "$O(n \\log n)$",
+        "$O(n^2)$",
+        "$O(\\log n)$"
       ],
       "correctIndex": 1
     },
@@ -5975,7 +5975,7 @@
     "subject": "Sorting & Searching",
     "title": "Quicksort Overview",
     "content": {
-      "text": "Quicksort is a divide-and-conquer sorting algorithm that picks a pivot element and partitions the array around it. Elements smaller than the pivot go left, larger elements go right. It then recursively sorts the subarrays, achieving efficient O(n log n) average-case performance."
+      "text": "Quicksort is a divide-and-conquer sorting algorithm that picks a pivot element and partitions the array around it. Elements smaller than the pivot go left, larger elements go right. It then recursively sorts the subarrays, achieving efficient $O(n \\log n)$ average-case performance."
     },
     "id": "clrs-ch07-001",
     "course": "Algorithms and Data Structures",
@@ -5999,7 +5999,7 @@
     "subject": "Sorting & Searching",
     "title": "Partitioning Process",
     "content": {
-      "text": "The partition operation rearranges the array so all elements less than the pivot come before it, and all greater elements come after. This ensures the pivot is in its final sorted position. The partition operation runs in O(n) time and is the core of quicksort's efficiency."
+      "text": "The partition operation rearranges the array so all elements less than the pivot come before it, and all greater elements come after. This ensures the pivot is in its final sorted position. The partition operation runs in $O(n)$ time and is the core of quicksort's efficiency."
     },
     "id": "clrs-ch07-003",
     "course": "Algorithms and Data Structures",
@@ -6011,7 +6011,7 @@
     "subject": "Sorting & Searching",
     "title": "In-Place Sorting Advantage",
     "content": {
-      "text": "Unlike merge sort, quicksort sorts in-place using only O(log n) extra space for recursion stack. This makes it memory-efficient for large datasets. The in-place partitioning swaps elements within the original array without requiring additional storage proportional to input size."
+      "text": "Unlike merge sort, quicksort sorts in-place using only $O(\\log n)$ extra space for recursion stack. This makes it memory-efficient for large datasets. The in-place partitioning swaps elements within the original array without requiring additional storage proportional to input size."
     },
     "id": "clrs-ch07-004",
     "course": "Algorithms and Data Structures",
@@ -6023,7 +6023,7 @@
     "subject": "Sorting & Searching",
     "title": "Randomized Quicksort Benefits",
     "content": {
-      "text": "Randomized quicksort chooses the pivot randomly instead of using a fixed strategy like first or last element. This eliminates dependence on input order and guarantees O(n log n) expected time complexity regardless of input distribution, making worst-case scenarios extremely unlikely."
+      "text": "Randomized quicksort chooses the pivot randomly instead of using a fixed strategy like first or last element. This eliminates dependence on input order and guarantees $O(n \\log n)$ expected time complexity regardless of input distribution, making worst-case scenarios extremely unlikely."
     },
     "id": "clrs-ch07-005",
     "course": "Algorithms and Data Structures",
@@ -6036,10 +6036,10 @@
     "title": "Quicksort Time Complexities",
     "content": {
       "points": [
-        "Best case: O(n log n) when pivot divides array into equal halves",
-        "Average case: O(n log n) with random pivot selection",
-        "Worst case: O(n²) when pivot is always smallest or largest element",
-        "Space complexity: O(log n) for recursion stack in average case"
+        "Best case: $O(n \\log n)$ when pivot divides array into equal halves",
+        "Average case: $O(n \\log n)$ with random pivot selection",
+        "Worst case: $O(n^2)$ when pivot is always smallest or largest element",
+        "Space complexity: $O(\\log n)$ for recursion stack in average case"
       ]
     },
     "id": "clrs-ch07-006",
@@ -6117,7 +6117,7 @@
     "subject": "Sorting & Searching",
     "title": "Worst Case Scenario",
     "content": {
-      "question": "When does quicksort achieve its worst-case O(n²) time complexity?",
+      "question": "When does quicksort achieve its worst-case $O(n^2)$ time complexity?",
       "answer": "When the pivot is consistently the smallest or largest element in the subarray, creating highly unbalanced partitions where one side has n-1 elements and the other has 0 elements."
     },
     "id": "clrs-ch07-011",
@@ -6132,10 +6132,10 @@
     "content": {
       "question": "What is the average-case time complexity of quicksort?",
       "options": [
-        "O(n)",
-        "O(n log n)",
-        "O(n²)",
-        "O(log n)"
+        "$O(n)$",
+        "$O(n \\log n)$",
+        "$O(n^2)$",
+        "$O(\\log n)$"
       ],
       "correctIndex": 1
     },
@@ -6149,7 +6149,7 @@
     "subject": "Sorting & Searching",
     "title": "Linear Time Sorting Overview",
     "content": {
-      "text": "Some sorting algorithms can achieve O(n) time complexity under specific conditions. Unlike comparison-based sorts limited by O(n log n), linear-time algorithms use non-comparison techniques. They work when input has special properties like limited range or uniform distribution."
+      "text": "Some sorting algorithms can achieve $O(n)$ time complexity under specific conditions. Unlike comparison-based sorts limited by $O(n \\log n)$, linear-time algorithms use non-comparison techniques. They work when input has special properties like limited range or uniform distribution."
     },
     "id": "clrs-ch08-001",
     "course": "Algorithms and Data Structures",
@@ -6162,9 +6162,9 @@
     "title": "Lower Bounds for Sorting",
     "content": {
       "points": [
-        "Any comparison-based sorting algorithm requires Ω(n log n) comparisons in the worst case",
+        "Any comparison-based sorting algorithm requires $\\Omega(n $\\log n$)$ comparisons in the worst case",
         "This bound is proven using decision tree analysis",
-        "The height of any decision tree for sorting n elements is at least log₂(n!)",
+        "The height of any decision tree for sorting n elements is at least $\\log_2 n$!)",
         "Algorithms like merge sort and heap sort are asymptotically optimal for comparison-based sorting",
         "Non-comparison sorts can potentially beat this bound"
       ]
@@ -6179,7 +6179,7 @@
     "subject": "Sorting & Searching",
     "title": "Counting Sort Basics",
     "content": {
-      "text": "Counting sort works when input elements are integers in a small range [0, k]. It counts occurrences of each value, then uses cumulative counts to place elements directly into output positions. Time complexity is O(n + k), making it linear when k = O(n)."
+      "text": "Counting sort works when input elements are integers in a small range [0, k]. It counts occurrences of each value, then uses cumulative counts to place elements directly into output positions. Time complexity is $O(n + k)$, making it linear when k = $O(n)$."
     },
     "id": "clrs-ch08-003",
     "course": "Algorithms and Data Structures",
@@ -6207,7 +6207,7 @@
       "points": [
         "Sorts integers by processing digits from least significant to most significant",
         "Uses a stable sort (like counting sort) as a subroutine for each digit position",
-        "Time complexity is O(d(n + k)) where d is number of digits and k is digit range",
+        "Time complexity is $O(d(n + k)$) where d is number of digits and k is digit range",
         "Works for any radix, but binary and decimal are most common",
         "Requires input numbers to have same number of digits (pad with leading zeros if needed)"
       ]
@@ -6224,10 +6224,10 @@
     "content": {
       "question": "What is the time complexity of radix sort for sorting n integers with d digits in base b?",
       "options": [
-        "O(n log n)",
-        "O(d × n)",
-        "O(d(n + b))",
-        "O(n + d + b)"
+        "$O(n \\log n)$",
+        "$O(d × n)$",
+        "$O(d(n + b)$)",
+        "$O(n + d + b)$"
       ],
       "correctIndex": 2
     },
@@ -6241,7 +6241,7 @@
     "subject": "Sorting & Searching",
     "title": "Bucket Sort Concept",
     "content": {
-      "text": "Bucket sort assumes input is uniformly distributed over [0, 1) and divides this range into n equal-sized buckets. Elements are distributed into buckets, each bucket is sorted individually, then concatenated. Average-case time complexity is O(n), but worst-case is O(n²)."
+      "text": "Bucket sort assumes input is uniformly distributed over [0, 1) and divides this range into n equal-sized buckets. Elements are distributed into buckets, each bucket is sorted individually, then concatenated. Average-case time complexity is $O(n)$, but worst-case is $O(n^2)$."
     },
     "id": "clrs-ch08-007",
     "course": "Algorithms and Data Structures",
@@ -6267,7 +6267,7 @@
     "title": "When to Use Linear Sorts",
     "content": {
       "points": [
-        "Counting sort: when elements are integers in small range k = O(n)",
+        "Counting sort: when elements are integers in small range k = $O(n)$",
         "Radix sort: when elements are integers with fixed number of digits",
         "Bucket sort: when input is uniformly distributed over known range",
         "All require additional assumptions beyond just comparison operations",
@@ -6284,11 +6284,11 @@
     "subject": "Sorting & Searching",
     "title": "Sorting Lower Bound",
     "content": {
-      "question": "The lower bound Ω(n log n) for comparison-based sorting is derived from which mathematical fact?",
+      "question": "The lower bound $\\Omega(n $\\log n$)$ for comparison-based sorting is derived from which mathematical fact?",
       "options": [
-        "log₂(n!) ≥ n log n - n",
+        "$\\log_2 n$!) ≥ n $\\log n$ - n",
         "There are n! possible permutations of n elements",
-        "Binary trees with n! leaves have height at least log₂(n!)",
+        "Binary trees with n! leaves have height at least $\\log_2 n$!)",
         "All comparison-based algorithms use binary decisions"
       ],
       "correctIndex": 2
@@ -6315,7 +6315,7 @@
     "subject": "Sorting & Searching",
     "title": "Bucket Sort Performance",
     "content": {
-      "question": "Under what condition does bucket sort achieve O(n) expected time complexity?",
+      "question": "Under what condition does bucket sort achieve $O(n)$ expected time complexity?",
       "options": [
         "When all elements are distinct",
         "When input is uniformly distributed",
@@ -6358,7 +6358,7 @@
     "subject": "Sorting & Searching",
     "title": "Linear Time Selection",
     "content": {
-      "text": "Selection can be performed in O(n) expected time using randomized algorithms, and even O(n) worst-case time using deterministic algorithms. This is faster than sorting the entire array first, which would take O(n log n) time."
+      "text": "Selection can be performed in $O(n)$ expected time using randomized algorithms, and even $O(n)$ worst-case time using deterministic algorithms. This is faster than sorting the entire array first, which would take $O(n \\log n)$ time."
     },
     "id": "clrs-ch09-003",
     "course": "Algorithms and Data Structures",
@@ -6396,10 +6396,10 @@
     "content": {
       "points": [
         "Uses random pivot selection like randomized quicksort",
-        "Expected running time is O(n) with good pivot choices",
+        "Expected running time is $O(n)$ with good pivot choices",
         "Recursively searches only one partition after pivoting",
         "Performance depends on how well pivots divide the array",
-        "Worst case is O(n²) but very unlikely with randomization"
+        "Worst case is $O(n^2)$ but very unlikely with randomization"
       ]
     },
     "id": "clrs-ch09-006",
@@ -6413,7 +6413,7 @@
     "title": "Deterministic Select Properties",
     "content": {
       "points": [
-        "Guarantees O(n) worst-case time complexity",
+        "Guarantees $O(n)$ worst-case time complexity",
         "Uses 'median of medians' strategy for pivot selection",
         "Divides input into groups of 5 elements",
         "Ensures pivot is reasonably centered in the array",
@@ -6449,8 +6449,8 @@
     "title": "Selection vs Sorting Trade-offs",
     "content": {
       "points": [
-        "Selection: O(n) time, finds one specific element",
-        "Sorting: O(n log n) time, orders all elements",
+        "Selection: $O(n)$ time, finds one specific element",
+        "Sorting: $O(n \\log n)$ time, orders all elements",
         "Use selection when only k-th element is needed",
         "Sorting better when multiple order statistics required",
         "Selection uses less memory and fewer operations"
@@ -6467,7 +6467,7 @@
     "title": "Expected Linear Time",
     "content": {
       "question": "What is the expected time complexity of randomized select algorithm?",
-      "answer": "O(n) expected time. The algorithm chooses random pivots and recursively searches only one partition, leading to linear expected performance despite O(n²) worst case."
+      "answer": "$O(n)$ expected time. The algorithm chooses random pivots and recursively searches only one partition, leading to linear expected performance despite $O(n^2)$ worst case."
     },
     "id": "clrs-ch09-010",
     "course": "Algorithms and Data Structures",
@@ -6479,7 +6479,7 @@
     "subject": "Sorting & Searching",
     "title": "Median of Medians",
     "content": {
-      "question": "How does the deterministic select algorithm achieve O(n) worst-case time?",
+      "question": "How does the deterministic select algorithm achieve $O(n)$ worst-case time?",
       "answer": "It uses the 'median of medians' approach: divides input into groups of 5, finds median of each group, then recursively finds the median of these medians as the pivot, ensuring good splits."
     },
     "id": "clrs-ch09-011",
@@ -6497,7 +6497,7 @@
         "n-1 comparisons",
         "2n-2 comparisons",
         "⌈3n/2⌉-2 comparisons",
-        "n log n comparisons"
+        "n $\\log n$ comparisons"
       ],
       "correctIndex": 2
     },
@@ -6535,7 +6535,7 @@
     "subject": "Stacks & Queues",
     "title": "Array Implementation Benefits",
     "content": {
-      "text": "Array-based implementations of stacks and queues offer constant-time O(1) operations and efficient memory usage. However, they have fixed capacity and may require resizing when full."
+      "text": "Array-based implementations of stacks and queues offer constant-time $O(1)$ operations and efficient memory usage. However, they have fixed capacity and may require resizing when full."
     },
     "id": "clrs-ch10-003",
     "course": "Algorithms and Data Structures",
@@ -6630,7 +6630,7 @@
         "Linked lists provide dynamic sizing without capacity limits",
         "Arrays have fixed size but faster access times",
         "Linked lists require extra memory for storing pointers",
-        "Both provide O(1) time complexity for basic operations"
+        "Both provide $O(1)$ time complexity for basic operations"
       ]
     },
     "id": "clrs-ch10-009",
@@ -6671,10 +6671,10 @@
     "content": {
       "question": "What is the time complexity of the dequeue operation in a linked list-based queue implementation?",
       "options": [
-        "O(n)",
-        "O(log n)",
-        "O(1)",
-        "O(n²)"
+        "$O(n)$",
+        "$O(\\log n)$",
+        "$O(1)$",
+        "$O(n^2)$"
       ],
       "correctIndex": 2
     },
@@ -6688,7 +6688,7 @@
     "subject": "Search Trees",
     "title": "Direct-Address Tables Basics",
     "content": {
-      "text": "Direct-address tables use keys as array indices for O(1) operations. They work well when the key universe is small and reasonably dense. Each key k corresponds directly to slot k in the table."
+      "text": "Direct-address tables use keys as array indices for $O(1)$ operations. They work well when the key universe is small and reasonably dense. Each key k corresponds directly to slot k in the table."
     },
     "id": "clrs-ch11-001",
     "course": "Algorithms and Data Structures",
@@ -6700,7 +6700,7 @@
     "subject": "Search Trees",
     "title": "Hash Table Fundamentals",
     "content": {
-      "text": "Hash tables use hash functions to map keys to array indices, enabling average O(1) operations. They handle large key universes efficiently by compressing keys into a smaller range of indices."
+      "text": "Hash tables use hash functions to map keys to array indices, enabling average $O(1)$ operations. They handle large key universes efficiently by compressing keys into a smaller range of indices."
     },
     "id": "clrs-ch11-002",
     "course": "Algorithms and Data Structures",
@@ -6817,7 +6817,7 @@
     "title": "Multiplication Method",
     "content": {
       "question": "How does the multiplication method for hash functions work?",
-      "answer": "Extract the fractional part of kA (where A is constant between 0 and 1), multiply by m, and take the floor. Formula: h(k) = floor(m(kA mod 1)). Works well with A ≈ (√5-1)/2."
+      "answer": "Extract the fractional part of kA (where A is constant between 0 and 1), multiply by m, and take the floor. Formula: h(k) = floor(m(kA mod 1)). Works well with A ≈ ($\\sqrt{5}$-1)/2."
     },
     "id": "clrs-ch11-010",
     "course": "Algorithms and Data Structures",
@@ -6844,10 +6844,10 @@
     "content": {
       "question": "In a hash table with chaining, what is the expected time for unsuccessful search with load factor α?",
       "options": [
-        "O(1)",
-        "O(α)",
-        "O(log α)",
-        "O(α²)"
+        "$O(1)$",
+        "$O(α)$",
+        "$O(log α)$",
+        "$O(α²)$"
       ],
       "correctIndex": 1
     },
@@ -6903,7 +6903,7 @@
     "title": "BST Time Complexity",
     "content": {
       "question": "What is the average and worst-case time complexity for search operations in a BST?",
-      "answer": "Average case: O(log n) for balanced trees. Worst case: O(n) when the tree becomes a linear chain (completely unbalanced)."
+      "answer": "Average case: $O(\\log n)$ for balanced trees. Worst case: $O(n)$ when the tree becomes a linear chain (completely unbalanced)."
     },
     "id": "clrs-ch12-004",
     "course": "Algorithms and Data Structures",
@@ -6980,7 +6980,7 @@
       "points": [
         "Advantages: Fast search, insertion, and deletion in average case",
         "Maintains sorted order automatically",
-        "Disadvantages: Can degenerate to O(n) operations in worst case",
+        "Disadvantages: Can degenerate to $O(n)$ operations in worst case",
         "Performance depends heavily on tree balance",
         "No guaranteed balance in basic BST implementation"
       ]
@@ -7026,7 +7026,7 @@
     "subject": "Search Trees",
     "title": "BST Complexity Quiz",
     "content": {
-      "question": "What causes a BST to have O(n) time complexity for operations?",
+      "question": "What causes a BST to have $O(n)$ time complexity for operations?",
       "options": [
         "When the tree is perfectly balanced",
         "When nodes are inserted in random order",
@@ -7045,7 +7045,7 @@
     "subject": "Search Trees",
     "title": "Red-Black Tree Basics",
     "content": {
-      "text": "Red-black trees are self-balancing binary search trees where each node has a color (red or black). They maintain balance through color properties and rotations, ensuring O(log n) operations. The longest path from root to leaf is at most twice the shortest path."
+      "text": "Red-black trees are self-balancing binary search trees where each node has a color (red or black). They maintain balance through color properties and rotations, ensuring $O(\\log n)$ operations. The longest path from root to leaf is at most twice the shortest path."
     },
     "id": "clrs-ch13-001",
     "course": "Algorithms and Data Structures",
@@ -7103,7 +7103,7 @@
       "points": [
         "Left rotation moves right child up and current node down-left",
         "Right rotation moves left child up and current node down-right",
-        "Both operations run in O(1) time",
+        "Both operations run in $O(1)$ time",
         "Rotations preserve the binary search tree property",
         "Used to fix red-black tree violations during insertion/deletion"
       ]
@@ -7118,7 +7118,7 @@
     "subject": "Search Trees",
     "title": "Red-Black vs AVL Trees",
     "content": {
-      "text": "Red-black trees guarantee O(log n) height with less strict balancing than AVL trees. They perform fewer rotations during insertions and deletions, making them preferred for applications with frequent modifications. The maximum height is 2 log(n+1)."
+      "text": "Red-black trees guarantee $O(\\log n)$ height with less strict balancing than AVL trees. They perform fewer rotations during insertions and deletions, making them preferred for applications with frequent modifications. The maximum height is $2 \\log(n+1)$."
     },
     "id": "clrs-ch13-006",
     "course": "Algorithms and Data Structures",
@@ -7150,7 +7150,7 @@
     "title": "Tree Balance Guarantee",
     "content": {
       "question": "What is the maximum height of a red-black tree with n nodes?",
-      "answer": "The maximum height is 2 log₂(n+1), which guarantees O(log n) operations for search, insert, and delete."
+      "answer": "The maximum height is $2 \\log_2 n + 1$, which guarantees $O(\\log n)$ operations for search, insert, and delete."
     },
     "id": "clrs-ch13-008",
     "course": "Algorithms and Data Structures",
@@ -7213,10 +7213,10 @@
     "content": {
       "question": "What is the guaranteed time complexity for search, insert, and delete operations in a red-black tree?",
       "options": [
-        "O(1)",
-        "O(log n)",
-        "O(n)",
-        "O(n log n)"
+        "$O(1)$",
+        "$O(\\log n)$",
+        "$O(n)$",
+        "$O(n \\log n)$"
       ],
       "correctIndex": 1
     },
@@ -7247,7 +7247,7 @@
         "Each piece length i has a price p[i]",
         "Goal is to find the optimal way to cut the rod",
         "Can be solved top-down with memoization or bottom-up",
-        "Time complexity: O(n²) with dynamic programming"
+        "Time complexity: $O(n^2)$ with dynamic programming"
       ]
     },
     "id": "clrs-ch14-002",
@@ -7304,10 +7304,10 @@
     "content": {
       "question": "What is the time complexity of the rod cutting problem when solved with dynamic programming?",
       "options": [
-        "O(n)",
-        "O(n log n)",
-        "O(n²)",
-        "O(2ⁿ)"
+        "$O(n)$",
+        "$O(n \\log n)$",
+        "$O(n^2)$",
+        "$O(2^n)$"
       ],
       "correctIndex": 2
     },
@@ -7350,8 +7350,8 @@
         "Constructs BST with minimum expected search cost",
         "Considers access probabilities for keys and dummy keys",
         "Uses dynamic programming to find optimal root for each subtree",
-        "Time complexity: O(n³) for standard algorithm",
-        "Space complexity: O(n²) for storing optimal costs"
+        "Time complexity: $O(n^3)$ for standard algorithm",
+        "Space complexity: $O(n^2)$ for storing optimal costs"
       ]
     },
     "id": "clrs-ch14-009",
@@ -7431,7 +7431,7 @@
         "Sort activities by finish time for optimal greedy approach",
         "Always choose activity that finishes earliest among remaining options",
         "Greedy choice leads to optimal solution for this problem",
-        "Time complexity is O(n log n) due to sorting step"
+        "Time complexity is $O(n \\log n)$ due to sorting step"
       ]
     },
     "id": "clrs-ch15-002",
@@ -7489,10 +7489,10 @@
     "content": {
       "question": "What is the time complexity of the greedy activity selection algorithm?",
       "options": [
-        "O(n)",
-        "O(n log n)",
-        "O(n²)",
-        "O(2ⁿ)"
+        "$O(n)$",
+        "$O(n \\log n)$",
+        "$O(n^2)$",
+        "$O(2^n)$"
       ],
       "correctIndex": 1
     },
@@ -7757,10 +7757,10 @@
     "content": {
       "question": "What is the amortized cost of insertion in a dynamic array that doubles in size when full?",
       "options": [
-        "O(1)",
-        "O(log n)",
-        "O(n)",
-        "O(n log n)"
+        "$O(1)$",
+        "$O(\\log n)$",
+        "$O(n)$",
+        "$O(n \\log n)$"
       ],
       "correctIndex": 0
     },
@@ -7787,8 +7787,8 @@
     "title": "Dynamic Order Statistics Features",
     "content": {
       "points": [
-        "Supports SELECT(i) to find the i-th smallest element in O(log n) time",
-        "Enables RANK(x) to determine the rank of element x in O(log n) time",
+        "Supports SELECT(i) to find the i-th smallest element in $O(\\log n)$ time",
+        "Enables RANK(x) to determine the rank of element x in $O(\\log n)$ time",
         "Built on red-black trees with size information stored in each node",
         "Maintains all standard BST operations while adding order-based queries",
         "Size of subtree is augmented information that can be efficiently maintained"
@@ -7832,7 +7832,7 @@
       "points": [
         "Stores intervals as nodes in a red-black tree keyed by left endpoints",
         "Each node contains the maximum endpoint in its subtree as augmented data",
-        "Supports interval search, insertion, and deletion in O(log n) time",
+        "Supports interval search, insertion, and deletion in $O(\\log n)$ time",
         "INTERVAL-SEARCH finds any overlapping interval or returns NIL",
         "Useful for scheduling, computational geometry, and range query problems"
       ]
@@ -7849,10 +7849,10 @@
     "content": {
       "question": "What is the time complexity of finding the k-th smallest element in a dynamic order statistics tree?",
       "options": [
-        "O(k)",
-        "O(n)",
-        "O(log n)",
-        "O(k log n)"
+        "$O(k)$",
+        "$O(n)$",
+        "$O(\\log n)$",
+        "$O(k \\log n)$"
       ],
       "correctIndex": 2
     },
@@ -7879,7 +7879,7 @@
     "subject": "Algorithm Analysis (Big O)",
     "title": "Size Augmentation in Trees",
     "content": {
-      "text": "In order statistics trees, each node stores the size of its subtree as augmented information. This size equals 1 plus the sizes of the left and right subtrees. The size information enables efficient rank and select operations while being easily maintained during rotations and insertions with only O(log n) additional work."
+      "text": "In order statistics trees, each node stores the size of its subtree as augmented information. This size equals 1 plus the sizes of the left and right subtrees. The size information enables efficient rank and select operations while being easily maintained during rotations and insertions with only $O(\\log n)$ additional work."
     },
     "id": "clrs-ch17-008",
     "course": "Algorithms and Data Structures",
@@ -7990,7 +7990,7 @@
     "subject": "Search Trees",
     "title": "B-Tree Height Guarantee",
     "content": {
-      "text": "B-trees guarantee that the height remains O(log n) where n is the number of keys. This balanced structure ensures that all operations like search, insert, and delete perform efficiently even with large datasets stored on disk."
+      "text": "B-trees guarantee that the height remains $O(\\log n)$ where n is the number of keys. This balanced structure ensures that all operations like search, insert, and delete perform efficiently even with large datasets stored on disk."
     },
     "id": "clrs-ch18-003",
     "course": "Algorithms and Data Structures",
@@ -8109,10 +8109,10 @@
     "content": {
       "question": "What is the time complexity of search, insert, and delete operations in a B-tree with n keys?",
       "options": [
-        "O(n)",
-        "O(log n)",
-        "O(n log n)",
-        "O(t log n) where t is minimum degree"
+        "$O(n)$",
+        "$O(\\log n)$",
+        "$O(n \\log n)$",
+        "$O(t \\log n)$ where t is minimum degree"
       ],
       "correctIndex": 1
     },
@@ -8198,8 +8198,8 @@
         "Each object contains set member, pointer to next object, and back-pointer to head",
         "Head object serves as the representative of the set",
         "UNION by weighted-union heuristic always appends smaller list to larger",
-        "Simple union without heuristic can lead to O(n²) worst-case behavior",
-        "With weighted-union heuristic, sequence of operations takes O(m + n log n) time"
+        "Simple union without heuristic can lead to $O(n^2)$ worst-case behavior",
+        "With weighted-union heuristic, sequence of operations takes $O(m + n \\log n)$ time"
       ]
     },
     "id": "clrs-ch19-005",
@@ -8214,10 +8214,10 @@
     "content": {
       "question": "What is the worst-case time complexity of n-1 UNION operations using simple linked list implementation without heuristics?",
       "options": [
-        "O(n)",
-        "O(n log n)",
-        "O(n²)",
-        "O(n³)"
+        "$O(n)$",
+        "$O(n \\log n)$",
+        "$O(n^2)$",
+        "$O(n^3)$"
       ],
       "correctIndex": 2
     },
@@ -8248,7 +8248,7 @@
         "UNION always makes root of lower rank point to root of higher rank",
         "If ranks are equal, arbitrarily choose and increment the new root's rank",
         "Prevents trees from becoming too deep and unbalanced",
-        "Alone gives O(m log n) time for m operations on n elements"
+        "Alone gives $O(m \\log n)$ time for m operations on n elements"
       ]
     },
     "id": "clrs-ch19-008",
@@ -8293,7 +8293,7 @@
     "subject": "Union Find",
     "title": "Combined Optimization Analysis",
     "content": {
-      "text": "Using both union by rank and path compression together gives nearly optimal performance. The amortized time per operation is O(α(n)), where α is the inverse Ackermann function, which grows extremely slowly and is effectively constant for practical purposes."
+      "text": "Using both union by rank and path compression together gives nearly optimal performance. The amortized time per operation is $O(\\alpha(n))$, where α is the inverse Ackermann function, which grows extremely slowly and is effectively constant for practical purposes."
     },
     "id": "clrs-ch19-011",
     "course": "Algorithms and Data Structures",
@@ -8318,7 +8318,7 @@
     "subject": "Graphs",
     "title": "Graph Representations Overview",
     "content": {
-      "text": "Graphs can be represented using adjacency lists or adjacency matrices. Adjacency lists use less space for sparse graphs and are more efficient for traversal algorithms. Adjacency matrices provide O(1) edge lookup but require O(V²) space regardless of edge count."
+      "text": "Graphs can be represented using adjacency lists or adjacency matrices. Adjacency lists use less space for sparse graphs and are more efficient for traversal algorithms. Adjacency matrices provide $O(1)$ edge lookup but require $O(V^2)$ space regardless of edge count."
     },
     "id": "clrs-ch20-001",
     "course": "Algorithms and Data Structures",
@@ -8331,9 +8331,9 @@
     "title": "Adjacency List Properties",
     "content": {
       "points": [
-        "Space complexity: O(V + E) for both directed and undirected graphs",
-        "Edge lookup time: O(degree of vertex)",
-        "Preferred for sparse graphs where E << V²",
+        "Space complexity: $O(V + E)$ for both directed and undirected graphs",
+        "Edge lookup time: $O(degree of vertex)$",
+        "Preferred for sparse graphs where E << $V^2$",
         "Easy to iterate over all adjacent vertices",
         "Memory efficient for most real-world graphs"
       ]
@@ -8361,7 +8361,7 @@
     "title": "BFS Time Complexity",
     "content": {
       "question": "What is the time complexity of BFS when using an adjacency list representation?",
-      "answer": "O(V + E) where V is the number of vertices and E is the number of edges. Each vertex is visited once and each edge is examined once."
+      "answer": "$O(V + E)$ where V is the number of vertices and E is the number of edges. Each vertex is visited once and each edge is examined once."
     },
     "id": "clrs-ch20-004",
     "course": "Algorithms and Data Structures",
@@ -8375,7 +8375,7 @@
     "content": {
       "points": [
         "Uses stack data structure (often implemented recursively)",
-        "Time complexity: O(V + E) with adjacency lists",
+        "Time complexity: $O(V + E)$ with adjacency lists",
         "Produces a depth-first forest of trees",
         "Can be used to detect cycles in graphs",
         "Explores as far as possible before backtracking"
@@ -8403,7 +8403,7 @@
     "subject": "Graphs",
     "title": "Graph Representation Quiz",
     "content": {
-      "question": "For a dense graph with V vertices where E ≈ V², which representation is more space efficient?",
+      "question": "For a dense graph with V vertices where E ≈ $V^2$, which representation is more space efficient?",
       "options": [
         "Adjacency list",
         "Adjacency matrix",
@@ -8486,10 +8486,10 @@
     "content": {
       "question": "What is the time complexity of finding strongly connected components using Kosaraju's algorithm?",
       "options": [
-        "O(V)",
-        "O(E)",
-        "O(V + E)",
-        "O(V²)"
+        "$O(V)$",
+        "$O(E)$",
+        "$O(V + E)$",
+        "$O(V^2)$"
       ],
       "correctIndex": 2
     },
@@ -8599,9 +8599,9 @@
     "title": "MST Algorithm Complexities",
     "content": {
       "points": [
-        "Kruskal's: O(E log E) dominated by edge sorting",
-        "Prim's with binary heap: O(E log V)",
-        "Prim's with Fibonacci heap: O(E + V log V)",
+        "Kruskal's: $O(E \\log E)$ dominated by edge sorting",
+        "Prim's with binary heap: $O(E \\log V)$",
+        "Prim's with Fibonacci heap: $O(E + V \\log V)$",
         "Both algorithms are greedy and produce optimal solutions"
       ]
     },
@@ -8692,7 +8692,7 @@
       "points": [
         "Handles negative edge weights unlike Dijkstra's algorithm",
         "Detects negative-weight cycles in the graph",
-        "Time complexity is O(VE) where V is vertices and E is edges",
+        "Time complexity is $O(VE)$ where V is vertices and E is edges",
         "Uses dynamic programming approach with edge relaxation",
         "Returns false if negative cycle exists, true otherwise"
       ]
@@ -8739,7 +8739,7 @@
     "subject": "Shortest Paths & MST",
     "title": "DAG Shortest Paths Efficiency",
     "content": {
-      "text": "For directed acyclic graphs (DAGs), shortest paths can be computed in O(V + E) time using topological sorting. This is more efficient than general algorithms because the absence of cycles eliminates the need for multiple relaxation rounds."
+      "text": "For directed acyclic graphs (DAGs), shortest paths can be computed in $O(V + E)$ time using topological sorting. This is more efficient than general algorithms because the absence of cycles eliminates the need for multiple relaxation rounds."
     },
     "id": "clrs-ch22-005",
     "course": "Algorithms and Data Structures",
@@ -8753,7 +8753,7 @@
     "content": {
       "points": [
         "Uses greedy approach with priority queue",
-        "Time complexity O((V + E) log V) with binary heap",
+        "Time complexity $O((V + E) \\log V)$ with binary heap",
         "Requires non-negative edge weights",
         "Maintains a set of vertices with finalized shortest distances",
         "More efficient than Bellman-Ford for non-negative weights"
@@ -8784,10 +8784,10 @@
     "content": {
       "question": "What is the time complexity of finding shortest paths in a DAG?",
       "options": [
-        "O(V²)",
-        "O(VE)",
-        "O(V + E)",
-        "O(V log V)"
+        "$O($V^2$)$",
+        "$O(VE)$",
+        "$O(V + E)$",
+        "$O(V log V)$"
       ],
       "correctIndex": 2
     },
@@ -8877,7 +8877,7 @@
       "points": [
         "Uses repeated matrix multiplication to compute shortest paths",
         "Based on the recurrence relation for path lengths",
-        "Time complexity is O(n³ log n) using fast matrix multiplication",
+        "Time complexity is $O(n^3 \\log n)$ using fast matrix multiplication",
         "Works by extending paths one edge at a time",
         "Can handle negative edge weights but not negative cycles"
       ]
@@ -8892,7 +8892,7 @@
     "subject": "Shortest Paths & MST",
     "title": "Floyd-Warshall Algorithm Basics",
     "content": {
-      "text": "Floyd-Warshall is a dynamic programming algorithm that solves all-pairs shortest paths in O(n³) time. It works by considering each vertex as an intermediate point and updating distances accordingly. The algorithm can detect negative cycles and works on both directed and undirected graphs."
+      "text": "Floyd-Warshall is a dynamic programming algorithm that solves all-pairs shortest paths in $O(n^3)$ time. It works by considering each vertex as an intermediate point and updating distances accordingly. The algorithm can detect negative cycles and works on both directed and undirected graphs."
     },
     "id": "clrs-ch23-003",
     "course": "Algorithms and Data Structures",
@@ -8905,8 +8905,8 @@
     "title": "Floyd-Warshall Key Properties",
     "content": {
       "points": [
-        "Uses dynamic programming with O(n³) time complexity",
-        "Space complexity can be optimized to O(n²)",
+        "Uses dynamic programming with $O(n^3)$ time complexity",
+        "Space complexity can be optimized to $O(n^2)$",
         "Handles negative edge weights effectively",
         "Can reconstruct actual shortest paths, not just distances",
         "Detects negative cycles by checking diagonal elements"
@@ -8937,10 +8937,10 @@
     "content": {
       "question": "What is the time complexity of the Floyd-Warshall algorithm?",
       "options": [
-        "O(n² log n)",
-        "O(n³)",
-        "O(n⁴)",
-        "O(n² + m)"
+        "$O(n^2 \\log n)$",
+        "$O(n^3)$",
+        "$O(n⁴)$",
+        "$O(n^2 + m)$"
       ],
       "correctIndex": 1
     },
@@ -8954,7 +8954,7 @@
     "subject": "Shortest Paths & MST",
     "title": "Johnson's Algorithm Purpose",
     "content": {
-      "text": "Johnson's algorithm is designed for sparse graphs and combines Bellman-Ford with Dijkstra's algorithm. It uses reweighting techniques to handle negative edges, then applies Dijkstra's from each vertex. For sparse graphs, it achieves O(V²log V + VE) time complexity, which is better than Floyd-Warshall."
+      "text": "Johnson's algorithm is designed for sparse graphs and combines Bellman-Ford with Dijkstra's algorithm. It uses reweighting techniques to handle negative edges, then applies Dijkstra's from each vertex. For sparse graphs, it achieves $O($V^2$log V + VE)$ time complexity, which is better than Floyd-Warshall."
     },
     "id": "clrs-ch23-007",
     "course": "Algorithms and Data Structures",
@@ -9029,9 +9029,9 @@
     "title": "All-Pairs Algorithm Comparison",
     "content": {
       "points": [
-        "Floyd-Warshall: O(n³) time, simple implementation, good for dense graphs",
-        "Matrix multiplication: O(n³ log n) time, theoretical interest",
-        "Johnson's: O(V²log V + VE) time, optimal for sparse graphs",
+        "Floyd-Warshall: $O(n^3)$ time, simple implementation, good for dense graphs",
+        "Matrix multiplication: $O(n^3 \\log n)$ time, theoretical interest",
+        "Johnson's: $O($V^2$log V + VE)$ time, optimal for sparse graphs",
         "Choose based on graph density and implementation complexity",
         "All can handle negative edges but not negative cycles"
       ]
@@ -9165,7 +9165,7 @@
       "points": [
         "Specific implementation of Ford-Fulkerson method",
         "Uses BFS to find shortest augmenting paths",
-        "Guarantees O(VE²) time complexity",
+        "Guarantees $O(V$E^2$)$ time complexity",
         "Avoids potential infinite loops of basic Ford-Fulkerson"
       ]
     },
@@ -9245,7 +9245,7 @@
         "A matching is a set of edges with no shared vertices",
         "Maximum matching finds the largest possible matching in a bipartite graph",
         "Can be solved using augmenting paths or network flow algorithms",
-        "Time complexity is O(VE) using Ford-Fulkerson method",
+        "Time complexity is $O(VE)$ using Ford-Fulkerson method",
         "Applications include job assignment and resource allocation"
       ]
     },
@@ -9308,7 +9308,7 @@
         "Women tentatively accept best proposal received so far",
         "Rejected men propose to next choice on their list",
         "Algorithm terminates when all men are matched",
-        "Produces male-optimal stable matching in O(n²) time"
+        "Produces male-optimal stable matching in $O(n^2)$ time"
       ]
     },
     "id": "clrs-ch25-006",
@@ -9334,7 +9334,7 @@
     "subject": "Shortest Paths & MST",
     "title": "Hungarian Algorithm Overview",
     "content": {
-      "text": "The Hungarian algorithm solves the assignment problem by finding minimum-cost perfect matching in weighted bipartite graphs. It uses vertex labeling and augmenting paths to achieve O(n³) time complexity for n×n cost matrices."
+      "text": "The Hungarian algorithm solves the assignment problem by finding minimum-cost perfect matching in weighted bipartite graphs. It uses vertex labeling and augmenting paths to achieve $O(n^3)$ time complexity for n×n cost matrices."
     },
     "id": "clrs-ch25-008",
     "course": "Algorithms and Data Structures",
@@ -9398,10 +9398,10 @@
     "content": {
       "question": "What is the time complexity of the Hungarian algorithm for the assignment problem?",
       "options": [
-        "O(n²)",
-        "O(n³)",
-        "O(n⁴)",
-        "O(2ⁿ)"
+        "$O(n^2)$",
+        "$O(n^3)$",
+        "$O(n⁴)$",
+        "$O(2^n)$"
       ],
       "correctIndex": 1
     },
@@ -9472,7 +9472,7 @@
       "points": [
         "Divide matrices into smaller blocks for concurrent processing",
         "Each processor computes a portion of the result matrix",
-        "Work complexity remains O(n³) for standard algorithm",
+        "Work complexity remains $O(n^3)$ for standard algorithm",
         "Span can be reduced significantly with proper decomposition",
         "Cache efficiency improves with block-based approaches"
       ]
@@ -9740,7 +9740,7 @@
       "options": [
         "1-competitive (optimal)",
         "2-competitive",
-        "log n competitive",
+        "$\\log n$ competitive",
         "n-competitive"
       ],
       "correctIndex": 1
@@ -9773,7 +9773,7 @@
     "subject": "Algorithm Analysis (Big O)",
     "title": "Matrix Multiplication Complexity",
     "content": {
-      "text": "Standard matrix multiplication of two n×n matrices takes O(n³) time using the naive algorithm. Each element requires n multiplications and additions. Advanced algorithms like Strassen's can reduce this to approximately O(n^2.807)."
+      "text": "Standard matrix multiplication of two n×n matrices takes $O(n^3)$ time using the naive algorithm. Each element requires n multiplications and additions. Advanced algorithms like Strassen's can reduce this to approximately $O(n^2.807)$."
     },
     "id": "clrs-ch28-001",
     "course": "Algorithms and Data Structures",
@@ -9785,7 +9785,7 @@
     "subject": "Algorithm Analysis (Big O)",
     "title": "Gaussian Elimination Overview",
     "content": {
-      "text": "Gaussian elimination solves systems of linear equations by transforming the coefficient matrix into row echelon form. The algorithm runs in O(n³) time for an n×n system. It involves forward elimination followed by back substitution."
+      "text": "Gaussian elimination solves systems of linear equations by transforming the coefficient matrix into row echelon form. The algorithm runs in $O(n^3)$ time for an n×n system. It involves forward elimination followed by back substitution."
     },
     "id": "clrs-ch28-002",
     "course": "Algorithms and Data Structures",
@@ -9797,7 +9797,7 @@
     "subject": "Algorithm Analysis (Big O)",
     "title": "LU Decomposition Benefits",
     "content": {
-      "text": "LU decomposition factors a matrix A into lower triangular L and upper triangular U matrices where A = LU. Once computed in O(n³) time, solving multiple systems with the same coefficient matrix takes only O(n²) per solution."
+      "text": "LU decomposition factors a matrix A into lower triangular L and upper triangular U matrices where A = LU. Once computed in $O(n^3)$ time, solving multiple systems with the same coefficient matrix takes only $O(n^2)$ per solution."
     },
     "id": "clrs-ch28-003",
     "course": "Algorithms and Data Structures",
@@ -9809,7 +9809,7 @@
     "subject": "Algorithm Analysis (Big O)",
     "title": "Matrix Inversion Complexity",
     "content": {
-      "text": "Computing the inverse of an n×n matrix requires O(n³) time using Gaussian elimination or LU decomposition. However, explicitly computing the inverse is often unnecessary and numerically unstable compared to solving linear systems directly."
+      "text": "Computing the inverse of an n×n matrix requires $O(n^3)$ time using Gaussian elimination or LU decomposition. However, explicitly computing the inverse is often unnecessary and numerically unstable compared to solving linear systems directly."
     },
     "id": "clrs-ch28-004",
     "course": "Algorithms and Data Structures",
@@ -9821,7 +9821,7 @@
     "subject": "Algorithm Analysis (Big O)",
     "title": "Cholesky Decomposition Efficiency",
     "content": {
-      "text": "For symmetric positive-definite matrices, Cholesky decomposition provides a more efficient factorization than general LU decomposition. It runs in O(n³/3) time, roughly half the work of LU decomposition, and uses only O(n²) storage."
+      "text": "For symmetric positive-definite matrices, Cholesky decomposition provides a more efficient factorization than general LU decomposition. It runs in $O(n^3/3)$ time, roughly half the work of LU decomposition, and uses only $O(n^2)$ storage."
     },
     "id": "clrs-ch28-005",
     "course": "Algorithms and Data Structures",
@@ -9834,9 +9834,9 @@
     "title": "Linear System Solution Methods",
     "content": {
       "points": [
-        "Gaussian elimination: O(n³) direct method transforming augmented matrix to row echelon form",
-        "LU decomposition: O(n³) preprocessing, then O(n²) per additional right-hand side",
-        "Cholesky decomposition: O(n³/3) for symmetric positive-definite matrices",
+        "Gaussian elimination: $O(n^3)$ direct method transforming augmented matrix to row echelon form",
+        "LU decomposition: $O(n^3)$ preprocessing, then $O(n^2)$ per additional right-hand side",
+        "Cholesky decomposition: $O(n^3/3)$ for symmetric positive-definite matrices",
         "Iterative methods: Variable complexity depending on convergence rate and desired accuracy"
       ]
     },
@@ -9851,11 +9851,11 @@
     "title": "Matrix Operation Time Complexities",
     "content": {
       "points": [
-        "Matrix addition/subtraction: O(n²) for n×n matrices",
-        "Standard matrix multiplication: O(n³) using naive triple-loop algorithm",
-        "Strassen's algorithm: O(n^2.807) for matrix multiplication using divide-and-conquer",
-        "Matrix inversion: O(n³) using Gaussian elimination or LU decomposition",
-        "Determinant calculation: O(n³) using row reduction or LU decomposition"
+        "Matrix addition/subtraction: $O(n^2)$ for n×n matrices",
+        "Standard matrix multiplication: $O(n^3)$ using naive triple-loop algorithm",
+        "Strassen's algorithm: $O(n^2.807)$ for matrix multiplication using divide-and-conquer",
+        "Matrix inversion: $O(n^3)$ using Gaussian elimination or LU decomposition",
+        "Determinant calculation: $O(n^3)$ using row reduction or LU decomposition"
       ]
     },
     "id": "clrs-ch28-007",
@@ -9887,9 +9887,9 @@
     "title": "Least-Squares Approximation Methods",
     "content": {
       "points": [
-        "Normal equations: Solve A^T A x = A^T b in O(n³) time",
-        "QR decomposition: More numerically stable, O(n³) preprocessing",
-        "Singular Value Decomposition (SVD): Most robust but O(n³) complexity",
+        "Normal equations: Solve A^T A x = A^T b in $O(n^3)$ time",
+        "QR decomposition: More numerically stable, $O(n^3)$ preprocessing",
+        "Singular Value Decomposition (SVD): Most robust but $O(n^3)$ complexity",
         "Useful for overdetermined systems where exact solution doesn't exist"
       ]
     },
@@ -9904,7 +9904,7 @@
     "title": "Forward Elimination",
     "content": {
       "question": "What is the time complexity of the forward elimination phase in Gaussian elimination for an n×n system?",
-      "answer": "O(n³). Forward elimination requires approximately n³/3 operations to transform the matrix to upper triangular form, making zeros below the diagonal through row operations."
+      "answer": "$O(n^3)$. Forward elimination requires approximately $n^3$/3 operations to transform the matrix to upper triangular form, making zeros below the diagonal through row operations."
     },
     "id": "clrs-ch28-010",
     "course": "Algorithms and Data Structures",
@@ -9917,7 +9917,7 @@
     "title": "Strassen's Algorithm",
     "content": {
       "question": "How does Strassen's algorithm improve upon standard matrix multiplication?",
-      "answer": "Strassen's algorithm reduces the time complexity from O(n³) to O(n^2.807) by using a divide-and-conquer approach that performs 7 recursive multiplications instead of 8, trading multiplications for additions."
+      "answer": "Strassen's algorithm reduces the time complexity from $O(n^3)$ to $O(n^2.807)$ by using a divide-and-conquer approach that performs 7 recursive multiplications instead of 8, trading multiplications for additions."
     },
     "id": "clrs-ch28-011",
     "course": "Algorithms and Data Structures",
@@ -9979,7 +9979,7 @@
     "title": "Simplex Method",
     "content": {
       "question": "What is the time complexity of the Simplex method for linear programming?",
-      "answer": "The Simplex method has exponential worst-case time complexity O(2^n), but performs very well in practice with polynomial average-case behavior."
+      "answer": "The Simplex method has exponential worst-case time complexity $O(2^n)$, but performs very well in practice with polynomial average-case behavior."
     },
     "id": "clrs-ch29-003",
     "course": "Algorithms and Data Structures",
@@ -10023,10 +10023,10 @@
     "content": {
       "question": "Which algorithm has the best worst-case time complexity for solving linear programming problems?",
       "options": [
-        "Simplex method: O(2^n)",
-        "Ellipsoid method: O(n^6)",
-        "Interior-point methods: O(n^3.5)",
-        "Karmarkar's algorithm: O(n^4)"
+        "Simplex method: $O(2^n)$",
+        "Ellipsoid method: $O(n^6)$",
+        "Interior-point methods: $O(n^3.5)$",
+        "Karmarkar's algorithm: $O(n^4)$"
       ],
       "correctIndex": 2
     },
@@ -10053,7 +10053,7 @@
     "title": "Interior Point Methods",
     "content": {
       "question": "What is the key advantage of interior-point methods over the Simplex method?",
-      "answer": "Interior-point methods have polynomial worst-case time complexity O(n^3.5) compared to Simplex's exponential worst-case, making them theoretically superior for large problems."
+      "answer": "Interior-point methods have polynomial worst-case time complexity $O(n^3.5)$ compared to Simplex's exponential worst-case, making them theoretically superior for large problems."
     },
     "id": "clrs-ch29-008",
     "course": "Algorithms and Data Structures",
@@ -10140,10 +10140,10 @@
     "title": "Coefficient vs Point-Value Forms",
     "content": {
       "points": [
-        "Coefficient form: A(x) = a₀ + a₁x + a₂x² + ... + aₙ₋₁xⁿ⁻¹",
+        "Coefficient form: A(x) = a₀ + a₁x + a₂$x^2$ + ... + aₙ₋₁xⁿ⁻¹",
         "Point-value form: {(x₀, y₀), (x₁, y₁), ..., (xₙ₋₁, yₙ₋₁)} where yᵢ = A(xᵢ)",
-        "Addition is faster in coefficient form O(n)",
-        "Multiplication is faster in point-value form O(n)",
+        "Addition is faster in coefficient form $O(n)$",
+        "Multiplication is faster in point-value form $O(n)$",
         "Converting between forms is the key challenge"
       ]
     },
@@ -10157,7 +10157,7 @@
     "subject": "Sorting & Searching",
     "title": "FFT Algorithm Purpose",
     "content": {
-      "text": "The Fast Fourier Transform (FFT) efficiently converts polynomials between coefficient and point-value representations in O(n log n) time. This enables fast polynomial multiplication by converting to point-value form, multiplying, then converting back."
+      "text": "The Fast Fourier Transform (FFT) efficiently converts polynomials between coefficient and point-value representations in $O(n \\log n)$ time. This enables fast polynomial multiplication by converting to point-value form, multiplying, then converting back."
     },
     "id": "clrs-ch30-003",
     "course": "Algorithms and Data Structures",
@@ -10202,10 +10202,10 @@
     "content": {
       "question": "What is the time complexity of the FFT algorithm?",
       "options": [
-        "O(n²)",
-        "O(n log n)",
-        "O(n log² n)",
-        "O(n³)"
+        "$O(n^2)$",
+        "$O(n \\log n)$",
+        "$O(n lo$g^2$ n)$",
+        "$O(n^3)$"
       ],
       "correctIndex": 1
     },
@@ -10219,7 +10219,7 @@
     "subject": "Sorting & Searching",
     "title": "Polynomial Multiplication Strategy",
     "content": {
-      "text": "To multiply two polynomials efficiently: convert both to point-value form using FFT, multiply corresponding y-values, then use inverse FFT to convert back to coefficient form. This reduces multiplication from O(n²) to O(n log n)."
+      "text": "To multiply two polynomials efficiently: convert both to point-value form using FFT, multiply corresponding y-values, then use inverse FFT to convert back to coefficient form. This reduces multiplication from $O(n^2)$ to $O(n \\log n)$."
     },
     "id": "clrs-ch30-007",
     "course": "Algorithms and Data Structures",
@@ -10281,7 +10281,7 @@
     "subject": "Sorting & Searching",
     "title": "FFT Circuit Implementation",
     "content": {
-      "text": "FFT can be implemented as a circuit with butterfly operations connecting inputs to outputs. The circuit has log n levels, each performing n/2 butterfly operations, demonstrating the algorithm's parallelizable structure."
+      "text": "FFT can be implemented as a circuit with butterfly operations connecting inputs to outputs. The circuit has $\\log n$ levels, each performing n/2 butterfly operations, demonstrating the algorithm's parallelizable structure."
     },
     "id": "clrs-ch30-011",
     "course": "Algorithms and Data Structures",
@@ -10312,7 +10312,7 @@
     "subject": "Algorithm Analysis (Big O)",
     "title": "Euclidean Algorithm Efficiency",
     "content": {
-      "text": "The Euclidean algorithm for computing GCD runs in O(log min(a,b)) time. This logarithmic complexity makes it extremely efficient even for very large numbers. The algorithm's performance is based on the fact that the Fibonacci sequence represents the worst-case input."
+      "text": "The Euclidean algorithm for computing GCD runs in $O(log min(a,b)$) time. This logarithmic complexity makes it extremely efficient even for very large numbers. The algorithm's performance is based on the fact that the Fibonacci sequence represents the worst-case input."
     },
     "id": "clrs-ch31-001",
     "course": "Algorithms and Data Structures",
@@ -10326,8 +10326,8 @@
     "content": {
       "points": [
         "Extended Euclidean algorithm finds coefficients x,y where gcd(a,b) = ax + by",
-        "Time complexity is O(log min(a,b)) for both basic and extended versions",
-        "Space complexity is O(1) for iterative implementation",
+        "Time complexity is $O(log min(a,b)$) for both basic and extended versions",
+        "Space complexity is $O(1)$ for iterative implementation",
         "Forms the foundation for many cryptographic algorithms"
       ]
     },
@@ -10341,7 +10341,7 @@
     "subject": "Algorithm Analysis (Big O)",
     "title": "Modular Exponentiation Complexity",
     "content": {
-      "text": "Computing a^b mod n using repeated squaring takes O(log b) multiplications instead of O(b). This exponential improvement is crucial for cryptographic applications like RSA. Without this optimization, cryptographic operations would be computationally infeasible."
+      "text": "Computing a^b mod n using repeated squaring takes $O(log b)$ multiplications instead of $O(b)$. This exponential improvement is crucial for cryptographic applications like RSA. Without this optimization, cryptographic operations would be computationally infeasible."
     },
     "id": "clrs-ch31-003",
     "course": "Algorithms and Data Structures",
@@ -10354,7 +10354,7 @@
     "title": "Chinese Remainder Theorem",
     "content": {
       "question": "What is the time complexity of solving a system of congruences using the Chinese Remainder Theorem?",
-      "answer": "O(k log²N) where k is the number of congruences and N is the product of all moduli. This includes k applications of the extended Euclidean algorithm."
+      "answer": "$O(k lo$g^2$N)$ where k is the number of congruences and N is the product of all moduli. This includes k applications of the extended Euclidean algorithm."
     },
     "id": "clrs-ch31-004",
     "course": "Algorithms and Data Structures",
@@ -10367,9 +10367,9 @@
     "title": "RSA Algorithm Complexities",
     "content": {
       "points": [
-        "Key generation: O(k³) where k is key length in bits",
-        "Encryption/Decryption: O(k³) using modular exponentiation",
-        "Primality testing for key generation: O(k⁴) using basic methods",
+        "Key generation: $O($k^3$)$ where k is key length in bits",
+        "Encryption/Decryption: $O($k^3$)$ using modular exponentiation",
+        "Primality testing for key generation: $O(k⁴)$ using basic methods",
         "Security relies on difficulty of integer factorization"
       ]
     },
@@ -10385,10 +10385,10 @@
     "content": {
       "question": "What is the time complexity of the Euclidean algorithm for computing gcd(a,b)?",
       "options": [
-        "O(min(a,b))",
-        "O(√min(a,b))",
-        "O(log min(a,b))",
-        "O(log(a+b))"
+        "$O(min(a,b)$)",
+        "$O($\\sqrt{m}$in(a,b)$)",
+        "$O(log min(a,b)$)",
+        "$O($\\log(a+b)$$)"
       ],
       "correctIndex": 2
     },
@@ -10402,7 +10402,7 @@
     "subject": "Algorithm Analysis (Big O)",
     "title": "Primality Testing Efficiency",
     "content": {
-      "text": "Deterministic primality testing has complexity O(n^(1/2)) for trial division, but probabilistic methods like Miller-Rabin achieve O(k log³n) where k is the number of rounds. Modern polynomial-time deterministic algorithms exist but are less practical than probabilistic ones."
+      "text": "Deterministic primality testing has complexity $O(n^(1/2)$) for trial division, but probabilistic methods like Miller-Rabin achieve $O(k lo$g^3$n)$ where k is the number of rounds. Modern polynomial-time deterministic algorithms exist but are less practical than probabilistic ones."
     },
     "id": "clrs-ch31-007",
     "course": "Algorithms and Data Structures",
@@ -10415,7 +10415,7 @@
     "title": "Modular Linear Equations",
     "content": {
       "question": "What is the time complexity of solving the modular linear equation ax ≡ b (mod n)?",
-      "answer": "O(log n) using the extended Euclidean algorithm to find the modular inverse of a, assuming gcd(a,n) = 1."
+      "answer": "$O(\\log n)$ using the extended Euclidean algorithm to find the modular inverse of a, assuming gcd(a,n) = 1."
     },
     "id": "clrs-ch31-008",
     "course": "Algorithms and Data Structures",
@@ -10446,10 +10446,10 @@
     "content": {
       "question": "Computing a^b mod n using repeated squaring has what time complexity?",
       "options": [
-        "O(b)",
-        "O(log b)",
-        "O(√b)",
-        "O(b log b)"
+        "$O(b)$",
+        "$O(log b)$",
+        "$O($\\sqrt{b}$)$",
+        "$O(b log b)$"
       ],
       "correctIndex": 1
     },
@@ -10463,7 +10463,7 @@
     "subject": "Algorithm Analysis (Big O)",
     "title": "Extended Euclidean Algorithm Benefits",
     "content": {
-      "text": "The extended Euclidean algorithm computes gcd(a,b) and finds Bézout coefficients in the same O(log min(a,b)) time as the basic version. This simultaneous computation is essential for finding modular inverses and solving linear Diophantine equations efficiently."
+      "text": "The extended Euclidean algorithm computes gcd(a,b) and finds Bézout coefficients in the same $O(log min(a,b)$) time as the basic version. This simultaneous computation is essential for finding modular inverses and solving linear Diophantine equations efficiently."
     },
     "id": "clrs-ch31-011",
     "course": "Algorithms and Data Structures",
@@ -10477,10 +10477,10 @@
     "content": {
       "question": "What is the time complexity of k rounds of the Miller-Rabin primality test on an n-bit number?",
       "options": [
-        "O(k log n)",
-        "O(k log²n)",
-        "O(k log³n)",
-        "O(k²log n)"
+        "$O(k \\log n)$",
+        "$O(k lo$g^2$n)$",
+        "$O(k lo$g^3$n)$",
+        "$O($k^2$\\log n$)$"
       ],
       "correctIndex": 2
     },
@@ -10508,7 +10508,7 @@
     "content": {
       "points": [
         "Checks pattern against text at every possible position",
-        "Time complexity is O(nm) where n is text length and m is pattern length",
+        "Time complexity is $O(nm)$ where n is text length and m is pattern length",
         "Simple to implement but inefficient for large inputs",
         "No preprocessing required - starts matching immediately",
         "Worst case occurs when pattern and text have many matching characters"
@@ -10524,7 +10524,7 @@
     "subject": "Sorting & Searching",
     "title": "Rabin-Karp Algorithm Overview",
     "content": {
-      "text": "Rabin-Karp uses rolling hash functions to efficiently compare pattern and text substrings. It computes hash values for the pattern and each text window, comparing hashes first before character-by-character verification. Expected time complexity is O(n+m) but worst case is O(nm)."
+      "text": "Rabin-Karp uses rolling hash functions to efficiently compare pattern and text substrings. It computes hash values for the pattern and each text window, comparing hashes first before character-by-character verification. Expected time complexity is $O(n+m)$ but worst case is $O(nm)$."
     },
     "id": "clrs-ch32-003",
     "course": "Algorithms and Data Structures",
@@ -10551,8 +10551,8 @@
     "content": {
       "points": [
         "Builds a finite state machine that recognizes the pattern",
-        "Preprocessing takes O(m³σ) time where σ is alphabet size",
-        "Matching phase runs in O(n) time with no backtracking",
+        "Preprocessing takes $O($m^3$σ)$ time where σ is alphabet size",
+        "Matching phase runs in $O(n)$ time with no backtracking",
         "Each character in text causes exactly one state transition",
         "Guarantees linear time matching once automaton is built"
       ]
@@ -10569,10 +10569,10 @@
     "content": {
       "question": "What is the worst-case time complexity of the naive string matching algorithm?",
       "options": [
-        "O(n)",
-        "O(m)",
-        "O(n + m)",
-        "O(nm)"
+        "$O(n)$",
+        "$O(m)$",
+        "$O(n + m)$",
+        "$O(nm)$"
       ],
       "correctIndex": 3
     },
@@ -10586,7 +10586,7 @@
     "subject": "Sorting & Searching",
     "title": "Knuth-Morris-Pratt Algorithm",
     "content": {
-      "text": "KMP avoids redundant comparisons by preprocessing the pattern to create a failure function. When a mismatch occurs, it uses this function to determine how far to shift the pattern without missing potential matches. Achieves O(n+m) time complexity with no backtracking in the text."
+      "text": "KMP avoids redundant comparisons by preprocessing the pattern to create a failure function. When a mismatch occurs, it uses this function to determine how far to shift the pattern without missing potential matches. Achieves $O(n+m)$ time complexity with no backtracking in the text."
     },
     "id": "clrs-ch32-007",
     "course": "Algorithms and Data Structures",
@@ -10613,8 +10613,8 @@
     "content": {
       "points": [
         "Array of integers representing starting positions of sorted suffixes",
-        "Requires O(n log n) time to construct using efficient algorithms",
-        "Enables fast pattern matching queries in O(m log n) time",
+        "Requires $O(n \\log n)$ time to construct using efficient algorithms",
+        "Enables fast pattern matching queries in $O(m \\log n)$ time",
         "Space-efficient alternative to suffix trees",
         "Useful for multiple pattern searches on the same text"
       ]
@@ -10660,7 +10660,7 @@
     "subject": "Sorting & Searching",
     "title": "Algorithm Selection Quiz",
     "content": {
-      "question": "Which string matching algorithm guarantees O(n) time during the matching phase after preprocessing?",
+      "question": "Which string matching algorithm guarantees $O(n)$ time during the matching phase after preprocessing?",
       "options": [
         "Naive algorithm",
         "Rabin-Karp",
@@ -10679,7 +10679,7 @@
     "subject": "Algorithm Analysis (Big O)",
     "title": "K-Means Clustering Basics",
     "content": {
-      "text": "K-means clustering partitions data into k clusters by iteratively assigning points to nearest centroids and updating centroid positions. The algorithm runs in O(nkt) time where n is data points, k is clusters, and t is iterations. It's widely used for unsupervised learning and data analysis tasks."
+      "text": "K-means clustering partitions data into k clusters by iteratively assigning points to nearest centroids and updating centroid positions. The algorithm runs in $O(nkt)$ time where n is data points, k is clusters, and t is iterations. It's widely used for unsupervised learning and data analysis tasks."
     },
     "id": "clrs-ch33-001",
     "course": "Algorithms and Data Structures",
@@ -10692,10 +10692,10 @@
     "title": "Clustering Algorithm Properties",
     "content": {
       "points": [
-        "K-means has O(nkt) time complexity per iteration",
-        "Hierarchical clustering runs in O(n³) time using basic methods",
-        "DBSCAN clustering achieves O(n log n) with spatial indexing",
-        "Space complexity is typically O(n + k) for storing points and centroids"
+        "K-means has $O(nkt)$ time complexity per iteration",
+        "Hierarchical clustering runs in $O(n^3)$ time using basic methods",
+        "DBSCAN clustering achieves $O(n \\log n)$ with spatial indexing",
+        "Space complexity is typically $O(n + k)$ for storing points and centroids"
       ]
     },
     "id": "clrs-ch33-002",
@@ -10708,7 +10708,7 @@
     "subject": "Algorithm Analysis (Big O)",
     "title": "Multiplicative Weights Method",
     "content": {
-      "text": "The multiplicative weights algorithm maintains probability distributions over experts or strategies, updating weights multiplicatively based on performance. Each iteration takes O(n) time to update n weights. This approach provides strong theoretical guarantees for online learning and approximation algorithms."
+      "text": "The multiplicative weights algorithm maintains probability distributions over experts or strategies, updating weights multiplicatively based on performance. Each iteration takes $O(n)$ time to update n weights. This approach provides strong theoretical guarantees for online learning and approximation algorithms."
     },
     "id": "clrs-ch33-003",
     "course": "Algorithms and Data Structures",
@@ -10721,7 +10721,7 @@
     "title": "K-Means Time Complexity",
     "content": {
       "question": "What is the time complexity of k-means clustering algorithm?",
-      "answer": "O(nkt) where n is the number of data points, k is the number of clusters, and t is the number of iterations until convergence."
+      "answer": "$O(nkt)$ where n is the number of data points, k is the number of clusters, and t is the number of iterations until convergence."
     },
     "id": "clrs-ch33-004",
     "course": "Algorithms and Data Structures",
@@ -10733,7 +10733,7 @@
     "subject": "Algorithm Analysis (Big O)",
     "title": "Gradient Descent Overview",
     "content": {
-      "text": "Gradient descent optimizes functions by iteratively moving in the direction of steepest descent. Each iteration requires O(d) time for d-dimensional problems to compute and apply gradients. The algorithm's convergence rate depends on function properties like convexity and smoothness."
+      "text": "Gradient descent optimizes functions by iteratively moving in the direction of steepest descent. Each iteration requires $O(d)$ time for d-dimensional problems to compute and apply gradients. The algorithm's convergence rate depends on function properties like convexity and smoothness."
     },
     "id": "clrs-ch33-005",
     "course": "Algorithms and Data Structures",
@@ -10746,10 +10746,10 @@
     "title": "Gradient Descent Variants",
     "content": {
       "points": [
-        "Batch gradient descent processes entire dataset: O(nd) per iteration",
-        "Stochastic gradient descent uses single samples: O(d) per iteration",
-        "Mini-batch gradient descent balances both: O(bd) for batch size b",
-        "Convergence typically requires O(1/ε) iterations for ε accuracy"
+        "Batch gradient descent processes entire dataset: $O(nd)$ per iteration",
+        "Stochastic gradient descent uses single samples: $O(d)$ per iteration",
+        "Mini-batch gradient descent balances both: $O(bd)$ for batch size b",
+        "Convergence typically requires $O(1/ε)$ iterations for ε accuracy"
       ]
     },
     "id": "clrs-ch33-006",
@@ -10764,10 +10764,10 @@
     "content": {
       "question": "What is the time complexity of basic hierarchical clustering?",
       "options": [
-        "O(n log n)",
-        "O(n²)",
-        "O(n³)",
-        "O(n²log n)"
+        "$O(n \\log n)$",
+        "$O(n^2)$",
+        "$O(n^3)$",
+        "$O(n^2\\log n)$"
       ],
       "correctIndex": 2
     },
@@ -10782,7 +10782,7 @@
     "title": "Multiplicative Weights Update",
     "content": {
       "question": "How long does it take to update weights in the multiplicative weights algorithm for n experts?",
-      "answer": "O(n) time, as each of the n weights must be updated multiplicatively based on the expert's performance in that round."
+      "answer": "$O(n)$ time, as each of the n weights must be updated multiplicatively based on the expert's performance in that round."
     },
     "id": "clrs-ch33-008",
     "course": "Algorithms and Data Structures",
@@ -10794,7 +10794,7 @@
     "subject": "Algorithm Analysis (Big O)",
     "title": "Online Learning Complexity",
     "content": {
-      "text": "Online learning algorithms like multiplicative weights process data sequentially without storing entire datasets. Per-round complexity is typically O(n) for n experts or features. These algorithms achieve sublinear regret bounds, making them efficient for large-scale streaming applications."
+      "text": "Online learning algorithms like multiplicative weights process data sequentially without storing entire datasets. Per-round complexity is typically $O(n)$ for n experts or features. These algorithms achieve sublinear regret bounds, making them efficient for large-scale streaming applications."
     },
     "id": "clrs-ch33-009",
     "course": "Algorithms and Data Structures",
@@ -10810,7 +10810,7 @@
         "Clustering algorithms group similar data points together",
         "Online learning processes sequential data with sublinear regret",
         "Optimization methods like gradient descent minimize objective functions",
-        "Time complexities vary from O(d) per step to O(n³) for some batch methods"
+        "Time complexities vary from $O(d)$ per step to $O(n^3)$ for some batch methods"
       ]
     },
     "id": "clrs-ch33-010",
@@ -10825,10 +10825,10 @@
     "content": {
       "question": "What is the per-iteration complexity of stochastic gradient descent in d dimensions?",
       "options": [
-        "O(1)",
-        "O(d)",
-        "O(d²)",
-        "O(nd)"
+        "$O(1)$",
+        "$O(d)$",
+        "$O($d^2$)$",
+        "$O(nd)$"
       ],
       "correctIndex": 1
     },
@@ -10843,7 +10843,7 @@
     "title": "DBSCAN Clustering Complexity",
     "content": {
       "question": "What time complexity can DBSCAN clustering achieve with proper spatial indexing?",
-      "answer": "O(n log n) time complexity when using spatial data structures like R-trees or kd-trees to efficiently find neighboring points."
+      "answer": "$O(n \\log n)$ time complexity when using spatial data structures like R-trees or kd-trees to efficiently find neighboring points."
     },
     "id": "clrs-ch33-012",
     "course": "Algorithms and Data Structures",
@@ -10855,7 +10855,7 @@
     "subject": "Algorithm Analysis (Big O)",
     "title": "What is P Class",
     "content": {
-      "text": "The class P contains all decision problems that can be solved by a deterministic algorithm in polynomial time. These are problems where we can find a solution in O(n^k) time for some constant k. Examples include sorting, shortest path, and minimum spanning tree."
+      "text": "The class P contains all decision problems that can be solved by a deterministic algorithm in polynomial time. These are problems where we can find a solution in $O(n^k)$ time for some constant k. Examples include sorting, shortest path, and minimum spanning tree."
     },
     "id": "clrs-ch34-001",
     "course": "Algorithms and Data Structures",
