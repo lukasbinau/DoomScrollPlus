@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useMemo, useRef } from 'react';
 import type { Card, UserState } from '../types/card';
 
 interface UseFeedOptions {
@@ -9,6 +9,11 @@ interface UseFeedOptions {
 }
 
 export function useFeed({ cards, userState, selectedSubject, showBookmarked }: UseFeedOptions): Card[] {
+  // Cache the feed so we only reshuffle when the actual set of cards changes,
+  // not when userState changes (e.g. lastSeen updates from onSeen).
+  const cachedFeedRef = useRef<Card[]>([]);
+  const cachedKeyRef = useRef<string>('');
+
   return useMemo(() => {
     let filtered = cards;
 
@@ -20,25 +25,26 @@ export function useFeed({ cards, userState, selectedSubject, showBookmarked }: U
     // Bookmarks mode
     if (showBookmarked) {
       filtered = filtered.filter(c => userState[c.id]?.bookmarked);
+      const key = 'bm:' + filtered.map(c => c.id).sort().join(',');
+      if (key === cachedKeyRef.current) return cachedFeedRef.current;
+      cachedKeyRef.current = key;
+      cachedFeedRef.current = filtered;
       return filtered;
     }
 
     // Hide learned cards
     filtered = filtered.filter(c => !userState[c.id]?.learned);
 
+    // Build a key from the set of filtered card IDs.
+    // If the set hasn't changed (just a lastSeen update), return the cached order.
+    const key = filtered.map(c => c.id).sort().join(',');
+    if (key === cachedKeyRef.current) {
+      return cachedFeedRef.current;
+    }
+    cachedKeyRef.current = key;
+
     // Spaced repetition sort: cards not seen recently float up
     const now = Date.now();
-    const scored = filtered.map(card => {
-      const state = userState[card.id];
-      const lastSeen = state?.lastSeen ?? 0;
-      const age = now - lastSeen;
-      // Never-seen cards get max priority, then by staleness
-      const priority = lastSeen === 0 ? Number.MAX_SAFE_INTEGER : age;
-      return { card, priority };
-    });
-
-    // Sort by priority descending (highest = most stale = show first)
-    scored.sort((a, b) => b.priority - a.priority);
 
     // Shuffle within priority tiers to add variety
     // Group into: never-seen, stale (>1hr), recent
@@ -47,7 +53,7 @@ export function useFeed({ cards, userState, selectedSubject, showBookmarked }: U
     const recent: Card[] = [];
     const ONE_HOUR = 60 * 60 * 1000;
 
-    for (const { card } of scored) {
+    for (const card of filtered) {
       const lastSeen = userState[card.id]?.lastSeen ?? 0;
       if (lastSeen === 0) neverSeen.push(card);
       else if (now - lastSeen > ONE_HOUR) stale.push(card);
@@ -59,7 +65,9 @@ export function useFeed({ cards, userState, selectedSubject, showBookmarked }: U
     shuffle(stale);
     shuffle(recent);
 
-    return [...neverSeen, ...stale, ...recent];
+    const result = [...neverSeen, ...stale, ...recent];
+    cachedFeedRef.current = result;
+    return result;
   }, [cards, userState, selectedSubject, showBookmarked]);
 }
 

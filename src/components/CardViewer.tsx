@@ -1,4 +1,4 @@
-import { useRef, useEffect, useCallback, useState } from 'react';
+import { useRef, useEffect, useCallback, useState, useMemo } from 'react';
 import type { Card, UserCardState } from '../types/card';
 import { SummaryCard } from './cards/SummaryCard';
 import { BulletsCard } from './cards/BulletsCard';
@@ -25,21 +25,27 @@ function renderCard(card: Card) {
 export function CardViewer({ cards, userState, onSeen, onBookmark, onLearn }: Props) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const isAnimating = useRef(false);
+  const onSeenRef = useRef(onSeen);
+  onSeenRef.current = onSeen;
+
+  // Stable key: only changes when the actual set/order of card IDs changes
+  const feedKey = useMemo(() => cards.map(c => c.id).join(','), [cards]);
 
   const goTo = useCallback((index: number) => {
     const clamped = Math.max(0, Math.min(index, cards.length - 1));
     if (clamped === currentIndex) return;
     isAnimating.current = true;
     setCurrentIndex(clamped);
-    onSeen(cards[clamped].id);
+    onSeenRef.current(cards[clamped].id);
     setTimeout(() => { isAnimating.current = false; }, 400);
-  }, [cards, currentIndex, onSeen]);
+  }, [cards, currentIndex]);
 
-  // Mark first card as seen
+  // Reset to card 0 only when the feed genuinely changes (filter/subject change)
   useEffect(() => {
-    if (cards.length > 0) onSeen(cards[0].id);
     setCurrentIndex(0);
-  }, [cards, onSeen]);
+    if (cards.length > 0) onSeenRef.current(cards[0].id);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [feedKey]);
 
   // Touch + wheel handlers on window
   useEffect(() => {
