@@ -64,11 +64,8 @@ export function SideDrawer({
 
   const handleSelectCourse = (course: string) => {
     if (expandedCourse === course) {
-      // Already expanded — selecting the course header means "all subjects in course"
-      onSelectCourse(course);
-      onSelectSubject(null);
-      if (showBookmarked) onToggleBookmarked();
-      onClose();
+      // Already expanded — collapse it
+      setExpandedCourse(null);
     } else {
       setExpandedCourse(course);
     }
