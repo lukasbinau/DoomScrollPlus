@@ -148,8 +148,8 @@ export function SideDrawer({
                 showBookmarked ? 'bg-violet-500/20 text-white' : 'text-white/60 hover:bg-white/5'
               }`}
             >
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className={`w-4 h-4 ${showBookmarked ? 'text-violet-400' : 'text-white/30'}`}>
-                <path d="M9.653 16.915l-.005-.003-.019-.01a20.759 20.759 0 01-1.162-.682 22.045 22.045 0 01-2.765-2.033C4.234 12.87 2.5 10.785 2.5 8.312 2.5 5.946 4.318 4 6.605 4c1.16 0 2.275.52 3.395 1.575C11.12 4.52 12.235 4 13.395 4 15.68 4 17.5 5.946 17.5 8.312c0 2.473-1.734 4.558-3.702 5.875a22.043 22.043 0 01-3.928 2.715l-.019.01-.005.003L10 17l-.347-.085z" />
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill={showBookmarked ? 'currentColor' : 'none'} stroke="currentColor" strokeWidth={2} className={`w-4 h-4 ${showBookmarked ? 'text-violet-400' : 'text-white/30'}`}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
               </svg>
               <span className="text-sm font-medium">Saved</span>
             </button>

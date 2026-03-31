@@ -127,25 +127,12 @@ export function CardViewer({ cards, userState, onSeen, onBookmark, onLearn }: Pr
               {renderCard(card)}
             </div>
 
-            {/* Right action bar */}
-            <div className="absolute right-4 bottom-24 safe-bottom flex flex-col items-center gap-5">
-              {/* Bookmark */}
-              <button
-                onClick={() => onBookmark(card.id)}
-                className="flex flex-col items-center gap-1 transition-transform active:scale-90"
-              >
-                <div className={`w-10 h-10 rounded-full flex items-center justify-center ${isBookmarked ? 'bg-violet-500' : 'bg-white/10'}`}>
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill={isBookmarked ? 'white' : 'none'} stroke="white" strokeWidth={2} className="w-5 h-5">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
-                  </svg>
-                </div>
-                <span className="text-[10px] text-white/50">Save</span>
-              </button>
-
-              {/* Mark learned */}
+            {/* Bottom action buttons */}
+            <div className="absolute bottom-6 left-4 right-4 safe-bottom flex items-end justify-between pointer-events-none">
+              {/* Learned - bottom left */}
               <button
                 onClick={() => onLearn(card.id)}
-                className="flex flex-col items-center gap-1 transition-transform active:scale-90"
+                className="flex flex-col items-center gap-1 transition-transform active:scale-90 pointer-events-auto"
               >
                 <div className={`w-10 h-10 rounded-full flex items-center justify-center ${isLearned ? 'bg-emerald-500' : 'bg-white/10'}`}>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth={2} className="w-5 h-5">
@@ -153,6 +140,19 @@ export function CardViewer({ cards, userState, onSeen, onBookmark, onLearn }: Pr
                   </svg>
                 </div>
                 <span className="text-[10px] text-white/50">Learned</span>
+              </button>
+
+              {/* Save - bottom right */}
+              <button
+                onClick={() => onBookmark(card.id)}
+                className="flex flex-col items-center gap-1 transition-transform active:scale-90 pointer-events-auto"
+              >
+                <div className={`w-10 h-10 rounded-full flex items-center justify-center ${isBookmarked ? 'bg-violet-500' : 'bg-white/10'}`}>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill={isBookmarked ? 'white' : 'none'} stroke="white" strokeWidth={2} className="w-5 h-5">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
+                  </svg>
+                </div>
+                <span className="text-[10px] text-white/50">Save</span>
               </button>
             </div>
           </div>

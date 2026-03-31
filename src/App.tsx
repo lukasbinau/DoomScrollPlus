@@ -3,13 +3,11 @@ import { useLocalStorage } from './hooks/useLocalStorage';
 import { useFeed } from './hooks/useFeed';
 import { CardViewer } from './components/CardViewer';
 import { SideDrawer } from './components/SideDrawer';
-import { ThemeToggle } from './components/ThemeToggle';
 import type { Card, UserState } from './types/card';
 
 export default function App() {
   const [allCards, setAllCards] = useState<Card[]>([]);
   const [userState, setUserState] = useLocalStorage<UserState>('ds-user-state', {});
-  const [isDark, setIsDark] = useLocalStorage('ds-dark-mode', true);
   const [selectedCourse, setSelectedCourse] = useState<string | null>(null);
   const [selectedSubject, setSelectedSubject] = useState<string | null>(null);
   const [showBookmarked, setShowBookmarked] = useState(false);
@@ -24,12 +22,12 @@ export default function App() {
       .catch(console.error);
   }, []);
 
-  // Apply dark mode class
+  // Apply dark mode
   useEffect(() => {
-    document.documentElement.classList.toggle('dark', isDark);
-    document.body.style.backgroundColor = isDark ? '#0a0a0a' : '#f5f5f5';
-    document.body.style.color = isDark ? '#fff' : '#0a0a0a';
-  }, [isDark]);
+    document.documentElement.classList.add('dark');
+    document.body.style.backgroundColor = '#0a0a0a';
+    document.body.style.color = '#fff';
+  }, []);
 
   // Search filter
   const searchedCards = useMemo(() => {
@@ -102,7 +100,7 @@ export default function App() {
       : 'All Cards';
 
   return (
-    <div className={`h-full relative ${isDark ? 'bg-[#0a0a0a]' : 'bg-[#f5f5f5]'}`}>
+    <div className="h-full relative bg-[#0a0a0a]">
       {/* Hamburger menu button */}
       <button
         onClick={() => setDrawerOpen(true)}
@@ -118,11 +116,6 @@ export default function App() {
       <div className="absolute top-3.5 left-14 z-30 safe-top">
         <span className="text-xs text-white/40 font-medium truncate max-w-[200px] block">{filterLabel}</span>
       </div>
-
-      <ThemeToggle
-        isDark={isDark}
-        onToggle={() => setIsDark(prev => !prev)}
-      />
 
       <SideDrawer
         isOpen={drawerOpen}
