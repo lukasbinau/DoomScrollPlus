@@ -5553,9 +5553,9 @@
     "title": "Master Method Cases",
     "content": {
       "points": [
-        "Case 1: f(n) grows slower than n^(log_b a), solution is Θ(n^(log_b a))",
-        "Case 2: f(n) grows at same rate as n^(log_b a), solution is Θ(n^(log_b a) $\\log n$)",
-        "Case 3: f(n) grows faster than n^(log_b a), solution is Θ(f(n))",
+        "Case 1: (n)$ grows slower than ^{\\log_b a}$, solution is $\\Theta(n^{\\log_b a})$",
+        "Case 2: (n)$ grows at same rate as ^{\\log_b a}$, solution is $\\Theta(n^{\\log_b a} \\log n)$",
+        "Case 3: (n)$ grows faster than ^{\\log_b a}$, solution is $\\Theta(f(n))$",
         "Regularity condition must hold for Case 3 to apply"
       ]
     },

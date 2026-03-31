@@ -78,9 +78,12 @@ export function ComplexityChart({ text }: Props) {
 
   if (curves.length === 0) return null;
 
+  const legendH = 18;
+  const totalH = H + legendH;
+
   return (
     <div className="mt-3 w-full max-w-[340px]">
-      <svg viewBox={`0 0 ${W} ${H}`} className="w-full" style={{ height: 'auto' }}>
+      <svg viewBox={`0 0 ${W} ${totalH}`} className="w-full" style={{ height: 'auto' }}>
         {/* Axes */}
         <line x1={pad.left} y1={pad.top + plotH} x2={W - pad.right} y2={pad.top + plotH} stroke="rgba(255,255,255,0.15)" strokeWidth={1} />
         <line x1={pad.left} y1={pad.top} x2={pad.left} y2={pad.top + plotH} stroke="rgba(255,255,255,0.15)" strokeWidth={1} />
@@ -91,13 +94,16 @@ export function ComplexityChart({ text }: Props) {
           <polyline key={c.key} points={c.points} fill="none" stroke={c.color} strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" opacity={0.9} />
         ))}
 
-        {/* Legend */}
-        {curves.map((c, i) => (
-          <g key={c.key}>
-            <line x1={W - pad.right - 70} y1={pad.top + 8 + i * 14} x2={W - pad.right - 58} y2={pad.top + 8 + i * 14} stroke={c.color} strokeWidth={2} />
-            <text x={W - pad.right - 54} y={pad.top + 12 + i * 14} fill={c.color} fontSize={10} fontFamily="monospace">{c.label}</text>
-          </g>
-        ))}
+        {/* Legend — horizontal row below the chart */}
+        {(() => {
+          const gap = W / (curves.length + 1);
+          return curves.map((c, i) => (
+            <g key={c.key}>
+              <line x1={gap * (i + 1) - 22} y1={H + legendH / 2} x2={gap * (i + 1) - 12} y2={H + legendH / 2} stroke={c.color} strokeWidth={2} />
+              <text x={gap * (i + 1) - 8} y={H + legendH / 2 + 4} fill={c.color} fontSize={9} fontFamily="monospace">{c.label}</text>
+            </g>
+          ));
+        })()}
       </svg>
     </div>
   );

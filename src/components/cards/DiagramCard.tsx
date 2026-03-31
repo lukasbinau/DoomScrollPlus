@@ -47,12 +47,16 @@ export function DiagramCard({ card }: Props) {
     mermaid.render(id, mermaidCode).then(({ svg }) => {
       if (!cancelled && el) {
         el.innerHTML = svg;
-        // Scale SVG to fit
         const svgEl = el.querySelector('svg');
         if (svgEl) {
-          svgEl.style.maxWidth = '100%';
-          svgEl.style.maxHeight = '100%';
+          // Get the natural size and set a proper viewBox so SVG scales to fit
+          const bbox = svgEl.getBBox();
+          const vbPad = 10;
+          svgEl.setAttribute('viewBox', `${bbox.x - vbPad} ${bbox.y - vbPad} ${bbox.width + vbPad * 2} ${bbox.height + vbPad * 2}`);
+          svgEl.removeAttribute('height');
+          svgEl.style.width = '100%';
           svgEl.style.height = 'auto';
+          svgEl.style.maxHeight = '100%';
         }
       }
     }).catch(() => {
@@ -71,7 +75,7 @@ export function DiagramCard({ card }: Props) {
         <MathText text={card.title} />
       </h2>
 
-      <div className="w-full max-w-[360px] max-h-[45vh] flex items-center justify-center overflow-hidden rounded-xl bg-white/[0.04] border border-white/10 p-4">
+      <div className="w-full max-w-[360px] max-h-[50vh] flex items-center justify-center overflow-auto rounded-xl bg-white/[0.04] border border-white/10 p-4">
         {error ? (
           <p className="text-sm text-red-400">Failed to render diagram</p>
         ) : (

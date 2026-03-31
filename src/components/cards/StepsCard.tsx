@@ -24,9 +24,13 @@ function StepDiagram({ code }: { code: string }) {
         el.innerHTML = svg;
         const svgEl = el.querySelector('svg');
         if (svgEl) {
-          svgEl.style.maxWidth = '100%';
-          svgEl.style.maxHeight = '100%';
+          const bbox = svgEl.getBBox();
+          const vbPad = 10;
+          svgEl.setAttribute('viewBox', `${bbox.x - vbPad} ${bbox.y - vbPad} ${bbox.width + vbPad * 2} ${bbox.height + vbPad * 2}`);
+          svgEl.removeAttribute('height');
+          svgEl.style.width = '100%';
           svgEl.style.height = 'auto';
+          svgEl.style.maxHeight = '100%';
         }
       }
     }).catch(() => {
@@ -73,7 +77,7 @@ export function StepsCard({ card }: Props) {
       </div>
 
       {/* Diagram area */}
-      <div className="w-full max-w-[360px] max-h-[35vh] flex items-center justify-center overflow-hidden rounded-xl bg-white/[0.04] border border-white/10 p-3">
+      <div className="w-full max-w-[360px] max-h-[35vh] flex items-center justify-center overflow-auto rounded-xl bg-white/[0.04] border border-white/10 p-3">
         <StepDiagram code={current.visual} />
       </div>
 
