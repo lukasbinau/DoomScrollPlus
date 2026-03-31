@@ -1,4 +1,4 @@
-import { useRef, useEffect, useCallback } from 'react';
+import { useRef, useEffect, useCallback, useState } from 'react';
 import type { Card, UserCardState } from '../types/card';
 import { SummaryCard } from './cards/SummaryCard';
 import { BulletsCard } from './cards/BulletsCard';
@@ -23,92 +23,58 @@ function renderCard(card: Card) {
 }
 
 export function CardViewer({ cards, userState, onSeen, onBookmark, onLearn }: Props) {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const currentIndexRef = useRef(0);
-  const touchStartY = useRef(0);
-  const isScrolling = useRef(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const isAnimating = useRef(false);
 
-  // Programmatically scroll to a specific card index
-  const scrollToIndex = useCallback((index: number) => {
-    const container = containerRef.current;
-    if (!container) return;
+  const goTo = useCallback((index: number) => {
     const clamped = Math.max(0, Math.min(index, cards.length - 1));
-    container.scrollTo({ top: clamped * container.clientHeight, behavior: 'smooth' });
-    if (clamped !== currentIndexRef.current && cards[clamped]) {
-      currentIndexRef.current = clamped;
-      onSeen(cards[clamped].id);
-    }
+    if (clamped === currentIndex) return;
+    isAnimating.current = true;
+    setCurrentIndex(clamped);
+    onSeen(cards[clamped].id);
+    setTimeout(() => { isAnimating.current = false; }, 400);
+  }, [cards, currentIndex, onSeen]);
+
+  // Mark first card as seen
+  useEffect(() => {
+    if (cards.length > 0) onSeen(cards[0].id);
+    setCurrentIndex(0);
   }, [cards, onSeen]);
 
-  // Touch-based swipe: one swipe = one card
+  // Touch + wheel handlers on window
   useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
+    let startY = 0;
 
     const onTouchStart = (e: TouchEvent) => {
-      touchStartY.current = e.touches[0].clientY;
-      isScrolling.current = false;
-    };
-
-    const onTouchMove = (e: TouchEvent) => {
-      // Prevent native scroll so we control it
-      e.preventDefault();
+      startY = e.touches[0].clientY;
     };
 
     const onTouchEnd = (e: TouchEvent) => {
-      if (isScrolling.current) return;
-      const deltaY = touchStartY.current - e.changedTouches[0].clientY;
-      const SWIPE_THRESHOLD = 50;
-
-      if (Math.abs(deltaY) > SWIPE_THRESHOLD) {
-        isScrolling.current = true;
-        if (deltaY > 0) {
-          scrollToIndex(currentIndexRef.current + 1); // swipe up → next
-        } else {
-          scrollToIndex(currentIndexRef.current - 1); // swipe down → prev
-        }
+      if (isAnimating.current) return;
+      const deltaY = startY - e.changedTouches[0].clientY;
+      if (Math.abs(deltaY) > 50) {
+        goTo(deltaY > 0 ? currentIndex + 1 : currentIndex - 1);
       }
     };
 
-    // Mouse wheel: one scroll = one card (for desktop)
     const onWheel = (e: WheelEvent) => {
       e.preventDefault();
-      if (isScrolling.current) return;
+      if (isAnimating.current) return;
       if (Math.abs(e.deltaY) > 30) {
-        isScrolling.current = true;
-        if (e.deltaY > 0) {
-          scrollToIndex(currentIndexRef.current + 1);
-        } else {
-          scrollToIndex(currentIndexRef.current - 1);
-        }
-        setTimeout(() => { isScrolling.current = false; }, 600);
+        goTo(e.deltaY > 0 ? currentIndex + 1 : currentIndex - 1);
       }
     };
 
-    container.addEventListener('touchstart', onTouchStart, { passive: true });
-    container.addEventListener('touchmove', onTouchMove, { passive: false });
-    container.addEventListener('touchend', onTouchEnd, { passive: true });
-    container.addEventListener('wheel', onWheel, { passive: false });
-
-    // Mark first card as seen
-    if (cards.length > 0) onSeen(cards[0].id);
+    window.addEventListener('touchstart', onTouchStart, { passive: true });
+    window.addEventListener('touchend', onTouchEnd, { passive: true });
+    window.addEventListener('wheel', onWheel, { passive: false });
 
     return () => {
-      container.removeEventListener('touchstart', onTouchStart);
-      container.removeEventListener('touchmove', onTouchMove);
-      container.removeEventListener('touchend', onTouchEnd);
-      container.removeEventListener('wheel', onWheel);
+      window.removeEventListener('touchstart', onTouchStart);
+      window.removeEventListener('touchend', onTouchEnd);
+      window.removeEventListener('wheel', onWheel);
     };
-  }, [cards, onSeen, scrollToIndex]);
-
-  // Reset scroll lock after smooth scroll finishes
-  useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
-    const onScrollEnd = () => { isScrolling.current = false; };
-    container.addEventListener('scrollend', onScrollEnd);
-    return () => container.removeEventListener('scrollend', onScrollEnd);
-  }, []);
+  }, [currentIndex, goTo]);
 
   if (cards.length === 0) {
     return (
@@ -118,18 +84,29 @@ export function CardViewer({ cards, userState, onSeen, onBookmark, onLearn }: Pr
     );
   }
 
+  // Only render current card ± 1 for performance
+  const visible = [-1, 0, 1]
+    .map(offset => currentIndex + offset)
+    .filter(i => i >= 0 && i < cards.length);
+
   return (
-    <div
-      ref={containerRef}
-      className="snap-container hide-scrollbar"
-    >
-      {cards.map((card) => {
+    <div className="snap-container">
+      {visible.map((i) => {
+        const card = cards[i];
         const state = userState[card.id];
         const isBookmarked = state?.bookmarked ?? false;
         const isLearned = state?.learned ?? false;
+        const offset = i - currentIndex;
 
         return (
-          <div key={card.id} className="snap-card relative">
+          <div
+            key={card.id}
+            className="snap-card absolute inset-0"
+            style={{
+              transform: `translateY(${offset * 100}%)`,
+              transition: 'transform 0.35s cubic-bezier(0.4, 0, 0.2, 1)',
+            }}
+          >
             {/* Gradient overlay for depth */}
             <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40 pointer-events-none" />
 
