@@ -75,7 +75,7 @@ export function DiagramCard({ card }: Props) {
         <MathText text={card.title} />
       </h2>
 
-      <div className="w-full max-w-[360px] max-h-[50vh] flex items-center justify-center overflow-auto rounded-xl bg-white/[0.04] border border-white/10 p-4">
+      <div className="w-full max-w-[360px] max-h-[50vh] flex items-center justify-center overflow-auto scrollable-touch rounded-xl bg-white/[0.04] border border-white/10 p-4">
         {error ? (
           <p className="text-sm text-red-400">Failed to render diagram</p>
         ) : (

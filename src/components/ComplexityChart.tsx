@@ -78,7 +78,10 @@ export function ComplexityChart({ text }: Props) {
 
   if (curves.length === 0) return null;
 
-  const legendH = 18;
+  const legendCols = 2;
+  const legendRowH = 14;
+  const legendRows = Math.ceil(curves.length / legendCols);
+  const legendH = legendRows * legendRowH + 6;
   const totalH = H + legendH;
 
   return (
@@ -94,15 +97,21 @@ export function ComplexityChart({ text }: Props) {
           <polyline key={c.key} points={c.points} fill="none" stroke={c.color} strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" opacity={0.9} />
         ))}
 
-        {/* Legend — horizontal row below the chart */}
+        {/* Legend — 2-column grid below the chart */}
         {(() => {
-          const gap = W / (curves.length + 1);
-          return curves.map((c, i) => (
-            <g key={c.key}>
-              <line x1={gap * (i + 1) - 22} y1={H + legendH / 2} x2={gap * (i + 1) - 12} y2={H + legendH / 2} stroke={c.color} strokeWidth={2} />
-              <text x={gap * (i + 1) - 8} y={H + legendH / 2 + 4} fill={c.color} fontSize={9} fontFamily="monospace">{c.label}</text>
-            </g>
-          ));
+          const colW = W / legendCols;
+          return curves.map((c, i) => {
+            const col = i % legendCols;
+            const row = Math.floor(i / legendCols);
+            const x = col * colW + 12;
+            const y = H + 8 + row * legendRowH;
+            return (
+              <g key={c.key}>
+                <line x1={x} y1={y} x2={x + 10} y2={y} stroke={c.color} strokeWidth={2} />
+                <text x={x + 14} y={y + 3} fill={c.color} fontSize={8} fontFamily="monospace">{c.label}</text>
+              </g>
+            );
+          });
         })()}
       </svg>
     </div>

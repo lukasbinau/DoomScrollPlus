@@ -36,7 +36,7 @@ export function CodeCard({ card }: Props) {
         <div className="flex items-center justify-between px-4 py-2 bg-white/[0.06] border-b border-white/10">
           <span className="text-xs font-mono text-white/40">{language}</span>
         </div>
-        <pre className="p-4 overflow-x-auto text-sm leading-relaxed bg-[#0d0d0d] m-0">
+        <pre className="p-4 overflow-x-auto text-xs leading-relaxed bg-[#0d0d0d] m-0 scrollable-touch">
           <code ref={codeRef} className={langClass}>
             {code}
           </code>

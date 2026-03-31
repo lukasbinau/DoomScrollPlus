@@ -56,13 +56,21 @@ export function CardViewer({ cards, userState, onSeen, onBookmark, onLearn }: Pr
   // Touch + wheel handlers on window
   useEffect(() => {
     let startY = 0;
+    let inScrollable = false;
 
     const onTouchStart = (e: TouchEvent) => {
       startY = e.touches[0].clientY;
+      const target = e.target as HTMLElement;
+      inScrollable = !!target.closest('.scrollable-touch');
+    };
+
+    const onTouchMove = (e: TouchEvent) => {
+      // Allow native scroll inside scrollable child elements
+      if (!inScrollable) e.preventDefault();
     };
 
     const onTouchEnd = (e: TouchEvent) => {
-      if (isAnimating.current) return;
+      if (isAnimating.current || inScrollable) return;
       const deltaY = startY - e.changedTouches[0].clientY;
       if (Math.abs(deltaY) > 50) {
         goTo(deltaY > 0 ? currentIndex + 1 : currentIndex - 1);
@@ -78,11 +86,13 @@ export function CardViewer({ cards, userState, onSeen, onBookmark, onLearn }: Pr
     };
 
     window.addEventListener('touchstart', onTouchStart, { passive: true });
+    window.addEventListener('touchmove', onTouchMove, { passive: false });
     window.addEventListener('touchend', onTouchEnd, { passive: true });
     window.addEventListener('wheel', onWheel, { passive: false });
 
     return () => {
       window.removeEventListener('touchstart', onTouchStart);
+      window.removeEventListener('touchmove', onTouchMove);
       window.removeEventListener('touchend', onTouchEnd);
       window.removeEventListener('wheel', onWheel);
     };
