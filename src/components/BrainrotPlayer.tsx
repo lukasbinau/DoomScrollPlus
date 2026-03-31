@@ -4,6 +4,8 @@ const VIDEOS = [
   'subway-surfers-1.mp4',
   'subway-surfers-2.mp4',
   'subway-surfers-3.mp4',
+  'subway-surfers-4.mp4',
+  'subway-surfers-5.mp4',
   'neon-spiral.mp4',
   'colorful-swirls.mp4',
   'color-mixing.mp4',
