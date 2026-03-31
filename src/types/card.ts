@@ -22,6 +22,7 @@ export type CardType = 'summary' | 'bullets' | 'flashcard' | 'quiz';
 export interface Card {
   id: string;
   type: CardType;
+  course: string;
   subject: string;
   title: string;
   content: SummaryContent | BulletsContent | FlashcardContent | QuizContent;

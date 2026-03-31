@@ -8,7 +8,8 @@
       "text": "Mitochondria generate most of the cell's ATP through oxidative phosphorylation. They have a double membrane — the inner membrane is highly folded into cristae, maximizing surface area for the electron transport chain. Fun fact: they have their own DNA, supporting the endosymbiotic theory."
     },
     "source": "Biology Textbook Ch.6",
-    "createdAt": "2026-03-15T10:00:00Z"
+    "createdAt": "2026-03-15T10:00:00Z",
+    "course": "Sample"
   },
   {
     "id": "bio-002",
@@ -25,7 +26,8 @@
       ]
     },
     "source": "Biology Textbook Ch.8",
-    "createdAt": "2026-03-15T10:05:00Z"
+    "createdAt": "2026-03-15T10:05:00Z",
+    "course": "Sample"
   },
   {
     "id": "hist-001",
@@ -36,7 +38,8 @@
       "text": "On November 9, 1989, the Berlin Wall fell after 28 years of dividing East and West Berlin. Growing pressure from peaceful protests and political reform in Eastern Europe led the East German government to open the border. It became the symbol of the end of the Cold War and led to German reunification in 1990."
     },
     "source": "Modern History Notes",
-    "createdAt": "2026-03-16T09:00:00Z"
+    "createdAt": "2026-03-16T09:00:00Z",
+    "course": "Sample"
   },
   {
     "id": "math-001",
@@ -48,7 +51,8 @@
       "answer": "x = (-b ± √(b² - 4ac)) / 2a. The discriminant (b² - 4ac) determines the number of solutions: positive = 2 real, zero = 1 real, negative = 2 complex."
     },
     "source": "Algebra II Notes",
-    "createdAt": "2026-03-16T09:30:00Z"
+    "createdAt": "2026-03-16T09:30:00Z",
+    "course": "Sample"
   },
   {
     "id": "cs-001",
@@ -66,7 +70,8 @@
       "correctIndex": 1
     },
     "source": "CS Algorithms Lecture 3",
-    "createdAt": "2026-03-17T14:00:00Z"
+    "createdAt": "2026-03-17T14:00:00Z",
+    "course": "Sample"
   },
   {
     "id": "bio-003",
@@ -77,7 +82,8 @@
       "text": "DNA replication is semi-conservative — each new double helix contains one original and one new strand. Helicase unwinds the helix, primase adds RNA primers, and DNA polymerase III synthesizes the new strand in the 5'→3' direction. The leading strand is continuous; the lagging strand is built in Okazaki fragments."
     },
     "source": "Biology Textbook Ch.11",
-    "createdAt": "2026-03-17T15:00:00Z"
+    "createdAt": "2026-03-17T15:00:00Z",
+    "course": "Sample"
   },
   {
     "id": "hist-002",
@@ -94,7 +100,8 @@
       ]
     },
     "source": "Modern History Ch.3",
-    "createdAt": "2026-03-18T08:00:00Z"
+    "createdAt": "2026-03-18T08:00:00Z",
+    "course": "Sample"
   },
   {
     "id": "math-002",
@@ -105,7 +112,8 @@
       "text": "In any right triangle, the square of the hypotenuse equals the sum of the squares of the other two sides: a² + b² = c². This is one of the most fundamental relationships in geometry, used in distance calculations, trigonometry, and even 3D space."
     },
     "source": "Geometry Notes",
-    "createdAt": "2026-03-18T09:00:00Z"
+    "createdAt": "2026-03-18T09:00:00Z",
+    "course": "Sample"
   },
   {
     "id": "cs-002",
@@ -121,7 +129,8 @@
       ]
     },
     "source": "Web Dev Lecture 5",
-    "createdAt": "2026-03-19T10:00:00Z"
+    "createdAt": "2026-03-19T10:00:00Z",
+    "course": "Sample"
   },
   {
     "id": "bio-004",
@@ -139,7 +148,8 @@
       "correctIndex": 1
     },
     "source": "Biology Textbook Ch.4",
-    "createdAt": "2026-03-19T11:00:00Z"
+    "createdAt": "2026-03-19T11:00:00Z",
+    "course": "Sample"
   },
   {
     "id": "hist-003",
@@ -151,7 +161,8 @@
       "answer": "The Renaissance began in 14th-century Italy (Florence). Its core idea was humanism — a renewed focus on human potential, classical learning, art, and science, marking the transition from the medieval to the modern world."
     },
     "source": "World History Ch.7",
-    "createdAt": "2026-03-20T08:00:00Z"
+    "createdAt": "2026-03-20T08:00:00Z",
+    "course": "Sample"
   },
   {
     "id": "math-003",
@@ -169,7 +180,8 @@
       "correctIndex": 0
     },
     "source": "Calculus Notes Ch.2",
-    "createdAt": "2026-03-20T10:00:00Z"
+    "createdAt": "2026-03-20T10:00:00Z",
+    "course": "Sample"
   },
   {
     "id": "cs-003",
@@ -180,7 +192,8 @@
       "text": "An API (Application Programming Interface) is a set of rules that lets different software applications communicate. Think of it as a waiter in a restaurant: you (the client) tell the waiter (API) what you want, and they bring it from the kitchen (server). REST APIs use HTTP methods like GET, POST, PUT, DELETE."
     },
     "source": "Web Dev Lecture 2",
-    "createdAt": "2026-03-21T09:00:00Z"
+    "createdAt": "2026-03-21T09:00:00Z",
+    "course": "Sample"
   },
   {
     "id": "bio-005",
@@ -192,7 +205,8 @@
       "answer": "6CO₂ + 6H₂O + light energy → C₆H₁₂O₆ + 6O₂. Carbon dioxide and water are converted into glucose and oxygen using sunlight, primarily in the chloroplasts."
     },
     "source": "Biology Textbook Ch.7",
-    "createdAt": "2026-03-21T10:00:00Z"
+    "createdAt": "2026-03-21T10:00:00Z",
+    "course": "Sample"
   },
   {
     "id": "hist-004",
@@ -203,7 +217,8 @@
       "text": "The French Revolution (1789–1799) overthrew the monarchy and established France as a republic. Triggered by economic crisis, social inequality, and Enlightenment ideas, key events included the storming of the Bastille, the Declaration of the Rights of Man, and the Reign of Terror. It fundamentally changed European political systems."
     },
     "source": "Modern History Ch.5",
-    "createdAt": "2026-03-22T08:00:00Z"
+    "createdAt": "2026-03-22T08:00:00Z",
+    "course": "Sample"
   },
   {
     "type": "summary",
@@ -214,7 +229,8 @@
     },
     "id": "02450_Book-001",
     "source": "02450_Book.pdf",
-    "createdAt": "2026-03-31T16:28:05.607Z"
+    "createdAt": "2026-03-31T16:28:05.607Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -231,7 +247,8 @@
     },
     "id": "02450_Book-002",
     "source": "02450_Book.pdf",
-    "createdAt": "2026-03-31T16:28:05.607Z"
+    "createdAt": "2026-03-31T16:28:05.607Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -242,7 +259,8 @@
     },
     "id": "02450_Book-003",
     "source": "02450_Book.pdf",
-    "createdAt": "2026-03-31T16:28:05.607Z"
+    "createdAt": "2026-03-31T16:28:05.607Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -258,7 +276,8 @@
     },
     "id": "02450_Book-004",
     "source": "02450_Book.pdf",
-    "createdAt": "2026-03-31T16:28:05.607Z"
+    "createdAt": "2026-03-31T16:28:05.607Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -269,7 +288,8 @@
     },
     "id": "02450_Book-005",
     "source": "02450_Book.pdf",
-    "createdAt": "2026-03-31T16:28:05.607Z"
+    "createdAt": "2026-03-31T16:28:05.607Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "flashcard",
@@ -281,7 +301,8 @@
     },
     "id": "02450_Book-006",
     "source": "02450_Book.pdf",
-    "createdAt": "2026-03-31T16:28:05.607Z"
+    "createdAt": "2026-03-31T16:28:05.607Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -292,7 +313,8 @@
     },
     "id": "02450_Book-007",
     "source": "02450_Book.pdf",
-    "createdAt": "2026-03-31T16:28:05.607Z"
+    "createdAt": "2026-03-31T16:28:05.607Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -308,7 +330,8 @@
     },
     "id": "02450_Book-008",
     "source": "02450_Book.pdf",
-    "createdAt": "2026-03-31T16:28:05.607Z"
+    "createdAt": "2026-03-31T16:28:05.607Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -319,7 +342,8 @@
     },
     "id": "02450_Book-009",
     "source": "02450_Book.pdf",
-    "createdAt": "2026-03-31T16:28:05.607Z"
+    "createdAt": "2026-03-31T16:28:05.607Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "quiz",
@@ -337,7 +361,8 @@
     },
     "id": "02450_Book-010",
     "source": "02450_Book.pdf",
-    "createdAt": "2026-03-31T16:28:05.607Z"
+    "createdAt": "2026-03-31T16:28:05.607Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -348,7 +373,8 @@
     },
     "id": "02450_Book-011",
     "source": "02450_Book.pdf",
-    "createdAt": "2026-03-31T16:28:05.607Z"
+    "createdAt": "2026-03-31T16:28:05.607Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -364,7 +390,8 @@
     },
     "id": "02450_Book-012",
     "source": "02450_Book.pdf",
-    "createdAt": "2026-03-31T16:28:05.607Z"
+    "createdAt": "2026-03-31T16:28:05.607Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -375,7 +402,8 @@
     },
     "id": "Algs4edBalancedSearchTrees-001",
     "source": "Algs4edBalancedSearchTrees.pdf",
-    "createdAt": "2026-03-31T16:28:25.165Z"
+    "createdAt": "2026-03-31T16:28:25.165Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -391,7 +419,8 @@
     },
     "id": "Algs4edBalancedSearchTrees-002",
     "source": "Algs4edBalancedSearchTrees.pdf",
-    "createdAt": "2026-03-31T16:28:25.165Z"
+    "createdAt": "2026-03-31T16:28:25.165Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -402,7 +431,8 @@
     },
     "id": "Algs4edBalancedSearchTrees-003",
     "source": "Algs4edBalancedSearchTrees.pdf",
-    "createdAt": "2026-03-31T16:28:25.165Z"
+    "createdAt": "2026-03-31T16:28:25.165Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -418,7 +448,8 @@
     },
     "id": "Algs4edBalancedSearchTrees-004",
     "source": "Algs4edBalancedSearchTrees.pdf",
-    "createdAt": "2026-03-31T16:28:25.165Z"
+    "createdAt": "2026-03-31T16:28:25.165Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "flashcard",
@@ -430,7 +461,8 @@
     },
     "id": "Algs4edBalancedSearchTrees-005",
     "source": "Algs4edBalancedSearchTrees.pdf",
-    "createdAt": "2026-03-31T16:28:25.165Z"
+    "createdAt": "2026-03-31T16:28:25.165Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -441,7 +473,8 @@
     },
     "id": "Algs4edBalancedSearchTrees-006",
     "source": "Algs4edBalancedSearchTrees.pdf",
-    "createdAt": "2026-03-31T16:28:25.165Z"
+    "createdAt": "2026-03-31T16:28:25.165Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -457,7 +490,8 @@
     },
     "id": "Algs4edBalancedSearchTrees-007",
     "source": "Algs4edBalancedSearchTrees.pdf",
-    "createdAt": "2026-03-31T16:28:25.165Z"
+    "createdAt": "2026-03-31T16:28:25.165Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "quiz",
@@ -475,7 +509,8 @@
     },
     "id": "Algs4edBalancedSearchTrees-008",
     "source": "Algs4edBalancedSearchTrees.pdf",
-    "createdAt": "2026-03-31T16:28:25.165Z"
+    "createdAt": "2026-03-31T16:28:25.165Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -486,7 +521,8 @@
     },
     "id": "Algs4edBalancedSearchTrees-009",
     "source": "Algs4edBalancedSearchTrees.pdf",
-    "createdAt": "2026-03-31T16:28:25.165Z"
+    "createdAt": "2026-03-31T16:28:25.165Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -497,7 +533,8 @@
     },
     "id": "Algs4edUnionFind-001",
     "source": "Algs4edUnionFind.pdf",
-    "createdAt": "2026-03-31T16:28:42.298Z"
+    "createdAt": "2026-03-31T16:28:42.298Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -513,7 +550,8 @@
     },
     "id": "Algs4edUnionFind-002",
     "source": "Algs4edUnionFind.pdf",
-    "createdAt": "2026-03-31T16:28:42.298Z"
+    "createdAt": "2026-03-31T16:28:42.298Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -524,7 +562,8 @@
     },
     "id": "Algs4edUnionFind-003",
     "source": "Algs4edUnionFind.pdf",
-    "createdAt": "2026-03-31T16:28:42.298Z"
+    "createdAt": "2026-03-31T16:28:42.298Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -540,7 +579,8 @@
     },
     "id": "Algs4edUnionFind-004",
     "source": "Algs4edUnionFind.pdf",
-    "createdAt": "2026-03-31T16:28:42.298Z"
+    "createdAt": "2026-03-31T16:28:42.298Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "flashcard",
@@ -552,7 +592,8 @@
     },
     "id": "Algs4edUnionFind-005",
     "source": "Algs4edUnionFind.pdf",
-    "createdAt": "2026-03-31T16:28:42.298Z"
+    "createdAt": "2026-03-31T16:28:42.298Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -563,7 +604,8 @@
     },
     "id": "Algs4edUnionFind-006",
     "source": "Algs4edUnionFind.pdf",
-    "createdAt": "2026-03-31T16:28:42.298Z"
+    "createdAt": "2026-03-31T16:28:42.298Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -580,7 +622,8 @@
     },
     "id": "Algs4edUnionFind-007",
     "source": "Algs4edUnionFind.pdf",
-    "createdAt": "2026-03-31T16:28:42.298Z"
+    "createdAt": "2026-03-31T16:28:42.298Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -591,7 +634,8 @@
     },
     "id": "Algs4edUnionFind-008",
     "source": "Algs4edUnionFind.pdf",
-    "createdAt": "2026-03-31T16:28:42.298Z"
+    "createdAt": "2026-03-31T16:28:42.298Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "quiz",
@@ -609,7 +653,8 @@
     },
     "id": "Algs4edUnionFind-009",
     "source": "Algs4edUnionFind.pdf",
-    "createdAt": "2026-03-31T16:28:42.298Z"
+    "createdAt": "2026-03-31T16:28:42.298Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -620,7 +665,8 @@
     },
     "id": "Algs4edUnionFind-010",
     "source": "Algs4edUnionFind.pdf",
-    "createdAt": "2026-03-31T16:28:42.298Z"
+    "createdAt": "2026-03-31T16:28:42.298Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -631,7 +677,8 @@
     },
     "id": "analysis-weekplan (1)-001",
     "source": "analysis-weekplan (1).pdf",
-    "createdAt": "2026-03-31T16:29:06.168Z"
+    "createdAt": "2026-03-31T16:29:06.168Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -647,7 +694,8 @@
     },
     "id": "analysis-weekplan (1)-002",
     "source": "analysis-weekplan (1).pdf",
-    "createdAt": "2026-03-31T16:29:06.168Z"
+    "createdAt": "2026-03-31T16:29:06.168Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -658,7 +706,8 @@
     },
     "id": "analysis-weekplan (1)-003",
     "source": "analysis-weekplan (1).pdf",
-    "createdAt": "2026-03-31T16:29:06.168Z"
+    "createdAt": "2026-03-31T16:29:06.168Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -674,7 +723,8 @@
     },
     "id": "analysis-weekplan (1)-004",
     "source": "analysis-weekplan (1).pdf",
-    "createdAt": "2026-03-31T16:29:06.168Z"
+    "createdAt": "2026-03-31T16:29:06.168Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "flashcard",
@@ -686,7 +736,8 @@
     },
     "id": "analysis-weekplan (1)-005",
     "source": "analysis-weekplan (1).pdf",
-    "createdAt": "2026-03-31T16:29:06.168Z"
+    "createdAt": "2026-03-31T16:29:06.168Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -697,7 +748,8 @@
     },
     "id": "analysis-weekplan (1)-006",
     "source": "analysis-weekplan (1).pdf",
-    "createdAt": "2026-03-31T16:29:06.168Z"
+    "createdAt": "2026-03-31T16:29:06.168Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -714,7 +766,8 @@
     },
     "id": "analysis-weekplan (1)-007",
     "source": "analysis-weekplan (1).pdf",
-    "createdAt": "2026-03-31T16:29:06.168Z"
+    "createdAt": "2026-03-31T16:29:06.168Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "quiz",
@@ -732,7 +785,8 @@
     },
     "id": "analysis-weekplan (1)-008",
     "source": "analysis-weekplan (1).pdf",
-    "createdAt": "2026-03-31T16:29:06.168Z"
+    "createdAt": "2026-03-31T16:29:06.168Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -743,7 +797,8 @@
     },
     "id": "analysis-weekplan (1)-009",
     "source": "analysis-weekplan (1).pdf",
-    "createdAt": "2026-03-31T16:29:06.168Z"
+    "createdAt": "2026-03-31T16:29:06.168Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -759,7 +814,8 @@
     },
     "id": "analysis-weekplan (1)-010",
     "source": "analysis-weekplan (1).pdf",
-    "createdAt": "2026-03-31T16:29:06.168Z"
+    "createdAt": "2026-03-31T16:29:06.168Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "flashcard",
@@ -771,7 +827,8 @@
     },
     "id": "analysis-weekplan (1)-011",
     "source": "analysis-weekplan (1).pdf",
-    "createdAt": "2026-03-31T16:29:06.168Z"
+    "createdAt": "2026-03-31T16:29:06.168Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "quiz",
@@ -789,7 +846,8 @@
     },
     "id": "analysis-weekplan (1)-012",
     "source": "analysis-weekplan (1).pdf",
-    "createdAt": "2026-03-31T16:29:06.168Z"
+    "createdAt": "2026-03-31T16:29:06.168Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -800,7 +858,8 @@
     },
     "id": "analysis-weekplan (2)-001",
     "source": "analysis-weekplan (2).pdf",
-    "createdAt": "2026-03-31T16:29:26.721Z"
+    "createdAt": "2026-03-31T16:29:26.721Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -816,7 +875,8 @@
     },
     "id": "analysis-weekplan (2)-002",
     "source": "analysis-weekplan (2).pdf",
-    "createdAt": "2026-03-31T16:29:26.721Z"
+    "createdAt": "2026-03-31T16:29:26.721Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -827,7 +887,8 @@
     },
     "id": "analysis-weekplan (2)-003",
     "source": "analysis-weekplan (2).pdf",
-    "createdAt": "2026-03-31T16:29:26.721Z"
+    "createdAt": "2026-03-31T16:29:26.721Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "flashcard",
@@ -839,7 +900,8 @@
     },
     "id": "analysis-weekplan (2)-004",
     "source": "analysis-weekplan (2).pdf",
-    "createdAt": "2026-03-31T16:29:26.721Z"
+    "createdAt": "2026-03-31T16:29:26.721Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -856,7 +918,8 @@
     },
     "id": "analysis-weekplan (2)-005",
     "source": "analysis-weekplan (2).pdf",
-    "createdAt": "2026-03-31T16:29:26.721Z"
+    "createdAt": "2026-03-31T16:29:26.721Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -867,7 +930,8 @@
     },
     "id": "analysis-weekplan (2)-006",
     "source": "analysis-weekplan (2).pdf",
-    "createdAt": "2026-03-31T16:29:26.721Z"
+    "createdAt": "2026-03-31T16:29:26.721Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -884,7 +948,8 @@
     },
     "id": "analysis-weekplan (2)-007",
     "source": "analysis-weekplan (2).pdf",
-    "createdAt": "2026-03-31T16:29:26.721Z"
+    "createdAt": "2026-03-31T16:29:26.721Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "quiz",
@@ -902,7 +967,8 @@
     },
     "id": "analysis-weekplan (2)-008",
     "source": "analysis-weekplan (2).pdf",
-    "createdAt": "2026-03-31T16:29:26.721Z"
+    "createdAt": "2026-03-31T16:29:26.721Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -913,7 +979,8 @@
     },
     "id": "analysis-weekplan (2)-009",
     "source": "analysis-weekplan (2).pdf",
-    "createdAt": "2026-03-31T16:29:26.721Z"
+    "createdAt": "2026-03-31T16:29:26.721Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "flashcard",
@@ -925,7 +992,8 @@
     },
     "id": "analysis-weekplan (2)-010",
     "source": "analysis-weekplan (2).pdf",
-    "createdAt": "2026-03-31T16:29:26.721Z"
+    "createdAt": "2026-03-31T16:29:26.721Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -941,7 +1009,8 @@
     },
     "id": "analysis-weekplan (2)-011",
     "source": "analysis-weekplan (2).pdf",
-    "createdAt": "2026-03-31T16:29:26.721Z"
+    "createdAt": "2026-03-31T16:29:26.721Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -952,7 +1021,8 @@
     },
     "id": "analysis-weekplan-001",
     "source": "analysis-weekplan.pdf",
-    "createdAt": "2026-03-31T16:29:49.243Z"
+    "createdAt": "2026-03-31T16:29:49.243Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -968,7 +1038,8 @@
     },
     "id": "analysis-weekplan-002",
     "source": "analysis-weekplan.pdf",
-    "createdAt": "2026-03-31T16:29:49.243Z"
+    "createdAt": "2026-03-31T16:29:49.243Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -979,7 +1050,8 @@
     },
     "id": "analysis-weekplan-003",
     "source": "analysis-weekplan.pdf",
-    "createdAt": "2026-03-31T16:29:49.243Z"
+    "createdAt": "2026-03-31T16:29:49.243Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "flashcard",
@@ -991,7 +1063,8 @@
     },
     "id": "analysis-weekplan-004",
     "source": "analysis-weekplan.pdf",
-    "createdAt": "2026-03-31T16:29:49.243Z"
+    "createdAt": "2026-03-31T16:29:49.243Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -1008,7 +1081,8 @@
     },
     "id": "analysis-weekplan-005",
     "source": "analysis-weekplan.pdf",
-    "createdAt": "2026-03-31T16:29:49.243Z"
+    "createdAt": "2026-03-31T16:29:49.243Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -1019,7 +1093,8 @@
     },
     "id": "analysis-weekplan-006",
     "source": "analysis-weekplan.pdf",
-    "createdAt": "2026-03-31T16:29:49.243Z"
+    "createdAt": "2026-03-31T16:29:49.243Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "quiz",
@@ -1037,7 +1112,8 @@
     },
     "id": "analysis-weekplan-007",
     "source": "analysis-weekplan.pdf",
-    "createdAt": "2026-03-31T16:29:49.243Z"
+    "createdAt": "2026-03-31T16:29:49.243Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -1054,7 +1130,8 @@
     },
     "id": "analysis-weekplan-008",
     "source": "analysis-weekplan.pdf",
-    "createdAt": "2026-03-31T16:29:49.243Z"
+    "createdAt": "2026-03-31T16:29:49.243Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -1065,7 +1142,8 @@
     },
     "id": "analysis-weekplan-009",
     "source": "analysis-weekplan.pdf",
-    "createdAt": "2026-03-31T16:29:49.243Z"
+    "createdAt": "2026-03-31T16:29:49.243Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "flashcard",
@@ -1077,7 +1155,8 @@
     },
     "id": "analysis-weekplan-010",
     "source": "analysis-weekplan.pdf",
-    "createdAt": "2026-03-31T16:29:49.243Z"
+    "createdAt": "2026-03-31T16:29:49.243Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "quiz",
@@ -1095,7 +1174,8 @@
     },
     "id": "analysis-weekplan-011",
     "source": "analysis-weekplan.pdf",
-    "createdAt": "2026-03-31T16:29:49.243Z"
+    "createdAt": "2026-03-31T16:29:49.243Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -1106,7 +1186,8 @@
     },
     "id": "analysis-weekplan-012",
     "source": "analysis-weekplan.pdf",
-    "createdAt": "2026-03-31T16:29:49.243Z"
+    "createdAt": "2026-03-31T16:29:49.243Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -1117,7 +1198,8 @@
     },
     "id": "directedgraphs-weekplan-001",
     "source": "directedgraphs-weekplan.pdf",
-    "createdAt": "2026-03-31T16:30:06.568Z"
+    "createdAt": "2026-03-31T16:30:06.568Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -1133,7 +1215,8 @@
     },
     "id": "directedgraphs-weekplan-002",
     "source": "directedgraphs-weekplan.pdf",
-    "createdAt": "2026-03-31T16:30:06.568Z"
+    "createdAt": "2026-03-31T16:30:06.568Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -1144,7 +1227,8 @@
     },
     "id": "directedgraphs-weekplan-003",
     "source": "directedgraphs-weekplan.pdf",
-    "createdAt": "2026-03-31T16:30:06.568Z"
+    "createdAt": "2026-03-31T16:30:06.568Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -1161,7 +1245,8 @@
     },
     "id": "directedgraphs-weekplan-004",
     "source": "directedgraphs-weekplan.pdf",
-    "createdAt": "2026-03-31T16:30:06.568Z"
+    "createdAt": "2026-03-31T16:30:06.568Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "flashcard",
@@ -1173,7 +1258,8 @@
     },
     "id": "directedgraphs-weekplan-005",
     "source": "directedgraphs-weekplan.pdf",
-    "createdAt": "2026-03-31T16:30:06.568Z"
+    "createdAt": "2026-03-31T16:30:06.568Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -1184,7 +1270,8 @@
     },
     "id": "directedgraphs-weekplan-006",
     "source": "directedgraphs-weekplan.pdf",
-    "createdAt": "2026-03-31T16:30:06.568Z"
+    "createdAt": "2026-03-31T16:30:06.568Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -1200,7 +1287,8 @@
     },
     "id": "directedgraphs-weekplan-007",
     "source": "directedgraphs-weekplan.pdf",
-    "createdAt": "2026-03-31T16:30:06.568Z"
+    "createdAt": "2026-03-31T16:30:06.568Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "quiz",
@@ -1218,7 +1306,8 @@
     },
     "id": "directedgraphs-weekplan-008",
     "source": "directedgraphs-weekplan.pdf",
-    "createdAt": "2026-03-31T16:30:06.568Z"
+    "createdAt": "2026-03-31T16:30:06.568Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -1229,7 +1318,8 @@
     },
     "id": "directedgraphs-weekplan-009",
     "source": "directedgraphs-weekplan.pdf",
-    "createdAt": "2026-03-31T16:30:06.568Z"
+    "createdAt": "2026-03-31T16:30:06.568Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -1246,7 +1336,8 @@
     },
     "id": "directedgraphs-weekplan-010",
     "source": "directedgraphs-weekplan.pdf",
-    "createdAt": "2026-03-31T16:30:06.568Z"
+    "createdAt": "2026-03-31T16:30:06.568Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -1257,7 +1348,8 @@
     },
     "id": "directedgraphs4x1-001",
     "source": "directedgraphs4x1.pdf",
-    "createdAt": "2026-03-31T16:30:27.268Z"
+    "createdAt": "2026-03-31T16:30:27.268Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -1273,7 +1365,8 @@
     },
     "id": "directedgraphs4x1-002",
     "source": "directedgraphs4x1.pdf",
-    "createdAt": "2026-03-31T16:30:27.268Z"
+    "createdAt": "2026-03-31T16:30:27.268Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -1284,7 +1377,8 @@
     },
     "id": "directedgraphs4x1-003",
     "source": "directedgraphs4x1.pdf",
-    "createdAt": "2026-03-31T16:30:27.268Z"
+    "createdAt": "2026-03-31T16:30:27.268Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -1301,7 +1395,8 @@
     },
     "id": "directedgraphs4x1-004",
     "source": "directedgraphs4x1.pdf",
-    "createdAt": "2026-03-31T16:30:27.268Z"
+    "createdAt": "2026-03-31T16:30:27.268Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -1318,7 +1413,8 @@
     },
     "id": "directedgraphs4x1-005",
     "source": "directedgraphs4x1.pdf",
-    "createdAt": "2026-03-31T16:30:27.268Z"
+    "createdAt": "2026-03-31T16:30:27.268Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "flashcard",
@@ -1330,7 +1426,8 @@
     },
     "id": "directedgraphs4x1-006",
     "source": "directedgraphs4x1.pdf",
-    "createdAt": "2026-03-31T16:30:27.268Z"
+    "createdAt": "2026-03-31T16:30:27.268Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -1341,7 +1438,8 @@
     },
     "id": "directedgraphs4x1-007",
     "source": "directedgraphs4x1.pdf",
-    "createdAt": "2026-03-31T16:30:27.268Z"
+    "createdAt": "2026-03-31T16:30:27.268Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -1358,7 +1456,8 @@
     },
     "id": "directedgraphs4x1-008",
     "source": "directedgraphs4x1.pdf",
-    "createdAt": "2026-03-31T16:30:27.268Z"
+    "createdAt": "2026-03-31T16:30:27.268Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "quiz",
@@ -1376,7 +1475,8 @@
     },
     "id": "directedgraphs4x1-009",
     "source": "directedgraphs4x1.pdf",
-    "createdAt": "2026-03-31T16:30:27.268Z"
+    "createdAt": "2026-03-31T16:30:27.268Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -1387,7 +1487,8 @@
     },
     "id": "directedgraphs4x1-010",
     "source": "directedgraphs4x1.pdf",
-    "createdAt": "2026-03-31T16:30:27.268Z"
+    "createdAt": "2026-03-31T16:30:27.268Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -1398,7 +1499,8 @@
     },
     "id": "directedgraphs4x1-011",
     "source": "directedgraphs4x1.pdf",
-    "createdAt": "2026-03-31T16:30:27.268Z"
+    "createdAt": "2026-03-31T16:30:27.268Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -1409,7 +1511,8 @@
     },
     "id": "introduction-weekplan (1)-001",
     "source": "introduction-weekplan (1).pdf",
-    "createdAt": "2026-03-31T16:30:49.569Z"
+    "createdAt": "2026-03-31T16:30:49.569Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -1425,7 +1528,8 @@
     },
     "id": "introduction-weekplan (1)-002",
     "source": "introduction-weekplan (1).pdf",
-    "createdAt": "2026-03-31T16:30:49.569Z"
+    "createdAt": "2026-03-31T16:30:49.569Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -1436,7 +1540,8 @@
     },
     "id": "introduction-weekplan (1)-003",
     "source": "introduction-weekplan (1).pdf",
-    "createdAt": "2026-03-31T16:30:49.569Z"
+    "createdAt": "2026-03-31T16:30:49.569Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -1453,7 +1558,8 @@
     },
     "id": "introduction-weekplan (1)-004",
     "source": "introduction-weekplan (1).pdf",
-    "createdAt": "2026-03-31T16:30:49.569Z"
+    "createdAt": "2026-03-31T16:30:49.569Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "flashcard",
@@ -1465,7 +1571,8 @@
     },
     "id": "introduction-weekplan (1)-005",
     "source": "introduction-weekplan (1).pdf",
-    "createdAt": "2026-03-31T16:30:49.569Z"
+    "createdAt": "2026-03-31T16:30:49.569Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -1476,7 +1583,8 @@
     },
     "id": "introduction-weekplan (1)-006",
     "source": "introduction-weekplan (1).pdf",
-    "createdAt": "2026-03-31T16:30:49.569Z"
+    "createdAt": "2026-03-31T16:30:49.569Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -1492,7 +1600,8 @@
     },
     "id": "introduction-weekplan (1)-007",
     "source": "introduction-weekplan (1).pdf",
-    "createdAt": "2026-03-31T16:30:49.569Z"
+    "createdAt": "2026-03-31T16:30:49.569Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "quiz",
@@ -1510,7 +1619,8 @@
     },
     "id": "introduction-weekplan (1)-008",
     "source": "introduction-weekplan (1).pdf",
-    "createdAt": "2026-03-31T16:30:49.569Z"
+    "createdAt": "2026-03-31T16:30:49.569Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -1521,7 +1631,8 @@
     },
     "id": "introduction-weekplan (1)-009",
     "source": "introduction-weekplan (1).pdf",
-    "createdAt": "2026-03-31T16:30:49.569Z"
+    "createdAt": "2026-03-31T16:30:49.569Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -1537,7 +1648,8 @@
     },
     "id": "introduction-weekplan (1)-010",
     "source": "introduction-weekplan (1).pdf",
-    "createdAt": "2026-03-31T16:30:49.569Z"
+    "createdAt": "2026-03-31T16:30:49.569Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "flashcard",
@@ -1549,7 +1661,8 @@
     },
     "id": "introduction-weekplan (1)-011",
     "source": "introduction-weekplan (1).pdf",
-    "createdAt": "2026-03-31T16:30:49.569Z"
+    "createdAt": "2026-03-31T16:30:49.569Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "quiz",
@@ -1567,7 +1680,8 @@
     },
     "id": "introduction-weekplan (1)-012",
     "source": "introduction-weekplan (1).pdf",
-    "createdAt": "2026-03-31T16:30:49.569Z"
+    "createdAt": "2026-03-31T16:30:49.569Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -1578,7 +1692,8 @@
     },
     "id": "introduction-weekplan-001",
     "source": "introduction-weekplan.pdf",
-    "createdAt": "2026-03-31T16:31:10.512Z"
+    "createdAt": "2026-03-31T16:31:10.512Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -1594,7 +1709,8 @@
     },
     "id": "introduction-weekplan-002",
     "source": "introduction-weekplan.pdf",
-    "createdAt": "2026-03-31T16:31:10.512Z"
+    "createdAt": "2026-03-31T16:31:10.512Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -1605,7 +1721,8 @@
     },
     "id": "introduction-weekplan-003",
     "source": "introduction-weekplan.pdf",
-    "createdAt": "2026-03-31T16:31:10.512Z"
+    "createdAt": "2026-03-31T16:31:10.512Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "flashcard",
@@ -1617,7 +1734,8 @@
     },
     "id": "introduction-weekplan-004",
     "source": "introduction-weekplan.pdf",
-    "createdAt": "2026-03-31T16:31:10.512Z"
+    "createdAt": "2026-03-31T16:31:10.512Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -1634,7 +1752,8 @@
     },
     "id": "introduction-weekplan-005",
     "source": "introduction-weekplan.pdf",
-    "createdAt": "2026-03-31T16:31:10.512Z"
+    "createdAt": "2026-03-31T16:31:10.512Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -1645,7 +1764,8 @@
     },
     "id": "introduction-weekplan-006",
     "source": "introduction-weekplan.pdf",
-    "createdAt": "2026-03-31T16:31:10.512Z"
+    "createdAt": "2026-03-31T16:31:10.512Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "quiz",
@@ -1663,7 +1783,8 @@
     },
     "id": "introduction-weekplan-007",
     "source": "introduction-weekplan.pdf",
-    "createdAt": "2026-03-31T16:31:10.512Z"
+    "createdAt": "2026-03-31T16:31:10.512Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -1674,7 +1795,8 @@
     },
     "id": "introduction-weekplan-008",
     "source": "introduction-weekplan.pdf",
-    "createdAt": "2026-03-31T16:31:10.512Z"
+    "createdAt": "2026-03-31T16:31:10.512Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -1690,7 +1812,8 @@
     },
     "id": "introduction-weekplan-009",
     "source": "introduction-weekplan.pdf",
-    "createdAt": "2026-03-31T16:31:10.512Z"
+    "createdAt": "2026-03-31T16:31:10.512Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "flashcard",
@@ -1702,7 +1825,8 @@
     },
     "id": "introduction-weekplan-010",
     "source": "introduction-weekplan.pdf",
-    "createdAt": "2026-03-31T16:31:10.512Z"
+    "createdAt": "2026-03-31T16:31:10.512Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -1713,7 +1837,8 @@
     },
     "id": "IntroProgStackandQueues-001",
     "source": "IntroProgStackandQueues.pdf",
-    "createdAt": "2026-03-31T16:31:17.181Z"
+    "createdAt": "2026-03-31T16:31:17.181Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -1729,7 +1854,8 @@
     },
     "id": "IntroProgStackandQueues-002",
     "source": "IntroProgStackandQueues.pdf",
-    "createdAt": "2026-03-31T16:31:17.181Z"
+    "createdAt": "2026-03-31T16:31:17.181Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "flashcard",
@@ -1741,7 +1867,8 @@
     },
     "id": "IntroProgStackandQueues-003",
     "source": "IntroProgStackandQueues.pdf",
-    "createdAt": "2026-03-31T16:31:17.181Z"
+    "createdAt": "2026-03-31T16:31:17.181Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -1752,7 +1879,8 @@
     },
     "id": "introtodatastructures-weekplan (1)-001",
     "source": "introtodatastructures-weekplan (1).pdf",
-    "createdAt": "2026-03-31T16:31:38.702Z"
+    "createdAt": "2026-03-31T16:31:38.702Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -1763,7 +1891,8 @@
     },
     "id": "introtodatastructures-weekplan (1)-002",
     "source": "introtodatastructures-weekplan (1).pdf",
-    "createdAt": "2026-03-31T16:31:38.702Z"
+    "createdAt": "2026-03-31T16:31:38.702Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -1780,7 +1909,8 @@
     },
     "id": "introtodatastructures-weekplan (1)-003",
     "source": "introtodatastructures-weekplan (1).pdf",
-    "createdAt": "2026-03-31T16:31:38.702Z"
+    "createdAt": "2026-03-31T16:31:38.702Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -1791,7 +1921,8 @@
     },
     "id": "introtodatastructures-weekplan (1)-004",
     "source": "introtodatastructures-weekplan (1).pdf",
-    "createdAt": "2026-03-31T16:31:38.702Z"
+    "createdAt": "2026-03-31T16:31:38.702Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "flashcard",
@@ -1803,7 +1934,8 @@
     },
     "id": "introtodatastructures-weekplan (1)-005",
     "source": "introtodatastructures-weekplan (1).pdf",
-    "createdAt": "2026-03-31T16:31:38.702Z"
+    "createdAt": "2026-03-31T16:31:38.702Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -1820,7 +1952,8 @@
     },
     "id": "introtodatastructures-weekplan (1)-006",
     "source": "introtodatastructures-weekplan (1).pdf",
-    "createdAt": "2026-03-31T16:31:38.702Z"
+    "createdAt": "2026-03-31T16:31:38.702Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -1831,7 +1964,8 @@
     },
     "id": "introtodatastructures-weekplan (1)-007",
     "source": "introtodatastructures-weekplan (1).pdf",
-    "createdAt": "2026-03-31T16:31:38.702Z"
+    "createdAt": "2026-03-31T16:31:38.702Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "quiz",
@@ -1849,7 +1983,8 @@
     },
     "id": "introtodatastructures-weekplan (1)-008",
     "source": "introtodatastructures-weekplan (1).pdf",
-    "createdAt": "2026-03-31T16:31:38.702Z"
+    "createdAt": "2026-03-31T16:31:38.702Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -1860,7 +1995,8 @@
     },
     "id": "introtodatastructures-weekplan (1)-009",
     "source": "introtodatastructures-weekplan (1).pdf",
-    "createdAt": "2026-03-31T16:31:38.702Z"
+    "createdAt": "2026-03-31T16:31:38.702Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -1877,7 +2013,8 @@
     },
     "id": "introtodatastructures-weekplan (1)-010",
     "source": "introtodatastructures-weekplan (1).pdf",
-    "createdAt": "2026-03-31T16:31:38.702Z"
+    "createdAt": "2026-03-31T16:31:38.702Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -1888,7 +2025,8 @@
     },
     "id": "introtodatastructures-weekplan (1)-011",
     "source": "introtodatastructures-weekplan (1).pdf",
-    "createdAt": "2026-03-31T16:31:38.702Z"
+    "createdAt": "2026-03-31T16:31:38.702Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "flashcard",
@@ -1900,7 +2038,8 @@
     },
     "id": "introtodatastructures-weekplan (1)-012",
     "source": "introtodatastructures-weekplan (1).pdf",
-    "createdAt": "2026-03-31T16:31:38.702Z"
+    "createdAt": "2026-03-31T16:31:38.702Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -1911,7 +2050,8 @@
     },
     "id": "introtodatastructures-weekplan-001",
     "source": "introtodatastructures-weekplan.pdf",
-    "createdAt": "2026-03-31T16:31:56.946Z"
+    "createdAt": "2026-03-31T16:31:56.946Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -1922,7 +2062,8 @@
     },
     "id": "introtodatastructures-weekplan-002",
     "source": "introtodatastructures-weekplan.pdf",
-    "createdAt": "2026-03-31T16:31:56.946Z"
+    "createdAt": "2026-03-31T16:31:56.946Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -1938,7 +2079,8 @@
     },
     "id": "introtodatastructures-weekplan-003",
     "source": "introtodatastructures-weekplan.pdf",
-    "createdAt": "2026-03-31T16:31:56.946Z"
+    "createdAt": "2026-03-31T16:31:56.946Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "flashcard",
@@ -1950,7 +2092,8 @@
     },
     "id": "introtodatastructures-weekplan-004",
     "source": "introtodatastructures-weekplan.pdf",
-    "createdAt": "2026-03-31T16:31:56.946Z"
+    "createdAt": "2026-03-31T16:31:56.946Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -1966,7 +2109,8 @@
     },
     "id": "introtodatastructures-weekplan-005",
     "source": "introtodatastructures-weekplan.pdf",
-    "createdAt": "2026-03-31T16:31:56.946Z"
+    "createdAt": "2026-03-31T16:31:56.946Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -1977,7 +2121,8 @@
     },
     "id": "introtodatastructures-weekplan-006",
     "source": "introtodatastructures-weekplan.pdf",
-    "createdAt": "2026-03-31T16:31:56.946Z"
+    "createdAt": "2026-03-31T16:31:56.946Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "quiz",
@@ -1995,7 +2140,8 @@
     },
     "id": "introtodatastructures-weekplan-007",
     "source": "introtodatastructures-weekplan.pdf",
-    "createdAt": "2026-03-31T16:31:56.946Z"
+    "createdAt": "2026-03-31T16:31:56.946Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -2006,7 +2152,8 @@
     },
     "id": "introtodatastructures-weekplan-008",
     "source": "introtodatastructures-weekplan.pdf",
-    "createdAt": "2026-03-31T16:31:56.946Z"
+    "createdAt": "2026-03-31T16:31:56.946Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -2022,7 +2169,8 @@
     },
     "id": "introtodatastructures-weekplan-009",
     "source": "introtodatastructures-weekplan.pdf",
-    "createdAt": "2026-03-31T16:31:56.946Z"
+    "createdAt": "2026-03-31T16:31:56.946Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -2033,7 +2181,8 @@
     },
     "id": "introtodatastructures-weekplan-010",
     "source": "introtodatastructures-weekplan.pdf",
-    "createdAt": "2026-03-31T16:31:56.946Z"
+    "createdAt": "2026-03-31T16:31:56.946Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -2044,7 +2193,8 @@
     },
     "id": "introtographs-weekplan-001",
     "source": "introtographs-weekplan.pdf",
-    "createdAt": "2026-03-31T16:32:16.039Z"
+    "createdAt": "2026-03-31T16:32:16.039Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -2061,7 +2211,8 @@
     },
     "id": "introtographs-weekplan-002",
     "source": "introtographs-weekplan.pdf",
-    "createdAt": "2026-03-31T16:32:16.039Z"
+    "createdAt": "2026-03-31T16:32:16.039Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -2072,7 +2223,8 @@
     },
     "id": "introtographs-weekplan-003",
     "source": "introtographs-weekplan.pdf",
-    "createdAt": "2026-03-31T16:32:16.039Z"
+    "createdAt": "2026-03-31T16:32:16.039Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -2083,7 +2235,8 @@
     },
     "id": "introtographs-weekplan-004",
     "source": "introtographs-weekplan.pdf",
-    "createdAt": "2026-03-31T16:32:16.039Z"
+    "createdAt": "2026-03-31T16:32:16.039Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -2100,7 +2253,8 @@
     },
     "id": "introtographs-weekplan-005",
     "source": "introtographs-weekplan.pdf",
-    "createdAt": "2026-03-31T16:32:16.039Z"
+    "createdAt": "2026-03-31T16:32:16.039Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "flashcard",
@@ -2112,7 +2266,8 @@
     },
     "id": "introtographs-weekplan-006",
     "source": "introtographs-weekplan.pdf",
-    "createdAt": "2026-03-31T16:32:16.039Z"
+    "createdAt": "2026-03-31T16:32:16.039Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -2123,7 +2278,8 @@
     },
     "id": "introtographs-weekplan-007",
     "source": "introtographs-weekplan.pdf",
-    "createdAt": "2026-03-31T16:32:16.039Z"
+    "createdAt": "2026-03-31T16:32:16.039Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -2140,7 +2296,8 @@
     },
     "id": "introtographs-weekplan-008",
     "source": "introtographs-weekplan.pdf",
-    "createdAt": "2026-03-31T16:32:16.039Z"
+    "createdAt": "2026-03-31T16:32:16.039Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -2151,7 +2308,8 @@
     },
     "id": "introtographs-weekplan-009",
     "source": "introtographs-weekplan.pdf",
-    "createdAt": "2026-03-31T16:32:16.039Z"
+    "createdAt": "2026-03-31T16:32:16.039Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "quiz",
@@ -2169,7 +2327,8 @@
     },
     "id": "introtographs-weekplan-010",
     "source": "introtographs-weekplan.pdf",
-    "createdAt": "2026-03-31T16:32:16.039Z"
+    "createdAt": "2026-03-31T16:32:16.039Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -2180,7 +2339,8 @@
     },
     "id": "introtographs-weekplan-011",
     "source": "introtographs-weekplan.pdf",
-    "createdAt": "2026-03-31T16:32:16.039Z"
+    "createdAt": "2026-03-31T16:32:16.039Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "flashcard",
@@ -2192,7 +2352,8 @@
     },
     "id": "introtographs-weekplan-012",
     "source": "introtographs-weekplan.pdf",
-    "createdAt": "2026-03-31T16:32:16.039Z"
+    "createdAt": "2026-03-31T16:32:16.039Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -2203,7 +2364,8 @@
     },
     "id": "introtographs4x1-001",
     "source": "introtographs4x1.pdf",
-    "createdAt": "2026-03-31T16:32:33.567Z"
+    "createdAt": "2026-03-31T16:32:33.567Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -2220,7 +2382,8 @@
     },
     "id": "introtographs4x1-002",
     "source": "introtographs4x1.pdf",
-    "createdAt": "2026-03-31T16:32:33.567Z"
+    "createdAt": "2026-03-31T16:32:33.567Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -2231,7 +2394,8 @@
     },
     "id": "introtographs4x1-003",
     "source": "introtographs4x1.pdf",
-    "createdAt": "2026-03-31T16:32:33.567Z"
+    "createdAt": "2026-03-31T16:32:33.567Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -2248,7 +2412,8 @@
     },
     "id": "introtographs4x1-004",
     "source": "introtographs4x1.pdf",
-    "createdAt": "2026-03-31T16:32:33.567Z"
+    "createdAt": "2026-03-31T16:32:33.567Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -2265,7 +2430,8 @@
     },
     "id": "introtographs4x1-005",
     "source": "introtographs4x1.pdf",
-    "createdAt": "2026-03-31T16:32:33.567Z"
+    "createdAt": "2026-03-31T16:32:33.567Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -2276,7 +2442,8 @@
     },
     "id": "introtographs4x1-006",
     "source": "introtographs4x1.pdf",
-    "createdAt": "2026-03-31T16:32:33.567Z"
+    "createdAt": "2026-03-31T16:32:33.567Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -2293,7 +2460,8 @@
     },
     "id": "introtographs4x1-007",
     "source": "introtographs4x1.pdf",
-    "createdAt": "2026-03-31T16:32:33.567Z"
+    "createdAt": "2026-03-31T16:32:33.567Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "flashcard",
@@ -2305,7 +2473,8 @@
     },
     "id": "introtographs4x1-008",
     "source": "introtographs4x1.pdf",
-    "createdAt": "2026-03-31T16:32:33.567Z"
+    "createdAt": "2026-03-31T16:32:33.567Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "quiz",
@@ -2323,7 +2492,8 @@
     },
     "id": "introtographs4x1-009",
     "source": "introtographs4x1.pdf",
-    "createdAt": "2026-03-31T16:32:33.567Z"
+    "createdAt": "2026-03-31T16:32:33.567Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -2334,7 +2504,8 @@
     },
     "id": "introtographs4x1-010",
     "source": "introtographs4x1.pdf",
-    "createdAt": "2026-03-31T16:32:33.567Z"
+    "createdAt": "2026-03-31T16:32:33.567Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -2345,7 +2516,8 @@
     },
     "id": "minimumspanningtrees-weekplan-001",
     "source": "minimumspanningtrees-weekplan.pdf",
-    "createdAt": "2026-03-31T16:32:54.196Z"
+    "createdAt": "2026-03-31T16:32:54.196Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -2362,7 +2534,8 @@
     },
     "id": "minimumspanningtrees-weekplan-002",
     "source": "minimumspanningtrees-weekplan.pdf",
-    "createdAt": "2026-03-31T16:32:54.196Z"
+    "createdAt": "2026-03-31T16:32:54.196Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -2379,7 +2552,8 @@
     },
     "id": "minimumspanningtrees-weekplan-003",
     "source": "minimumspanningtrees-weekplan.pdf",
-    "createdAt": "2026-03-31T16:32:54.196Z"
+    "createdAt": "2026-03-31T16:32:54.196Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -2390,7 +2564,8 @@
     },
     "id": "minimumspanningtrees-weekplan-004",
     "source": "minimumspanningtrees-weekplan.pdf",
-    "createdAt": "2026-03-31T16:32:54.196Z"
+    "createdAt": "2026-03-31T16:32:54.196Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "flashcard",
@@ -2402,7 +2577,8 @@
     },
     "id": "minimumspanningtrees-weekplan-005",
     "source": "minimumspanningtrees-weekplan.pdf",
-    "createdAt": "2026-03-31T16:32:54.196Z"
+    "createdAt": "2026-03-31T16:32:54.196Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -2413,7 +2589,8 @@
     },
     "id": "minimumspanningtrees-weekplan-006",
     "source": "minimumspanningtrees-weekplan.pdf",
-    "createdAt": "2026-03-31T16:32:54.196Z"
+    "createdAt": "2026-03-31T16:32:54.196Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -2430,7 +2607,8 @@
     },
     "id": "minimumspanningtrees-weekplan-007",
     "source": "minimumspanningtrees-weekplan.pdf",
-    "createdAt": "2026-03-31T16:32:54.196Z"
+    "createdAt": "2026-03-31T16:32:54.196Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "quiz",
@@ -2448,7 +2626,8 @@
     },
     "id": "minimumspanningtrees-weekplan-008",
     "source": "minimumspanningtrees-weekplan.pdf",
-    "createdAt": "2026-03-31T16:32:54.196Z"
+    "createdAt": "2026-03-31T16:32:54.196Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -2459,7 +2638,8 @@
     },
     "id": "minimumspanningtrees-weekplan-009",
     "source": "minimumspanningtrees-weekplan.pdf",
-    "createdAt": "2026-03-31T16:32:54.196Z"
+    "createdAt": "2026-03-31T16:32:54.196Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "flashcard",
@@ -2471,7 +2651,8 @@
     },
     "id": "minimumspanningtrees-weekplan-010",
     "source": "minimumspanningtrees-weekplan.pdf",
-    "createdAt": "2026-03-31T16:32:54.196Z"
+    "createdAt": "2026-03-31T16:32:54.196Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -2482,7 +2663,8 @@
     },
     "id": "minimumspanningtrees-weekplan-011",
     "source": "minimumspanningtrees-weekplan.pdf",
-    "createdAt": "2026-03-31T16:32:54.196Z"
+    "createdAt": "2026-03-31T16:32:54.196Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -2493,7 +2675,8 @@
     },
     "id": "minimumspanningtrees4x1-001",
     "source": "minimumspanningtrees4x1.pdf",
-    "createdAt": "2026-03-31T16:33:12.811Z"
+    "createdAt": "2026-03-31T16:33:12.811Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -2509,7 +2692,8 @@
     },
     "id": "minimumspanningtrees4x1-002",
     "source": "minimumspanningtrees4x1.pdf",
-    "createdAt": "2026-03-31T16:33:12.811Z"
+    "createdAt": "2026-03-31T16:33:12.811Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -2520,7 +2704,8 @@
     },
     "id": "minimumspanningtrees4x1-003",
     "source": "minimumspanningtrees4x1.pdf",
-    "createdAt": "2026-03-31T16:33:12.811Z"
+    "createdAt": "2026-03-31T16:33:12.811Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -2536,7 +2721,8 @@
     },
     "id": "minimumspanningtrees4x1-004",
     "source": "minimumspanningtrees4x1.pdf",
-    "createdAt": "2026-03-31T16:33:12.811Z"
+    "createdAt": "2026-03-31T16:33:12.811Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -2547,7 +2733,8 @@
     },
     "id": "minimumspanningtrees4x1-005",
     "source": "minimumspanningtrees4x1.pdf",
-    "createdAt": "2026-03-31T16:33:12.811Z"
+    "createdAt": "2026-03-31T16:33:12.811Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -2564,7 +2751,8 @@
     },
     "id": "minimumspanningtrees4x1-006",
     "source": "minimumspanningtrees4x1.pdf",
-    "createdAt": "2026-03-31T16:33:12.811Z"
+    "createdAt": "2026-03-31T16:33:12.811Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -2575,7 +2763,8 @@
     },
     "id": "minimumspanningtrees4x1-007",
     "source": "minimumspanningtrees4x1.pdf",
-    "createdAt": "2026-03-31T16:33:12.811Z"
+    "createdAt": "2026-03-31T16:33:12.811Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -2592,7 +2781,8 @@
     },
     "id": "minimumspanningtrees4x1-008",
     "source": "minimumspanningtrees4x1.pdf",
-    "createdAt": "2026-03-31T16:33:12.811Z"
+    "createdAt": "2026-03-31T16:33:12.811Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "flashcard",
@@ -2604,7 +2794,8 @@
     },
     "id": "minimumspanningtrees4x1-009",
     "source": "minimumspanningtrees4x1.pdf",
-    "createdAt": "2026-03-31T16:33:12.811Z"
+    "createdAt": "2026-03-31T16:33:12.811Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -2615,7 +2806,8 @@
     },
     "id": "minimumspanningtrees4x1-010",
     "source": "minimumspanningtrees4x1.pdf",
-    "createdAt": "2026-03-31T16:33:12.811Z"
+    "createdAt": "2026-03-31T16:33:12.811Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -2631,7 +2823,8 @@
     },
     "id": "minimumspanningtrees4x1-011",
     "source": "minimumspanningtrees4x1.pdf",
-    "createdAt": "2026-03-31T16:33:12.811Z"
+    "createdAt": "2026-03-31T16:33:12.811Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "quiz",
@@ -2649,7 +2842,8 @@
     },
     "id": "minimumspanningtrees4x1-012",
     "source": "minimumspanningtrees4x1.pdf",
-    "createdAt": "2026-03-31T16:33:12.811Z"
+    "createdAt": "2026-03-31T16:33:12.811Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -2660,7 +2854,8 @@
     },
     "id": "partialsums-001",
     "source": "partialsums.pdf",
-    "createdAt": "2026-03-31T16:33:32.738Z"
+    "createdAt": "2026-03-31T16:33:32.738Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -2676,7 +2871,8 @@
     },
     "id": "partialsums-002",
     "source": "partialsums.pdf",
-    "createdAt": "2026-03-31T16:33:32.738Z"
+    "createdAt": "2026-03-31T16:33:32.738Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -2687,7 +2883,8 @@
     },
     "id": "partialsums-003",
     "source": "partialsums.pdf",
-    "createdAt": "2026-03-31T16:33:32.738Z"
+    "createdAt": "2026-03-31T16:33:32.738Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -2704,7 +2901,8 @@
     },
     "id": "partialsums-004",
     "source": "partialsums.pdf",
-    "createdAt": "2026-03-31T16:33:32.738Z"
+    "createdAt": "2026-03-31T16:33:32.738Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -2715,7 +2913,8 @@
     },
     "id": "partialsums-005",
     "source": "partialsums.pdf",
-    "createdAt": "2026-03-31T16:33:32.738Z"
+    "createdAt": "2026-03-31T16:33:32.738Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "flashcard",
@@ -2727,7 +2926,8 @@
     },
     "id": "partialsums-006",
     "source": "partialsums.pdf",
-    "createdAt": "2026-03-31T16:33:32.738Z"
+    "createdAt": "2026-03-31T16:33:32.738Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -2744,7 +2944,8 @@
     },
     "id": "partialsums-007",
     "source": "partialsums.pdf",
-    "createdAt": "2026-03-31T16:33:32.738Z"
+    "createdAt": "2026-03-31T16:33:32.738Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -2755,7 +2956,8 @@
     },
     "id": "partialsums-008",
     "source": "partialsums.pdf",
-    "createdAt": "2026-03-31T16:33:32.738Z"
+    "createdAt": "2026-03-31T16:33:32.738Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "quiz",
@@ -2773,7 +2975,8 @@
     },
     "id": "partialsums-009",
     "source": "partialsums.pdf",
-    "createdAt": "2026-03-31T16:33:32.738Z"
+    "createdAt": "2026-03-31T16:33:32.738Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -2790,7 +2993,8 @@
     },
     "id": "partialsums-010",
     "source": "partialsums.pdf",
-    "createdAt": "2026-03-31T16:33:32.738Z"
+    "createdAt": "2026-03-31T16:33:32.738Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -2801,7 +3005,8 @@
     },
     "id": "priorityqueues-weekplan-001",
     "source": "priorityqueues-weekplan.pdf",
-    "createdAt": "2026-03-31T16:33:52.977Z"
+    "createdAt": "2026-03-31T16:33:52.977Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -2817,7 +3022,8 @@
     },
     "id": "priorityqueues-weekplan-002",
     "source": "priorityqueues-weekplan.pdf",
-    "createdAt": "2026-03-31T16:33:52.977Z"
+    "createdAt": "2026-03-31T16:33:52.977Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -2828,7 +3034,8 @@
     },
     "id": "priorityqueues-weekplan-003",
     "source": "priorityqueues-weekplan.pdf",
-    "createdAt": "2026-03-31T16:33:52.977Z"
+    "createdAt": "2026-03-31T16:33:52.977Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -2844,7 +3051,8 @@
     },
     "id": "priorityqueues-weekplan-004",
     "source": "priorityqueues-weekplan.pdf",
-    "createdAt": "2026-03-31T16:33:52.977Z"
+    "createdAt": "2026-03-31T16:33:52.977Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "flashcard",
@@ -2856,7 +3064,8 @@
     },
     "id": "priorityqueues-weekplan-005",
     "source": "priorityqueues-weekplan.pdf",
-    "createdAt": "2026-03-31T16:33:52.977Z"
+    "createdAt": "2026-03-31T16:33:52.977Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -2867,7 +3076,8 @@
     },
     "id": "priorityqueues-weekplan-006",
     "source": "priorityqueues-weekplan.pdf",
-    "createdAt": "2026-03-31T16:33:52.977Z"
+    "createdAt": "2026-03-31T16:33:52.977Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -2883,7 +3093,8 @@
     },
     "id": "priorityqueues-weekplan-007",
     "source": "priorityqueues-weekplan.pdf",
-    "createdAt": "2026-03-31T16:33:52.977Z"
+    "createdAt": "2026-03-31T16:33:52.977Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -2894,7 +3105,8 @@
     },
     "id": "priorityqueues-weekplan-008",
     "source": "priorityqueues-weekplan.pdf",
-    "createdAt": "2026-03-31T16:33:52.977Z"
+    "createdAt": "2026-03-31T16:33:52.977Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "quiz",
@@ -2912,7 +3124,8 @@
     },
     "id": "priorityqueues-weekplan-009",
     "source": "priorityqueues-weekplan.pdf",
-    "createdAt": "2026-03-31T16:33:52.977Z"
+    "createdAt": "2026-03-31T16:33:52.977Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -2923,7 +3136,8 @@
     },
     "id": "priorityqueues-weekplan-010",
     "source": "priorityqueues-weekplan.pdf",
-    "createdAt": "2026-03-31T16:33:52.977Z"
+    "createdAt": "2026-03-31T16:33:52.977Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -2939,7 +3153,8 @@
     },
     "id": "priorityqueues-weekplan-011",
     "source": "priorityqueues-weekplan.pdf",
-    "createdAt": "2026-03-31T16:33:52.977Z"
+    "createdAt": "2026-03-31T16:33:52.977Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "flashcard",
@@ -2951,7 +3166,8 @@
     },
     "id": "priorityqueues-weekplan-012",
     "source": "priorityqueues-weekplan.pdf",
-    "createdAt": "2026-03-31T16:33:52.977Z"
+    "createdAt": "2026-03-31T16:33:52.977Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -2962,7 +3178,8 @@
     },
     "id": "priorityqueues4x1-001",
     "source": "priorityqueues4x1.pdf",
-    "createdAt": "2026-03-31T16:34:12.975Z"
+    "createdAt": "2026-03-31T16:34:12.975Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -2978,7 +3195,8 @@
     },
     "id": "priorityqueues4x1-002",
     "source": "priorityqueues4x1.pdf",
-    "createdAt": "2026-03-31T16:34:12.975Z"
+    "createdAt": "2026-03-31T16:34:12.975Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -2995,7 +3213,8 @@
     },
     "id": "priorityqueues4x1-003",
     "source": "priorityqueues4x1.pdf",
-    "createdAt": "2026-03-31T16:34:12.975Z"
+    "createdAt": "2026-03-31T16:34:12.975Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -3006,7 +3225,8 @@
     },
     "id": "priorityqueues4x1-004",
     "source": "priorityqueues4x1.pdf",
-    "createdAt": "2026-03-31T16:34:12.975Z"
+    "createdAt": "2026-03-31T16:34:12.975Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -3023,7 +3243,8 @@
     },
     "id": "priorityqueues4x1-005",
     "source": "priorityqueues4x1.pdf",
-    "createdAt": "2026-03-31T16:34:12.975Z"
+    "createdAt": "2026-03-31T16:34:12.975Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -3034,7 +3255,8 @@
     },
     "id": "priorityqueues4x1-006",
     "source": "priorityqueues4x1.pdf",
-    "createdAt": "2026-03-31T16:34:12.975Z"
+    "createdAt": "2026-03-31T16:34:12.975Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -3050,7 +3272,8 @@
     },
     "id": "priorityqueues4x1-007",
     "source": "priorityqueues4x1.pdf",
-    "createdAt": "2026-03-31T16:34:12.975Z"
+    "createdAt": "2026-03-31T16:34:12.975Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "flashcard",
@@ -3062,7 +3285,8 @@
     },
     "id": "priorityqueues4x1-008",
     "source": "priorityqueues4x1.pdf",
-    "createdAt": "2026-03-31T16:34:12.975Z"
+    "createdAt": "2026-03-31T16:34:12.975Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -3073,7 +3297,8 @@
     },
     "id": "priorityqueues4x1-009",
     "source": "priorityqueues4x1.pdf",
-    "createdAt": "2026-03-31T16:34:12.975Z"
+    "createdAt": "2026-03-31T16:34:12.975Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -3090,7 +3315,8 @@
     },
     "id": "priorityqueues4x1-010",
     "source": "priorityqueues4x1.pdf",
-    "createdAt": "2026-03-31T16:34:12.975Z"
+    "createdAt": "2026-03-31T16:34:12.975Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "quiz",
@@ -3108,7 +3334,8 @@
     },
     "id": "priorityqueues4x1-011",
     "source": "priorityqueues4x1.pdf",
-    "createdAt": "2026-03-31T16:34:12.975Z"
+    "createdAt": "2026-03-31T16:34:12.975Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "flashcard",
@@ -3120,7 +3347,8 @@
     },
     "id": "priorityqueues4x1-012",
     "source": "priorityqueues4x1.pdf",
-    "createdAt": "2026-03-31T16:34:12.975Z"
+    "createdAt": "2026-03-31T16:34:12.975Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -3131,7 +3359,8 @@
     },
     "id": "searchingandsorting-weekplan-001",
     "source": "searchingandsorting-weekplan.pdf",
-    "createdAt": "2026-03-31T16:34:31.365Z"
+    "createdAt": "2026-03-31T16:34:31.365Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -3142,7 +3371,8 @@
     },
     "id": "searchingandsorting-weekplan-002",
     "source": "searchingandsorting-weekplan.pdf",
-    "createdAt": "2026-03-31T16:34:31.365Z"
+    "createdAt": "2026-03-31T16:34:31.365Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -3158,7 +3388,8 @@
     },
     "id": "searchingandsorting-weekplan-003",
     "source": "searchingandsorting-weekplan.pdf",
-    "createdAt": "2026-03-31T16:34:31.365Z"
+    "createdAt": "2026-03-31T16:34:31.365Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -3169,7 +3400,8 @@
     },
     "id": "searchingandsorting-weekplan-004",
     "source": "searchingandsorting-weekplan.pdf",
-    "createdAt": "2026-03-31T16:34:31.365Z"
+    "createdAt": "2026-03-31T16:34:31.365Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -3185,7 +3417,8 @@
     },
     "id": "searchingandsorting-weekplan-005",
     "source": "searchingandsorting-weekplan.pdf",
-    "createdAt": "2026-03-31T16:34:31.365Z"
+    "createdAt": "2026-03-31T16:34:31.365Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "flashcard",
@@ -3197,7 +3430,8 @@
     },
     "id": "searchingandsorting-weekplan-006",
     "source": "searchingandsorting-weekplan.pdf",
-    "createdAt": "2026-03-31T16:34:31.365Z"
+    "createdAt": "2026-03-31T16:34:31.365Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -3208,7 +3442,8 @@
     },
     "id": "searchingandsorting-weekplan-007",
     "source": "searchingandsorting-weekplan.pdf",
-    "createdAt": "2026-03-31T16:34:31.365Z"
+    "createdAt": "2026-03-31T16:34:31.365Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -3224,7 +3459,8 @@
     },
     "id": "searchingandsorting-weekplan-008",
     "source": "searchingandsorting-weekplan.pdf",
-    "createdAt": "2026-03-31T16:34:31.365Z"
+    "createdAt": "2026-03-31T16:34:31.365Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "quiz",
@@ -3242,7 +3478,8 @@
     },
     "id": "searchingandsorting-weekplan-009",
     "source": "searchingandsorting-weekplan.pdf",
-    "createdAt": "2026-03-31T16:34:31.365Z"
+    "createdAt": "2026-03-31T16:34:31.365Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -3253,7 +3490,8 @@
     },
     "id": "searchingandsorting-weekplan-010",
     "source": "searchingandsorting-weekplan.pdf",
-    "createdAt": "2026-03-31T16:34:31.365Z"
+    "createdAt": "2026-03-31T16:34:31.365Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -3269,7 +3507,8 @@
     },
     "id": "searchingandsorting-weekplan-011",
     "source": "searchingandsorting-weekplan.pdf",
-    "createdAt": "2026-03-31T16:34:31.365Z"
+    "createdAt": "2026-03-31T16:34:31.365Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -3280,7 +3519,8 @@
     },
     "id": "searchtrees-weekplan-001",
     "source": "searchtrees-weekplan.pdf",
-    "createdAt": "2026-03-31T16:34:50.416Z"
+    "createdAt": "2026-03-31T16:34:50.416Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -3297,7 +3537,8 @@
     },
     "id": "searchtrees-weekplan-002",
     "source": "searchtrees-weekplan.pdf",
-    "createdAt": "2026-03-31T16:34:50.416Z"
+    "createdAt": "2026-03-31T16:34:50.416Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -3308,7 +3549,8 @@
     },
     "id": "searchtrees-weekplan-003",
     "source": "searchtrees-weekplan.pdf",
-    "createdAt": "2026-03-31T16:34:50.416Z"
+    "createdAt": "2026-03-31T16:34:50.416Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "flashcard",
@@ -3320,7 +3562,8 @@
     },
     "id": "searchtrees-weekplan-004",
     "source": "searchtrees-weekplan.pdf",
-    "createdAt": "2026-03-31T16:34:50.416Z"
+    "createdAt": "2026-03-31T16:34:50.416Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -3331,7 +3574,8 @@
     },
     "id": "searchtrees-weekplan-005",
     "source": "searchtrees-weekplan.pdf",
-    "createdAt": "2026-03-31T16:34:50.416Z"
+    "createdAt": "2026-03-31T16:34:50.416Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -3348,7 +3592,8 @@
     },
     "id": "searchtrees-weekplan-006",
     "source": "searchtrees-weekplan.pdf",
-    "createdAt": "2026-03-31T16:34:50.416Z"
+    "createdAt": "2026-03-31T16:34:50.416Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -3359,7 +3604,8 @@
     },
     "id": "searchtrees-weekplan-007",
     "source": "searchtrees-weekplan.pdf",
-    "createdAt": "2026-03-31T16:34:50.416Z"
+    "createdAt": "2026-03-31T16:34:50.416Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -3375,7 +3621,8 @@
     },
     "id": "searchtrees-weekplan-008",
     "source": "searchtrees-weekplan.pdf",
-    "createdAt": "2026-03-31T16:34:50.416Z"
+    "createdAt": "2026-03-31T16:34:50.416Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "quiz",
@@ -3393,7 +3640,8 @@
     },
     "id": "searchtrees-weekplan-009",
     "source": "searchtrees-weekplan.pdf",
-    "createdAt": "2026-03-31T16:34:50.416Z"
+    "createdAt": "2026-03-31T16:34:50.416Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -3404,7 +3652,8 @@
     },
     "id": "searchtrees-weekplan-010",
     "source": "searchtrees-weekplan.pdf",
-    "createdAt": "2026-03-31T16:34:50.416Z"
+    "createdAt": "2026-03-31T16:34:50.416Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -3421,7 +3670,8 @@
     },
     "id": "searchtrees-weekplan-011",
     "source": "searchtrees-weekplan.pdf",
-    "createdAt": "2026-03-31T16:34:50.416Z"
+    "createdAt": "2026-03-31T16:34:50.416Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -3432,7 +3682,8 @@
     },
     "id": "searchtrees4x1-001",
     "source": "searchtrees4x1.pdf",
-    "createdAt": "2026-03-31T16:35:09.462Z"
+    "createdAt": "2026-03-31T16:35:09.462Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -3449,7 +3700,8 @@
     },
     "id": "searchtrees4x1-002",
     "source": "searchtrees4x1.pdf",
-    "createdAt": "2026-03-31T16:35:09.462Z"
+    "createdAt": "2026-03-31T16:35:09.462Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -3460,7 +3712,8 @@
     },
     "id": "searchtrees4x1-003",
     "source": "searchtrees4x1.pdf",
-    "createdAt": "2026-03-31T16:35:09.462Z"
+    "createdAt": "2026-03-31T16:35:09.462Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -3476,7 +3729,8 @@
     },
     "id": "searchtrees4x1-004",
     "source": "searchtrees4x1.pdf",
-    "createdAt": "2026-03-31T16:35:09.462Z"
+    "createdAt": "2026-03-31T16:35:09.462Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "flashcard",
@@ -3488,7 +3742,8 @@
     },
     "id": "searchtrees4x1-005",
     "source": "searchtrees4x1.pdf",
-    "createdAt": "2026-03-31T16:35:09.462Z"
+    "createdAt": "2026-03-31T16:35:09.462Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -3499,7 +3754,8 @@
     },
     "id": "searchtrees4x1-006",
     "source": "searchtrees4x1.pdf",
-    "createdAt": "2026-03-31T16:35:09.462Z"
+    "createdAt": "2026-03-31T16:35:09.462Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -3516,7 +3772,8 @@
     },
     "id": "searchtrees4x1-007",
     "source": "searchtrees4x1.pdf",
-    "createdAt": "2026-03-31T16:35:09.462Z"
+    "createdAt": "2026-03-31T16:35:09.462Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -3527,7 +3784,8 @@
     },
     "id": "searchtrees4x1-008",
     "source": "searchtrees4x1.pdf",
-    "createdAt": "2026-03-31T16:35:09.462Z"
+    "createdAt": "2026-03-31T16:35:09.462Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "quiz",
@@ -3545,7 +3803,8 @@
     },
     "id": "searchtrees4x1-009",
     "source": "searchtrees4x1.pdf",
-    "createdAt": "2026-03-31T16:35:09.462Z"
+    "createdAt": "2026-03-31T16:35:09.462Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "flashcard",
@@ -3557,7 +3816,8 @@
     },
     "id": "searchtrees4x1-010",
     "source": "searchtrees4x1.pdf",
-    "createdAt": "2026-03-31T16:35:09.462Z"
+    "createdAt": "2026-03-31T16:35:09.462Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -3568,7 +3828,8 @@
     },
     "id": "searchtrees4x1-011",
     "source": "searchtrees4x1.pdf",
-    "createdAt": "2026-03-31T16:35:09.462Z"
+    "createdAt": "2026-03-31T16:35:09.462Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -3579,7 +3840,8 @@
     },
     "id": "segmenttrees-weekplan-001",
     "source": "segmenttrees-weekplan.pdf",
-    "createdAt": "2026-03-31T16:35:28.657Z"
+    "createdAt": "2026-03-31T16:35:28.657Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -3596,7 +3858,8 @@
     },
     "id": "segmenttrees-weekplan-002",
     "source": "segmenttrees-weekplan.pdf",
-    "createdAt": "2026-03-31T16:35:28.657Z"
+    "createdAt": "2026-03-31T16:35:28.657Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -3607,7 +3870,8 @@
     },
     "id": "segmenttrees-weekplan-003",
     "source": "segmenttrees-weekplan.pdf",
-    "createdAt": "2026-03-31T16:35:28.657Z"
+    "createdAt": "2026-03-31T16:35:28.657Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "flashcard",
@@ -3619,7 +3883,8 @@
     },
     "id": "segmenttrees-weekplan-004",
     "source": "segmenttrees-weekplan.pdf",
-    "createdAt": "2026-03-31T16:35:28.657Z"
+    "createdAt": "2026-03-31T16:35:28.657Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -3636,7 +3901,8 @@
     },
     "id": "segmenttrees-weekplan-005",
     "source": "segmenttrees-weekplan.pdf",
-    "createdAt": "2026-03-31T16:35:28.657Z"
+    "createdAt": "2026-03-31T16:35:28.657Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -3647,7 +3913,8 @@
     },
     "id": "segmenttrees-weekplan-006",
     "source": "segmenttrees-weekplan.pdf",
-    "createdAt": "2026-03-31T16:35:28.657Z"
+    "createdAt": "2026-03-31T16:35:28.657Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -3664,7 +3931,8 @@
     },
     "id": "segmenttrees-weekplan-007",
     "source": "segmenttrees-weekplan.pdf",
-    "createdAt": "2026-03-31T16:35:28.657Z"
+    "createdAt": "2026-03-31T16:35:28.657Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "quiz",
@@ -3682,7 +3950,8 @@
     },
     "id": "segmenttrees-weekplan-008",
     "source": "segmenttrees-weekplan.pdf",
-    "createdAt": "2026-03-31T16:35:28.657Z"
+    "createdAt": "2026-03-31T16:35:28.657Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -3693,7 +3962,8 @@
     },
     "id": "segmenttrees-weekplan-009",
     "source": "segmenttrees-weekplan.pdf",
-    "createdAt": "2026-03-31T16:35:28.657Z"
+    "createdAt": "2026-03-31T16:35:28.657Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -3710,7 +3980,8 @@
     },
     "id": "segmenttrees-weekplan-010",
     "source": "segmenttrees-weekplan.pdf",
-    "createdAt": "2026-03-31T16:35:28.657Z"
+    "createdAt": "2026-03-31T16:35:28.657Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -3721,7 +3992,8 @@
     },
     "id": "segmenttrees1x1-001",
     "source": "segmenttrees1x1.pdf",
-    "createdAt": "2026-03-31T16:35:50.243Z"
+    "createdAt": "2026-03-31T16:35:50.243Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -3737,7 +4009,8 @@
     },
     "id": "segmenttrees1x1-002",
     "source": "segmenttrees1x1.pdf",
-    "createdAt": "2026-03-31T16:35:50.243Z"
+    "createdAt": "2026-03-31T16:35:50.243Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -3748,7 +4021,8 @@
     },
     "id": "segmenttrees1x1-003",
     "source": "segmenttrees1x1.pdf",
-    "createdAt": "2026-03-31T16:35:50.243Z"
+    "createdAt": "2026-03-31T16:35:50.243Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -3764,7 +4038,8 @@
     },
     "id": "segmenttrees1x1-004",
     "source": "segmenttrees1x1.pdf",
-    "createdAt": "2026-03-31T16:35:50.243Z"
+    "createdAt": "2026-03-31T16:35:50.243Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -3775,7 +4050,8 @@
     },
     "id": "segmenttrees1x1-005",
     "source": "segmenttrees1x1.pdf",
-    "createdAt": "2026-03-31T16:35:50.243Z"
+    "createdAt": "2026-03-31T16:35:50.243Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -3791,7 +4067,8 @@
     },
     "id": "segmenttrees1x1-006",
     "source": "segmenttrees1x1.pdf",
-    "createdAt": "2026-03-31T16:35:50.243Z"
+    "createdAt": "2026-03-31T16:35:50.243Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -3802,7 +4079,8 @@
     },
     "id": "segmenttrees1x1-007",
     "source": "segmenttrees1x1.pdf",
-    "createdAt": "2026-03-31T16:35:50.243Z"
+    "createdAt": "2026-03-31T16:35:50.243Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -3813,7 +4091,8 @@
     },
     "id": "segmenttrees1x1-008",
     "source": "segmenttrees1x1.pdf",
-    "createdAt": "2026-03-31T16:35:50.243Z"
+    "createdAt": "2026-03-31T16:35:50.243Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "flashcard",
@@ -3825,7 +4104,8 @@
     },
     "id": "segmenttrees1x1-009",
     "source": "segmenttrees1x1.pdf",
-    "createdAt": "2026-03-31T16:35:50.243Z"
+    "createdAt": "2026-03-31T16:35:50.243Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "quiz",
@@ -3843,7 +4123,8 @@
     },
     "id": "segmenttrees1x1-010",
     "source": "segmenttrees1x1.pdf",
-    "createdAt": "2026-03-31T16:35:50.243Z"
+    "createdAt": "2026-03-31T16:35:50.243Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -3860,7 +4141,8 @@
     },
     "id": "segmenttrees1x1-011",
     "source": "segmenttrees1x1.pdf",
-    "createdAt": "2026-03-31T16:35:50.243Z"
+    "createdAt": "2026-03-31T16:35:50.243Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -3871,7 +4153,8 @@
     },
     "id": "segmenttrees4x1-001",
     "source": "segmenttrees4x1.pdf",
-    "createdAt": "2026-03-31T16:36:11.068Z"
+    "createdAt": "2026-03-31T16:36:11.068Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -3887,7 +4170,8 @@
     },
     "id": "segmenttrees4x1-002",
     "source": "segmenttrees4x1.pdf",
-    "createdAt": "2026-03-31T16:36:11.068Z"
+    "createdAt": "2026-03-31T16:36:11.068Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -3898,7 +4182,8 @@
     },
     "id": "segmenttrees4x1-003",
     "source": "segmenttrees4x1.pdf",
-    "createdAt": "2026-03-31T16:36:11.068Z"
+    "createdAt": "2026-03-31T16:36:11.068Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -3914,7 +4199,8 @@
     },
     "id": "segmenttrees4x1-004",
     "source": "segmenttrees4x1.pdf",
-    "createdAt": "2026-03-31T16:36:11.068Z"
+    "createdAt": "2026-03-31T16:36:11.068Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -3925,7 +4211,8 @@
     },
     "id": "segmenttrees4x1-005",
     "source": "segmenttrees4x1.pdf",
-    "createdAt": "2026-03-31T16:36:11.068Z"
+    "createdAt": "2026-03-31T16:36:11.068Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -3941,7 +4228,8 @@
     },
     "id": "segmenttrees4x1-006",
     "source": "segmenttrees4x1.pdf",
-    "createdAt": "2026-03-31T16:36:11.068Z"
+    "createdAt": "2026-03-31T16:36:11.068Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "flashcard",
@@ -3953,7 +4241,8 @@
     },
     "id": "segmenttrees4x1-007",
     "source": "segmenttrees4x1.pdf",
-    "createdAt": "2026-03-31T16:36:11.068Z"
+    "createdAt": "2026-03-31T16:36:11.068Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -3964,7 +4253,8 @@
     },
     "id": "segmenttrees4x1-008",
     "source": "segmenttrees4x1.pdf",
-    "createdAt": "2026-03-31T16:36:11.068Z"
+    "createdAt": "2026-03-31T16:36:11.068Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -3980,7 +4270,8 @@
     },
     "id": "segmenttrees4x1-009",
     "source": "segmenttrees4x1.pdf",
-    "createdAt": "2026-03-31T16:36:11.068Z"
+    "createdAt": "2026-03-31T16:36:11.068Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "quiz",
@@ -3998,7 +4289,8 @@
     },
     "id": "segmenttrees4x1-010",
     "source": "segmenttrees4x1.pdf",
-    "createdAt": "2026-03-31T16:36:11.068Z"
+    "createdAt": "2026-03-31T16:36:11.068Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -4009,7 +4301,8 @@
     },
     "id": "shortestpaths-weekplan-001",
     "source": "shortestpaths-weekplan.pdf",
-    "createdAt": "2026-03-31T16:36:32.599Z"
+    "createdAt": "2026-03-31T16:36:32.599Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -4026,7 +4319,8 @@
     },
     "id": "shortestpaths-weekplan-002",
     "source": "shortestpaths-weekplan.pdf",
-    "createdAt": "2026-03-31T16:36:32.599Z"
+    "createdAt": "2026-03-31T16:36:32.599Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -4037,7 +4331,8 @@
     },
     "id": "shortestpaths-weekplan-003",
     "source": "shortestpaths-weekplan.pdf",
-    "createdAt": "2026-03-31T16:36:32.599Z"
+    "createdAt": "2026-03-31T16:36:32.599Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "flashcard",
@@ -4049,7 +4344,8 @@
     },
     "id": "shortestpaths-weekplan-004",
     "source": "shortestpaths-weekplan.pdf",
-    "createdAt": "2026-03-31T16:36:32.599Z"
+    "createdAt": "2026-03-31T16:36:32.599Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -4066,7 +4362,8 @@
     },
     "id": "shortestpaths-weekplan-005",
     "source": "shortestpaths-weekplan.pdf",
-    "createdAt": "2026-03-31T16:36:32.599Z"
+    "createdAt": "2026-03-31T16:36:32.599Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -4077,7 +4374,8 @@
     },
     "id": "shortestpaths-weekplan-006",
     "source": "shortestpaths-weekplan.pdf",
-    "createdAt": "2026-03-31T16:36:32.599Z"
+    "createdAt": "2026-03-31T16:36:32.599Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -4088,7 +4386,8 @@
     },
     "id": "shortestpaths-weekplan-007",
     "source": "shortestpaths-weekplan.pdf",
-    "createdAt": "2026-03-31T16:36:32.599Z"
+    "createdAt": "2026-03-31T16:36:32.599Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -4105,7 +4404,8 @@
     },
     "id": "shortestpaths-weekplan-008",
     "source": "shortestpaths-weekplan.pdf",
-    "createdAt": "2026-03-31T16:36:32.599Z"
+    "createdAt": "2026-03-31T16:36:32.599Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "quiz",
@@ -4123,7 +4423,8 @@
     },
     "id": "shortestpaths-weekplan-009",
     "source": "shortestpaths-weekplan.pdf",
-    "createdAt": "2026-03-31T16:36:32.599Z"
+    "createdAt": "2026-03-31T16:36:32.599Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -4134,7 +4435,8 @@
     },
     "id": "shortestpaths-weekplan-010",
     "source": "shortestpaths-weekplan.pdf",
-    "createdAt": "2026-03-31T16:36:32.599Z"
+    "createdAt": "2026-03-31T16:36:32.599Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -4151,7 +4453,8 @@
     },
     "id": "shortestpaths-weekplan-011",
     "source": "shortestpaths-weekplan.pdf",
-    "createdAt": "2026-03-31T16:36:32.599Z"
+    "createdAt": "2026-03-31T16:36:32.599Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -4162,7 +4465,8 @@
     },
     "id": "shortestpaths4x1-001",
     "source": "shortestpaths4x1.pdf",
-    "createdAt": "2026-03-31T16:36:52.619Z"
+    "createdAt": "2026-03-31T16:36:52.619Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -4178,7 +4482,8 @@
     },
     "id": "shortestpaths4x1-002",
     "source": "shortestpaths4x1.pdf",
-    "createdAt": "2026-03-31T16:36:52.619Z"
+    "createdAt": "2026-03-31T16:36:52.619Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -4189,7 +4494,8 @@
     },
     "id": "shortestpaths4x1-003",
     "source": "shortestpaths4x1.pdf",
-    "createdAt": "2026-03-31T16:36:52.619Z"
+    "createdAt": "2026-03-31T16:36:52.619Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -4206,7 +4512,8 @@
     },
     "id": "shortestpaths4x1-004",
     "source": "shortestpaths4x1.pdf",
-    "createdAt": "2026-03-31T16:36:52.619Z"
+    "createdAt": "2026-03-31T16:36:52.619Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -4217,7 +4524,8 @@
     },
     "id": "shortestpaths4x1-005",
     "source": "shortestpaths4x1.pdf",
-    "createdAt": "2026-03-31T16:36:52.619Z"
+    "createdAt": "2026-03-31T16:36:52.619Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "flashcard",
@@ -4229,7 +4537,8 @@
     },
     "id": "shortestpaths4x1-006",
     "source": "shortestpaths4x1.pdf",
-    "createdAt": "2026-03-31T16:36:52.619Z"
+    "createdAt": "2026-03-31T16:36:52.619Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -4245,7 +4554,8 @@
     },
     "id": "shortestpaths4x1-007",
     "source": "shortestpaths4x1.pdf",
-    "createdAt": "2026-03-31T16:36:52.619Z"
+    "createdAt": "2026-03-31T16:36:52.619Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -4256,7 +4566,8 @@
     },
     "id": "shortestpaths4x1-008",
     "source": "shortestpaths4x1.pdf",
-    "createdAt": "2026-03-31T16:36:52.619Z"
+    "createdAt": "2026-03-31T16:36:52.619Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "quiz",
@@ -4274,7 +4585,8 @@
     },
     "id": "shortestpaths4x1-009",
     "source": "shortestpaths4x1.pdf",
-    "createdAt": "2026-03-31T16:36:52.619Z"
+    "createdAt": "2026-03-31T16:36:52.619Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -4290,7 +4602,8 @@
     },
     "id": "shortestpaths4x1-010",
     "source": "shortestpaths4x1.pdf",
-    "createdAt": "2026-03-31T16:36:52.619Z"
+    "createdAt": "2026-03-31T16:36:52.619Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -4301,7 +4614,8 @@
     },
     "id": "shortestpaths4x1-011",
     "source": "shortestpaths4x1.pdf",
-    "createdAt": "2026-03-31T16:36:52.619Z"
+    "createdAt": "2026-03-31T16:36:52.619Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "quiz",
@@ -4319,7 +4633,8 @@
     },
     "id": "shortestpaths4x1-012",
     "source": "shortestpaths4x1.pdf",
-    "createdAt": "2026-03-31T16:36:52.619Z"
+    "createdAt": "2026-03-31T16:36:52.619Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -4330,7 +4645,8 @@
     },
     "id": "survivalguide-001",
     "source": "survivalguide.pdf",
-    "createdAt": "2026-03-31T16:37:04.593Z"
+    "createdAt": "2026-03-31T16:37:04.593Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -4346,7 +4662,8 @@
     },
     "id": "survivalguide-002",
     "source": "survivalguide.pdf",
-    "createdAt": "2026-03-31T16:37:04.593Z"
+    "createdAt": "2026-03-31T16:37:04.593Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -4357,7 +4674,8 @@
     },
     "id": "survivalguide-003",
     "source": "survivalguide.pdf",
-    "createdAt": "2026-03-31T16:37:04.593Z"
+    "createdAt": "2026-03-31T16:37:04.593Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -4373,7 +4691,8 @@
     },
     "id": "survivalguide-004",
     "source": "survivalguide.pdf",
-    "createdAt": "2026-03-31T16:37:04.593Z"
+    "createdAt": "2026-03-31T16:37:04.593Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -4384,7 +4703,8 @@
     },
     "id": "survivalguide-005",
     "source": "survivalguide.pdf",
-    "createdAt": "2026-03-31T16:37:04.593Z"
+    "createdAt": "2026-03-31T16:37:04.593Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "flashcard",
@@ -4396,7 +4716,8 @@
     },
     "id": "survivalguide-006",
     "source": "survivalguide.pdf",
-    "createdAt": "2026-03-31T16:37:04.593Z"
+    "createdAt": "2026-03-31T16:37:04.593Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -4407,7 +4728,8 @@
     },
     "id": "survivalguide-007",
     "source": "survivalguide.pdf",
-    "createdAt": "2026-03-31T16:37:04.593Z"
+    "createdAt": "2026-03-31T16:37:04.593Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "quiz",
@@ -4425,7 +4747,8 @@
     },
     "id": "survivalguide-008",
     "source": "survivalguide.pdf",
-    "createdAt": "2026-03-31T16:37:04.593Z"
+    "createdAt": "2026-03-31T16:37:04.593Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -4436,7 +4759,8 @@
     },
     "id": "unionfind-weekplan-001",
     "source": "unionfind-weekplan.pdf",
-    "createdAt": "2026-03-31T16:37:26.519Z"
+    "createdAt": "2026-03-31T16:37:26.519Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -4452,7 +4776,8 @@
     },
     "id": "unionfind-weekplan-002",
     "source": "unionfind-weekplan.pdf",
-    "createdAt": "2026-03-31T16:37:26.519Z"
+    "createdAt": "2026-03-31T16:37:26.519Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -4463,7 +4788,8 @@
     },
     "id": "unionfind-weekplan-003",
     "source": "unionfind-weekplan.pdf",
-    "createdAt": "2026-03-31T16:37:26.519Z"
+    "createdAt": "2026-03-31T16:37:26.519Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -4474,7 +4800,8 @@
     },
     "id": "unionfind-weekplan-004",
     "source": "unionfind-weekplan.pdf",
-    "createdAt": "2026-03-31T16:37:26.519Z"
+    "createdAt": "2026-03-31T16:37:26.519Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -4490,7 +4817,8 @@
     },
     "id": "unionfind-weekplan-005",
     "source": "unionfind-weekplan.pdf",
-    "createdAt": "2026-03-31T16:37:26.519Z"
+    "createdAt": "2026-03-31T16:37:26.519Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -4501,7 +4829,8 @@
     },
     "id": "unionfind-weekplan-006",
     "source": "unionfind-weekplan.pdf",
-    "createdAt": "2026-03-31T16:37:26.519Z"
+    "createdAt": "2026-03-31T16:37:26.519Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "flashcard",
@@ -4513,7 +4842,8 @@
     },
     "id": "unionfind-weekplan-007",
     "source": "unionfind-weekplan.pdf",
-    "createdAt": "2026-03-31T16:37:26.519Z"
+    "createdAt": "2026-03-31T16:37:26.519Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -4530,7 +4860,8 @@
     },
     "id": "unionfind-weekplan-008",
     "source": "unionfind-weekplan.pdf",
-    "createdAt": "2026-03-31T16:37:26.519Z"
+    "createdAt": "2026-03-31T16:37:26.519Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -4541,7 +4872,8 @@
     },
     "id": "unionfind-weekplan-009",
     "source": "unionfind-weekplan.pdf",
-    "createdAt": "2026-03-31T16:37:26.519Z"
+    "createdAt": "2026-03-31T16:37:26.519Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "quiz",
@@ -4559,7 +4891,8 @@
     },
     "id": "unionfind-weekplan-010",
     "source": "unionfind-weekplan.pdf",
-    "createdAt": "2026-03-31T16:37:26.519Z"
+    "createdAt": "2026-03-31T16:37:26.519Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -4570,7 +4903,8 @@
     },
     "id": "unionfind-weekplan-011",
     "source": "unionfind-weekplan.pdf",
-    "createdAt": "2026-03-31T16:37:26.519Z"
+    "createdAt": "2026-03-31T16:37:26.519Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "quiz",
@@ -4588,7 +4922,8 @@
     },
     "id": "unionfind-weekplan-012",
     "source": "unionfind-weekplan.pdf",
-    "createdAt": "2026-03-31T16:37:26.519Z"
+    "createdAt": "2026-03-31T16:37:26.519Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -4599,7 +4934,8 @@
     },
     "id": "unionfind4x1-001",
     "source": "unionfind4x1.pdf",
-    "createdAt": "2026-03-31T16:37:49.632Z"
+    "createdAt": "2026-03-31T16:37:49.632Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -4616,7 +4952,8 @@
     },
     "id": "unionfind4x1-002",
     "source": "unionfind4x1.pdf",
-    "createdAt": "2026-03-31T16:37:49.632Z"
+    "createdAt": "2026-03-31T16:37:49.632Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -4627,7 +4964,8 @@
     },
     "id": "unionfind4x1-003",
     "source": "unionfind4x1.pdf",
-    "createdAt": "2026-03-31T16:37:49.632Z"
+    "createdAt": "2026-03-31T16:37:49.632Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -4638,7 +4976,8 @@
     },
     "id": "unionfind4x1-004",
     "source": "unionfind4x1.pdf",
-    "createdAt": "2026-03-31T16:37:49.632Z"
+    "createdAt": "2026-03-31T16:37:49.632Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -4655,7 +4994,8 @@
     },
     "id": "unionfind4x1-005",
     "source": "unionfind4x1.pdf",
-    "createdAt": "2026-03-31T16:37:49.632Z"
+    "createdAt": "2026-03-31T16:37:49.632Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "flashcard",
@@ -4667,7 +5007,8 @@
     },
     "id": "unionfind4x1-006",
     "source": "unionfind4x1.pdf",
-    "createdAt": "2026-03-31T16:37:49.632Z"
+    "createdAt": "2026-03-31T16:37:49.632Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -4678,7 +5019,8 @@
     },
     "id": "unionfind4x1-007",
     "source": "unionfind4x1.pdf",
-    "createdAt": "2026-03-31T16:37:49.632Z"
+    "createdAt": "2026-03-31T16:37:49.632Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "bullets",
@@ -4694,7 +5036,8 @@
     },
     "id": "unionfind4x1-008",
     "source": "unionfind4x1.pdf",
-    "createdAt": "2026-03-31T16:37:49.632Z"
+    "createdAt": "2026-03-31T16:37:49.632Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "quiz",
@@ -4712,7 +5055,8 @@
     },
     "id": "unionfind4x1-009",
     "source": "unionfind4x1.pdf",
-    "createdAt": "2026-03-31T16:37:49.632Z"
+    "createdAt": "2026-03-31T16:37:49.632Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "summary",
@@ -4723,7 +5067,8 @@
     },
     "id": "unionfind4x1-010",
     "source": "unionfind4x1.pdf",
-    "createdAt": "2026-03-31T16:37:49.632Z"
+    "createdAt": "2026-03-31T16:37:49.632Z",
+    "course": "Algorithms and Data Structures"
   },
   {
     "type": "flashcard",
@@ -4735,6 +5080,7 @@
     },
     "id": "unionfind4x1-011",
     "source": "unionfind4x1.pdf",
-    "createdAt": "2026-03-31T16:37:49.632Z"
+    "createdAt": "2026-03-31T16:37:49.632Z",
+    "course": "Algorithms and Data Structures"
   }
 ]

@@ -3,13 +3,14 @@ import type { Card, UserState } from '../types/card';
 interface Props {
   cards: Card[];
   userState: UserState;
+  selectedCourse: string | null;
   selectedSubject: string | null;
 }
 
-export function ProgressBar({ cards, userState, selectedSubject }: Props) {
-  const filtered = selectedSubject
-    ? cards.filter(c => c.subject === selectedSubject)
-    : cards;
+export function ProgressBar({ cards, userState, selectedCourse, selectedSubject }: Props) {
+  let filtered = cards;
+  if (selectedCourse) filtered = filtered.filter(c => c.course === selectedCourse);
+  if (selectedSubject) filtered = filtered.filter(c => c.subject === selectedSubject);
 
   const total = filtered.length;
   if (total === 0) return null;

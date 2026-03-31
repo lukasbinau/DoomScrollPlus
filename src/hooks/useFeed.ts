@@ -4,11 +4,12 @@ import type { Card, UserState } from '../types/card';
 interface UseFeedOptions {
   cards: Card[];
   userState: UserState;
-  selectedSubject: string | null; // null = all
+  selectedCourse: string | null;
+  selectedSubject: string | null;
   showBookmarked: boolean;
 }
 
-export function useFeed({ cards, userState, selectedSubject, showBookmarked }: UseFeedOptions): Card[] {
+export function useFeed({ cards, userState, selectedCourse, selectedSubject, showBookmarked }: UseFeedOptions): Card[] {
   // Cache the feed so we only reshuffle when the actual set of cards changes,
   // not when userState changes (e.g. lastSeen updates from onSeen).
   const cachedFeedRef = useRef<Card[]>([]);
@@ -16,6 +17,11 @@ export function useFeed({ cards, userState, selectedSubject, showBookmarked }: U
 
   return useMemo(() => {
     let filtered = cards;
+
+    // Filter by course
+    if (selectedCourse) {
+      filtered = filtered.filter(c => c.course === selectedCourse);
+    }
 
     // Filter by subject
     if (selectedSubject) {
@@ -68,7 +74,7 @@ export function useFeed({ cards, userState, selectedSubject, showBookmarked }: U
     const result = [...neverSeen, ...stale, ...recent];
     cachedFeedRef.current = result;
     return result;
-  }, [cards, userState, selectedSubject, showBookmarked]);
+  }, [cards, userState, selectedCourse, selectedSubject, showBookmarked]);
 }
 
 function shuffle<T>(arr: T[]): void {

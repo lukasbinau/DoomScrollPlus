@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback, useMemo } from 'react';
 import { useLocalStorage } from './hooks/useLocalStorage';
 import { useFeed } from './hooks/useFeed';
 import { CardViewer } from './components/CardViewer';
-import { SubjectFilter } from './components/SubjectFilter';
+import { SideDrawer } from './components/SideDrawer';
 import { ProgressBar } from './components/ProgressBar';
 import { ThemeToggle } from './components/ThemeToggle';
 import type { Card, UserState } from './types/card';
@@ -11,9 +11,11 @@ export default function App() {
   const [allCards, setAllCards] = useState<Card[]>([]);
   const [userState, setUserState] = useLocalStorage<UserState>('ds-user-state', {});
   const [isDark, setIsDark] = useLocalStorage('ds-dark-mode', true);
+  const [selectedCourse, setSelectedCourse] = useState<string | null>(null);
   const [selectedSubject, setSelectedSubject] = useState<string | null>(null);
   const [showBookmarked, setShowBookmarked] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+  const [drawerOpen, setDrawerOpen] = useState(false);
 
   // Load cards
   useEffect(() => {
@@ -37,20 +39,34 @@ export default function App() {
     return allCards.filter(c =>
       c.title.toLowerCase().includes(q) ||
       c.subject.toLowerCase().includes(q) ||
+      c.course.toLowerCase().includes(q) ||
       c.source.toLowerCase().includes(q)
     );
   }, [allCards, searchQuery]);
 
-  // Get subjects
-  const subjects = useMemo(() => {
-    const set = new Set(allCards.map(c => c.subject));
-    return Array.from(set).sort();
+  // Build course hierarchy for the drawer
+  const courses = useMemo(() => {
+    const map = new Map<string, Set<string>>();
+    const counts = new Map<string, number>();
+    allCards.forEach(c => {
+      if (!map.has(c.course)) map.set(c.course, new Set());
+      map.get(c.course)!.add(c.subject);
+      counts.set(c.course, (counts.get(c.course) || 0) + 1);
+    });
+    return Array.from(map.entries())
+      .map(([course, subjectsSet]) => ({
+        course,
+        subjects: Array.from(subjectsSet).sort(),
+        count: counts.get(course) || 0,
+      }))
+      .sort((a, b) => b.count - a.count);
   }, [allCards]);
 
   // Feed algorithm
   const feed = useFeed({
     cards: searchedCards,
     userState,
+    selectedCourse,
     selectedSubject,
     showBookmarked,
   });
@@ -77,20 +93,49 @@ export default function App() {
     }));
   }, [setUserState]);
 
+  // Current filter label for the top bar
+  const filterLabel = showBookmarked
+    ? 'Saved'
+    : selectedCourse
+      ? selectedSubject
+        ? `${selectedCourse} › ${selectedSubject}`
+        : selectedCourse
+      : 'All Cards';
+
   return (
     <div className={`h-full relative ${isDark ? 'bg-[#0a0a0a]' : 'bg-[#f5f5f5]'}`}>
-      <SubjectFilter
-        subjects={subjects}
-        selected={selectedSubject}
-        onSelect={setSelectedSubject}
-        showBookmarked={showBookmarked}
-        onToggleBookmarked={() => setShowBookmarked(prev => !prev)}
-        onSearch={setSearchQuery}
-      />
+      {/* Hamburger menu button */}
+      <button
+        onClick={() => setDrawerOpen(true)}
+        className="absolute top-3 left-4 z-30 w-8 h-8 rounded-full bg-white/10 flex items-center justify-center transition-transform active:scale-90 safe-top"
+        aria-label="Open menu"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4 text-white/70">
+          <path fillRule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10zm0 5.25a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75a.75.75 0 01-.75-.75z" clipRule="evenodd" />
+        </svg>
+      </button>
+
+      {/* Current filter label */}
+      <div className="absolute top-3.5 left-14 z-30 safe-top">
+        <span className="text-xs text-white/40 font-medium truncate max-w-[200px] block">{filterLabel}</span>
+      </div>
 
       <ThemeToggle
         isDark={isDark}
         onToggle={() => setIsDark(prev => !prev)}
+      />
+
+      <SideDrawer
+        isOpen={drawerOpen}
+        onClose={() => setDrawerOpen(false)}
+        courses={courses}
+        selectedCourse={selectedCourse}
+        selectedSubject={selectedSubject}
+        showBookmarked={showBookmarked}
+        onSelectCourse={setSelectedCourse}
+        onSelectSubject={setSelectedSubject}
+        onToggleBookmarked={() => setShowBookmarked(prev => !prev)}
+        onSearch={setSearchQuery}
       />
 
       <CardViewer
@@ -104,6 +149,7 @@ export default function App() {
       <ProgressBar
         cards={allCards}
         userState={userState}
+        selectedCourse={selectedCourse}
         selectedSubject={selectedSubject}
       />
     </div>
