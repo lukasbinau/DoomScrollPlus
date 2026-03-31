@@ -4,6 +4,7 @@ import { useFeed } from './hooks/useFeed';
 import { CardViewer } from './components/CardViewer';
 import { SideDrawer } from './components/SideDrawer';
 import { InstallPrompt } from './components/InstallPrompt';
+import { BrainrotPlayer } from './components/BrainrotPlayer';
 import type { Card, UserState } from './types/card';
 
 export default function App() {
@@ -14,6 +15,7 @@ export default function App() {
   const [showBookmarked, setShowBookmarked] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [brainrot, setBrainrot] = useLocalStorage<boolean>('ds-brainrot', false);
 
   // Load cards
   useEffect(() => {
@@ -101,11 +103,18 @@ export default function App() {
       : 'All Cards';
 
   return (
-    <div className="h-full relative bg-[#0a0a0a]">
+    <div className={`h-full relative bg-[#0a0a0a] ${brainrot ? 'brainrot' : ''}`}>
+      {/* Video area for brainrot mode */}
+      {brainrot && (
+        <div className="h-[40dvh] w-full relative z-0">
+          <BrainrotPlayer />
+        </div>
+      )}
+
       {/* Hamburger menu button */}
       <button
         onClick={() => setDrawerOpen(true)}
-        className="absolute top-3 left-4 z-30 w-8 h-8 rounded-full bg-white/10 flex items-center justify-center transition-transform active:scale-90 safe-top"
+        className={`absolute ${brainrot ? 'top-[40dvh]' : 'top-3'} left-4 z-30 w-8 h-8 rounded-full bg-white/10 flex items-center justify-center transition-transform active:scale-90 safe-top mt-3`}
         aria-label="Open menu"
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4 text-white/70">
@@ -113,8 +122,17 @@ export default function App() {
         </svg>
       </button>
 
+      {/* Brainrot toggle button */}
+      <button
+        onClick={() => setBrainrot(prev => !prev)}
+        className={`absolute ${brainrot ? 'top-[40dvh]' : 'top-3'} right-4 z-30 w-8 h-8 rounded-full flex items-center justify-center transition-all active:scale-90 safe-top mt-3 ${brainrot ? 'bg-violet-500 shadow-lg shadow-violet-500/40' : 'bg-white/10'}`}
+        aria-label="Toggle brainrot mode"
+      >
+        <span className="text-sm">🧠</span>
+      </button>
+
       {/* Current filter label */}
-      <div className="absolute top-3.5 left-14 z-30 safe-top">
+      <div className={`absolute ${brainrot ? 'top-[40dvh]' : 'top-3'} left-14 z-30 safe-top mt-3.5`}>
         <span className="text-xs text-white/40 font-medium truncate max-w-[200px] block">{filterLabel}</span>
       </div>
 

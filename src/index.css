@@ -42,6 +42,14 @@ body {
   height: 100dvh;
 }
 
+/* Brainrot split-screen mode */
+.brainrot .snap-container {
+  height: 60dvh;
+}
+.brainrot .snap-card {
+  height: 60dvh;
+}
+
 /* Scrollable child areas inside cards */
 .scrollable-touch {
   -webkit-overflow-scrolling: touch;
