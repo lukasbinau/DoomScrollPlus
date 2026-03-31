@@ -11,6 +11,7 @@ import { StepsCard } from './cards/StepsCard';
 interface Props {
   cards: Card[];
   userState: Record<string, UserCardState>;
+  brainrot: boolean;
   onSeen: (id: string) => void;
   onBookmark: (id: string) => void;
   onLearn: (id: string) => void;
@@ -28,7 +29,7 @@ function renderCard(card: Card) {
   }
 }
 
-export function CardViewer({ cards, userState, onSeen, onBookmark, onLearn }: Props) {
+export function CardViewer({ cards, userState, brainrot, onSeen, onBookmark, onLearn }: Props) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const isAnimating = useRef(false);
   const onSeenRef = useRef(onSeen);
@@ -166,8 +167,10 @@ export function CardViewer({ cards, userState, onSeen, onBookmark, onLearn }: Pr
             <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40 pointer-events-none" />
 
             {/* Card content */}
-            <div className="card-body relative h-full overflow-y-auto scrollable-touch">
-              {renderCard(card)}
+            <div className={`card-body relative h-full ${brainrot ? 'overflow-hidden' : 'overflow-y-auto scrollable-touch'}`}>
+              <div className={brainrot ? 'card-compact h-full' : ''}>
+                {renderCard(card)}
+              </div>
             </div>
 
             {/* Bottom action buttons */}

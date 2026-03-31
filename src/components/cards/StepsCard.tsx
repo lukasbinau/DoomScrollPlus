@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
 import type { Card, StepsContent } from '../../types/card';
 import { MathText } from '../MathText';
+import { ContentPopup } from '../ContentPopup';
 import mermaid from 'mermaid';
 
 interface Props {
@@ -77,9 +78,11 @@ export function StepsCard({ card }: Props) {
       </div>
 
       {/* Diagram area */}
-      <div className="w-full max-w-[360px] max-h-[35vh] flex items-center justify-center overflow-auto scrollable-touch rounded-xl bg-white/[0.04] border border-white/10 p-3">
-        <StepDiagram code={current.visual} />
-      </div>
+      <ContentPopup>
+        <div className="w-full max-w-[360px] max-h-[35vh] flex items-center justify-center overflow-auto scrollable-touch rounded-xl bg-white/[0.04] border border-white/10 p-3">
+          <StepDiagram code={current.visual} />
+        </div>
+      </ContentPopup>
 
       {/* Step label */}
       <p className="mt-3 text-sm font-medium text-white/90 text-center max-w-[340px]">
