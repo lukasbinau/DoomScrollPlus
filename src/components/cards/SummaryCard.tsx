@@ -5,9 +5,10 @@ import { ContentPopup } from '../ContentPopup';
 
 interface Props {
   card: Card;
+  isActive?: boolean;
 }
 
-export function SummaryCard({ card }: Props) {
+export function SummaryCard({ card, isActive }: Props) {
   const { text } = card.content as SummaryContent;
   const hasChart = extractComplexities(text).length > 0;
 
@@ -22,7 +23,7 @@ export function SummaryCard({ card }: Props) {
       <p className="text-lg leading-relaxed text-white/80 max-w-[340px]">
         <MathText text={text} />
       </p>
-      <ContentPopup hidden={!hasChart}>
+      <ContentPopup hidden={!hasChart} animationKey={isActive ? card.id : undefined}>
         <ComplexityChart text={text} />
       </ContentPopup>
       <span className="mt-8 text-xs text-white/30">

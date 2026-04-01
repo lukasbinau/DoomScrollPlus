@@ -10,9 +10,10 @@ import 'prismjs/components/prism-clike';
 
 interface Props {
   card: Card;
+  isActive?: boolean;
 }
 
-export function CodeCard({ card }: Props) {
+export function CodeCard({ card, isActive }: Props) {
   const { code, language, explanation } = card.content as CodeContent;
   const codeRef = useRef<HTMLElement>(null);
   const popupCodeRef = useRef<HTMLElement>(null);
@@ -46,7 +47,7 @@ export function CodeCard({ card }: Props) {
         <MathText text={card.title} />
       </h2>
 
-      <ContentPopup popupContent={popupContent}>
+      <ContentPopup popupContent={popupContent} animationKey={isActive ? card.id : undefined}>
         <div className="w-full max-w-[360px] rounded-xl overflow-hidden border border-white/10">
           <div className="flex items-center justify-between px-4 py-2 bg-white/[0.06] border-b border-white/10">
             <span className="text-xs font-mono text-white/40">{language}</span>

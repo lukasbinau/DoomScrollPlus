@@ -18,15 +18,15 @@ interface Props {
   onLearn: (id: string) => void;
 }
 
-function renderCard(card: Card) {
+function renderCard(card: Card, isActive: boolean) {
   switch (card.type) {
-    case 'summary': return <SummaryCard card={card} />;
-    case 'bullets': return <BulletsCard card={card} />;
+    case 'summary': return <SummaryCard card={card} isActive={isActive} />;
+    case 'bullets': return <BulletsCard card={card} isActive={isActive} />;
     case 'flashcard': return <FlashCard card={card} />;
     case 'quiz': return <QuizCard card={card} />;
-    case 'diagram': return <DiagramCard card={card} />;
-    case 'code': return <CodeCard card={card} />;
-    case 'steps': return <StepsCard card={card} />;
+    case 'diagram': return <DiagramCard card={card} isActive={isActive} />;
+    case 'code': return <CodeCard card={card} isActive={isActive} />;
+    case 'steps': return <StepsCard card={card} isActive={isActive} />;
   }
 }
 
@@ -152,6 +152,7 @@ export function CardViewer({ cards, userState, brainrot, navigationLocked, onSee
     <div className="snap-container">
       {visible.map((i) => {
         const card = cards[i];
+        const isActive = i === currentIndex;
         const state = userState[card.id];
         const isBookmarked = state?.bookmarked ?? false;
         const isLearned = state?.learned ?? false;
@@ -172,7 +173,7 @@ export function CardViewer({ cards, userState, brainrot, navigationLocked, onSee
             {/* Card content */}
             <div className={`card-body relative h-full ${brainrot ? 'overflow-hidden' : 'overflow-hidden'}`}>
               <div className={brainrot ? 'card-compact h-full flex flex-col items-center justify-center pt-12 pb-20' : 'h-full flex flex-col items-center justify-center pt-14 pb-24'}>
-                {renderCard(card)}
+                {renderCard(card, isActive)}
               </div>
             </div>
 

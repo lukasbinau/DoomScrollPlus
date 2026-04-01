@@ -29,6 +29,7 @@ mermaid.initialize({
 
 interface Props {
   card: Card;
+  isActive?: boolean;
 }
 
 let diagramCounter = 0;
@@ -75,7 +76,7 @@ function PopupDiagram({ code }: { code: string }) {
   return <div ref={containerRef} className="w-full flex items-center justify-center" />;
 }
 
-export function DiagramCard({ card }: Props) {
+export function DiagramCard({ card, isActive }: Props) {
   const { mermaid: mermaidCode, caption } = card.content as DiagramContent;
   const { containerRef, error } = useMermaidRender(mermaidCode);
 
@@ -94,7 +95,7 @@ export function DiagramCard({ card }: Props) {
         <MathText text={card.title} />
       </h2>
 
-      <ContentPopup popupContent={popupContent} zoomable>
+      <ContentPopup popupContent={popupContent} zoomable animationKey={isActive ? card.id : undefined}>
         <div className="w-full max-w-[360px] max-h-[50vh] flex items-center justify-center overflow-auto scrollable-touch rounded-xl bg-white/[0.04] border border-white/10 p-4">
           {error ? (
             <p className="text-sm text-red-400">Failed to render diagram</p>

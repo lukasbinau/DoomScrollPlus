@@ -6,6 +6,7 @@ import mermaid from 'mermaid';
 
 interface Props {
   card: Card;
+  isActive?: boolean;
 }
 
 let stepsCounter = 0;
@@ -56,7 +57,7 @@ function PopupStepDiagram({ code }: { code: string }) {
   return <div ref={ref} className="w-full flex items-center justify-center" />;
 }
 
-export function StepsCard({ card }: Props) {
+export function StepsCard({ card, isActive }: Props) {
   const { steps, summary } = card.content as StepsContent;
   const [step, setStep] = useState(0);
   const total = steps.length;
@@ -89,7 +90,7 @@ export function StepsCard({ card }: Props) {
       </div>
 
       {/* Diagram area */}
-      <ContentPopup popupContent={<PopupStepDiagram code={current.visual} />} zoomable>
+      <ContentPopup popupContent={<PopupStepDiagram code={current.visual} />} zoomable animationKey={isActive ? `${card.id}-${step}` : undefined}>
         <div className="w-full max-w-[360px] max-h-[35vh] flex items-center justify-center overflow-auto scrollable-touch rounded-xl bg-white/[0.04] border border-white/10 p-3">
           <StepDiagram code={current.visual} />
         </div>

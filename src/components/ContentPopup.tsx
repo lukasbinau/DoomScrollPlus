@@ -9,9 +9,11 @@ interface ContentPopupProps {
   hidden?: boolean;
   /** Enable pinch-to-zoom and drag inside the modal */
   zoomable?: boolean;
+  /** Changes when the owning card becomes active so the hint animation can restart */
+  animationKey?: string | number;
 }
 
-export function ContentPopup({ children, popupContent, hidden, zoomable }: ContentPopupProps) {
+export function ContentPopup({ children, popupContent, hidden, zoomable, animationKey }: ContentPopupProps) {
   const [open, setOpen] = useState(false);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const didOpen = useRef(false);
@@ -120,7 +122,7 @@ export function ContentPopup({ children, popupContent, hidden, zoomable }: Conte
         style={{ touchAction: 'none' }}
       >
         {children}
-        <div className="content-expand-hint absolute bottom-1 right-1 px-1.5 py-0.5 rounded text-[9px] text-white/55 pointer-events-none">
+        <div key={animationKey ?? 'content-expand-hint'} className="content-expand-hint absolute bottom-1 right-1 px-1.5 py-0.5 rounded text-[9px] text-white/55 pointer-events-none">
           Hold to expand
         </div>
       </div>
