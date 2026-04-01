@@ -52,10 +52,6 @@ body {
 }
 
 /* Compact card styling for brainrot mode */
-.brainrot .card-body > :first-child {
-  padding-top: 2.5rem;
-  padding-bottom: 4rem;
-}
 .brainrot .card-compact h2 {
   font-size: 1rem;
   line-height: 1.3;

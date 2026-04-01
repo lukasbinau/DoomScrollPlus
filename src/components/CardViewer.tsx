@@ -168,7 +168,7 @@ export function CardViewer({ cards, userState, brainrot, onSeen, onBookmark, onL
 
             {/* Card content */}
             <div className={`card-body relative h-full ${brainrot ? 'overflow-hidden' : 'overflow-hidden'}`}>
-              <div className={brainrot ? 'card-compact h-full' : 'h-full flex flex-col items-center justify-center pt-14 pb-24'}>
+              <div className={brainrot ? 'card-compact h-full flex flex-col items-center justify-center pt-12 pb-20' : 'h-full flex flex-col items-center justify-center pt-14 pb-24'}>
                 {renderCard(card)}
               </div>
             </div>
