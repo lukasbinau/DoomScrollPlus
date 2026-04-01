@@ -5,7 +5,17 @@ interface CourseData {
   course: string;
   subjects: string[];
   count: number;
+  comingSoon?: boolean;
 }
+
+const COMING_SOON_COURSES: CourseData[] = [
+  { course: 'Introduction to Machine Learning', subjects: ['Coming soon!'], count: 0, comingSoon: true },
+  { course: 'Mat 1A', subjects: ['Coming soon!'], count: 0, comingSoon: true },
+  { course: 'Mat 1B', subjects: ['Coming soon!'], count: 0, comingSoon: true },
+  { course: 'Physics 1 Spring', subjects: ['Coming soon!'], count: 0, comingSoon: true },
+  { course: 'Physics 1 Fall', subjects: ['Coming soon!'], count: 0, comingSoon: true },
+  { course: 'Introduction to Statistics', subjects: ['Coming soon!'], count: 0, comingSoon: true },
+];
 
 interface Props {
   isOpen: boolean;
@@ -38,6 +48,8 @@ export function SideDrawer({
 }: Props) {
   const [expandedCourse, setExpandedCourse] = useState<string | null>(selectedCourse);
   const [query, setQuery] = useState('');
+
+  const displayCourses = useMemo(() => [...courses, ...COMING_SOON_COURSES], [courses]);
 
   // Progress stats
   const progress = useMemo(() => {
@@ -157,16 +169,16 @@ export function SideDrawer({
             <div className="h-px bg-white/5 my-1" />
 
             {/* Courses */}
-            {courses.map(({ course, subjects, count }) => {
+            {displayCourses.map(({ course, subjects, count, comingSoon }) => {
               const isExpanded = expandedCourse === course;
-              const isCourseActive = selectedCourse === course && !selectedSubject && !showBookmarked;
+              const isCourseActive = !comingSoon && selectedCourse === course && !selectedSubject && !showBookmarked;
 
               return (
                 <div key={course}>
                   <button
                     onClick={() => handleSelectCourse(course)}
                     className={`w-full text-left px-4 py-3 flex items-center justify-between transition-colors ${
-                      isCourseActive ? 'bg-violet-500/20 text-white' : 'text-white/70 hover:bg-white/5'
+                      isCourseActive ? 'bg-violet-500/20 text-white' : comingSoon ? 'text-white/50 hover:bg-white/[0.03]' : 'text-white/70 hover:bg-white/5'
                     }`}
                   >
                     <div className="flex items-center gap-3 min-w-0">
@@ -175,29 +187,42 @@ export function SideDrawer({
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 20 20"
                         fill="currentColor"
-                        className={`w-4 h-4 flex-shrink-0 transition-transform duration-200 ${isExpanded ? 'rotate-90' : ''} ${isCourseActive ? 'text-violet-400' : 'text-white/30'}`}
+                        className={`w-4 h-4 flex-shrink-0 transition-transform duration-200 ${isExpanded ? 'rotate-90' : ''} ${isCourseActive ? 'text-violet-400' : comingSoon ? 'text-violet-300/50' : 'text-white/30'}`}
                       >
                         <path fillRule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clipRule="evenodd" />
                       </svg>
                       <span className="text-sm font-medium truncate">{course}</span>
                     </div>
-                    <span className="text-xs text-white/30 flex-shrink-0 ml-2">{count}</span>
+                    <span className="text-xs text-white/30 flex-shrink-0 ml-2">{comingSoon ? 'soon' : count}</span>
                   </button>
 
                   {/* Subjects (sub-categories) */}
                   {isExpanded && (
                     <div className="bg-white/[0.02]">
-                      {/* "All in course" option */}
-                      <button
-                        onClick={() => { onSelectCourse(course); onSelectSubject(null); if (showBookmarked) onToggleBookmarked(); onClose(); }}
-                        className={`w-full text-left pl-11 pr-4 py-2.5 flex items-center gap-2 transition-colors ${
-                          isCourseActive ? 'text-violet-400' : 'text-white/50 hover:bg-white/5'
-                        }`}
-                      >
-                        <span className="text-xs">All {course}</span>
-                      </button>
+                      {!comingSoon && (
+                        <button
+                          onClick={() => { onSelectCourse(course); onSelectSubject(null); if (showBookmarked) onToggleBookmarked(); onClose(); }}
+                          className={`w-full text-left pl-11 pr-4 py-2.5 flex items-center gap-2 transition-colors ${
+                            isCourseActive ? 'text-violet-400' : 'text-white/50 hover:bg-white/5'
+                          }`}
+                        >
+                          <span className="text-xs">All {course}</span>
+                        </button>
+                      )}
 
                       {subjects.map(subject => {
+                        if (comingSoon) {
+                          return (
+                            <div
+                              key={subject}
+                              className="w-full text-left pl-11 pr-4 py-2.5 flex items-center gap-2 text-violet-300/70"
+                            >
+                              <div className="w-1.5 h-1.5 rounded-full bg-violet-400/60" />
+                              <span className="text-xs">{subject}</span>
+                            </div>
+                          );
+                        }
+
                         const isSubjectActive = selectedCourse === course && selectedSubject === subject && !showBookmarked;
                         return (
                           <button
