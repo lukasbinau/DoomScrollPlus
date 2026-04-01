@@ -168,7 +168,7 @@ export function CardViewer({ cards, userState, brainrot, onSeen, onBookmark, onL
 
             {/* Card content */}
             <div className={`card-body relative h-full ${brainrot ? 'overflow-hidden' : 'overflow-y-auto scrollable-touch'}`}>
-              <div className={brainrot ? 'card-compact h-full' : ''}>
+              <div className={brainrot ? 'card-compact h-full' : 'min-h-full'}>
                 {renderCard(card)}
               </div>
             </div>

@@ -1,4 +1,5 @@
 import { useState, useRef, useCallback, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 
 interface ContentPopupProps {
   children: React.ReactNode;
@@ -124,7 +125,7 @@ export function ContentPopup({ children, popupContent, hidden, zoomable }: Conte
         </div>
       </div>
 
-      {open && (
+      {open && createPortal(
         <div
           className="content-popup-overlay"
           onClick={() => setOpen(false)}
@@ -149,7 +150,8 @@ export function ContentPopup({ children, popupContent, hidden, zoomable }: Conte
               {popupContent ?? children}
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </>
   );
