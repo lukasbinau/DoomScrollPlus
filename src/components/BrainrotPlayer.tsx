@@ -1,18 +1,7 @@
 import { useRef, useEffect, useCallback, useState } from 'react';
 
 const VIDEOS = [
-  'subway-surfers-1.mp4',
-  'subway-surfers-2.mp4',
-  'subway-surfers-3.mp4',
-  'subway-surfers-4.mp4',
-  'subway-surfers-5.mp4',
-  'neon-spiral.mp4',
-  'colorful-swirls.mp4',
-  'color-mixing.mp4',
-  'ink-water.mp4',
-  'abstract-paint.mp4',
-  'liquid-art.mp4',
-  'neon-glow.mp4',
+  'subway-surfers-2026.mp4',
 ];
 
 export function BrainrotPlayer() {
