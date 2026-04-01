@@ -12,6 +12,7 @@ interface Props {
   cards: Card[];
   userState: Record<string, UserCardState>;
   brainrot: boolean;
+  navigationLocked: boolean;
   onSeen: (id: string) => void;
   onBookmark: (id: string) => void;
   onLearn: (id: string) => void;
@@ -29,7 +30,7 @@ function renderCard(card: Card) {
   }
 }
 
-export function CardViewer({ cards, userState, brainrot, onSeen, onBookmark, onLearn }: Props) {
+export function CardViewer({ cards, userState, brainrot, navigationLocked, onSeen, onBookmark, onLearn }: Props) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const isAnimating = useRef(false);
   const onSeenRef = useRef(onSeen);
@@ -56,6 +57,8 @@ export function CardViewer({ cards, userState, brainrot, onSeen, onBookmark, onL
 
   // Touch + wheel handlers on window
   useEffect(() => {
+    if (navigationLocked) return;
+
     let startY = 0;
     let inScrollable = false;
     let cardScrollEl: HTMLElement | null = null;
@@ -130,7 +133,7 @@ export function CardViewer({ cards, userState, brainrot, onSeen, onBookmark, onL
       window.removeEventListener('touchend', onTouchEnd);
       window.removeEventListener('wheel', onWheel);
     };
-  }, [currentIndex, goTo]);
+  }, [currentIndex, goTo, navigationLocked]);
 
   if (cards.length === 0) {
     return (

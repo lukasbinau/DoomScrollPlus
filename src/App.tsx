@@ -155,6 +155,7 @@ export default function App() {
         cards={feed}
         userState={userState}
         brainrot={brainrot}
+        navigationLocked={drawerOpen}
         onSeen={handleSeen}
         onBookmark={handleBookmark}
         onLearn={handleLearn}
