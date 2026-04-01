@@ -25,7 +25,7 @@ const aliases: Record<string, string> = {
   '2^n': '2^n', '2ⁿ': '2^n',
 };
 
-function extractComplexities(text: string): string[] {
+export function extractComplexities(text: string): string[] {
   const found = new Set<string>();
   // Match O(...), Θ(...), Ω(...) patterns
   const pattern = /[OΘΩ]\(([^)]+)\)/g;

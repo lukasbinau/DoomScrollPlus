@@ -1,6 +1,6 @@
 import type { Card, SummaryContent } from '../../types/card';
 import { MathText } from '../MathText';
-import { ComplexityChart } from '../ComplexityChart';
+import { ComplexityChart, extractComplexities } from '../ComplexityChart';
 import { ContentPopup } from '../ContentPopup';
 
 interface Props {
@@ -9,6 +9,7 @@ interface Props {
 
 export function SummaryCard({ card }: Props) {
   const { text } = card.content as SummaryContent;
+  const hasChart = extractComplexities(text).length > 0;
 
   return (
     <div className="flex flex-col items-center justify-center min-h-full px-8 text-center">
@@ -21,7 +22,7 @@ export function SummaryCard({ card }: Props) {
       <p className="text-lg leading-relaxed text-white/80 max-w-[340px]">
         <MathText text={text} />
       </p>
-      <ContentPopup>
+      <ContentPopup hidden={!hasChart}>
         <ComplexityChart text={text} />
       </ContentPopup>
       <span className="mt-8 text-xs text-white/30">

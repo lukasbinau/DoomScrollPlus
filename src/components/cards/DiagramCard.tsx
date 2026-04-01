@@ -33,8 +33,7 @@ interface Props {
 
 let diagramCounter = 0;
 
-export function DiagramCard({ card }: Props) {
-  const { mermaid: mermaidCode, caption } = card.content as DiagramContent;
+function useMermaidRender(mermaidCode: string) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [error, setError] = useState(false);
 
@@ -50,7 +49,6 @@ export function DiagramCard({ card }: Props) {
         el.innerHTML = svg;
         const svgEl = el.querySelector('svg');
         if (svgEl) {
-          // Get the natural size and set a proper viewBox so SVG scales to fit
           const bbox = svgEl.getBBox();
           const vbPad = 10;
           svgEl.setAttribute('viewBox', `${bbox.x - vbPad} ${bbox.y - vbPad} ${bbox.width + vbPad * 2} ${bbox.height + vbPad * 2}`);
@@ -67,6 +65,26 @@ export function DiagramCard({ card }: Props) {
     return () => { cancelled = true; };
   }, [mermaidCode]);
 
+  return { containerRef, error };
+}
+
+/** Standalone diagram renderer for the popup modal */
+function PopupDiagram({ code }: { code: string }) {
+  const { containerRef, error } = useMermaidRender(code);
+  if (error) return <p className="text-sm text-red-400">Failed to render diagram</p>;
+  return <div ref={containerRef} className="w-full flex items-center justify-center" />;
+}
+
+export function DiagramCard({ card }: Props) {
+  const { mermaid: mermaidCode, caption } = card.content as DiagramContent;
+  const { containerRef, error } = useMermaidRender(mermaidCode);
+
+  const popupContent = (
+    <div className="w-full flex items-center justify-center p-2">
+      <PopupDiagram code={mermaidCode} />
+    </div>
+  );
+
   return (
     <div className="flex flex-col items-center justify-center min-h-full px-6">
       <span className="inline-block px-3 py-1 mb-4 text-xs font-semibold tracking-wider uppercase rounded-full bg-indigo-500/20 text-indigo-400">
@@ -76,7 +94,7 @@ export function DiagramCard({ card }: Props) {
         <MathText text={card.title} />
       </h2>
 
-      <ContentPopup>
+      <ContentPopup popupContent={popupContent} zoomable>
         <div className="w-full max-w-[360px] max-h-[50vh] flex items-center justify-center overflow-auto scrollable-touch rounded-xl bg-white/[0.04] border border-white/10 p-4">
           {error ? (
             <p className="text-sm text-red-400">Failed to render diagram</p>

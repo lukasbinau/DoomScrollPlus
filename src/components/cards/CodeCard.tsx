@@ -15,14 +15,27 @@ interface Props {
 export function CodeCard({ card }: Props) {
   const { code, language, explanation } = card.content as CodeContent;
   const codeRef = useRef<HTMLElement>(null);
+  const popupCodeRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    if (codeRef.current) {
-      Prism.highlightElement(codeRef.current);
-    }
+    if (codeRef.current) Prism.highlightElement(codeRef.current);
+    if (popupCodeRef.current) Prism.highlightElement(popupCodeRef.current);
   }, [code]);
 
   const langClass = `language-${language === 'pseudocode' ? 'clike' : language}`;
+
+  const popupContent = (
+    <div className="w-full rounded-xl overflow-hidden border border-white/10">
+      <div className="flex items-center justify-between px-4 py-2 bg-white/[0.06] border-b border-white/10">
+        <span className="text-xs font-mono text-white/40">{language}</span>
+      </div>
+      <pre className="p-4 overflow-x-auto text-sm leading-relaxed bg-[#0d0d0d] m-0 scrollable-touch">
+        <code ref={popupCodeRef} className={langClass}>
+          {code}
+        </code>
+      </pre>
+    </div>
+  );
 
   return (
     <div className="flex flex-col items-center justify-center min-h-full px-6">
@@ -33,7 +46,7 @@ export function CodeCard({ card }: Props) {
         <MathText text={card.title} />
       </h2>
 
-      <ContentPopup>
+      <ContentPopup popupContent={popupContent}>
         <div className="w-full max-w-[360px] rounded-xl overflow-hidden border border-white/10">
           <div className="flex items-center justify-between px-4 py-2 bg-white/[0.06] border-b border-white/10">
             <span className="text-xs font-mono text-white/40">{language}</span>

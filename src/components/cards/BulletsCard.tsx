@@ -1,6 +1,6 @@
 import type { Card, BulletsContent } from '../../types/card';
 import { MathText } from '../MathText';
-import { ComplexityChart } from '../ComplexityChart';
+import { ComplexityChart, extractComplexities } from '../ComplexityChart';
 import { ContentPopup } from '../ContentPopup';
 
 interface Props {
@@ -10,6 +10,7 @@ interface Props {
 export function BulletsCard({ card }: Props) {
   const { points } = card.content as BulletsContent;
   const allText = points.join(' ');
+  const hasChart = extractComplexities(allText).length > 0;
 
   return (
     <div className="flex flex-col items-center justify-center min-h-full px-8">
@@ -29,7 +30,7 @@ export function BulletsCard({ card }: Props) {
           </li>
         ))}
       </ul>
-      <ContentPopup>
+      <ContentPopup hidden={!hasChart}>
         <ComplexityChart text={allText} />
       </ContentPopup>
       <span className="mt-8 text-xs text-white/30">
