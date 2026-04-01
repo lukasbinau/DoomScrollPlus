@@ -13,19 +13,20 @@ interface Props {
   isActive?: boolean;
 }
 
-export function CodeCard({ card, isActive }: Props) {
-  const { code, language, explanation } = card.content as CodeContent;
-  const codeRef = useRef<HTMLElement>(null);
+interface PopupCodeProps {
+  code: string;
+  language: string;
+  langClass: string;
+}
+
+function PopupCode({ code, language, langClass }: PopupCodeProps) {
   const popupCodeRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    if (codeRef.current) Prism.highlightElement(codeRef.current);
     if (popupCodeRef.current) Prism.highlightElement(popupCodeRef.current);
   }, [code]);
 
-  const langClass = `language-${language === 'pseudocode' ? 'clike' : language}`;
-
-  const popupContent = (
+  return (
     <div className="w-full rounded-xl overflow-hidden border border-white/10">
       <div className="flex items-center justify-between px-4 py-2 bg-white/[0.06] border-b border-white/10">
         <span className="text-xs font-mono text-white/40">{language}</span>
@@ -37,6 +38,19 @@ export function CodeCard({ card, isActive }: Props) {
       </pre>
     </div>
   );
+}
+
+export function CodeCard({ card, isActive }: Props) {
+  const { code, language, explanation } = card.content as CodeContent;
+  const codeRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    if (codeRef.current) Prism.highlightElement(codeRef.current);
+  }, [code]);
+
+  const langClass = `language-${language === 'pseudocode' ? 'clike' : language}`;
+
+  const popupContent = <PopupCode code={code} language={language} langClass={langClass} />;
 
   return (
     <div className="flex flex-col items-center px-6 w-full">
