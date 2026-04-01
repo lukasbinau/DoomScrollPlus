@@ -120,7 +120,7 @@ export function ContentPopup({ children, popupContent, hidden, zoomable }: Conte
         style={{ touchAction: 'none' }}
       >
         {children}
-        <div className="absolute bottom-1 right-1 px-1.5 py-0.5 rounded bg-black/50 text-[9px] text-white/40 pointer-events-none">
+        <div className="content-expand-hint absolute bottom-1 right-1 px-1.5 py-0.5 rounded text-[9px] text-white/55 pointer-events-none">
           Hold to expand
         </div>
       </div>
