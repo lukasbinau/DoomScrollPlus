@@ -86,7 +86,7 @@ export function DiagramCard({ card }: Props) {
   );
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-full px-6">
+    <div className="flex flex-col items-center px-6 w-full">
       <span className="inline-block px-3 py-1 mb-4 text-xs font-semibold tracking-wider uppercase rounded-full bg-indigo-500/20 text-indigo-400">
         Diagram · {card.subject}
       </span>

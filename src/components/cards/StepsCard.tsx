@@ -73,7 +73,7 @@ export function StepsCard({ card }: Props) {
   }, [step]);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-full px-6">
+    <div className="flex flex-col items-center px-6 w-full">
       <span className="inline-block px-3 py-1 mb-3 text-xs font-semibold tracking-wider uppercase rounded-full bg-teal-500/20 text-teal-400">
         Step-by-Step · {card.subject}
       </span>

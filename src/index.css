@@ -114,6 +114,16 @@ body {
   overflow: hidden;
 }
 
+/* Non-brainrot: cap code blocks so cards fit on screen */
+.snap-card pre {
+  max-height: 45vh;
+  overflow: hidden;
+}
+
+/* Non-brainrot: cap diagram areas */
+.snap-card .max-h-\[50vh\] { max-height: 35vh; }
+.snap-card .max-h-\[35vh\] { max-height: 28vh; }
+
 /* Flashcard flip */
 .flip-card {
   perspective: 1000px;
