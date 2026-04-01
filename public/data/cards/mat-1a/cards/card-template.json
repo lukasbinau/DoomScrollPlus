@@ -1,0 +1,12 @@
+﻿{
+    "id":  "mat-1a-001",
+    "type":  "summary",
+    "course":  "Mat 1A",
+    "subject":  "Coming Soon",
+    "title":  "Replace with card title",
+    "content":  {
+                    "text":  "Replace with card content"
+                },
+    "source":  "Replace with source reference",
+    "createdAt":  "2026-04-01T00:00:00.000Z"
+}

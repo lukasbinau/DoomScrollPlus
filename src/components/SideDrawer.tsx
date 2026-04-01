@@ -1,5 +1,6 @@
 import { useState, useMemo } from 'react';
 import type { Card, UserState } from '../types/card';
+import { COMING_SOON_COURSES } from '../courseConfig';
 
 interface CourseData {
   course: string;
@@ -7,15 +8,6 @@ interface CourseData {
   count: number;
   comingSoon?: boolean;
 }
-
-const COMING_SOON_COURSES: CourseData[] = [
-  { course: 'Introduction to Machine Learning', subjects: ['Coming soon!'], count: 0, comingSoon: true },
-  { course: 'Mat 1A', subjects: ['Coming soon!'], count: 0, comingSoon: true },
-  { course: 'Mat 1B', subjects: ['Coming soon!'], count: 0, comingSoon: true },
-  { course: 'Physics 1 Spring', subjects: ['Coming soon!'], count: 0, comingSoon: true },
-  { course: 'Physics 1 Fall', subjects: ['Coming soon!'], count: 0, comingSoon: true },
-  { course: 'Introduction to Statistics', subjects: ['Coming soon!'], count: 0, comingSoon: true },
-];
 
 interface Props {
   isOpen: boolean;
@@ -49,7 +41,19 @@ export function SideDrawer({
   const [expandedCourse, setExpandedCourse] = useState<string | null>(selectedCourse);
   const [query, setQuery] = useState('');
 
-  const displayCourses = useMemo(() => [...courses, ...COMING_SOON_COURSES], [courses]);
+  const displayCourses = useMemo(() => {
+    const existingCourses = new Set(courses.map(course => course.course));
+    const placeholders: CourseData[] = COMING_SOON_COURSES
+      .filter(entry => !existingCourses.has(entry.course))
+      .map(entry => ({
+        course: entry.course,
+        subjects: ['Coming soon!'],
+        count: 0,
+        comingSoon: true,
+      }));
+
+    return [...courses, ...placeholders];
+  }, [courses]);
 
   // Progress stats
   const progress = useMemo(() => {
@@ -192,6 +196,11 @@ export function SideDrawer({
                         <path fillRule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clipRule="evenodd" />
                       </svg>
                       <span className="text-sm font-medium truncate">{course}</span>
+                      {comingSoon && (
+                        <span className="px-2 py-0.5 rounded-full text-[9px] font-semibold uppercase tracking-[0.16em] bg-violet-500/15 text-violet-300 border border-violet-400/25">
+                          Coming Soon
+                        </span>
+                      )}
                     </div>
                     <span className="text-xs text-white/30 flex-shrink-0 ml-2">{comingSoon ? 'soon' : count}</span>
                   </button>

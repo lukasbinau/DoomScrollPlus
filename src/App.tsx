@@ -6,6 +6,7 @@ import { SideDrawer } from './components/SideDrawer';
 import { InstallPrompt } from './components/InstallPrompt';
 import { BrainrotPlayer } from './components/BrainrotPlayer';
 import type { Card, UserState } from './types/card';
+import { COURSE_FILE_PATHS } from './courseConfig';
 
 export default function App() {
   const [allCards, setAllCards] = useState<Card[]>([]);
@@ -19,9 +20,14 @@ export default function App() {
 
   // Load cards
   useEffect(() => {
-    fetch(`${import.meta.env.BASE_URL}data/cards.json`)
-      .then(res => res.json())
-      .then((data: Card[]) => setAllCards(data))
+    Promise.all(
+      COURSE_FILE_PATHS.map(({ path }) =>
+        fetch(`${import.meta.env.BASE_URL}${path}`)
+          .then(res => res.json())
+          .then((data: Card[]) => data)
+      )
+    )
+      .then((courseCardSets) => setAllCards(courseCardSets.flat()))
       .catch(console.error);
   }, []);
 
